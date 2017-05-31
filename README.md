@@ -32,7 +32,7 @@ For more information beyond the documents listed above, see:
 <a id="1.2"></a>
 ## Overview of Intel® Enterprise Edition for Lustre* software
 
-Intel® Enterprise Edition for Lustre* software is a global single-namespace file system architecture that allows parallel access by many clients to all the data in the file system across many servers and storage devices. Designed to take advantage of the reliability features of enterprise-class storage hardware, Intel® EE for Lustre* software supports availability features such as redundant servers with storage failover. Metadata and data are stored on separate servers to allow each system to be optimized for the different workloads. The components of an Intel® EE for Lustre* software, file storage system include the following:
+Intel® Enterprise Edition for Lustre\* software is a global single-namespace file system architecture that allows parallel access by many clients to all the data in the file system across many servers and storage devices. Designed to take advantage of the reliability features of enterprise-class storage hardware, Intel® EE for Lustre\* software supports availability features such as redundant servers with storage failover. Metadata and data are stored on separate servers to allow each system to be optimized for the different workloads. The components of an Intel® EE for Lustre\* software, file storage system include the following:
 
 - Intel® Manager for Lustre server: The server that hosts the Intel® Manager for Lustre* software and GUI, and is the server from which Lustre file systems are created, monitored, and managed. Connected to storage servers via the administrative LAN. This is distinct from the management server, which provides access to the management target.
 - Management server(s) (MGS): Provide access to the management target. Paired, redundant management servers provide server failover (high availability) in the event of a server failure.
@@ -59,7 +59,7 @@ Following are key features provided by Intel® Enterprise Edition for Lustre* so
 
 **GUI-based creation and management of Lustre\* file systems**
 
-The Intel® Manager for Lustre* software provides a powerful, yet easy-to-use GUI that enables rapid creation of Lustre file systems. The GUI supports easy configuration for high availability and expansion, and enables performance monitoring and management of multiple Lustre file systems. See <a href="Creating_new_lustre_fs_3_0.md/#3.0">Creating a new Lustre* file system</a>.
+The Intel® Manager for Lustre* software provides a powerful, yet easy-to-use GUI that enables rapid creation of Lustre file systems. The GUI supports easy configuration for high availability and expansion, and enables performance monitoring and management of multiple Lustre file systems. See <a href="Creating_new_lustre_fs_3_0.md">Creating a new Lustre* file system</a>.
 
 **Graphical charts display real-time performance metrics**
 
