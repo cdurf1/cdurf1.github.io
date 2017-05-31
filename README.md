@@ -38,5 +38,5 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 ### Documents
 
-[Introduction](Introduction_1_0.md)
+[Introduction](https://github.com/cdurf1/cdurf1.github.io/Introduction_1_0.md)
 
