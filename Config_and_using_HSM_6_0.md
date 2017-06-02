@@ -9,7 +9,7 @@ The HSM framework included with Intel® EE for Lustre* software includes the fol
 - **An Agent:** A Lustre client that runs an instance of Copytool to transfer certain files between the Lustre file system and the archive, and deletes from the Lustre file system those files that have been archived. There can be one instance of Copytool per agent.
 - **A POSIX Copytool:** This is a reference implementation included in Lustre 2.5 and later. The copytool actually performs the data transfer between the file system and the archive. 
 - **The HSM Coordinator:** The HSM Coordinator gathers all archive requests and dispatches them to Agents. The HSM Coordinator thread coordinates HSM activities. (Some documents refer to this as the MDT Coordinator.)
-- **The Robinhood policy engine:** Robinhood enables full automation of HSM activities. Robinhood lets an create file archiving policies based on the file class, as defined by file size, path, owner, age, extended attributes (xattrs), least-recently used, and other criteria. Multiple rules can be combined with Boolean operators. After copying files to archive, automatic file system purging can be set to occur based on the amount the percentage of consumed file system capacity, file classes, etc. Robinhood can also be used to generate reports, and create packages. 
+- **The Robinhood policy engine:** Robinhood enables full automation of HSM activities. Robinhood lets an administrator create file archiving policies based on the file class, as defined by file size, path, owner, age, extended attributes (xattrs), least-recently used, and other criteria. Multiple rules can be combined with Boolean operators. After copying files to archive, automatic file system purging can be set to occur based on the amount the percentage of consumed file system capacity, file classes, etc. Robinhood can also be used to generate reports, and create packages. 
 
 **Note:** Robinhood is *not necessary to provide basic HSM capabilities* and this HSM framework as installed does not define Robinhood policies. Note that the Robinhood policy engine server requires a supported RDBMS.
 
@@ -30,8 +30,8 @@ Robinhood can automate HSM activities. The section linked here discusses adding 
 
  - <a href="#6.5">Add a Robinhood policy engine server</a>
  
-<a id="6.1"></a>
-## Add an HSM Agent node
+
+## <a id="6.1"></a>Add an HSM Agent node
 
 If you plan to enable Hierarchical Storage Management (HSM), perform the following procedures to create an HSM Agent node.
 
@@ -43,8 +43,8 @@ To add a copytool instance to an existing HSM Agent node, see <a href="#6.2">Add
 1. When you have added the server(s), perform the procedure in <a href="#6.2">AAdd a Copytool to an HSM Agent node</a>.
 1. After the copytool has been added to the HSM Agent node, see <a href="#6.4">AUsing HSM</a>.
 
-<a id="6.2"></a>
-## Add a Copytool to an HSM Agent node
+
+## <a id="6.2"></a>Add a Copytool to an HSM Agent node
 
 1. At the menu bar, click the Configuration drop-down menu and click HSM.
 1. At the bottom of the window, click + Add Copytool.
@@ -67,8 +67,8 @@ To add a copytool instance to an existing HSM Agent node, see <a href="#6.2">Add
 
 See <a href="#6.3">Start the Copytool</a>.
 
-<a id="6.3"></a>
-## Start the Copytool
+
+## <a id="6.3"></a>Start the Copytool
 
 When a copytool is added to an Intel®EE for Lustre file system configuration, it is not automatically activated. Instead, the copytool will initially be set to Unconfigured. The configuration exists inside the Intel® Manager for Lustre* database but it has not been applied directly to the target HSM Agent.
 
@@ -80,8 +80,8 @@ To configure and launch the copytool on an HSM Agent:
 
 As soon as copytool services are requested, the copytool worker will respond. See [HSM window](Graphical_User_Interface_9_0.md/#9.3.4) for more information.
 
-<a id="6.4"></a>
-## Using HSM
+
+## <a id="6.4"></a>Using HSM
 
 After configuring the Copytool Agent node and adding Copytool to that agent, you can use HSM to manage file archiving, free-up file system storage, and improve overall file system performance. 
 
@@ -126,13 +126,12 @@ Cancels an lfs_hsm command that is underway.
 
 To view the progress of HSM copytool activities, click **Configuration** and click **HSM** to open the HSM window and observe copytool progress. See [Monitor HSM Copytool activities](Monitoring_lustre_fs_4_0.md/#4.8) for more information.
 
-The command```
-lctl get_param mdt.*.hsm
-```
-also requests returns information about the currently executing HSM request.
+The command 
+```lctl get_param mdt.*.hsm
+``` also requests returns information about the currently executing HSM request.
 
-<a id="6.5"></a>
-## Add a Robinhood Policy Engine server
+
+## <a id="6.5"></a>Add a Robinhood Policy Engine server
 
 The Robinhood policy engine can be used to automate HSM activities. Each instance of Robinhood and its RDBMS supports a single file system. A single server can support multiple instances of Robinhood. The following procedure adds a Robinhood server, however configuring policies are not discussed herein. See the implementation guide *Hierarchical Storage Management Configuration Guide* for more information.  
 
