@@ -66,7 +66,7 @@ Fully-configurable color charts display a variety of real-time performance metri
 
 **Auto-configured high-availability clustering for server pairs**
 
-Pacemaker and Corosync are configured automatically when the system design follows configuration guidance. This removes the need for manually installing HA configuration files on storage servers, and simplifies high-availability configuration. See [High-availability file system support](Creating_new_lustre_fs_3_0.md#3.3).
+Pacemaker and Corosync are configured automatically when the system design follows configuration guidance. This removes the need for manually installing HA configuration files on storage servers, and simplifies high-availability configuration. See [High-availability file system support](Creating_new_lustre_fs_3_0.md/#3.3).
 
 **PDU configuration and server outlet assignments support automatic failover**
 
@@ -243,13 +243,13 @@ The following twelve charts are presented. For more information, see [View chart
 - [OST Balance chart](Graphical_User_Interface_9_0.md/#9.2.2)
 - [Metadata Operations chart](Graphical_User_Interface_9_0.md/#9.2.3)
 - [Read/Write Bandwidth chart](Graphical_User_Interface_9_0.md/#9.2.4)
-- <a href="Graphical_User_Interface_9_0.md/#9.2.5">Metadata Servers chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.6">Object Storage Servers chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.7">CPU Usage chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.8">Memory Usage chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.9">Space Usage chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.10">ile Usage chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.11">Object Usage chart</a>
+- [Metadata Servers chart](Graphical_User_Interface_9_0.md/#9.2.5)
+- [Object Storage Servers chart](Graphical_User_Interface_9_0.md/#9.2.6)
+- [CPU Usage chart](Graphical_User_Interface_9_0.md/#9.2.7)
+- [Memory Usage chart](Graphical_User_Interface_9_0.md/#9.2.8)
+- [Space Usage chart](Graphical_User_Interface_9_0.md/#9.2.9)
+- [File Usage chart](Graphical_User_Interface_9_0.md/#9.2.10)
+- [Object Usage chart](Graphical_User_Interface_9_0.md/#9.2.11)
 
 <a id="1.4.4"></a>
 ### Configuration menu
@@ -270,7 +270,7 @@ The Configuration drop-down menu provides access to the following several window
 
 Clicking the Jobstats button on the top menu bar lists the top ten jobs currently in process. The listed jobs can be sorted by column and average duration can be selected. Column sorts and duration will be persistent when navigating away and back to the page.
 
-**Note:** Job stats need to be enabled before then can be viewed. See <a href="Monitoring_lustre_fs_4_0.md/#4.3">View Job stats</a>.
+**Note:** Job stats need to be enabled before then can be viewed. See [View Job stats](Monitoring_lustre_fs_4_0.md/#4.3).
 
 <a id="f1.5"></a>
 ![./md_Graphics/job_stats.png][f1.5]
@@ -301,7 +301,7 @@ The Status indicator provides information about the functioning and health of ea
 - A green light ![./md_Graphics/status_light.png][f1.7] indicates that all is normal. Note that a green light does not indicate anything about file system performance.
 - A yellow light ![./md_Graphics/yellow_status.png][f1.8] indicates that one or more warning alerts have been received. The file system may be operating in a degraded mode, for example a target has failed over, so performance may be degraded.
 - A red light ![./md_Graphics/red_status.png][f1.9] indicates that one or more errors alerts have been received. This file system may be down or is severely degraded.
-The Status window displays information alerts, commands that are executing, and events. For more information, see <a href="Graphical_User_Interface_9_0.md/#9.6">Status window</a>.
+The Status window displays information alerts, commands that are executing, and events. For more information, see [Status window](Graphical_User_Interface_9_0.md/#9.6).
 
 <a id="f1.9"></a>
 ![./md_Graphics/status_page.png][f1.10]
