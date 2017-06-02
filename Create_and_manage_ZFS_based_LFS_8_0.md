@@ -8,7 +8,7 @@ Intel® Manager for Lustre* software is able to create and manage Lustre file sy
 - <a href="#8.3">Removing a ZFS-based Lustre file system</a>
 - <a href="#8.4">Destroy an individual zpool</a>
 - <a href="#8.5">Destroy all of the ZFS pools in a shared-storage</a>
-- <a href="#8.6">High-availability cluster</a>
+
 
 
 ## <a id="8.1"></a>Create a ZFS-based Lustre file system
