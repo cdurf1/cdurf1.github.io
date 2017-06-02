@@ -80,7 +80,6 @@ To create and manage an OpenZFS-based Lustre file system that is highly-availabl
 	**Note:** The naming convention for the pool name is intended to reflect the Lustre file system name name (\<fsname\>) and the MDT index number (\<n\> usually 0, unless DNE is used). The number of mirrors used for the MDT depends on the requirements of the installation and can be scaled up accordingly.
     
    - ZFS pool for OST (typically a RAIDZ2 pool, balancing reliability against optimal capacity):
-
 	```
 	zpool create -O canmount=off \
 	-O recordsize=1M \
@@ -113,13 +112,15 @@ One must always manage ZFS pools and their contents from the host where the pool
 	zpool list
 	```
 2. If any of the pools that are expected to be on this host are missing, it may be that the pools have been exported, or are imported on a different host. Use the ```zpool import``` command to identify these pools. For example:
+	
 	```
 	[root@rh7z-oss1 ~]# zpool import
    pool: demo-ost0pool
      id: 12622396723776112603
-  state: ONLINE
- action: The pool can be imported using its name or numeric identifier.
- config:
+     state: ONLINE
+     action: The pool can be imported using its name or numeric identifier.
+     config:
+
 	demo-ost0pool  ONLINE
 	  raidz2-0  ONLINE
 	    sda     ONLINE
@@ -128,14 +129,16 @@ One must always manage ZFS pools and their contents from the host where the pool
 	    sdd     ONLINE
 	    sde     ONLINE
 	    sdf     ONLINE
+
    pool: demo-ost1pool
      id: 617459513944251623
-  state: ONLINE
- status: The pool was last accessed by another system.
- action: The pool can be imported using its name or numeric identifier 
+     state: ONLINE
+     status: The pool was last accessed by another system.
+     action: The pool can be imported using its name or numeric identifier 
      and the '-f' flag.
    see: http://zfsonlinux.org/msg/ZFS-8000-EY
- config:
+   config:
+
 	demo-ost1pool                             ONLINE
 	  raidz2-0                                ONLINE
 	    scsi-0QEMU_QEMU_HARDDISK_IEELOST0001  ONLINE
@@ -169,10 +172,10 @@ In the example, there are two exported pools. Note that the second pool in the l
 <a id="8.3"></a>
 ## Removing a ZFS-based Lustre file system
 
-When removing a Lustre file system, the Intel® Manager for Lustre* software does not destroy the data content held on Lustre OSDs. This allows the operator an opportunity to recover data from the OSDs if the file system was removed from IML accidentally. As a consequence, after the file system is removed from the manager, the OSD volumes may need to be cleaned up as a separate operation before they are ready to be re-used.
+When removing a Lustre file system, the Intel® Manager for Lustre\* software does not destroy the data content held on Lustre OSDs. This allows the operator an opportunity to recover data from the OSDs if the file system was removed from IML accidentally. As a consequence, after the file system is removed from the manager, the OSD volumes may need to be cleaned up as a separate operation before they are ready to be re-used.
 
-LDISKFS volumes do not require any special treatment; they can simply be reformatted, either by hand or by re-adding the volumes into a new Lustre file system via  Intel® Manager for Lustre* software. The manager software will detect the pre-existing Lustre data, and ask the user to confirm that the volume is to be re-used.
-ZFS OSDs require some additional work. ZFS OSDs are file system datasets inside zpools. After a file system is removed using Intel® Manager for Lustre* software, any ZFS OSDs from that file system will still be present in the ZFS storage pools (zpools), and cannot be re-used directly. To reuse the storage in a zpool, the existing OSD datasets must first be removed, using the zfs destroy command.  This is described in these sections:
+LDISKFS volumes do not require any special treatment; they can simply be reformatted, either by hand or by re-adding the volumes into a new Lustre file system via  Intel® Manager for Lustre\* software. The manager software will detect the pre-existing Lustre data, and ask the user to confirm that the volume is to be re-used.
+ZFS OSDs require some additional work. ZFS OSDs are file system datasets inside zpools. After a file system is removed using Intel® Manager for Lustre\* software, any ZFS OSDs from that file system will still be present in the ZFS storage pools (zpools), and cannot be re-used directly. To reuse the storage in a zpool, the existing OSD datasets must first be removed, using the zfs destroy command.  This is described in these sections:
 
 - <a href="#8.4">Destroy an individual zpool</a>
 - <a href="#8.5">Destroy all of the ZFS pools in a shared-storage high-availability cluster
@@ -196,9 +199,7 @@ action: The pool can be imported using its name or numeric identifier
 and the '-f' flag.
 ...
 ```
-
-
-    Don't force an import of a pool in this state unless you are certain that the other host is offline. If possible, either export the zpool from the other host so that it can be imported, or log into the other host to perform the required work.
+Don't force an import of a pool in this state unless you are certain that the other host is offline. If possible, either export the zpool from the other host so that it can be imported, or log into the other host to perform the required work.
 1. If necessary, use the zpool import command, along with the pool name, to import a pool onto the host:
 ```
 zpool import <pool name>
