@@ -1,5 +1,4 @@
-<a id="8.0"></a>
-# Creating and Managing ZFS-based Lustre file systems
+# <a id="8.0"></a>Creating and Managing ZFS-based Lustre file systems
 
 Intel® Manager for Lustre* software is able to create and manage Lustre file systems that are based on OpenZFS object storage device (OSD) volumes. The software installs the necessary packages, formats Lustre targets from ZFS pools, and creates the high-availability software framework for managing availability for Lustre + ZFS servers.  The following topics are covered:
 
@@ -17,7 +16,7 @@ The procedures in this section assume that you have first assembled and configur
 
 To create and manage an OpenZFS-based Lustre file system that is highly-available and managed by Intel® Manager for Lustre* software, perform these steps:
 
-1. Add all of the physical servers that will comprise your ZFS-based Lustre file system. To do this, perform the steps in <a href="Creating_new_lustre_fs_3_0.md/#3.4">Add one or more HA servers</a>. Add each server as a *Managed Storage Server*.
+1. Add all of the physical servers that will comprise your ZFS-based Lustre file system. To do this, perform the steps in [Add one or more HA servers](Creating_new_lustre_fs_3_0.md/#3.4). Add each server as a *Managed Storage Server*.
     
     **Note:**  Steps 2 and 3 below are performed automatically by Intel® Manager for Lustre\* software and do not need to be performed.  They are included here for topic coverage only. Continue with Step 4.
 
@@ -96,10 +95,10 @@ To create and manage an OpenZFS-based Lustre file system that is highly-availabl
 **Note:** See the document *Lustre\* Installation and Configuration using Intel® EE for Lustre\* Software and OpenZFS* for descriptions of the ashift and recordsize properties. RAIDZ2 is the preferred vdev configuration for OSTs, and we recommend an arrangement of at least 11 disks (9+2) per RAIDZ2 vdev for best performance. The pool naming convention is based on the Lustre file system name and OST index number, starting at 0 (zero).
 
    The remainder of this procedure is performed at the Intel® Manager for Lustre\* software GUI. 
-1. For high-availability, configure your servers as primary and fail-over servers for each zpool.  Perform the steps in <a href="Creating_new_lustre_fs_3_0.md/#3.5">Configure primary and fail-over servers</a>.
-1. If you are using power distribution units (PDUs) for power control, then for each server, perform the steps in <a href="Creating_new_lustre_fs_3_0.md/#3.6">Add power distribution units</a>.  Then perform the steps in <a href="Creating_new_lustre_fs_3_0.md/#3.7">Assign PDU outlets to servers</a> for each server.
-1. If you are using Baseboard Management Controllers (BMCs) for power control, then perform the steps in <a href="Creating_new_lustre_fs_3_0.md/#3.8">Assign BMCs to servers</a> for each server.  
-1. Perform the steps in <a href="Creating_new_lustre_fs_3_0.md/#3.0">Create the new Lustre file system</a>, using the zpools you created in step 4 above as object storage targets (volumes), rather than direct block devices.  Each ZFS pool that you created will appear as a target, with the Type identified as a **ZfsPool**.
+1. For high-availability, configure your servers as primary and fail-over servers for each zpool.  Perform the steps in [Configure primary and fail-over servers<](Creating_new_lustre_fs_3_0.md/#3.5).
+1. If you are using power distribution units (PDUs) for power control, then for each server, perform the steps in [Add power distribution units](Creating_new_lustre_fs_3_0.md/#3.6).  Then perform the steps in [Assign PDU outlets to servers](Creating_new_lustre_fs_3_0.md/#3.7) for each server.
+1. If you are using Baseboard Management Controllers (BMCs) for power control, then perform the steps in [Assign BMCs to servers](Creating_new_lustre_fs_3_0.md/#3.8)for each server.  
+1. Perform the steps in [Create the new Lustre file system](Creating_new_lustre_fs_3_0.md/#3.0), using the zpools you created in step 4 above as object storage targets (volumes), rather than direct block devices.  Each ZFS pool that you created will appear as a target, with the Type identified as a **ZfsPool**.
 
 <a id="8.2"></a>
 ## Importing and exporting ZFS pools in a shared-storage high-availability cluster
