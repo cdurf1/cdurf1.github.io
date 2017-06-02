@@ -1,4 +1,5 @@
-# <a id="8.0"></a>Creating and Managing ZFS-based Lustre file systems
+<a id="8.0"></a>
+# Creating and Managing ZFS-based Lustre file systems
 
 Intel® Manager for Lustre* software is able to create and manage Lustre file systems that are based on OpenZFS object storage device (OSD) volumes. The software installs the necessary packages, formats Lustre targets from ZFS pools, and creates the high-availability software framework for managing availability for Lustre + ZFS servers.  The following topics are covered:
 
@@ -7,10 +8,10 @@ Intel® Manager for Lustre* software is able to create and manage Lustre file sy
 - <a href="#8.3">Removing a ZFS-based Lustre file system</a>
 - <a href="#8.4">Destroy an individual zpool</a>
 - <a href="#8.5">Destroy all of the ZFS pools in a shared-storage</a>
-- <a href="#8.6">high-availability cluster</a>
+- <a href="#8.6">High-availability cluster</a>
 
-<a id="8.1"></a>
-## Create a ZFS-based Lustre file system
+
+## <a id="8.1"></a>Create a ZFS-based Lustre file system
 
 The procedures in this section assume that you have first assembled and configured the physical hardware: servers, storage devices, network interfaces, etc., and installed Intel® Manager for Lustre* software as instructed in the *Intel® Enterprise Edition for Lustre\* Software Installation Guide*.  
 
@@ -18,23 +19,28 @@ To create and manage an OpenZFS-based Lustre file system that is highly-availabl
 
 1. Add all of the physical servers that will comprise your ZFS-based Lustre file system. To do this, perform the steps in <a href="Creating_new_lustre_fs_3_0.md/#3.4">Add one or more HA servers</a>. Add each server as a *Managed Storage Server*.
     
-    **Note:**  Steps 2 and 3 below are performed automatically by Intel® Manager for Lustre* software and do not need to be performed.  They are included here for topic coverage only. Continue with Step 4.
+    **Note:**  Steps 2 and 3 below are performed automatically by Intel® Manager for Lustre\* software and do not need to be performed.  They are included here for topic coverage only. Continue with Step 4.
+
 1. Having added the servers, you now need to ensure that the server hostids are set before creating any zpools. Each server requires a unique hostid to be configured. Setting the hostid on each server will allow ZFS to apply an attribute on each zpool indicating which host currently has the pool imported. This provides some protection in ZFS against multiple simultaneous imports of zpools when the storage is connected to more than one server. To set the hostid, run the genhostid command on each host and reboot. In the document *Lustre\* Installation and Configuration using Intel® EE for Lustre\* Software and OpenZFS*, see the section *Protecting File System Volumes from Concurrent Access* for more information.
+
 1. As a further protection against “double-importing” ZFS pools, and to prevent conflicts with the Pacemaker resource management software, disable the ZFS Systemd target by entering the following command:
-    ```
-systemctl disable zfs.target
-```
+	
+	```
+	systemctl disable zfs.target
+	```
+    
     This will stop the operating system from attempting to auto-import ZFS storage pools during system boot. Disabling the ZFS target affect all ZFS storage pools, including any that are not being used for Lustre.
+
 1. ZFS pool configuration is executed directly on each of the Lustre server HA pairs using the command line tools supplied with the ZFS software. The storage devices for each ZFS pool must be connected to, and accessible from, each Lustre server in the HA pair. For each ZFS pool, it is easiest to nominate a primary server and use that host to create the zpool. Log into each primary host and use this zpool command to create each storage pool.  The general syntax for creating a zpool is as follows:
 
-    ```
+	```
 zpool create [-f] -O canmount=off \
 -O mountpoint=none \
 [ -o <option> ] \
 -o cachefile=none \
 -o failmode=panic \
 <zpool name> <zpool specification>
-```
+	```
     
     ZFS is highly configurable and there are a wide range of optional parameters that can be applied to a ZFS pool, to improve performance or to modify functionality. The most important of these are as follows:
     - cachefile=none: ZFS uses the cachefile to identify pools it can automatically import, but this does not make consideration for shared storage cluster environments. To prevent a ZFS pool from being added to the default cachefile and automatically imported at system boot, it is essential that all ZFS pools that are held on shared storage have the cachefile set to the special value “none”. This, in conjunction with setting the hostid provides a lightweight impediment against double-importing the pool.
@@ -52,26 +58,31 @@ zpool create [-f] -O canmount=off \
     Following are three examples of typical pool configurations, one each for MGT, MDT and OST respectively:
     
     - ZFS pool for MGT (typically a simple mirror):
-```
+
+	```
 zpool create -O canmount=off \
   -O mountpoint=none \
   -o cachefile=none \
   -o failmode=panic \
   mgspool mirror <dev A> <dev B>
-```
+  	```
+    
     - ZFS pool for MDT (typically a stripe of mirrors to maximize performance):
-```
+
+	```
 zpool create -O canmount=off \
   -O mountpoint=none \
   -o cachefile=none \
   -o failmode=panic \
   <fsname>-mdt<n>pool \
   mirror <dev A> <dev B> [ mirror <dev C> <dev D> ] ...
-```
+	```
+
 **Note:** The naming convention for the pool name is intended to reflect the Lustre file system name name (<fsname>) and the MDT index number (<n> usually 0, unless DNE is used). The number of mirrors used for the MDT depends on the requirements of the installation and can be scaled up accordingly.
     
-    - ZFS pool for OST (typically a RAIDZ2 pool, balancing reliability against optimal capacity):
-```
+   - ZFS pool for OST (typically a RAIDZ2 pool, balancing reliability against optimal capacity):
+
+	```
 zpool create -O canmount=off \
   -O recordsize=1M \
   -O mountpoint=none \
@@ -81,10 +92,11 @@ zpool create -O canmount=off \
   <fsname>-ost<n>pool \
   raidz2 <dev A> <dev B> \
     <dev C> <dev D>  <dev E> <dev F> ...
-```
+	```
+
 **Note:** See the document *Lustre\* Installation and Configuration using Intel® EE for Lustre\* Software and OpenZFS* for descriptions of the ashift and recordsize properties. RAIDZ2 is the preferred vdev configuration for OSTs, and we recommend an arrangement of at least 11 disks (9+2) per RAIDZ2 vdev for best performance. The pool naming convention is based on the Lustre file system name and OST index number, starting at 0 (zero).
 
-    The remainder of this procedure is performed at the Intel® Manager for Lustre* software GUI. 
+   The remainder of this procedure is performed at the Intel® Manager for Lustre* software GUI. 
 1. For high-availability, configure your servers as primary and fail-over servers for each zpool.  Perform the steps in <a href="Creating_new_lustre_fs_3_0.md/#3.5">Configure primary and fail-over servers</a>.
 1. If you are using power distribution units (PDUs) for power control, then for each server, perform the steps in <a href="Creating_new_lustre_fs_3_0.md/#3.6">Add power distribution units</a>.  Then perform the steps in <a href="Creating_new_lustre_fs_3_0.md/#3.7">Assign PDU outlets to servers</a> for each server.
 1. If you are using Baseboard Management Controllers (BMCs) for power control, then perform the steps in <a href="Creating_new_lustre_fs_3_0.md/#3.8">Assign BMCs to servers</a> for each server.  
