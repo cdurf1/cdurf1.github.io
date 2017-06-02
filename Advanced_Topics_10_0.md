@@ -1,5 +1,4 @@
-<a id="10.0"></a>
-# Advanced Topics
+# <a id="10.0"></a>Advanced Topics
 
 The following procedures are provided in this chapter:
 
