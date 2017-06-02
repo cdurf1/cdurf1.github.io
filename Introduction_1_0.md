@@ -59,7 +59,7 @@ Following are key features provided by Intel® Enterprise Edition for Lustre* so
 
 **GUI-based creation and management of Lustre\* file systems**
 
-The Intel® Manager for Lustre\* software provides a powerful, yet easy-to-use GUI that enables rapid creation of Lustre file systems. The GUI supports easy configuration for high availability and expansion, and enables performance monitoring and management of multiple Lustre file systems. See [Creating a new Lustre\* file system](Creating_new_lustre_fs_3_0.md/#3.0).
+The Intel® Manager for Lustre\* software provides a powerful, yet easy-to-use GUI that enables rapid creation of Lustre file systems. The GUI supports easy configuration for high availability and expansion, and enables performance monitoring and management of multiple Lustre file systems. See [Creating a new Lustre\* file system](docs/Creating_new_lustre_fs_3_0.md/#3.0).
 
 **Graphical charts display real-time performance metrics**
 
