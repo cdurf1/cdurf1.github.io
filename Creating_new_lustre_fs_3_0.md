@@ -1,5 +1,4 @@
-<a id="3.0"></a>
-# Creating a new Lustre* file system
+# Creating a new Lustre\* file system<a id="3.0"></a>
 
 This chapter describes how to create a new Lustre* file system, to be managed from the Intel® Manager for Lustre\*, and how to mount file system clients.  
 
