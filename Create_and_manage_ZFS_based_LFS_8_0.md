@@ -120,7 +120,6 @@ One must always manage ZFS pools and their contents from the host where the pool
   state: ONLINE
  action: The pool can be imported using its name or numeric identifier.
  config:
-
 	demo-ost0pool  ONLINE
 	  raidz2-0  ONLINE
 	    sda     ONLINE
@@ -129,7 +128,6 @@ One must always manage ZFS pools and their contents from the host where the pool
 	    sdd     ONLINE
 	    sde     ONLINE
 	    sdf     ONLINE
-
    pool: demo-ost1pool
      id: 617459513944251623
   state: ONLINE
@@ -138,7 +136,6 @@ One must always manage ZFS pools and their contents from the host where the pool
      and the '-f' flag.
    see: http://zfsonlinux.org/msg/ZFS-8000-EY
  config:
-
 	demo-ost1pool                             ONLINE
 	  raidz2-0                                ONLINE
 	    scsi-0QEMU_QEMU_HARDDISK_IEELOST0001  ONLINE
