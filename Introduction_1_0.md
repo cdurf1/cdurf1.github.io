@@ -63,7 +63,7 @@ The Intel® Manager for Lustre\* software provides a powerful, yet easy-to-use G
 
 **Graphical charts display real-time performance metrics**
 
-Fully-configurable color charts display a variety of real-time performance metrics for single or multiple file systems, down to individual servers and targets, and reveal metrics such as read/write heat maps, OST balance, file system capacity, metadata operations, read/write operations, job statistics, and various resource usage parameters, among others. See <a href="Monitoring_lustre_fs_4_0.md/#4.0">View charts on the Dashboard</a>.
+Fully-configurable color charts display a variety of real-time performance metrics for single or multiple file systems, down to individual servers and targets, and reveal metrics such as read/write heat maps, OST balance, file system capacity, metadata operations, read/write operations, job statistics, and various resource usage parameters, among others. See [View charts on the Dashboard](Monitoring_lustre_fs_4_0.md/#4.0).
 
 **Auto-configured high-availability clustering for server pairs**
 
