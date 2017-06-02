@@ -1,6 +1,5 @@
-# Introducing Intel® Manager for Lustre*
+# Introducing Intel® Manager for Lustre\*<a id="1.0"></a>
 
-<a id="1.0"></a>
 Enterprises and institutions of all sizes use high performance computing to solve today's most intense computing challenges. Just as compute clusters exploit parallel processors and development tools, storage solutions must be parallel to deliver the sustained performance at the large scales that today's applications require. The Lustre* file system is the ideal distributed, parallel file system for high performance computing. 
 
 Accordingly, as storage solutions continue to grow in complexity, powerful, yet easy-to-use software tools to install, configure, monitor, manage, and optimize Lustre-based solutions are essential. Intel® Manager for Lustre* software is purpose-built to simplify the deployment and management of Lustre-based solutions. Intel® Manager for Lustre* software reduces management complexity and costs, enabling storage superusers to exploit the performance and scalability of Lustre storage, and accelerate critical applications and work flows.
@@ -32,7 +31,7 @@ For more information beyond the documents listed above, see:
 <a id="1.2"></a>
 ## Overview of Intel® Enterprise Edition for Lustre* software
 
-Intel® Enterprise Edition for Lustre\* software is a global single-namespace file system architecture that allows parallel access by many clients to all the data in the file system across many servers and storage devices. Designed to take advantage of the reliability features of enterprise-class storage hardware, Intel® EE for Lustre\* software supports availability features such as redundant servers with storage failover. Metadata and data are stored on separate servers to allow each system to be optimized for the different workloads. The components of an Intel® EE for Lustre\* software, file storage system include the following:
+Intel® Enterprise Edition for Lustre* software is a global single-namespace file system architecture that allows parallel access by many clients to all the data in the file system across many servers and storage devices. Designed to take advantage of the reliability features of enterprise-class storage hardware, Intel® EE for Lustre* software supports availability features such as redundant servers with storage failover. Metadata and data are stored on separate servers to allow each system to be optimized for the different workloads. The components of an Intel® EE for Lustre* software, file storage system include the following:
 
 - Intel® Manager for Lustre server: The server that hosts the Intel® Manager for Lustre* software and GUI, and is the server from which Lustre file systems are created, monitored, and managed. Connected to storage servers via the administrative LAN. This is distinct from the management server, which provides access to the management target.
 - Management server(s) (MGS): Provide access to the management target. Paired, redundant management servers provide server failover (high availability) in the event of a server failure.
@@ -59,7 +58,7 @@ Following are key features provided by Intel® Enterprise Edition for Lustre* so
 
 **GUI-based creation and management of Lustre\* file systems**
 
-The Intel® Manager for Lustre\* software provides a powerful, yet easy-to-use GUI that enables rapid creation of Lustre file systems. The GUI supports easy configuration for high availability and expansion, and enables performance monitoring and management of multiple Lustre file systems. See [Creating a new Lustre\* file system](Creating_new_lustre_fs_3_0.md).
+The Intel® Manager for Lustre* software provides a powerful, yet easy-to-use GUI that enables rapid creation of Lustre file systems. The GUI supports easy configuration for high availability and expansion, and enables performance monitoring and management of multiple Lustre file systems. See [Creating a new Lustre* file system](Creating_new_lustre_fs_3_0.md/#3.0).
 
 **Graphical charts display real-time performance metrics**
 
@@ -67,7 +66,7 @@ Fully-configurable color charts display a variety of real-time performance metri
 
 **Auto-configured high-availability clustering for server pairs**
 
-Pacemaker and Corosync are configured automatically when the system design follows configuration guidance. This removes the need for manually installing HA configuration files on storage servers, and simplifies high-availability configuration. See <a href="Creating_new_lustre_fs_3_0.md/#3.3">High-availability file system support</a>.
+Pacemaker and Corosync are configured automatically when the system design follows configuration guidance. This removes the need for manually installing HA configuration files on storage servers, and simplifies high-availability configuration. See [High-availability file system support](Creating_new_lustre_fs_3_0.md/#3.3).
 
 **PDU configuration and server outlet assignments support automatic failover**
 
@@ -109,7 +108,7 @@ The installation strategy removes the need to manually install the software on e
 
 **Support for OpenZFS in Management Mode**
 
-Intel® EE for Lustre* software supports ZFS as a back-end file system replacement for ldiskfs.  Intel® Manager for Lustre* software is able to configure and manage high-availability Lustre storage solutions, and Intel® EE for Lustre* software can discover and manage ZFS file systems. See <a href="Create_and_manage_ZFS_based_LFS_8_0.md/#8.0">Creating and Managing ZFS-based Lustre file systems</a>.
+Intel® EE for Lustre* software supports ZFS as a back-end file system replacement for ldiskfs.  Intel® Manager for Lustre* software is able to configure and manage high-availability Lustre storage solutions, and Intel® EE for Lustre* software can discover and manage ZFS file systems. See [Creating and Managing ZFS-based Lustre file systems](Create_and_manage_ZFS_based_LFS_8_0.md/#8.0).
 
 **Intel® EE for Lustre\* Software ZFS Snapshots**
 
@@ -193,7 +192,7 @@ Monitor-only mode can be used to establish monitoring for file systems that don�
 <a id="1.4"></a>
 ## Overview of the graphical user interface
 
-This section provides an overview of the Intel® Manager for Lustre* software GUI. For a complete description of the GUI, see <a href="Graphical_User_Interface_9_0.md/#9.0">Graphical User Interface</a>.
+This section provides an overview of the Intel® Manager for Lustre* software GUI. For a complete description of the GUI, see [Graphical User Interface](Graphical_User_Interface_9_0.md/#9.0).
 
 The Intel® Manager for Lustre* software GUI presents a set of intuitive windows that let you set up, configure, monitor, and manage Lustre* file systems. The menu bar provides access to these capabilities.  Click the following links for overview information:
 
@@ -238,12 +237,12 @@ The Dashboard window presents several charts that display rich visual informatio
   
 
 
-The following twelve charts are presented. For more information, see <a href="Monitoring_lustre_fs_4_0.md/#4.1">View charts on the Dashboard</a>.
+The following twelve charts are presented. For more information, see [View charts on the Dashboard](Monitoring_lustre_fs_4_0.md/#4.1).
 
-- <a href="Graphical_User_Interface_9_0.md/#9.2.1">Read/Write Heat Map chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.2">OST Balance chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.3">Metadata Operations chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.4">Read/Write Bandwidth chart</a>
+- [Read/Write Heat Map chart](Graphical_User_Interface_9_0.md/#9.2.1)
+- [OST Balance chart](Graphical_User_Interface_9_0.md/#9.2.2)
+- [Metadata Operations chart](Graphical_User_Interface_9_0.md/#9.2.3)
+- [Read/Write Bandwidth chart](Graphical_User_Interface_9_0.md/#9.2.4)
 - <a href="Graphical_User_Interface_9_0.md/#9.2.5">Metadata Servers chart</a>
 - <a href="Graphical_User_Interface_9_0.md/#9.2.6">Object Storage Servers chart</a>
 - <a href="Graphical_User_Interface_9_0.md/#9.2.7">CPU Usage chart</a>
