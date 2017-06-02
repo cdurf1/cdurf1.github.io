@@ -66,7 +66,7 @@ Fully-configurable color charts display a variety of real-time performance metri
 
 **Auto-configured high-availability clustering for server pairs**
 
-Pacemaker and Corosync are configured automatically when the system design follows configuration guidance. This removes the need for manually installing HA configuration files on storage servers, and simplifies high-availability configuration. See [High-availability file system support](Creating_new_lustre_fs_3_0.md/#3.3).
+Pacemaker and Corosync are configured automatically when the system design follows configuration guidance. This removes the need for manually installing HA configuration files on storage servers, and simplifies high-availability configuration. See [High-availability file system support](Creating_new_lustre_fs_3_0.md#3.3).
 
 **PDU configuration and server outlet assignments support automatic failover**
 
