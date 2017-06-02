@@ -80,7 +80,8 @@ To create and manage an OpenZFS-based Lustre file system that is highly-availabl
 	**Note:** The naming convention for the pool name is intended to reflect the Lustre file system name name (\<fsname\>) and the MDT index number (\<n\> usually 0, unless DNE is used). The number of mirrors used for the MDT depends on the requirements of the installation and can be scaled up accordingly.
     
    - ZFS pool for OST (typically a RAIDZ2 pool, balancing reliability against optimal capacity):
-	```
+   
+   	```
 	zpool create -O canmount=off \
 	-O recordsize=1M \
 	-O mountpoint=none \
