@@ -32,16 +32,15 @@ To create and manage an OpenZFS-based Lustre file system that is highly-availabl
     This will stop the operating system from attempting to auto-import ZFS storage pools during system boot. Disabling the ZFS target affect all ZFS storage pools, including any that are not being used for Lustre.
 
 1. ZFS pool configuration is executed directly on each of the Lustre server HA pairs using the command line tools supplied with the ZFS software. The storage devices for each ZFS pool must be connected to, and accessible from, each Lustre server in the HA pair. For each ZFS pool, it is easiest to nominate a primary server and use that host to create the zpool. Log into each primary host and use this zpool command to create each storage pool.  The general syntax for creating a zpool is as follows:
-
+	
 	```
-zpool create [-f] -O canmount=off \
--O mountpoint=none \
-[ -o <option> ] \
--o cachefile=none \
--o failmode=panic \
-<zpool name> <zpool specification>
+	zpool create [-f] -O canmount=off \
+	-O mountpoint=none \
+	[ -o <option> ] \
+	-o cachefile=none \
+	-o failmode=panic \
+	<zpool name> <zpool specification>
 	```
-    
     ZFS is highly configurable and there are a wide range of optional parameters that can be applied to a ZFS pool, to improve performance or to modify functionality. The most important of these are as follows:
     - cachefile=none: ZFS uses the cachefile to identify pools it can automatically import, but this does not make consideration for shared storage cluster environments. To prevent a ZFS pool from being added to the default cachefile and automatically imported at system boot, it is essential that all ZFS pools that are held on shared storage have the cachefile set to the special value “none”. This, in conjunction with setting the hostid provides a lightweight impediment against double-importing the pool.
     - failmode=panic: zpools should have the "failmode" parameter set to "panic". This will cause a host that has lost connectivity to the underlying storage devices, or has experienced too many device failures, to shut down immediately. The node is thus prevented from issuing undesired writes to a zpool after catastrophic failures, including host disconnection from the zpool. When ZFS pools are operating within an HA cluster framework, panicking a node will also trigger a failover event in the cluster, allowing the zpools to be imported to a standby node, and services to continue operation.
