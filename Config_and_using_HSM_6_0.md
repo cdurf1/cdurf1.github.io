@@ -126,9 +126,10 @@ Cancels an lfs_hsm command that is underway.
 
 To view the progress of HSM copytool activities, click **Configuration** and click **HSM** to open the HSM window and observe copytool progress. See [Monitor HSM Copytool activities](Monitoring_lustre_fs_4_0.md/#4.8) for more information.
 
-The command 
-```lctl get_param mdt.*.hsm
-``` also requests returns information about the currently executing HSM request.
+The command```
+lctl get_param mdt.*.hsm
+```
+also requests returns information about the currently executing HSM request.
 
 
 ## <a id="6.5"></a>Add a Robinhood Policy Engine server
