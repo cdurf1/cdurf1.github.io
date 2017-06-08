@@ -47,7 +47,7 @@ The servers on which the MGT, MDT, or OSTs are located can all be configured as 
 
 
 
-![./md_Graphics/lustre-configuration5_zoom40.png][f1.1]
+![/md_Graphics/lustre-configuration5_zoom40.png][f1.1]
 
 
 
@@ -329,16 +329,16 @@ The window is responsive to fit within the display area.
  
  
 
-[f1.1]: ./md_Graphics/lustre-configuration5_zoom40.png
-[f1.2]: ./md_Graphics/top_bar.png
-[f1.3]: ./md_Graphics/dashboard_zoom92.png 
-[f1.4]: ./md_Graphics/read-write-heat-map-chart_zoom91.png
-[f1.5]: ./md_Graphics/job_stats.png
-[f1.6]: ./md_Graphics/logs.png
-[f1.7]: ./md_Graphics/status_light.png
-[f1.8]: ./md_Graphics/yellow_status.png
-[f1.9]: ./md_Graphics/red_status.png
-[f1.10]: ./md_Graphics/status_page.png
-[f1.11]: ./md_Graphics/red_status_bar.png
-[f1.12]: ./md_Graphics/mobile_button.png
-[f1.13]: ./md_Graphics/vertical_menu_bar.png
+[f1.1]: /md_Graphics/lustre-configuration5_zoom40.png
+[f1.2]: /md_Graphics/top_bar.png
+[f1.3]: /md_Graphics/dashboard_zoom92.png 
+[f1.4]: /md_Graphics/read-write-heat-map-chart_zoom91.png
+[f1.5]: /md_Graphics/job_stats.png
+[f1.6]: /md_Graphics/logs.png
+[f1.7]: /md_Graphics/status_light.png
+[f1.8]: /md_Graphics/yellow_status.png
+[f1.9]: /md_Graphics/red_status.png
+[f1.10]: /md_Graphics/status_page.png
+[f1.11]: /md_Graphics/red_status_bar.png
+[f1.12]: /md_Graphics/mobile_button.png
+[f1.13]: /md_Graphics/vertical_menu_bar.png
