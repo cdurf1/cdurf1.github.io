@@ -1,6 +1,5 @@
-# Introducing Intel® Manager for Lustre*
+# Introducing Intel® Manager for Lustre\*<a id="1.0"></a>
 
-<a id="1.0"></a>
 Enterprises and institutions of all sizes use high performance computing to solve today's most intense computing challenges. Just as compute clusters exploit parallel processors and development tools, storage solutions must be parallel to deliver the sustained performance at the large scales that today's applications require. The Lustre* file system is the ideal distributed, parallel file system for high performance computing. 
 
 Accordingly, as storage solutions continue to grow in complexity, powerful, yet easy-to-use software tools to install, configure, monitor, manage, and optimize Lustre-based solutions are essential. Intel® Manager for Lustre* software is purpose-built to simplify the deployment and management of Lustre-based solutions. Intel® Manager for Lustre* software reduces management complexity and costs, enabling storage superusers to exploit the performance and scalability of Lustre storage, and accelerate critical applications and work flows.
@@ -59,15 +58,15 @@ Following are key features provided by Intel® Enterprise Edition for Lustre* so
 
 **GUI-based creation and management of Lustre\* file systems**
 
-The Intel® Manager for Lustre* software provides a powerful, yet easy-to-use GUI that enables rapid creation of Lustre file systems. The GUI supports easy configuration for high availability and expansion, and enables performance monitoring and management of multiple Lustre file systems. See <a href="Creating_new_lustre_fs_3_0.md/#3.0">Creating a new Lustre* file system</a>.
+The Intel® Manager for Lustre* software provides a powerful, yet easy-to-use GUI that enables rapid creation of Lustre file systems. The GUI supports easy configuration for high availability and expansion, and enables performance monitoring and management of multiple Lustre file systems. See [Creating a new Lustre* file system](Creating_new_lustre_fs_3_0.md/#3.0).
 
 **Graphical charts display real-time performance metrics**
 
-Fully-configurable color charts display a variety of real-time performance metrics for single or multiple file systems, down to individual servers and targets, and reveal metrics such as read/write heat maps, OST balance, file system capacity, metadata operations, read/write operations, job statistics, and various resource usage parameters, among others. See <a href="Monitoring_lustre_fs_4_0.md/#4.0">View charts on the Dashboard</a>.
+Fully-configurable color charts display a variety of real-time performance metrics for single or multiple file systems, down to individual servers and targets, and reveal metrics such as read/write heat maps, OST balance, file system capacity, metadata operations, read/write operations, job statistics, and various resource usage parameters, among others. See [View charts on the Dashboard](Monitoring_lustre_fs_4_0.md/#4.0).
 
 **Auto-configured high-availability clustering for server pairs**
 
-Pacemaker and Corosync are configured automatically when the system design follows configuration guidance. This removes the need for manually installing HA configuration files on storage servers, and simplifies high-availability configuration. See <a href="Creating_new_lustre_fs_3_0.md/#3.3">High-availability file system support</a>.
+Pacemaker and Corosync are configured automatically when the system design follows configuration guidance. This removes the need for manually installing HA configuration files on storage servers, and simplifies high-availability configuration. See [High-availability file system support](Creating_new_lustre_fs_3_0.md/#3.3).
 
 **PDU configuration and server outlet assignments support automatic failover**
 
@@ -109,7 +108,7 @@ The installation strategy removes the need to manually install the software on e
 
 **Support for OpenZFS in Management Mode**
 
-Intel® EE for Lustre* software supports ZFS as a back-end file system replacement for ldiskfs.  Intel® Manager for Lustre* software is able to configure and manage high-availability Lustre storage solutions, and Intel® EE for Lustre* software can discover and manage ZFS file systems. See <a href="Create_and_manage_ZFS_based_LFS_8_0.md/#8.0">Creating and Managing ZFS-based Lustre file systems</a>.
+Intel® EE for Lustre* software supports ZFS as a back-end file system replacement for ldiskfs.  Intel® Manager for Lustre* software is able to configure and manage high-availability Lustre storage solutions, and Intel® EE for Lustre* software can discover and manage ZFS file systems. See [Creating and Managing ZFS-based Lustre file systems](Create_and_manage_ZFS_based_LFS_8_0.md/#8.0).
 
 **Intel® EE for Lustre\* Software ZFS Snapshots**
 
@@ -193,7 +192,7 @@ Monitor-only mode can be used to establish monitoring for file systems that don�
 <a id="1.4"></a>
 ## Overview of the graphical user interface
 
-This section provides an overview of the Intel® Manager for Lustre* software GUI. For a complete description of the GUI, see <a href="Graphical_User_Interface_9_0.md/#9.0">Graphical User Interface</a>.
+This section provides an overview of the Intel® Manager for Lustre* software GUI. For a complete description of the GUI, see [Graphical User Interface](Graphical_User_Interface_9_0.md/#9.0).
 
 The Intel® Manager for Lustre* software GUI presents a set of intuitive windows that let you set up, configure, monitor, and manage Lustre* file systems. The menu bar provides access to these capabilities.  Click the following links for overview information:
 
@@ -212,7 +211,7 @@ The Intel® Manager for Lustre* software GUI presents a set of intuitive windows
 Following is the top menu bar. From here you can access the entire GUI, view the collective Status of all file systems and devices, and also access Help.
 
 <a id="f1.2"></a>
-![./md_Graphics/top_bar.png][f1.2]
+![md_Graphics/top_bar.png][f1.2]
 
 
 
@@ -223,7 +222,7 @@ The Dashboard displays a set of charts that provide usage and performance data a
 The following is a partial view of the Dashboard. 
 
 <a id="f1.3"></a>
-![./md_Graphics/dashboard_zoom92.png][f1.3]
+![md_Graphics/dashboard_zoom92.png][f1.3]
 
  
 
@@ -233,24 +232,24 @@ The following is a partial view of the Dashboard.
 
 The Dashboard window presents several charts that display rich visual information about the current and historical performance of each Lustre file system. Following is an example of the Read/Write Heat Map, which is a color-coded map revealing the level of read/write activity per OST, over time.
 <a id="f1.4"></a>
-![./md_Graphics/read-write-heat-map-chart_zoom91.png][f1.4]
+![md_Graphics/read-write-heat-map-chart_zoom91.png][f1.4]
 
   
 
 
-The following twelve charts are presented. For more information, see <a href="Monitoring_lustre_fs_4_0.md/#4.1">View charts on the Dashboard</a>.
+The following twelve charts are presented. For more information, see [View charts on the Dashboard](Monitoring_lustre_fs_4_0.md/#4.1).
 
-- <a href="Graphical_User_Interface_9_0.md/#9.2.1">Read/Write Heat Map chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.2">OST Balance chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.3">Metadata Operations chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.4">Read/Write Bandwidth chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.5">Metadata Servers chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.6">Object Storage Servers chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.7">CPU Usage chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.8">Memory Usage chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.9">Space Usage chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.10">ile Usage chart</a>
-- <a href="Graphical_User_Interface_9_0.md/#9.2.11">Object Usage chart</a>
+- [Read/Write Heat Map chart](Graphical_User_Interface_9_0.md/#9.2.1)
+- [OST Balance chart](Graphical_User_Interface_9_0.md/#9.2.2)
+- [Metadata Operations chart](Graphical_User_Interface_9_0.md/#9.2.3)
+- [Read/Write Bandwidth chart](Graphical_User_Interface_9_0.md/#9.2.4)
+- [Metadata Servers chart](Graphical_User_Interface_9_0.md/#9.2.5)
+- [Object Storage Servers chart](Graphical_User_Interface_9_0.md/#9.2.6)
+- [CPU Usage chart](Graphical_User_Interface_9_0.md/#9.2.7)
+- [Memory Usage chart](Graphical_User_Interface_9_0.md/#9.2.8)
+- [Space Usage chart](Graphical_User_Interface_9_0.md/#9.2.9)
+- [File Usage chart](Graphical_User_Interface_9_0.md/#9.2.10)
+- [Object Usage chart](Graphical_User_Interface_9_0.md/#9.2.11)
 
 <a id="1.4.4"></a>
 ### Configuration menu
@@ -271,10 +270,10 @@ The Configuration drop-down menu provides access to the following several window
 
 Clicking the Jobstats button on the top menu bar lists the top ten jobs currently in process. The listed jobs can be sorted by column and average duration can be selected. Column sorts and duration will be persistent when navigating away and back to the page.
 
-**Note:** Job stats need to be enabled before then can be viewed. See <a href="Monitoring_lustre_fs_4_0.md/#4.3">View Job stats</a>.
+**Note:** Job stats need to be enabled before then can be viewed. See [View Job stats](Monitoring_lustre_fs_4_0.md/#4.3).
 
 <a id="f1.5"></a>
-![./md_Graphics/job_stats.png][f1.5]
+![md_Graphics/job_stats.png][f1.5]
 
 
 
@@ -285,7 +284,7 @@ Clicking the Jobstats button on the top menu bar lists the top ten jobs currentl
 The Logs window displays log information and lets you filter events by date range, host, service, and messages from Lustre or all sources.  The logs window also features querying with auto-complete and linkable host names.
 
 <a id="f1.6"></a>
-![./md_Graphics/logs.png][f1.6]
+![md_Graphics/logs.png][f1.6]
 
 
 
@@ -299,13 +298,13 @@ Help is context-sensitive; Clicking Help at the menu bar opens this Online Help 
 
 The Status indicator provides information about the functioning and health of each file system. Alerts are messages that indicate that the file system may be, or is, operating in a degraded mode.
 
-- A green light ![./md_Graphics/status_light.png][f1.7] indicates that all is normal. Note that a green light does not indicate anything about file system performance.
-- A yellow light ![./md_Graphics/yellow_status.png][f1.8] indicates that one or more warning alerts have been received. The file system may be operating in a degraded mode, for example a target has failed over, so performance may be degraded.
-- A red light ![./md_Graphics/red_status.png][f1.9] indicates that one or more errors alerts have been received. This file system may be down or is severely degraded.
-The Status window displays information alerts, commands that are executing, and events. For more information, see <a href="Graphical_User_Interface_9_0.md/#9.6">Status window</a>.
+- A green light ![md_Graphics/status_light.png][f1.7] indicates that all is normal. Note that a green light does not indicate anything about file system performance.
+- A yellow light ![md_Graphics/yellow_status.png][f1.8] indicates that one or more warning alerts have been received. The file system may be operating in a degraded mode, for example a target has failed over, so performance may be degraded.
+- A red light ![md_Graphics/red_status.png][f1.9] indicates that one or more errors alerts have been received. This file system may be down or is severely degraded.
+The Status window displays information alerts, commands that are executing, and events. For more information, see [Status window](Graphical_User_Interface_9_0.md/#9.6).
 
 <a id="f1.9"></a>
-![./md_Graphics/status_page.png][f1.10]
+![md_Graphics/status_page.png][f1.10]
 
 
  
@@ -314,7 +313,7 @@ The Status window displays information alerts, commands that are executing, and 
 This red bar briefly appears if there are any active error or warning alerts on your system. Clicking Details opens the Status window and reveals the current, active alerts.
 
 <a id="f1.10"></a>
-![./md_Graphics/red_status_bar.png][f1.11]
+![md_Graphics/red_status_bar.png][f1.11]
 
 <a id="1.5"></a>
 ## Access the Dashboard from a smart phone or tablet
@@ -323,23 +322,23 @@ You can access the Intel® Manager for Lustre GUI from your smart phone or table
 
 1. Point your device's browser to the manager server running the Intel® Manager for Lustre software.
 The window is responsive to fit within the display area.
-2. To view the menu bar, click ![./md_Graphics/mobile_button.png][f1.12]. The menu bar is now displayed vertically along the left side of the window.
+2. To view the menu bar, click ![md_Graphics/mobile_button.png][f1.12]. The menu bar is now displayed vertically along the left side of the window.
 <a id="f1.13"></a>
-![./md_Graphics/vertical_menu_bar.png][f1.13]
-3. To hide the menu bar, click ![./md_Graphics/mobile_button.png][f1.12] again.
+![md_Graphics/vertical_menu_bar.png][f1.13]
+3. To hide the menu bar, click ![md_Graphics/mobile_button.png][f1.12] again.
  
  
 
 [f1.1]: md_Graphics/lustre-configuration5_zoom40.png
-[f1.2]: ./md_Graphics/top_bar.png
-[f1.3]: ./md_Graphics/dashboard_zoom92.png 
-[f1.4]: ./md_Graphics/read-write-heat-map-chart_zoom91.png
-[f1.5]: ./md_Graphics/job_stats.png
-[f1.6]: ./md_Graphics/logs.png
-[f1.7]: ./md_Graphics/status_light.png
-[f1.8]: ./md_Graphics/yellow_status.png
-[f1.9]: ./md_Graphics/red_status.png
-[f1.10]: ./md_Graphics/status_page.png
-[f1.11]: ./md_Graphics/red_status_bar.png
-[f1.12]: ./md_Graphics/mobile_button.png
-[f1.13]: ./md_Graphics/vertical_menu_bar.png
+[f1.2]: md_Graphics/top_bar.png
+[f1.3]: md_Graphics/dashboard_zoom92.png 
+[f1.4]: md_Graphics/read-write-heat-map-chart_zoom91.png
+[f1.5]: md_Graphics/job_stats.png
+[f1.6]: md_Graphics/logs.png
+[f1.7]: md_Graphics/status_light.png
+[f1.8]: md_Graphics/yellow_status.png
+[f1.9]: md_Graphics/red_status.png
+[f1.10]: md_Graphics/status_page.png
+[f1.11]: md_Graphics/red_status_bar.png
+[f1.12]: md_Graphics/mobile_button.png
+[f1.13]: md_Graphics/vertical_menu_bar.png
