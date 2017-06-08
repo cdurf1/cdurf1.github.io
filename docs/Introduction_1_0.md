@@ -48,7 +48,7 @@ The servers on which the MGT, MDT, or OSTs are located can all be configured as 
 
 
 
-![./md_Graphics/lustre-configuration5_zoom40.png][f1.1]
+![/md_Graphics/lustre-configuration5_zoom40.png][f1.1]
 
 
 
@@ -330,7 +330,7 @@ The window is responsive to fit within the display area.
  
  
 
-[f1.1]: ./md_Graphics/lustre-configuration5_zoom40.png
+[f1.1]: /md_Graphics/lustre-configuration5_zoom40.png
 [f1.2]: ./md_Graphics/top_bar.png
 [f1.3]: ./md_Graphics/dashboard_zoom92.png 
 [f1.4]: ./md_Graphics/read-write-heat-map-chart_zoom91.png
