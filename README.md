@@ -1,4 +1,4 @@
-<iframe src="toc.html" style="border:2px solid grey;"></iframe>
+<iframe src="contents.html" style="border:2px solid grey;"></iframe>
 # Introducing Intel® Manager for Lustre\*<a id="1.0"></a>
 
 Enterprises and institutions of all sizes use high performance computing to solve today's most intense computing challenges. Just as compute clusters exploit parallel processors and development tools, storage solutions must be parallel to deliver the sustained performance at the large scales that today's applications require. The Lustre* file system is the ideal distributed, parallel file system for high performance computing. 
