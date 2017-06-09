@@ -107,7 +107,7 @@ Changes you select to make on this Volumes Configuration window will be updated 
     
 **Note:** There is currently no lock-out of one user's changes versus changes made by another user. The most-recently applied setting is the one in-force.
 
-Next, proceed to <a href="#3.7">Add power distribution units</a> or <a href="#3.8">Add power distribution units</a>Assign BMCs to servers</a>. It is important to remember these server/volume configurations for when configuring power distribution units (PDUs) and outlet-server assignments.
+Next, proceed to <a href="#3.7">Add power distribution units</a> or <a href="#3.8">Assign BMCs to servers</a>. It is important to remember these server/volume configurations for when configuring power distribution units (PDUs) and outlet-server assignments.
 
 
 ## <a id="3.6"></a>Add power distribution units
