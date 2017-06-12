@@ -1,6 +1,6 @@
 # Table of Contents
 
-- <a href="docs/Introduction_1_0.md">Introduction</a>
+- [Intoduction](docs/Introduction_1_0.md)
 - <a href="docs/Getting_started_2_0.md">Getting Started</a>
 - <a href="docs/Creating_new_lustre_fs_3_0.md">Creating a new Lustre* file system</a>
 - <a href="docs/Monitoring_lustre_fs_4_0.md">Monitoring Lustre* file systems</a>
