@@ -1,4 +1,22 @@
-# Introducing Intel® Manager for Lustre\*<a id="1.0"></a>
+<a id="1.0"></a># Introducing Intel® Manager for Lustre\*
+
+In this Section:\
+
+- <a href="#1.1">## Related Documentation</a>
+- <a href="#1.2">## Overview of Intel® Enterprise Edition for Lustre* software</a>
+- <a href="#1.2">## Key Features</a>
+- <a href="#1.3">## Management mode versus Monitor-only mode</a>
+- <a href="#1.4">## Overview of the graphical user interface</a>
+    - <a href="#1.4.1">### Menu bar</a>
+    - <a href="#1.4.2">### Dashboard window</a>
+    - <a href="#1.4.3">### Summary of charts</a>
+    - <a href="#1.4.4">### Configuration menu</a>
+    - <a href="#1.4.4">### Job stats</a>
+    - <a href="#1.4.5">### Logs window</a>
+    - <a href="#1.4.6">### Help</a>
+    - <a href="#1.4.7">### Status Indicator and window</a>
+    - <a href="#1.4.8">### Alert Bar</a>
+- <a href="#1.5">## Access the Dashboard from a smart phone or tablet</a>
 
 Enterprises and institutions of all sizes use high performance computing to solve today's most intense computing challenges. Just as compute clusters exploit parallel processors and development tools, storage solutions must be parallel to deliver the sustained performance at the large scales that today's applications require. The Lustre* file system is the ideal distributed, parallel file system for high performance computing. 
 
@@ -9,8 +27,8 @@ Intel® Manager for Lustre* software greatly simplifies the creation and managem
 Intel® EE for Lustre\*, when integrated with Linux, aggregates a range of storage hardware into a single Lustre file system that is well-proven for delivering fast IO to applications across high-speed network fabrics such as InfiniBand* and Ethernet.
 An existing Lustre file system that has been set up outside of Intel® Manager for Lustre* software can be monitored, but not managed by the manager. In this case, Lustre commands can be used to manage metadata or object storage servers in the Lustre file system. 
 
-<a id="1.1"></a>
-## Related Documentation
+
+<a id="1.1"></a>## Related Documentation
 
 The following documents are pertinent to Intel® Enterprise Edition for Lustre* software. This list may not be current. Contact your Intel® support representative for the most current information.
 
@@ -28,8 +46,8 @@ The following documents are pertinent to Intel® Enterprise Edition for Lustre* 
 For more information beyond the documents listed above, see: 
 **Intel® Solutions for Lustre\* software** - http://www.intel.com/content/www/us/en/software/intel-solutions-for-lustre-software.html
 
-<a id="1.2"></a>
-## Overview of Intel® Enterprise Edition for Lustre* software
+
+<a id="1.2"></a>## Overview of Intel® Enterprise Edition for Lustre* software
 
 Intel® Enterprise Edition for Lustre* software is a global single-namespace file system architecture that allows parallel access by many clients to all the data in the file system across many servers and storage devices. Designed to take advantage of the reliability features of enterprise-class storage hardware, Intel® EE for Lustre* software supports availability features such as redundant servers with storage failover. Metadata and data are stored on separate servers to allow each system to be optimized for the different workloads. The components of an Intel® EE for Lustre* software, file storage system include the following:
 
@@ -51,8 +69,8 @@ The servers on which the MGT, MDT, or OSTs are located can all be configured as 
 
 
 
-<a id="1.2"></a>
-## Key Features
+
+<a id="1.2"></a>## Key Features
 
 Following are key features provided by Intel® Enterprise Edition for Lustre* software and Intel® Manger for Lustre* software.
 
@@ -168,8 +186,8 @@ Dynamic LNet configuration (DLC) is a powerful extension of the LNet software to
 
 Kerberos provides a means for authentication and authorization of participants on a computer network, as well as providing secure communications through authentication. This functionality has been applied to Intel® EE for Lustre* software for the purposes of establishing trust between Lustre* servers and clients, and optionally, supporting encrypted network communications.
 
-<a id="1.3"></a>
-## Management mode versus Monitor-only mode
+
+<a id="1.3"></a>## Management mode versus Monitor-only mode
 
 **What is Management Mode?**
 
@@ -189,8 +207,8 @@ Monitor-only mode can be used to establish monitoring for file systems that don�
 
 **Note:** RAID-based fault tolerance for storage devices are implemented independent of Intel® Manager for Lustre* software.
 
-<a id="1.4"></a>
-## Overview of the graphical user interface
+
+<a id="1.4"></a>## Overview of the graphical user interface
 
 This section provides an overview of the Intel® Manager for Lustre* software GUI. For a complete description of the GUI, see [Graphical User Interface](Graphical_User_Interface_9_0.md/#9.0).
 
@@ -206,8 +224,8 @@ The Intel® Manager for Lustre* software GUI presents a set of intuitive windows
 - <a href="#1.4.8">Status Indicator and window</a>
 - <a href="#1.4.9">Alert bar</a>
  
-<a id="1.4.1"></a>
-### Menu bar
+
+<a id="1.4.1"></a>### Menu bar
 Following is the top menu bar. From here you can access the entire GUI, view the collective Status of all file systems and devices, and also access Help.
 
 <a id="f1.2"></a>
@@ -215,8 +233,8 @@ Following is the top menu bar. From here you can access the entire GUI, view the
 
 
 
-<a id="1.4.2"></a>
-### Dashboard window
+
+<a id="1.4.2"></a>### Dashboard window
 The Dashboard displays a set of charts that provide usage and performance data at several levels in the file systems being monitored. At the top level, this window displays an aggregate view of all file systems. You can select to view and monitor individual file systems and servers at the Dashboard. To view a single file system, click Configure Dashboard and under File System, select the desired file system.
 
 The following is a partial view of the Dashboard. 
@@ -227,8 +245,8 @@ The following is a partial view of the Dashboard.
  
 
 
-<a id="1.4.3"></a>
-### Summary of charts
+
+<a id="1.4.3"></a>### Summary of charts
 
 The Dashboard window presents several charts that display rich visual information about the current and historical performance of each Lustre file system. Following is an example of the Read/Write Heat Map, which is a color-coded map revealing the level of read/write activity per OST, over time.
 <a id="f1.4"></a>
@@ -251,8 +269,8 @@ The following twelve charts are presented. For more information, see [View chart
 - [File Usage chart](Graphical_User_Interface_9_0.md/#9.2.10)
 - [Object Usage chart](Graphical_User_Interface_9_0.md/#9.2.11)
 
-<a id="1.4.4"></a>
-### Configuration menu
+
+<a id="1.4.4"></a>### Configuration menu
 The Configuration drop-down menu provides access to the following several windows, where you can create, configure, and manage file systems:
 
 - **Servers** - This window lets you add servers to the storage system and configure LNet for each server, provides server status information, and lets you start, stop, and remove servers. From here you can also automatically configure Corosync for managed HA servers.
@@ -265,8 +283,8 @@ The Configuration drop-down menu provides access to the following several window
 - **MGTs** - This window provides features to create and configure a management target.
 
 
-<a id="1.4.4"></a>
-### Job stats
+
+<a id="1.4.4"></a>### Job stats
 
 Clicking the Jobstats button on the top menu bar lists the top ten jobs currently in process. The listed jobs can be sorted by column and average duration can be selected. Column sorts and duration will be persistent when navigating away and back to the page.
 
@@ -278,8 +296,8 @@ Clicking the Jobstats button on the top menu bar lists the top ten jobs currentl
 
 
 
-<a id="1.4.5"></a>
-### Logs window
+
+<a id="1.4.5"></a>### Logs window
 
 The Logs window displays log information and lets you filter events by date range, host, service, and messages from Lustre or all sources.  The logs window also features querying with auto-complete and linkable host names.
 
@@ -288,13 +306,13 @@ The Logs window displays log information and lets you filter events by date rang
 
 
 
-<a id="1.4.6"></a>
-### Help
+
+<a id="1.4.6"></a>### Help
 
 Help is context-sensitive; Clicking Help at the menu bar opens this Online Help to the related topic. Internet access is not required.
 
-<a id="1.4.7"></a>
-### Status Indicator and window
+
+<a id="1.4.7"></a>### Status Indicator and window
 
 The Status indicator provides information about the functioning and health of each file system. Alerts are messages that indicate that the file system may be, or is, operating in a degraded mode.
 
@@ -308,15 +326,15 @@ The Status window displays information alerts, commands that are executing, and 
 
 
  
-<a id="1.4.8"></a>
-### Alert Bar
+
+<a id="1.4.8"></a>### Alert Bar
 This red bar briefly appears if there are any active error or warning alerts on your system. Clicking Details opens the Status window and reveals the current, active alerts.
 
 <a id="f1.10"></a>
 ![md_Graphics/red_status_bar.png][f1.11]
 
-<a id="1.5"></a>
-## Access the Dashboard from a smart phone or tablet
+
+<a id="1.5"></a>## Access the Dashboard from a smart phone or tablet
 
 You can access the Intel® Manager for Lustre GUI from your smart phone or tablet. To access the GUI from your smart phone or tablet, your device needs to be running the latest version of Chrome or Firefox browser:
 
