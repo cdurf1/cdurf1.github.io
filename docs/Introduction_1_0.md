@@ -1,22 +1,22 @@
 <a id="1.0"></a># Introducing Intel® Manager for Lustre\*
 
-In this Section:\
+In this Section:
 
-- <a href="#1.1">## Related Documentation</a>
-- <a href="#1.2">## Overview of Intel® Enterprise Edition for Lustre* software</a>
-- <a href="#1.2">## Key Features</a>
-- <a href="#1.3">## Management mode versus Monitor-only mode</a>
-- <a href="#1.4">## Overview of the graphical user interface</a>
-    - <a href="#1.4.1">### Menu bar</a>
-    - <a href="#1.4.2">### Dashboard window</a>
-    - <a href="#1.4.3">### Summary of charts</a>
-    - <a href="#1.4.4">### Configuration menu</a>
-    - <a href="#1.4.4">### Job stats</a>
-    - <a href="#1.4.5">### Logs window</a>
-    - <a href="#1.4.6">### Help</a>
-    - <a href="#1.4.7">### Status Indicator and window</a>
-    - <a href="#1.4.8">### Alert Bar</a>
-- <a href="#1.5">## Access the Dashboard from a smart phone or tablet</a>
+- <a href="#1.1">Related Documentation</a>
+- <a href="#1.2">Overview of Intel® Enterprise Edition for Lustre* software</a>
+- <a href="#1.2">Key Features</a>
+- <a href="#1.3">Management mode versus Monitor-only mode</a>
+- <a href="#1.4">Overview of the graphical user interface</a>
+    - <a href="#1.4.1">Menu bar</a>
+    - <a href="#1.4.2">Dashboard window</a>
+    - <a href="#1.4.3">Summary of charts</a>
+    - <a href="#1.4.4">Configuration menu</a>
+    - <a href="#1.4.4">Job stats</a>
+    - <a href="#1.4.5">Logs window</a>
+    - <a href="#1.4.6">Help</a>
+    - <a href="#1.4.7">Status Indicator and window</a>
+    - <a href="#1.4.8">Alert Bar</a>
+- <a href="#1.5">Access the Dashboard from a smart phone or tablet</a>
 
 Enterprises and institutions of all sizes use high performance computing to solve today's most intense computing challenges. Just as compute clusters exploit parallel processors and development tools, storage solutions must be parallel to deliver the sustained performance at the large scales that today's applications require. The Lustre* file system is the ideal distributed, parallel file system for high performance computing. 
 
