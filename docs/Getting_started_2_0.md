@@ -23,6 +23,7 @@ See the following information to get started:
 **WARNING:** For Lustre* file systems created and managed by Intel® Manager for Lustre* software, the only supported command line interface is the CLI provided by Intel® Manager for Lustre* software. Modifying such a Lustre file system manually from a UNIX shell will interfere with the ability of the Intel® Manager for Lustre* software to manage and monitor the file system. 
 
 <a id="2.1"></a>
+
 ## Creating user accounts
 
 **Note:** Before creating user accounts, see the documentation provided by your storage solution provider for the initial setup procedure to be completed. The first superuser is created as part of that initial setup procedure.
