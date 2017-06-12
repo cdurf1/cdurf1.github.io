@@ -1,5 +1,10 @@
 # Getting started<a id="2.0"></a>
 
+**In this section:**
+
+- <a href="#2.1">Creating user accounts</a>
+- <a href="#2.2">Setting up email notifications of alerts</a>
+
 A high-availability Lustre file system managed by Intel® Manager for Lustre* software requires that your entire storage system configuration and all  interfaces comply with a pre-defined configuration.  For detailed information, see the section High Availability Configuration Specification in the *Intel® Enterprise Edition for Lustre\* Software Installation Guide*. Also see the guide *Lustre\* Installation and Configuration using Intel® EE for Lustre\* Software and OpenZFS*.
 
 **Note:** All references herein to the "manager" refer to the Intel® Manager for Lustre* software.
