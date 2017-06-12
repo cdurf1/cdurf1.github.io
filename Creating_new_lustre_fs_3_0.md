@@ -8,19 +8,19 @@ This chapter describes how to create a new Lustre* file system, to be managed fr
 
 **In this section:**
 
-- <a href="#3.1">## IMPORTANT PREREQUISITES to creating an HA Lustre file system</a>
-- <a href="#3.2">## IMPORTANT INFORMATION about reconfiguring your file system</a>
-- <a href="#3.3">## High-availability file system support</a>
-- <a href="#3.4">## Add one or more HA servers</a>
-- <a href="#3.5">## Assign primary and failover servers to storage volumes</a>
-- <a href="#3.6">## Add power distribution units</a>
-- <a href="#3.7">## Assign PDU outlets to servers</a>
-- <a href="#3.8">## Assign PDU outlets to servers</a>
-- <a href="#3.9">## Create the new Lustre file system</a>
-- <a href="#3.10">## View the new file system</a>
-- <a href="#3.11">## Mount the Lustre file system</a>
-    - <a href="#3.11.1">### Mount the entire file system</a>
-    - <a href="#3.11.2">### Mount a file system sub-directory</a>
+- <a href="#3.1">IMPORTANT PREREQUISITES to creating an HA Lustre file system</a>
+- <a href="#3.2">IMPORTANT INFORMATION about reconfiguring your file system</a>
+- <a href="#3.3">High-availability file system support</a>
+- <a href="#3.4">Add one or more HA servers</a>
+- <a href="#3.5">Assign primary and failover servers to storage volumes</a>
+- <a href="#3.6">Add power distribution units</a>
+- <a href="#3.7">Assign PDU outlets to servers</a>
+- <a href="#3.8">Assign PDU outlets to servers</a>
+- <a href="#3.9">Create the new Lustre file system</a>
+- <a href="#3.10">View the new file system</a>
+- <a href="#3.11">Mount the Lustre file system</a>
+    - <a href="#3.11.1">Mount the entire file system</a>
+    - <a href="#3.11.2">Mount a file system sub-directory</a>
 
 
 
