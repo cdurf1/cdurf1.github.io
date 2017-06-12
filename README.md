@@ -2,7 +2,7 @@
 
 - [Intoduction](docs/Introduction_1_0.md)
 - [Getting Started](docs/Getting_started_2_0.md")
-- <a href="docs/Creating_new_lustre_fs_3_0.md">Creating a new Lustre* file system</a>
+- [Creating a new Lustre* file system](docs/Creating_new_lustre_fs_3_0.md)
 - <a href="docs/Monitoring_lustre_fs_4_0.md">Monitoring Lustre* file systems</a>
 - <a href="docs/Manage_maintain_HA_lustre_fs_5_0.md">Managing and Maintaining HA Lustre file systems</a>
 - <a href="docs/Config_and_using_HSM_6_0.md">Configuring and using Hierarchical Storage Management</a>
