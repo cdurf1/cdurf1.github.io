@@ -1,9 +1,9 @@
 # Introducing Intel® Manager for Lustre\*<a id="1.0"></a>
 
-In this Section:\
+**In this Section:**
 
 - <a href="#1.1">Related Documentation</a>
-- <a href="#1.2"Overview of Intel® Enterprise Edition for Lustre* software</a>
+- <a href="#1.2">Overview of Intel® Enterprise Edition for Lustre* software</a>
 - <a href="#1.2">Key Features</a>
 - <a href="#1.3">Management mode versus Monitor-only mode</a>
 - <a href="#1.4">Overview of the graphical user interface</a>
