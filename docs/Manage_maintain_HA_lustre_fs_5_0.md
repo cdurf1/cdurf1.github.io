@@ -5,7 +5,7 @@
 
 Before performing any upgrades or maintenance on a primary HA server, all file system targets attached to that server must be manually failed over to the secondary server, using the Intel® for Manager Lustre\* software. DO NOT independently shut the server down. 
 
-** In this section:
+** In this section:**
 
 - <a href="#5.1">Increase a file system's storage capacity</a>
 - <a href="#5.2">Add an object storage target to a managed file system</a>
