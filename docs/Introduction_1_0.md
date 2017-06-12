@@ -2,6 +2,7 @@
 
 In this Section:
 
+- [Intoduction](docs/Introduction_1_0.md)
 - <a href="#1.1">Related Documentation</a>
 - <a href="#1.2">Overview of Intel® Enterprise Edition for Lustre* software</a>
 - <a href="#1.2">Key Features</a>
