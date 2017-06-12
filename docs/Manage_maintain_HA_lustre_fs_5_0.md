@@ -3,9 +3,9 @@
 
 **Warning:** After you have created a Lustre file system using Intel® Manager for Lustre* software, you should not make any configuration changes outside of Intel® Manager for Lustre* software, to file system servers, their respective targets, or network connectivity. Doing so will likely defeat the ability of Intel® Manager for Lustre* software to monitor or manage the file system, and will make all or portions of the file system unavailable to clients.
 
-Before performing any upgrades or maintenance on a primary HA server, all file system targets attached to that server must be manually failed over to the secondary server, using the Intel® for Manager Lustre* software. DO NOT independently shut the server down. 
+Before performing any upgrades or maintenance on a primary HA server, all file system targets attached to that server must be manually failed over to the secondary server, using the Intel® for Manager Lustre\* software. DO NOT independently shut the server down. 
 
-In addition to the links below, see <a href="Advanced_Topics_10_0.md/#10.0">Advanced topics</a>.
+** In this section:
 
 - <a href="#5.1">Increase a file system's storage capacity</a>
 - <a href="#5.2">Add an object storage target to a managed file system</a>
@@ -21,6 +21,10 @@ In addition to the links below, see <a href="Advanced_Topics_10_0.md/#10.0">Adva
 - <a href="#5.12">Reconfiguring NIDs for a server</a>
 - <a href="#5.13">Decommission a server for an MGT, MDT, or OST</a>
 - <a href="#5.14">Removing an unwanted server profile</a>
+
+In addition to the links above, see <a href="Advanced_Topics_10_0.md/#10.0">Advanced topics</a>.
+
+
 
 <a id="5.1"></a>
 ## Increase a file system's storage capacity
