@@ -1,6 +1,18 @@
 <a id="6.0"></a>
 # Configuring and using Hierarchical Storage Management
 
+**In this section:**
+
+- <a href="6.0a">Introdction</a>
+- <a href="#6.1">Add an HSM Agent node</a>
+- <a href="#6.2">Add a Copytool to an HSM Agent</a>
+- <a href="#6.3">Start the Copytool</a>
+- <a href="#6.4">Using HSM</a>
+- <a href="#6.5">Add a Robinhood Policy Engine server</a>
+
+<a id="6.0a"></a>
+## Introduction
+
 Hierarchical Storage Management (HSM) can help provide a cost-effective storage platform that balances performance and capacity. With HSM, storage systems are organized into tiers. The high-performance, primary tier is on the shortest path to the systems where applications are running and where the most data is generated and consumed. As the high-performance tier fills, data that is not being as actively accessed is migrated to lower-cost, higher-capacity storage archive for long-term retention. Data migration is generally managed automatically and transparently to users. 
 
 Intel® Enterprise Edition for Lustre\*software provides a framework for incorporating HSM into a Lustre file system. When a new file is created, a replica is made on the associated HSM archive tier, so that initially, two copies of the file exist. As changes are made to the file, these are replicated onto the archive copy as well. As the available capacity is consumed on the high-performance tier, the least-frequently-used files are deleted from that tier and each file is replaced with stub file that points to the archive copy. Applications are not aware of the locality of a file. Applications do not need to be re-written to work with data stored on an HSM system. If a system call is made to open a file that has been deleted from the high-performance tier, the HSM software automatically dispatches a request to retrieve the file from the archive and restore it to the high-performance tier.
@@ -30,6 +42,14 @@ Perform these tasks to configure basic HSM capabilities for a Lustre file system
 Robinhood can automate HSM activities. The section linked here discusses adding a Robinhood policy engine server, but does not discuss configuring Robinhood for HSM automation. For more information, see the related guide: *Hierarchical Storage Management Configuration*.
 
  - <a href="#6.5">Add a Robinhood policy engine server</a>
+ 
+ **In this section:**
+
+- <a href="#6.1">Add an HSM Agent node</a>
+- <a href="#6.2">Add a Copytool to an HSM Agent</a>
+- <a href="#6.3">Start the Copytool</a>
+- <a href="#6.4">Using HSM</a>
+- <a href="#6.5">Add a Robinhood Policy Engine server</a>
  
 <a id="6.1"></a>
 ## Add an HSM Agent node
