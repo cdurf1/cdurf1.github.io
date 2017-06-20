@@ -3,7 +3,9 @@
 
 A Lustre file system that was created without using Intel® Manager for Lustre* software can be monitored, *but not managed*, from the manager GUI. 
 
-Before an existing Lustre file system can be monitored at the manager GUI, the servers must be added and then the file system detected by the manager. 
+Before an existing Lustre file system can be monitored at the manager GUI, the servers must be added and then the file system detected by the manager.
+
+**In this section:** 
 
 - <a href="#7.1">Detect file system</a>
 - <a href="#7.2">Add OSTs and OSSs to a monitored file system</a>
