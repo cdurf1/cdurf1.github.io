@@ -1,7 +1,9 @@
 <a id="8.0"></a>
 # Creating and Managing ZFS-based Lustre file systems
 
-Intel® Manager for Lustre* software is able to create and manage Lustre file systems that are based on OpenZFS object storage device (OSD) volumes. The software installs the necessary packages, formats Lustre targets from ZFS pools, and creates the high-availability software framework for managing availability for Lustre + ZFS servers.  The following topics are covered:
+Intel® Manager for Lustre\* software is able to create and manage Lustre file systems that are based on OpenZFS object storage device (OSD) volumes. The software installs the necessary packages, formats Lustre targets from ZFS pools, and creates the high-availability software framework for managing availability for Lustre + ZFS servers.  
+
+**In this section:**
 
 - <a href="#8.1">Create a ZFS-based Lustre file system</a>
 - <a href="#8.2">Importing and exporting ZFS pools in a shared-storage high-availability cluster</a>
