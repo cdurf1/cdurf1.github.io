@@ -1,4 +1,4 @@
-<a href="../README.md">**Intel® Manager for Lustre\* Table of Contents**</a>
+[**Intel® Manager for Lustre\* Online Help Main Table of Contents**](../README.md)
 # <a id="5.0"></a>Managing and Maintaining HA Lustre file systems
 
 **Warning:** After you have created a Lustre file system using Intel® Manager for Lustre* software, you should not make any configuration changes outside of Intel® Manager for Lustre* software, to file system servers, their respective targets, or network connectivity. Doing so will likely defeat the ability of Intel® Manager for Lustre* software to monitor or manage the file system, and will make all or portions of the file system unavailable to clients.

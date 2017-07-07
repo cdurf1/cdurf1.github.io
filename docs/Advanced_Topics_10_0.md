@@ -1,4 +1,4 @@
-<a href="../README.md">**Intel® Manager for Lustre\* Table of Contents**</a>
+[**Intel® Manager for Lustre\* Online Help Main Table of Contents**](../README.md)
 # <a id="10.0"></a>Advanced Topics
 
 The following procedures are provided in this chapter:

@@ -1,4 +1,4 @@
-<a href="../README.md">**Intel® Manager for Lustre\* Table of Contents**</a>
+[**Intel® Manager for Lustre\* Online Help Main Table of Contents**](../README.md)
 # Monitoring Lustre* file systems<a id="4.0"></a>
 
 You can easily monitor one or more file systems at the Dashboard, and Status, and Logs windows. The Dashboard window displays a set of charts that provide usage and performance data at several levels in the file systems being monitored, while the Status and Logs windows keep you informed of file system activity relevant to current and past file system health and performance. 
