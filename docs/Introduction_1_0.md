@@ -1,4 +1,4 @@
-[Intel(R) Manager for Lustre\* Main Table of Contents](../README.md)
+[**Intel(R) Manager for Lustre\* Online Help Main Table of Contents**](../README.md)
 # Introducing Intel® Manager for Lustre\*<a id="1.0"></a>
 
 **In this Section:**
