@@ -1,5 +1,5 @@
-<a id="13.0"></a>
-# Glossary
+<a href="../README.md">**Intel® Manager for Lustre\* Table of Contents**</a>
+# <a id="13.0"></a>Glossary
 
 **chroma-agent.** An executable provided with the Intel® Manager for Lustre* software that can be installed as a service on Lustre* servers to enable monitoring of Lustre file systems not created by the Intel® Manager for Lustre* software. 
 

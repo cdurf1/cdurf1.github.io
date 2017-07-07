@@ -1,5 +1,5 @@
-<a id="15.0"></a>
-# Legal Information
+<a href="../README.md">**Intel® Manager for Lustre\* Table of Contents**</a>
+# <a id="15.0"></a>Legal Information
 
 Copyright © 2017 Intel Corporation. All Rights Reserved.
 
