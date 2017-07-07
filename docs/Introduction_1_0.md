@@ -1,4 +1,4 @@
-<a href="./README.md">**TOC**</a>
+<a href="./README.md">**Main Table of Contents**</a>
 # Introducing Intel® Manager for Lustre\*<a id="1.0"></a>
 
 **In this Section:**
