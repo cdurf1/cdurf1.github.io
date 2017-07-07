@@ -1,3 +1,4 @@
+[**Intel® Manager for Lustre\* Online Help Main Table of Contents**](../README.md)
 # <a id="11.0"></a>Using the Intel® Manager for Lustre* command line interface
 
 Intel® Manager for Lustre* software includes a command line interface (CLI) which can be used instead of the GUI to communicate with the Representational State Transfer (REST)-based API underlying the software GUI. The CLI is intended to be used in shell scripts by superusers and power users.
@@ -21,6 +22,8 @@ To access the Intel® Manager for Lustre* CLI:
 
 **WARNING**: To manage Lustre file systems from the command line, you must use the Intel® Manager for Lustre* command line interface. Modifying a file system manually from a shell on a storage server will interfere with the ability of Intel® Manager for Lustre* to manage and monitor the file system.
 
+<a href="#11.0">Top of page</a>
+
 
 ## <a id="11.2"></a>Creating a configuration file with login information
 
@@ -40,7 +43,7 @@ password = <password>
 ```
 $ chmod 0600 ~/.chroma
 ```
-
+<a href="#11.0">Top of page</a>
 
 ## <a id="11.3"></a>Getting help for CLI commands
 
@@ -141,7 +144,7 @@ optional arguments:
 ```
  -h, --help show this help message and exit
 ```
-
+<a href="#11.0">Top of page</a>
 
 ## <a id="11.4"></a>CLI command examples
 
@@ -216,3 +219,4 @@ To detect existing (non-managed) Lustre file systems on servers that have been a
 ```
 # chroma filesystem-detect
 ```
+<a href="#11.0">Top of page</a>

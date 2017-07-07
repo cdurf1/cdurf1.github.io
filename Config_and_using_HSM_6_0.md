@@ -1,4 +1,13 @@
+[**Intel® Manager for Lustre\* Online Help Main Table of Contents**](../README.md)
 # <a id="6.0"></a>Configuring and using Hierarchical Storage Management
+
+**In this chapter:**
+
+- <a href="#6.1">Add an HSM Agent node</a>
+- <a href="#6.2">Add a Copytool to an HSM Agent node</a>
+- <a href="#6.3">Start the Copytool</a>
+- <a href="#6.4">Using HSM</a>
+- <a href="#6.5">Add a Robinhood Policy Engine server</a>
 
 Hierarchical Storage Management (HSM) can help provide a cost-effective storage platform that balances performance and capacity. With HSM, storage systems are organized into tiers. The high-performance, primary tier is on the shortest path to the systems where applications are running and where the most data is generated and consumed. As the high-performance tier fills, data that is not being as actively accessed is migrated to lower-cost, higher-capacity storage archive for long-term retention. Data migration is generally managed automatically and transparently to users. 
 
@@ -30,6 +39,7 @@ Robinhood can automate HSM activities. The section linked here discusses adding 
 
  - <a href="#6.5">Add a Robinhood policy engine server</a>
  
+<a href="#6.0">Top of page</a>
 
 ## <a id="6.1"></a>Add an HSM Agent node
 
@@ -43,6 +53,7 @@ To add a copytool instance to an existing HSM Agent node, see <a href="#6.2">Add
 1. When you have added the server(s), perform the procedure in <a href="#6.2">AAdd a Copytool to an HSM Agent node</a>.
 1. After the copytool has been added to the HSM Agent node, see <a href="#6.4">AUsing HSM</a>.
 
+<a href="#6.0">Top of page</a>
 
 ## <a id="6.2"></a>Add a Copytool to an HSM Agent node
 
@@ -67,6 +78,7 @@ To add a copytool instance to an existing HSM Agent node, see <a href="#6.2">Add
 
 See <a href="#6.3">Start the Copytool</a>.
 
+<a href="#6.0">Top of page</a>
 
 ## <a id="6.3"></a>Start the Copytool
 
@@ -80,6 +92,7 @@ To configure and launch the copytool on an HSM Agent:
 
 As soon as copytool services are requested, the copytool worker will respond. See [HSM window](Graphical_User_Interface_9_0.md/#9.3.4) for more information.
 
+<a href="#6.0">Top of page</a>
 
 ## <a id="6.4"></a>Using HSM
 
@@ -131,6 +144,7 @@ lctl get_param mdt.*.hsm
 ```
 also requests returns information about the currently executing HSM request.
 
+<a href="#6.0">Top of page</a>
 
 ## <a id="6.5"></a>Add a Robinhood Policy Engine server
 
@@ -141,3 +155,4 @@ To add a Robinhood policy engine server, perform the steps under [Add one or mor
 **Creating Policies**
 
 Robinhood lets an superuser create file-archiving policies based on the file class, as defined by file size, path, owner, age, extended attributes (xattrs), least-recently used, and other criteria. Multiple rules can be combined with Boolean operators. After copying files to archive, automatic file system purging can be set to occur based on the percentage of consumed file system capacity, file classes, etc. Robinhood can also be used to generate reports and create packages. See the implementation guide *Hierarchical Storage Management Configuration Guide* for more information.
+<a href="#6.0">Top of page</a>

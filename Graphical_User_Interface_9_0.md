@@ -1,3 +1,4 @@
+[**Intel® Manager for Lustre\* Online Help Main Table of Contents**](../README.md)
 # <a id="9.0"></a>Graphical User Interface
 
 This section details the Intel® Manager for Lustre* graphical user interface.  Click the desired topic.
@@ -64,6 +65,7 @@ By default, the Dashboard displays information and charts for all file systems. 
 
 Click **Update** to apply your choices and **Cancel** to close.
 
+<a href="#9.0">Top of page</a>
 
 ## <a id="9.2"></a>Dashboard charts
 
@@ -76,7 +78,7 @@ Charts are presented as:
 - <a href="#9.2c">MDT charts</a>
 - <a href="#9.2d">OST charts</a>
 
-
+<a href="#9.0">Top of page</a>
 
 **<a id="9.2a"></a>File system charts**
 
@@ -468,6 +470,8 @@ This chart is displayed for a selected OST and shows the percentage of metadata 
 1. Click **Set Range** to set the **Start** and **End** times and dates over which measurements will be displayed. This  view of the chart is a static snapshot, starting and ending as configured. 
 1. Click **Update** to apply and close this window.
 
+<a href="#9.0">Top of page</a>
+
 
 ## <a id="9.3"></a>Configuration menu
 
@@ -729,7 +733,7 @@ Under MGT Configuration for an existing MGT, you can perform these actions under
 - **Failover**: Clicking Failover will forcibly migrate the target to its failover server. Clients attempting to access data on the target while the migration is in process may experience delays until the migration completes. If this action is not displayed, then the MGT has already failed-over and this button will display as Failback. Otherwise, a secondary server has not been configured. 
 - **Failback**: Migrate the target back to its primary server. Clients attempting to access data on the target while the migration is in process may experience delays until the migration completes. This action is displayed only after a target has failed-over.
 
-
+<a href="#9.0">Top of page</a>
 
 ## <a id="9.4"></a>Job Stats window
 
@@ -741,6 +745,8 @@ Clicking **Job Stats** opens the Job Stats window and reveals the top five jobs 
 ![md_Graphics/job_stats.png][f9.4]
 
 On the <a href="#9.2.1">Read/Write Heat Map</a> (on the Dashboard), you can also click a heat map cell and go to the Job Stats screen for that OST. Doing so will present a static view of job stats for the selected OST. Because it is static, *Duration* is not selectable.
+
+<a href="#9.0">Top of page</a>
 
 
 ## <a id="9.5"></a>Logs window
@@ -760,6 +766,8 @@ For example, if a failover event takes place, the following occurs:
 - An email alert is sent to the superuser. See the documentation provided by your storage solution provider for how to configure your mail server to enable and set up email alerts.
 
 Each of the above items generates a log message which is generated and displayed on the Logs window.
+
+<a href="#9.0">Top of page</a>
 
 
 ## <a id="9.6"></a>Status window
@@ -825,6 +833,7 @@ record_type = CorosyncNoPeersAlert
 severity in [ERROR, WARNING]
 ```
 
+<a href="#9.0">Top of page</a>
 
 ## <a id="9.7"></a>Resources tree view
 
@@ -834,6 +843,7 @@ The following image is a partial display of the Resources tree view.
 
 The Resources tree view is a tree listing of resources in the selected file system. It lists items in real time and lets you descend the file system hierarchy to the desired resource.  You can click a resource (file systems, servers, volumes, and targets) to view that resource in the tree, and click its metrics link to view that resource's metrics. This pane displays pages when many records are available. You can size this pane by dragging its edge drawer.
 
+<a href="#9.0">Top of page</a>
 
 ## <a id="9.8"></a>Breadcrumb navigation
 
@@ -849,7 +859,7 @@ If you create a cycle, the breadcrumbs will automatically slice up to the curren
 
 If you click the Back button and the browser indicates that it is going to a previous page not in the breadcrumbs list, the new page will act as the starting breadcrumb location. This prevents a "reverse build-up" of breadcrumbs.
 
-
+<a href="#9.0">Top of page</a>
 
 ## <a id="9.9"></a>Alert bar
 

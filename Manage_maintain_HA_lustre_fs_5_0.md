@@ -1,3 +1,4 @@
+[**Intel® Manager for Lustre\* Online Help Main Table of Contents**](../README.md)
 # <a id="5.0"></a>Managing and Maintaining HA Lustre file systems
 
 **Warning:** After you have created a Lustre file system using Intel® Manager for Lustre* software, you should not make any configuration changes outside of Intel® Manager for Lustre* software, to file system servers, their respective targets, or network connectivity. Doing so will likely defeat the ability of Intel® Manager for Lustre* software to monitor or manage the file system, and will make all or portions of the file system unavailable to clients.
@@ -41,6 +42,7 @@ Perform the following procedures to add a storage server.
 
 See <a href="#5.2">Add an Object Storage Target</a> for instructions to add targets/volumes. Each target must already be connected to its server (or two servers in HA configurations).
 
+<a href="#5.0">Top of page</a>
 
 ## <a id="5.2"></a>Add an object storage target to a managed file system
 
@@ -52,6 +54,7 @@ To add another object storage target:
 1. Each available target device is displayed, with its Capacity, Type, HA-status, and server pair, if configured. Select the OST or OSTs to be added and click **OK**. The new OSTs will be displayed in the table of OSTs for the file system. 
 **Note:** Intel® Manager for Lustre* software will automatically assign OST indices in a distributed fashion across servers to permit striping. 
 
+<a href="#5.0">Top of page</a>
 
 ## <a id="5.3"></a>Start, stop, or remove a file system
 
@@ -70,7 +73,7 @@ To add another object storage target:
 1. At the menu bar, click the **Configuration** drop-down menu and click **File Systems**. 
 1. To remove a file system, in the table entry for the file system, click the **Actions** drop-down menu and click **Remove**. File system contents will remain intact until volumes are re-used in another file system. Click **Confirm** to complete this action. 
 
-
+<a href="#5.0">Top of page</a>
 
 ## <a id="5.4"></a>Start or stop an MGT, MDT, or OST
 
@@ -87,6 +90,7 @@ To start or stop a target:
 - When an MDT is stopped, the file system becomes inoperable until the MDT is started again.
 - When an OST is stopped, clients are unable to access the files stored on this OST. Other OSTs on other servers are not affected.
 
+<a href="#5.0">Top of page</a>
 
 ## <a id="5.5"></a>Remove an OST from a file system
 
@@ -100,6 +104,7 @@ Upon removing an OST from a file system, the OST is no longer visible in the man
 1. Under *Object Storage Targets*, locate the target name in the first column. 
 1. At the far right, click the **Actions** drop-down menu and click **Remove**. Click **Confirm** to complete this action.
 
+<a href="#5.0">Top of page</a>
 
 ## <a id="5.6"></a>Perform a single target failover from primary to secondary server
 
@@ -115,7 +120,7 @@ To initiate failover of a target from its primary server to its secondary server
 ```
 $ chroma target-failover <target name, e.g. lustre-OST0000>
 ```
-
+<a href="#5.0">Top of page</a>
 
 ## <a id="5.7"></a>Perform a single target failback from secondary to primary server
 
@@ -133,6 +138,7 @@ To initiate failback of a target using the CLI, enter:
 $ chroma target-failback <target name, e.g. lustre-OST0000>
 ```
 
+<a href="#5.0">Top of page</a>
 
 ## <a id="5.8"></a>Intentionally failover of all targets from a primary to a secondary server
 
@@ -147,6 +153,7 @@ To manually failover all targets from a primary to secondary server, perform the
 1. At the menu bar, click the **Configuration** drop-down menu and click **Servers**.
 1. For the primary server on which you want to perform maintenance, click the **Actions** drop-down and select **Power-Off**. Note that this action is visible only if PDUs have been added and outlets assigned to servers. This action will switch power off for this server. Any targets running on the primary server will be failed-over to the secondary server. Non-HA-capable targets (targets not supported by a secondary server) will be unavailable until power for the server is switched on again. 
 
+<a href="#5.0">Top of page</a>
 
 ## <a id="5.9"></a>Handling network address changes
 
@@ -169,6 +176,7 @@ You can also directly edit the NID configuration for a server, but to do this, t
 
 Lustre commands can, however, be used to manage metadata or object storage servers in an existing Lustre storage system that has been set up outside the manager and is being monitored, *but not managed*, by Intel® Manager for Lustre* software. 
 
+<a href="#5.0">Top of page</a>
 
 ## <a id="5.10"></a>Reboot, power-off, or remove a server
 
@@ -187,6 +195,7 @@ To perform any of these commands:
 1. For the desired server, at the **Actions** drop-down menu at the right, click the desired command.
 1. After clicking on a command, a *Commands* window pops up to reveal the jobs that are run to perform this command, and the command Status shows pending. When each job completes, the command Status then shows *Succeeded*. 
 
+<a href="#5.0">Top of page</a>
 
 ## <a id="5.11"></a>Reconfiguring Corosync and Pacemaker for a server
 
@@ -194,11 +203,13 @@ Pacemaker and Corosync configuration is required for each server if you are crea
 
 An administrator may need to reset or configure Pacemaker or Corosync when performing maintenance on a server, altering the server's configuration, or troubleshooting problems with those services.  See [Pacemaker configuration](Graphical_User_Interface_9_0.md/#9.3.1.1) and [Corosync configuration](Graphical_User_Interface_9_0.md/#9.3.1.1) for more information.
 
+<a href="#5.0">Top of page</a>
 
 ## <a id="5.12"></a>Reconfiguring NIDs for a server
 
 Intel® Manager for Lustre* software automatically configures NIDs for each managed server that you add, so that manual NID configuration should not normally be required. However, an administrator may need to reconfigure NIDs for a server when performing maintenance on a server, altering the server's configuration, or troubleshooting problems network interfaces.  See [NID Configuration](Graphical_User_Interface_9_0.md/#9.3.1.1).
 
+<a href="#5.0">Top of page</a>
 
 ## <a id="5.13"></a>Decommission a server for an MGT, MDT, or OST
 
@@ -219,6 +230,7 @@ To remove (decommission) a server for an OST:
 
 **Note:** Each server is also separately listed at **Configuration > Servers**, however the server configuration regarding which file system, target, and HA status is not shown on the *Servers* window.
 
+<a href="#5.0">Top of page</a>
 
 ## <a id="5.14"></a>Removing an unwanted server profile
 

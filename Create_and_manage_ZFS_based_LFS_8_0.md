@@ -1,3 +1,4 @@
+[**Intel® Manager for Lustre\* Online Help Main Table of Contents**](../README.md)
 # <a id="8.0"></a>Creating and Managing ZFS-based Lustre file systems
 
 Intel® Manager for Lustre* software is able to create and manage Lustre file systems that are based on OpenZFS object storage device (OSD) volumes. The software installs the necessary packages, formats Lustre targets from ZFS pools, and creates the high-availability software framework for managing availability for Lustre + ZFS servers.  The following topics are covered:
@@ -100,6 +101,8 @@ To create and manage an OpenZFS-based Lustre file system that is highly-availabl
 1. If you are using Baseboard Management Controllers (BMCs) for power control, then perform the steps in [Assign BMCs to servers](Creating_new_lustre_fs_3_0.md/#3.8)for each server.  
 1. Perform the steps in [Create the new Lustre file system](Creating_new_lustre_fs_3_0.md/#3.0), using the zpools you created in step 4 above as object storage targets (volumes), rather than direct block devices.  Each ZFS pool that you created will appear as a target, with the Type identified as a **ZfsPool**.
 
+<a href="#8.0">Top of page</a>
+
 <a id="8.2"></a>
 ## Importing and exporting ZFS pools in a shared-storage high-availability cluster
 
@@ -168,6 +171,7 @@ In the example, there are two exported pools. Note that the second pool in the l
 	```
 	zpool import -a
 	```
+<a href="#8.0">Top of page</a>
 
 <a id="8.3"></a>
 ## Removing a ZFS-based Lustre file system
@@ -179,6 +183,8 @@ ZFS OSDs require some additional work. ZFS OSDs are file system datasets inside 
 
 - <a href="#8.4">Destroy an individual zpool</a>
 - <a href="#8.5">Destroy all of the ZFS pools in a shared-storage high-availability cluster
+
+<a href="#8.0">Top of page</a>
 
 <a id="8.4"></a>
 ## Destroy an individual zpool
@@ -213,6 +219,8 @@ For example:
 zpool destroy demo-ost0pool
 ```
 1. Confirm that the pool has been removed with zpool list.
+
+<a href="#8.0">Top of page</a>
 
 <a id="8.5"></a>
 ## Destroy an individual zpool

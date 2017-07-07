@@ -1,3 +1,4 @@
+[**Intel® Manager for Lustre\* Online Help Main Table of Contents**](../README.md)
 # <a id="15.0"></a>Legal Information
 
 Copyright © 2017 Intel Corporation. All Rights Reserved.

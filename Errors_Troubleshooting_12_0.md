@@ -1,3 +1,4 @@
+[**Intel® Manager for Lustre\* Online Help Main Table of Contents**](../README.md)
 # <a id="12.0"></a>Errors and troubleshooting
 
 The following topics are discussed in this chapter:
@@ -233,6 +234,7 @@ manually fail the target over to the peer server. </td>
     </tbody>
 </table>
 
+<a href="#12.0">Top of page</a>
 
 ## <a id="12.2"></a>Running Intel® Manager for Lustre* diagnostics
 
@@ -302,3 +304,4 @@ optional arguments:
  --days-back DAYS_BACK, -d DAYS_BACK
             Number of days back to collect logs. default is 1. 0 would mean today's logs only.
 ```
+<a href="#12.0">Top of page</a>
