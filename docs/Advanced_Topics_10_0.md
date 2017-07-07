@@ -1,13 +1,13 @@
-<a href="./README.md">**Main TOC**</a>
-
 <a id="10.0"></a>
 # Advanced Topics
+<a href="./README.md">**Main TOC**</a>
 
 The following procedures are provided in this chapter:
 
 - <a href="#10.1">File system advanced settings</a>
 - <a href="#10.2">Configure a new management target</a>
 - <a href="#10.3">Detect and monitor existing Lustre* file systems</a>
+- <a href="./README.md">**Main TOC**</a>
 
 <a id="10.1"></a>
 ## File system advanced settings
