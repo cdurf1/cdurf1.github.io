@@ -1,5 +1,4 @@
 # Pre-Installation Tasks
-======================
 
 What Not to Do
 --------------
@@ -132,14 +131,7 @@ yum-config-manager --enable rhel-7-server-optional-rpms
     should also be able to ssh between the Lustre servers and the
     manager server without having to enter a password.
 
-[]{#_LNET_Configuration .anchor}**Note**: If a storage node (a Lustre
-server) is to be used as a metadata server (MDS), to properly enforce
-Lustre file permissions, the MDS *must have access* to the same UID/GID
-database as the Lustre clients. For example, if the Lustre clients are
-using LDAP to provide network-wide user account information, the MDS
-must be configured to check LDAP for user account information. If a pair
-of nodes has been configured as HA peers for an MDT, LDAP must be
-configured on both nodes to ensure proper functionality in the event of
+**Note**: If a storage node (a Lustre server) is to be used as a metadata server (MDS), to properly enforce Lustre file permissions, the MDS *must have access* to the same UID/GID database as the Lustre clients. For example, if the Lustre clients are using LDAP to provide network-wide user account information, the MDS must be configured to check LDAP for user account information. If a pair of nodes has been configured as HA peers for an MDT, LDAP must be configured on both nodes to ensure proper functionality in the event of
 a failover.
 
 **Note**: Non-root users should be prevented from logging into storage
@@ -150,7 +142,7 @@ Client Requirements
 
 A client accessing your Lustre file system (created with Intel® Manager
 for Lustre\* software) must be running Intel® EE for Lustre\* 3.1.0.3
-client software. See [Configuring Clients](#configuring-clients) for
+client software. See [Configuring Clients](ig_ch_07_configure_clients.md) for
 instructions on installing software and configuring clients.
 
 LNET provides the client network infrastructure required by the Lustre
@@ -170,8 +162,8 @@ installed with Intel® EE for Lustre\* software.
 Firewall Considerations
 -----------------------
 
-[]{#_Toc402946281 .anchor}Intel® Manager for Lustre\* software runs on
-servers running RHEL or CentOS, version 7.3. The *firewalld* package
+Intel® Manager for Lustre\* software runs on
+servers running RHEL or CentOS, version 7.3. The *firewalled* package
 needs to be installed and configured for *all file system servers
 before* installing Intel® EE for Lustre\* software. The Intel® EE for
 Lustre\* software installation process will then modify the firewall
