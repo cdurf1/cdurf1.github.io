@@ -51,22 +51,27 @@ To install the software, complete these steps:
 1.  Download the installation archive to a directory on the manager
     server (e.g. /tmp).
 
-2.  Unpack the installation archive using tar: ee-3.1.0.3.tar.gz:
-```#* cd /tmp; mkdir install
-    *#* tar –C install –xzf ee-3.1.0.3.tar.gz
+1.  Unpack the installation archive using tar: ee-3.1.0.3.tar.gz:
+
+
+    ```
+    # cd /tmp; mkdir install
+
+    # tar –C install –xzf ee-3.1.0.3.tar.gz
 ```
-
-
 1.  To install the Intel® EE for Lustre\* software, run:
+
+
+    ```
+    # cd /tmp/install/ ee-3.1.0.3
+
+    # ./install
 ```
- '#' cd /tmp/install/ ee-3.1.0.3
- *#* ./install
-```
 
 
-1. When the prompts below appear, enter your
-    parameters for the first superuser of Intel® Manager for Lustre\*:
 
+1.  When the prompts below appear, enter your parameters for the first superuser of Intel® Manager for Lustre\*:
+    
     **Username:** *&lt;Enter the name of the superuser&gt;*
 
     **Password:** *&lt;Enter a password&gt;*
@@ -75,10 +80,9 @@ To install the software, complete these steps:
 
     **Email:** *&lt;Enter an email address for the superuser&gt;*
 
-    
-
-
     **Note**: Additional Intel® Manager for Lustre\* software superusers as well as file system administrators and users can be created in the manager GUI.
+
+When configuration is complete, a message is displayed indicating the installation was successful.
 
 When configuration is complete, a message is displayed indicating the installation was successful.
 
@@ -105,7 +109,7 @@ When configuration is complete, a message is displayed indicating the installati
 https://<command_center_server_IP_address>/
 ```
 
-    **Note**: If the IP address of the server has an associated FQDN, you can connect to the Intel® Manager for Lustre\* GUI user interface using:
+**Note**: If the IP address of the server has an associated FQDN, you can connect to the Intel® Manager for Lustre\* GUI user interface using:
 
 ```
     https://<command_center_server_fqdn>/
