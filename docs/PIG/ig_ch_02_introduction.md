@@ -66,7 +66,7 @@ mode](#what-is-monitor-only-mode).
 **Note**: Managed HA support *requires* that your entire storage system
 configuration and all interfaces be compliant with a *known
 configuration*. See the [High Availability Configuration
-Specification](#building-the-system-the-high-availability-configuration-spec)
+Specification](ig_ch_03_building.md)
 herein for more information.
 
 What is Monitor-only Mode?
