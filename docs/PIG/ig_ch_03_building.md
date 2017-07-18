@@ -1,5 +1,4 @@
 # Building the System – The High Availability Configuration Spec
-==============================================================
 
 A high-availability Lustre file system managed by Intel® Manager for
 Lustre\* software requires that your entire storage system configuration
@@ -58,8 +57,8 @@ for Lustre\* software consists of the following. See Figure 1.
     optimize performance for a given workload. RAID 6 is recommended for
     OSTs. RAID is implemented independent of Intel® Manager for
     Lustre\* software. Note that Logical Volume Manager (LVM) *is not*
-    supported in [Management mode](#what-is-management-mode), but *is*
-    supported in [Monitor mode](#what-is-monitor-only-mode). Software
+    supported in [Management mode](ig_ch_02_introduction.md/#what-is-management-mode), but *is*
+    supported in [Monitor mode](ig_ch_02_introduction.md/#what-is-monitor-only-mode). Software
     RAID (MDRAID) disk discovery is not supported.
 
 -   **Failover/High Availability ring 1 network**: This network supports
@@ -110,14 +109,11 @@ later.
 
 Figure 1 shows the high-level HA system configuration.
 
-![lustre-configuration4.png](md_Graphics/ig_image2.png){width="5.976068460192476in"
-height="5.201466535433071in"}
+![lustre-configuration4.png](md_Graphics/ig_image2.png)
 
-[]{#_Ref440028836 .anchor}Figure . Lustre\* High-Availability File
-System Configuration
+**Lustre\* High-Availability File System Configuration**
 
-**\
-Note**: All references herein to the *manager GUI* refer to the Intel®
+**Note**: All references herein to the *manager GUI* refer to the Intel®
 Manager for Lustre\* graphical user interface.
 
 Manager Server Requirements
@@ -187,11 +183,9 @@ Manager for Lustre\* software.
 Figure 2 depicts the configuration, interconnect requirements and
 targets for the MGS and MDS.
 
-![mgt\_mdt\_config2.png](md_Graphics/ig_image3.png){width="5.828125546806649in"
-height="5.980930664916885in"}
+![mgt\_mdt\_config2.png](md_Graphics/ig_image3.png)
 
-[]{#_Ref455643078 .anchor}Figure . Management and Metadata Server and
-Target Configuration
+**Management and Metadata Server and Target Configuration**
 
 The MDS and MGS, both independent servers, share the following
 requirements.
@@ -296,10 +290,9 @@ Object Storage Server and Target Requirements
 
 The object storage server (OSS) provides access to the object storage target(s) (OST). There is no specific limit to the number of OSSs. For HA, each OSS must have a failover twin. This means that OSSs are paired. Each OSS pair can provide access for to up to 8 targets or LUNS. The maximum capacity for an OST is 128 terabytes. Figure 3 depicts the configuration and interconnect requirements for HA OSSs and OSTs. See the *Lustre\* 2.X File System Operations Manual, Chapter 5, Setting up a Lustre File System* for more information.
 
-![oss\_config.png](md_Graphics/ig_image4.png){width="6.1875in"
-height="7.087858705161855in"}
+![oss\_config.png](md_Graphics/ig_image4.png)
 
-Figure . Object Storage Server(s) and Target(s) Configuration
+**Object Storage Server(s) and Target(s) Configuration**
 
 Requirements for HA object storage servers and targets are as follows:
 
@@ -362,8 +355,8 @@ Requirements for HA object storage servers and targets are as follows:
     helps to ensure that a full stripe write of 1 MB can be spread
     evenly across all disks in the volume, with no “read, modify, write”
     penalty. Note that Logical Volume Manager (LVM) is not supported in
-    [Management mode](#what-is-management-mode), but is supported in
-    [Monitor mode](#what-is-monitor-only-mode). Software RAID (MDRAID)
+    [Management mode](ig_ch_02_introduction.md/#what-is-management-mode), but is supported in
+    [Monitor mode](ig_ch_02_introduction.md/#what-is-monitor-only-mode). Software RAID (MDRAID)
     disk discovery is not supported.
 
 -   There is no specific limit to the number of object storage servers,
@@ -401,7 +394,7 @@ the Intel® Manager for Lustre\* software GUI.
 PDU](#issues-regarding-power-loss-to-the-bmc-or-pdu)
 
 After you have connected and configured IPMI, see [Appendix A, IPMI
-Checks](#_Appendix_A_-).
+Checks](ig_ch_14_appA_IPMI.md).
 
 ### Power Distribution Units
 
