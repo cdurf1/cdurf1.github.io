@@ -1,5 +1,4 @@
 # About this Document
-===================
 
 Document Purpose
 ----------------
