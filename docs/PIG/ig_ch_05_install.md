@@ -1,5 +1,4 @@
 # Intel® EE for Lustre\* Software Installation
-==============================================
 
 This section describes how to install the Intel® EE for Lustre\*
 software and the Intel® Manager for Lustre\* software on the *manager
@@ -55,20 +54,21 @@ To install the software, complete these steps:
 2.  Unpack the installation archive using tar: ee-3.1.0.3.tar.gz:
 
     ```
-# cd /tmp; mkdir install
-# tar –C install –xzf ee-3.1.0.3.tar.gz
+*#* cd /tmp; mkdir install
+
+*#* tar –C install –xzf ee-3.1.0.3.tar.gz
 ```
 
 
 1.  To install the Intel® EE for Lustre\* software, run:
 
     ```
-# cd /tmp/install/ ee-3.1.0.3
-# ./install
+ *#* cd /tmp/install/ ee-3.1.0.3
+ *#* ./install
 ```
 
 
-1.  []{#_Ref336418703 .anchor}When the prompts below appear, enter your
+1. When the prompts below appear, enter your
     parameters for the first superuser of Intel® Manager for Lustre\*:
 
     **Username:** *&lt;Enter the name of the superuser&gt;*
