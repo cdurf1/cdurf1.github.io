@@ -8,4 +8,4 @@
 - [Intel® Enterprise Edition for Lustre\* Software
 Installation Guide](docs/PIG/ig_TOC.md)
 
-This document provides detailed instructions for installing the Intel® Enterprise Edition for Lustre\* software.  
+  This document provides detailed instructions for installing the Intel® Enterprise Edition for Lustre\* software.  
