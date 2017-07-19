@@ -8,7 +8,7 @@ to help expedite resolution of the problem, please do the following:
 
 1.  [Run chroma diagnostics](#run-chroma-diagnostics).
 
-2.  [Submit a ticket](#Submit_a_ticket).
+2.  [Submit a ticket](#submit-a-ticket).
 
 Run chroma diagnostics
 ----------------------
