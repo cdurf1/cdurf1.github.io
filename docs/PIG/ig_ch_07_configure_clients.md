@@ -1,5 +1,12 @@
 # Configuring Clients 
-====================
+
+**In this Chapter:**
+
+- [Client Requirements](#client-requirements-1)
+- [Installing Intel® EE for Lustre\* software on Clients Running RHEL or CentOS](#installing-intel-ee-for-lustre-software-on-clients-running-rhel-or-centos)
+- [Installing Lustre on SUSE Linux Enterprise Server](#installing-lustre-on-suse-linux-enterprise-server)
+- [Installing and Configuring Lustre Manually](#installing-and-configuring-lustre-manually)
+
 
 A client (compute node) accessing a storage appliance must be running
 Intel® EE for Lustre\* 3.1.0.3 client software. The Lustre file system
@@ -17,14 +24,8 @@ or CentOS Linux, version 6.8 or 7.3.
 
 **Notes**:
 
--   Before using the Red Hat or RHEL software referenced herein, please
-    refer to Red Hat’s website for more information, including without
-    limitation, information regarding the mitigation of potential
-    security vulnerabilities in the Red Hat software.
-
--   Client support for el6 is distributed in the
-    ee-contrib-3.1.0.3/el6/lustre-client-&lt;lu-version&gt;-bundle.tar.gz
-    tarball.
+-   Before using the Red Hat or RHEL software referenced herein, please refer to Red Hat’s website for more information, including without limitation, information regarding the mitigation of potential security vulnerabilities in the Red Hat software.
+- Client support for el6 is distributed in the ee-contrib-3.1.0.3/el6/lustre-client-&lt;lu-version&gt;-bundle.tar.gz tarball.
 
 Intel® EE for Lustre\* software may be installed on file system
 *servers and clients* running SUSE Linux Enterprise version 11 with SP4,
@@ -35,11 +36,11 @@ high availability is not supported by Intel® Manager for Lustre\*
 software on installations running SUSE.
 
 For information about clients running SUSE, see [Installing Lustre on
-SUSE Linux Enterprise Server](#_Installing_Lustre_on).
+SUSE Linux Enterprise Server](ig_ch_08_install_SUSE.md/#installing-Lustre-on).
 
 LNET provides the client network infrastructure required by the Lustre
 file system and LNET must be configured for each client. See [LNET
-Configuration](#_LNET_Configuration).
+Configuration](ig_ch_04_pre_install.md/#LNET-Configuration).
 
 Installing Intel® EE for Lustre\* software on Clients Running RHEL or CentOS
 ----------------------------------------------------------------------------
@@ -66,35 +67,25 @@ perform these steps:**
 
 2.  Install the Lustre client packages on all Lustre clients.
 
-    **Note**: The version of the kernel running on a Lustre client must be
+   **Note**: The version of the kernel running on a Lustre client must be
 the same as the version of the lustre-client-modules-ver package being
 installed. If not, a compatible kernel must be installed on the client
 before the Lustre client packages are installed.
 
-    a.  Log onto a Lustre client as the root user.
+   **a.**  Log onto a Lustre client as the root user.
 
-    b.  Use the yum command to install the packages:
+   **b.**  Use the yum command to install the packages:```# yum --nogpgcheck install pkg1.rpm pkg2.rpm ...```
 
-
-    ```
-# yum --nogpgcheck install pkg1.rpm pkg2.rpm ...
+   **c.**  Verify the packages were installed correctly:
+      ```# rpm -qa|egrep "lustre|kernel"|sort
 ```
 
 
-    c.  Verify the packages were installed correctly:
+   d.  Reboot the client.
 
+   e.  Repeat these steps on each Lustre client.
 
-    ```
-# rpm -qa|egrep "lustre|kernel"|sort
-```
-
-
-    d.  Reboot the client.
-
-    e.  Repeat these steps on each Lustre client.
-
-
-1.  Configure LNET on the client.
+1. Configure LNET on the client.
 
 2.  Launch Intel® Manager for Lustre\* software and login as
     administrator. Go to the manager GUI to obtain mount point
@@ -180,6 +171,4 @@ mount -t lustre 10.214.13.245@tcp0:/test /mnt/test
 ```
 
 
-1.  On the client, enter the mount command provided.[[[[]{#_Toc325121001
-    .anchor}]{#_Ref327448701 .anchor}]{#_Toc325385416
-    .anchor}]{#InstallingChromaManager-InstallingAdditi .anchor}
+1.  On the client, enter the mount command provided.

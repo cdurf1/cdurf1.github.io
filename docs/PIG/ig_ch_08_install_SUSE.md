@@ -1,5 +1,4 @@
 # Installing Lustre on SUSE Linux Enterprise Server
-=================================================
 
 Intel® EE for Lustre\* software may be installed on file system servers
 and clients running SUSE Linux Enterprise version 11 with SP4, and on
@@ -30,4 +29,4 @@ For information regarding installing and configuring Lustre, see Part II
 of the Lustre Operations Manual. This is available at the following URL.
 If this page does not load, copy and paste it into your browser.
 
-<https://build.hpdd.intel.com/job/lustre-manual/lastSuccessfulBuild/artifact/lustre_manual.xhtml#part.installconfig>
+https://build.hpdd.intel.com/job/lustre-manual/lastSuccessfulBuild/artifact/lustre_manual.xhtml#part.installconfig

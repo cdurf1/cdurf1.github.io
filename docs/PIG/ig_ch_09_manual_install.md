@@ -1,5 +1,4 @@
 # Installing and Configuring Lustre Manually
-==========================================
 
 Some installations may opt to deploy and configure a Lustre file system
 manually, without Intel® Manager for Lustre\* software. Other

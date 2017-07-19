@@ -1,7 +1,28 @@
 # Appendix C - Backup and Recovery of Servers Managed by Intel® Manager for Lustre\* Software
-===========================================================================================
 
-[]{#_Toc402946326 .anchor}**Note**: This appendix is outdated and in
+**In this Chapter:
+
+- [Introduction](#introduction)
+- [Backup Overview](#backup-overview-1)
+- [Example Backup Checklist](#example-backup-checklist-1)
+- [Operating System](#operating-system-1)
+- [Host Name Resolution](#host-name-resolution-1)
+- [Package Update management environment (RPM & YUM)](#package-update-management-environment-rpm-yum-1)
+- [Identity configuration](#identity-configuration-1)
+- [Security configuration](#security-configuration-1)
+- [Creating a Backup Manifest for a Metadata Server or Object Storage Server](#creating-a-backup-manifest-for-a-metadata-server-or-object-storage-server)
+- [Chroma Agent Configuration](#chroma-agent-configuration)
+- [Intel® Manager for Lustre\* YUM Repository Configuration](#intel-manager-for-lustre-yum-repository-configuration)
+- [Network Configuration](#network-configuration)
+- [SELinux Configuration](#selinux-configuration)
+- [Lustre LNET Configuration](#lustre-lnet-configuration)
+- [Pacemaker and Corosync High Availability Framework](#pacemaker-and-corosync-high-availability-framework)
+- [System Services Startup Scripts (rc.sysinit)](#system-services-startup-scripts-rc.sysinit)
+- [Sample Automated Backup Script for Intel® EE Lustre Servers](#sample-automated-backup-script-for-intel-ee-lustre-servers)
+- [Restoring a Server from Backup](#restoring-a-server-from-backup)
+
+
+**Note**: This appendix is outdated and in
 revision.  Procedures in this appendix were developed for servers
 running RHEL 6.7.  The process for servers running RHEL 7.3 is very
 similar, but *this appendix has not yet been revised or tested for RHEL
@@ -24,7 +45,7 @@ Intel® Manager for Lustre\* software provides a way to configure Lustre
 servers as metadata and object storage servers. Such servers are
 configured into high availability cluster pairs as defined in this
 section: [Building the System – The High Availability Configuration
-Spec](#building-the-system-the-high-availability-configuration-spec).
+Spec](ig_ch_03_building.md/#building-the-system-the-high-availability-configuration-spec).
 
 For a high-availability Lustre file system configured and managed by
 Intel® Manager for Lustre\* software, there must be at least one cluster
@@ -184,53 +205,36 @@ is being used for Lustre networking).
 
 An *example* Kickstart template:
 
+
+```
 install
-
 text
-
 reboot
-
 url --url=http://10.0.1.1/CS6.4/
-
 lang en\_US.UTF-8
-
 keyboard us
-
 network --hostname ee-iml --onboot yes --device eth0 --bootproto static
 --ip 10.0.2.1 --netmask 255.255.0.0 --gateway 10.0.0.1 --noipv6
 --nameserver 8.8.8.8
-
 network --onboot yes --device eth1 --bootproto static --ip 10.1.0.1
 --netmask 255.255.0.0 --noipv6
-
 rootpw  --iscrypted xyzzy
-
 firewall --disabled
-
 selinux --disabled
-
 authconfig --enableshadow --passalgo=sha512
-
 timezone --utc America/New\_York
-
 bootloader --location=mbr --driveorder=vda --append="crashkernel=auto
 console=ttyS0,115200 rd\_NO\_PLYMOUTH"
-
 zerombr
-
 clearpart --all --initlabel --drives=vda
-
 autopart
-
 repo --name="CentOS" --baseurl=http://10.0.1.1/CS6.4/ --cost=100
-
 %packages
-
 @core
-
 @base
-
 %end
+```
+
 
 Kickstart templates are flexible and powerful, and can be extended with
 the addition of pre- and post-install scripts. With a modest amount of
@@ -629,13 +633,13 @@ Resource: demo-MDT0000\_ae5915 successfully cleaned up
     failback (or use Intel® Manager for Lustre\* GUI to manage the
     resources):
 
-pcs resource move &lt;resource name&gt;
+    pcs resource move &lt;resource name&gt;
 
-pcs resource clear &lt;resource name&gt;
+    pcs resource clear &lt;resource name&gt;
 
-> The resource clear command removes any constraints imposed by the
-> move, so that the resource can be moved back again in the event of a
-> subsequent failover trigger.
+    The resource clear command removes any constraints imposed by the
+move, so that the resource can be moved back again in the event of a
+subsequent failover trigger.
 
 1.  It may be useful during the initial stages of the recovery process
     for Pacemaker to disable the constraints around the fencing agents.
@@ -647,7 +651,7 @@ pcs resource clear &lt;resource name&gt;
     full service is restored, this configuration change must be
     reversed.
 
-pcs property set stonith-enabled=false
+    pcs property set stonith-enabled=false
 
 The cluster configuration has now been recovered to the running state
 based on the last backup taken. Note that this process assumes that the

@@ -1,5 +1,4 @@
 # Updating the Operating System
-=============================
 
 Intel® EE for Lustre\* software release 3.1.0.3 runs on servers and
 clients running RHEL or CentOS, version 7.3; client only support is

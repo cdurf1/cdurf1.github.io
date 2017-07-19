@@ -1,5 +1,4 @@
 # Appendix A - IPMI Checks
-========================
 
 Procedures provided in this appendix can be used to establish a level of
 confidence that your IPMI implementation is functional. Note that IPMI
@@ -24,7 +23,6 @@ Perform the following steps:
     Red Hat/CentOS, verify that the following commands complete
     successfully:
 
-<!-- -->
 
 a.  fence\_ipmilan -a &lt;BMC ADDRESS&gt; -l &lt;BMC USERNAME&gt; -p
     &lt;BMC PASSWORD&gt; -o monitor

@@ -1,5 +1,13 @@
 # Introducing the Intel® Enterprise Edition for Lustre\* Software
 
+**In this Chapter:**
+
+- [What is Intel® Manager for Lustre\* Software?](#what-is-intel-manager-for-lustre-software)
+- [What is Management Mode?](#what-is-management-mode)
+- [What is Monitor-only Mode?](#what-is-monitor-only-mode)
+- [The Configuration Page in Monitor-only mode](#the-configuration-page-in-monitor-only-mode)
+- [Building a Lustre Storage Solution over a ZFS File System](#building-a-lustre-storage-solution-over-a-zfs-file-system)
+
 Intel® Enterprise Edition for Lustre\* software, when integrated with
 Linux, aggregates a range of storage hardware into a single Lustre\*
 file system that is well proven for delivering fast IO to applications
@@ -66,8 +74,7 @@ mode](#what-is-monitor-only-mode).
 **Note**: Managed HA support *requires* that your entire storage system
 configuration and all interfaces be compliant with a *known
 configuration*. See the [High Availability Configuration
-Specification](ig_ch_03_building.md)
-herein for more information.
+Specification](ig_ch_03_building.md) for more information.
 
 What is Monitor-only Mode?
 --------------------------

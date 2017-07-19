@@ -1,5 +1,18 @@
 # Building the System – The High Availability Configuration Spec
 
+**In this Chapter:**
+
+- [Overall System Configuration](#overall-system-configuration)
+- [Manager Server Requirements](#manager-server-requirements)
+- [Management Server and Metadata Server Requirements](#management-server-and-metadata-server-requirements)
+- [Management Target](#management-target)
+- [Metadata Target](#metadata-target)
+- [Object Storage Server and Target Requirements](#object-storage-server-and-target-requirements)
+- [Power Control to Support Failover](#power-control-to-support-failover)
+- [Intelligent Platform Management Interface](#intelligent-platform-management-interface)
+- [Power Distribution Units](#power-distribution-units)
+- [Issues Regarding Power Loss to the BMC or PDU](#issues-regarding-power-loss-to-the-bmc-or-pdu)
+
 A high-availability Lustre file system managed by Intel® Manager for
 Lustre\* software requires that your entire storage system configuration
 and all interfaces comply with the High Availability Configuration
@@ -107,11 +120,10 @@ Manager for Lustre\* software GUI). Also, keep records of how failover
 power control has been implemented (IPMI or PDUs) as this will be needed
 later.
 
-Figure 1 shows the high-level HA system configuration.
+The following figure shows the high-level HA system configuration.
 
 ![lustre-configuration4.png](md_Graphics/ig_image2.png)
 
-**Lustre\* High-Availability File System Configuration**
 
 **Note**: All references herein to the *manager GUI* refer to the Intel®
 Manager for Lustre\* graphical user interface.
@@ -180,12 +192,12 @@ configuration requirements.
 **Note**: The MGS is separate from the independent server running Intel®
 Manager for Lustre\* software.
 
-Figure 2 depicts the configuration, interconnect requirements and
+The following figure depicts the configuration, interconnect requirements and
 targets for the MGS and MDS.
 
 ![mgt\_mdt\_config2.png](md_Graphics/ig_image3.png)
 
-**Management and Metadata Server and Target Configuration**
+
 
 The MDS and MGS, both independent servers, share the following
 requirements.
@@ -212,78 +224,31 @@ requirements.
 
     -   rhel-x86\_64-server-7
 
--   A dedicated Ethernet port capable of one gigabit/sec. This port
-    connects to the Management network.
-
-
--   yum needs to be functional, with any needed proxies, and default yum
-    repositories must be fully configured. Run yum update to verify that
-    yum updates occur successfully.
-
-
--   HA servers are configured in pairs, with a primary server and a
-    failover server.
-
--   Crossover cable – Each HA server (excluding the manager server) is
-    connected to its peer HA server by a private crossover link. This is
-    an Ethernet connection.
-
--   All required multipath configuration between each storage server
-    controller and its physical storage devices must be complete.
-
--   Storage controllers and drives must already be installed and LUNs
-    must already be configured and present.
-
--   Each server of a failover pair must have access to exactly the same
-    LUNs as its peer. Each LUN is visible only to its two, paired
-    failover servers.
-
-
--   For proper failover functionality, paired servers must be able to
-    access the other’s power control device. This can be implemented
-    either using power distribution units (PDUs) or IPMI. Recommended
-    PDUs are from American Power Conversion Corp., models AP7900,
-    AP7901, AP7902, AP7920, AP7921, AP7930, AP7931, AP7932, AP7960,
-    AP7990, and AP8941. Each server should be supplied with two power
-    supply sources, for redundancy.
+-   A dedicated Ethernet port capable of one gigabit/sec. This port connects to the Management network.
+- yum needs to be functional, with any needed proxies, and default yum repositories must be fully configured. Run yum update to verify that yum updates occur successfully.
+- HA servers are configured in pairs, with a primary server and a failover server.
+- Crossover cable – Each HA server (excluding the manager server) is  connected to its peer HA server by a private crossover link. This is an Ethernet connection.
+- All required multipath configuration between each storage server controller and its physical storage devices must be complete.
+- Storage controllers and drives must already be installed and LUNs must already be configured and present.
+-  Each server of a failover pair must have access to exactly the same LUNs as its peer. Each LUN is visible only to its two, paired failover servers.
+- For proper failover functionality, paired servers must be able to access the other’s power control device. This can be implemented either using power distribution units (PDUs) or IPMI. Recommended PDUs are from American Power Conversion Corp., models AP7900, AP7901, AP7902, AP7920, AP7921, AP7930, AP7931, AP7932, AP7960, AP7990, and AP8941. Each server should be supplied with two power supply sources, for redundancy.
 
 Management Target
 -----------------
 
--   For comparatively small file systems, the typical management target
-    capacity might be 100 MB. See the *Lustre\* 2.X File System
-    Operations Manual, Chapter 5, Setting up a Lustre File System* for
-    more information.
-
--   Intel® Manager for Lustre\* software does *not* support an MGT
-    larger than 10 Gbytes.
-
--   RAID 1 is recommended. Software RAID (MDRAID) disk discovery is not
-    supported.
-
--   As described above, the MGS and MDS servers are connected to the
-    management storage in a primary/failover configuration.
-
--   All required multipath configuration between each storage server
-    controller and its physical storage devices must be complete.
+-   For comparatively small file systems, the typical management target capacity might be 100 MB. See the *Lustre\* 2.X File System Operations Manual, Chapter 5, Setting up a Lustre File System* for more information.
+- Intel® Manager for Lustre\* software does *not* support an MGT larger than 10 Gbytes.
+- RAID 1 is recommended. Software RAID (MDRAID) disk discovery is not supported.
+- As described above, the MGS and MDS servers are connected to the management storage in a primary/failover configuration.
+- All required multipath configuration between each storage server controller and its physical storage devices must be complete.
 
 Metadata Target
 ---------------
 
--   Storage capacity for the metadata target should be 2K bytes per
-    storage system file. Multiply the anticipated number of files the
-    file system will contain by 2K to determine the required capacity of
-    the target. See the *Lustre\* 2.X File System Operations Manual,
-    Chapter 5, Setting up a Lustre File System* for more information.
-
--   RAID 10 is recommended for metadata targets. Software RAID (MDRAID)
-    disk discovery is not supported.
-
--   As described above, the MGS and MDS servers are connected to
-    metadata storage in a primary/failover configuration.
-
--   All required multipath configuration between each storage server
-    controller and its physical storage devices must be complete.
+-   Storage capacity for the metadata target should be 2K bytes per storage system file. Multiply the anticipated number of files the file system will contain by 2K to determine the required capacity of the target. See the *Lustre\* 2.X File System Operations Manual, Chapter 5, Setting up a Lustre File System* for more information.
+- RAID 10 is recommended for metadata targets. Software RAID (MDRAID) disk discovery is not supported.
+- As described above, the MGS and MDS servers are connected to metadata storage in a primary/failover configuration.
+- All required multipath configuration between each storage server controller and its physical storage devices must be complete.
 
 Object Storage Server and Target Requirements
 ---------------------------------------------
@@ -296,72 +261,23 @@ The object storage server (OSS) provides access to the object storage target(s) 
 
 Requirements for HA object storage servers and targets are as follows:
 
--   Red Hat Enterprise Linux or CentOS Linux version 7.3 must be
-    installed. All Lustre servers should be running the same OS and
-    version. CentOS must have access to the base repositories and update
-    repositories. Red Hat must have the following channels registered
-    and enabled:
+-   Red Hat Enterprise Linux or CentOS Linux version 7.3 must be installed. All Lustre servers should be running the same OS and version. CentOS must have access to the base repositories and update repositories. Red Hat must have the following channels registered and enabled:
+    - rhel-x86\_64-server-supplementary-7
+    - rhel-x86\_64-server-optional-7
+    - rhel-x86\_64-server-ha-7
+    - rhel-x86\_64-server-7
 
-    -   rhel-x86\_64-server-supplementary-7
-
-    -   rhel-x86\_64-server-optional-7
-
-    -   rhel-x86\_64-server-ha-7
-
-    -   rhel-x86\_64-server-7
-
--   A storage device of at least 6 GB on each server to store the
-    operating system and additional packages. Generally, OSS and OST
-    space requirements are driven by the total size of the file system,
-    the number of servers and OST, the number of files in the file
-    system and the file size. See the Lustre\* 2.X File System
-    Operations Manual, Chapter 5, Setting up a Lustre File System for
-    more information.
-
--   A dedicated Ethernet port capable of one gigabit/sec. This port
-    connects to the Management network.
-
--   yum needs to be functional, with any needed proxies, and default yum
-    repositories must be fully configured. Run yum update to verify that
-    yum updates occur successfully.
-
--   HA servers are configured in pairs, with a primary server and a
-    failover server.
-
--   Crossover cable – Each HA server (excluding the manager server) is
-    connected to its peer HA server by a private crossover link. This is
-    an Ethernet connection.
-
--   Any required multipath configuration between each storage server
-    controller and its physical storage devices must be complete.
-
--   Storage controllers and drives must already be installed and LUNs
-    must already be configured and present.
-
--   Each server of a failover pair must have access to exactly the same
-    LUNs as its peer. Each LUN is visible only to its two, paired
-    failover servers.
-
--   For proper failover functionality, paired servers must be able to
-    access the other’s power control device. This can be implemented
-    using power distribution units (PDUs) or by using IPMI. Recommended
-    PDUs are from American Power Conversion Corp., models AP7900,
-    AP7901, AP7902, AP7920, AP7921, AP7930, AP7931, AP7932, AP7960, and
-    AP7990. Each server should be supplied with two power supply
-    sources, for redundancy.
-
--   RAID 6, n+2 is recommended for object storage targets. For optimal
-    write performance, n should be a power of 2 (e.g. 4, 8, or 16). This
-    helps to ensure that a full stripe write of 1 MB can be spread
-    evenly across all disks in the volume, with no “read, modify, write”
-    penalty. Note that Logical Volume Manager (LVM) is not supported in
-    [Management mode](ig_ch_02_introduction.md/#what-is-management-mode), but is supported in
-    [Monitor mode](ig_ch_02_introduction.md/#what-is-monitor-only-mode). Software RAID (MDRAID)
-    disk discovery is not supported.
-
--   There is no specific limit to the number of object storage servers,
-    but each OSS should support no more than eight target storage
-    devices.
+-   A storage device of at least 6 GB on each server to store the operating system and additional packages. Generally, OSS and OST space requirements are driven by the total size of the file system, the number of servers and OST, the number of files in the file system and the file size. See the Lustre\* 2.X File System Operations Manual, Chapter 5, Setting up a Lustre File System for more information.
+-  A dedicated Ethernet port capable of one gigabit/sec. This port connects to the Management network.
+- yum needs to be functional, with any needed proxies, and default yum repositories must be fully configured. Run yum update to verify that yum updates occur successfully.
+- HA servers are configured in pairs, with a primary server and a failover server.
+- Crossover cable – Each HA server (excluding the manager server) is connected to its peer HA server by a private crossover link. This is an Ethernet connection.
+- Any required multipath configuration between each storage server controller and its physical storage devices must be complete.
+- Storage controllers and drives must already be installed and LUNs must already be configured and present.
+- Each server of a failover pair must have access to exactly the same LUNs as its peer. Each LUN is visible only to its two, paired failover servers.
+- For proper failover functionality, paired servers must be able to access the other’s power control device. This can be implemented using power distribution units (PDUs) or by using IPMI. Recommended PDUs are from American Power Conversion Corp., models AP7900, AP7901, AP7902, AP7920, AP7921, AP7930, AP7931, AP7932, AP7960, and AP7990. Each server should be supplied with two power supply sources, for redundancy.
+- RAID 6, n+2 is recommended for object storage targets. For optimal write performance, n should be a power of 2 (e.g. 4, 8, or 16). This helps to ensure that a full stripe write of 1 MB can be spread evenly across all disks in the volume, with no “read, modify, write” penalty. Note that Logical Volume Manager (LVM) is not supported in [Management mode](ig_ch_02_introduction.md/#what-is-management-mode), but is supported in [Monitor mode](ig_ch_02_introduction.md/#what-is-monitor-only-mode). Software RAID (MDRAID) disk discovery is not supported.
+- There is no specific limit to the number of object storage servers, but each OSS should support no more than eight target storage devices.
 
 Power Control to Support Failover
 ---------------------------------

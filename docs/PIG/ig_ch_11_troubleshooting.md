@@ -1,5 +1,4 @@
 # General Troubleshooting
-=======================
 
 Consider the following tips before contacting technical support as you
 may find this information useful when debugging an issue:
@@ -13,7 +12,7 @@ may find this information useful when debugging an issue:
     click on the command that failed to display a detailed message.
 
 Troubleshooting information for known issues you may encounter is
-provided below. Also, see [Getting Help](#getting-help).
+provided below. Also, see [Getting Help](ig_ch_17_appD_getting_help.md).
 
 ***Problem:* When you run chroma-config, a message is displayed that
 includes the following: “*Please correct the hostname resolution."*\

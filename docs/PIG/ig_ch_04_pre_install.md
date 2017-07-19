@@ -1,27 +1,26 @@
 # Pre-Installation Tasks
 
+**In this Chapter:**
+
+- [What Not to Do](#what-not-to-do)
+- [LNET Configuration](#lnet-configuration)
+- [Server Configuration](#server-configuration)
+- [Client Requirements](#client-requirements)
+- [Linux\* Kernel Rebuilds and Patches](#linux-kernel-rebuilds-and-patches)
+- [Firewall Considerations](#firewall-considerations)
+
+
 What Not to Do
 --------------
 
 Please do *not* perform the following tasks, as these tasks (among
 others) are performed automatically, or will conflict with the software:
 
--   Do **not** configure IP addresses for the crossover cable interfaces
-    (server to target).
-
--   Do **not** install or configure Lustre, Corosync, or Pacemaker.
-    Install Intel® EE for Lustre\* software only as described in this
-    guide.
-
--   Do **not** configure NTP on storage servers.
-
--   When installing Red Hat Enterprise Linux or CentOS Linux, do **not**
-    use the EPEL repositories. Uninstall EPEL-release on all systems if
-    it is installed.
-
--   Do **not** install CMAN (Cluster Manager) or other packages that use
-    the Red Hat fence agents. Intel® Manager for Lustre\* software will
-    have package conflicts. Remove all such packages from all systems.
+-   Do **not** configure IP addresses for the crossover cable interfaces (server to target).
+- Do **not** install or configure Lustre, Corosync, or Pacemaker. Install Intel® EE for Lustre\* software only as described in this guide.
+- Do **not** configure NTP on storage servers.
+- When installing Red Hat Enterprise Linux or CentOS Linux, do **not** use the EPEL repositories. Uninstall EPEL-release on all systems if it is installed.
+- Do **not** install CMAN (Cluster Manager) or other packages that use the Red Hat fence agents. Intel® Manager for Lustre\* software will have package conflicts. Remove all such packages from all systems.
 
 LNET Configuration
 ------------------
@@ -131,7 +130,14 @@ yum-config-manager --enable rhel-7-server-optional-rpms
     should also be able to ssh between the Lustre servers and the
     manager server without having to enter a password.
 
-**Note**: If a storage node (a Lustre server) is to be used as a metadata server (MDS), to properly enforce Lustre file permissions, the MDS *must have access* to the same UID/GID database as the Lustre clients. For example, if the Lustre clients are using LDAP to provide network-wide user account information, the MDS must be configured to check LDAP for user account information. If a pair of nodes has been configured as HA peers for an MDT, LDAP must be configured on both nodes to ensure proper functionality in the event of
+**Note**: If a storage node (a Lustre
+server) is to be used as a metadata server (MDS), to properly enforce
+Lustre file permissions, the MDS *must have access* to the same UID/GID
+database as the Lustre clients. For example, if the Lustre clients are
+using LDAP to provide network-wide user account information, the MDS
+must be configured to check LDAP for user account information. If a pair
+of nodes has been configured as HA peers for an MDT, LDAP must be
+configured on both nodes to ensure proper functionality in the event of
 a failover.
 
 **Note**: Non-root users should be prevented from logging into storage
@@ -147,7 +153,7 @@ instructions on installing software and configuring clients.
 
 LNET provides the client network infrastructure required by the Lustre
 file system and LNET must be configured for each client. See [LNET
-Configuration](#_LNET_Configuration).
+Configuration](#LNET-Configuration).
 
 Linux\* Kernel Rebuilds and Patches
 -----------------------------------

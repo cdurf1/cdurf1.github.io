@@ -1,5 +1,9 @@
 # Creating a Managed Lustre File System
-=====================================
+
+**In this Chapter:**
+
+- [Adding Storage Servers to a Lustre File System](#adding-storage-servers-to-a-lustre-file-system)
+- [Administering a Lustre File System](#administering-a-lustre-file-system)
 
 After Intel® EE for Lustre\* software is installed, point your web
 browser to the Intel® Manager for Lustre\* dashboard. Use Chrome\* or
@@ -52,15 +56,13 @@ firewalls on the manager and storage servers.
 Administering a Lustre File System 
 -----------------------------------
 
-[[]{#OLE_LINK2 .anchor}]{#OLE_LINK1 .anchor}***WARNING***: *To manage
-Lustre file systems from the command line, you must use the Intel®
-Manager for Lustre\* command line interface (CLI).*
+**WARNING**: To manage Lustre file systems from the command line, you must use the Intel® Manager for Lustre\* command line interface (CLI).
 
 ***WARNING**: Modifying a file system manually from a shell on a storage
 server will interfere with the ability of the Intel® Manager for
 Lustre\* software to manage and monitor the file system. *
 
-[]{#_Toc325378096 .anchor}Storage servers created in the manager GUI can
+Storage servers created in the manager GUI can
 be managed using the manager GUI or the command line interface. For
 information about using the CLI, see the Intel® Manager for Lustre\*
 online Help topic*, Using the command line interface*.

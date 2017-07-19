@@ -1,5 +1,4 @@
 # Installing Updates to Intel® EE for Lustre\* software
-=====================================================
 
 **Note**: Perform any OS update prior to updating the Intel® EE for
 Lustre\* software.
@@ -66,6 +65,3 @@ server and then all file system managed servers, do the following:
 
 7.  When all servers have been updated, restart the file system(s) that
     were stopped for this update.
-
-[[[]{#_Toc402946296 .anchor}]{#_Appendix_A_-
-.anchor}]{#IPMI_Configuration .anchor}

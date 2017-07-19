@@ -1,5 +1,33 @@
 # Appendix B - Backing up and Restoring Intel® Manager for Lustre\* Server Software
-=================================================================================
+
+**In this Chapter:**
+
+- [Backup Overview](#backup-overview)
+- [Example Backup Checklist](#example-backup-checklist)
+- [Operating System](#operating-system)
+- [Host Name Resolution](#host-name-resolution)
+- [Package Update management environment (RPM & YUM)](#package-update-management-environment-rpm-yum)
+- [Identity configuration](#identity-configuration)
+- [Security configuration](#security-configuration)
+- [Intel® Manager for Lustre\* software](#intel-manager-for-lustre-software)
+- [Creating a Backup Manifest for the Intel® Manager for Lustre\* Server](#creating-a-backup-manifest-for-the-intel-manager-for-lustre-server)
+- [Network Configuration Files](#network-configuration-files)
+- [YUM Configuration](#yum-configuration)
+- [User Configuration](#user-configuration)
+- [SSH Host keys (Optional)](#ssh-host-keys-optional)
+- [SSH user keys (Optional)](#ssh-user-keys-optional)
+- [NTP Configuration](#ntp-configuration)
+- [Intel® Manager for Lustre\* SSL Certificates](#intel-manager-for-lustre-ssl-certificates)
+- [Intel® Manager for Lustre\* Database](#intel-manager-for-lustre-database)
+- [Restoring the Intel® Manager for Lustre\* Service](#restoring-the-intel-manager-for-lustre-service)
+- [Re-install OS and Restore System Configuration](#re-install-os-and-restore-system-configuration)
+- [Re-install Intel® Manager for Lustre\* software](#re-install-intel-manager-for-lustre-software)
+- [Restore the NTP Configuration](#restore-the-ntp-configuration)
+- [Restore the Intel® Manager for Lustre\* SSL certificates](#restore-the-intel-manager-for-lustre-ssl-certificates)
+- [Restore the PostgresSQL Database](#restore-the-postgressql-database)
+- [Restart Intel® Manager for Lustre\* software](#restart-intel-manager-for-lustre-software)
+- [Potential Issues](#potential-issues)
+
 
 An effective system recovery strategy requires that the administrator
 maintains a current backup of critical files and implements a reliable
@@ -119,7 +147,6 @@ Manager for Lustre\* service.
 
 -   Save the Kickstart Template from OS Installation (or create one)
 
-<!-- -->
 
 -   Save OS network configuration (can be included in Kickstart
     template)
@@ -171,7 +198,7 @@ procedures may be required to ensure that relevant data is persistently
 and reliably backed up
 
 Operating system requirements are covered in this guide under [Manager
-Server Requirements](#manager-server-requirements). The following
+Server Requirements](ig_ch_03_building.md/#manager-server-requirements). The following
 example Kickstart template describes a basic platform with a small set
 of packages and two network interfaces: one for provisioning the OS and
 connection to external infrastructure, and the other for connection to
@@ -179,53 +206,36 @@ the Intel® EE for Lustre\* management network.
 
 An *example* Kickstart template:
 
+
+```
 install
-
 text
-
 reboot
-
 url --url=http://10.0.1.1/CS6.4/
-
 lang en\_US.UTF-8
-
 keyboard us
-
 network --hostname ee-iml --onboot yes --device eth0 --bootproto static
 --ip 10.0.2.1 --netmask 255.255.0.0 --gateway 10.0.0.1 --noipv6
 --nameserver 8.8.8.8
-
 network --onboot yes --device eth1 --bootproto static --ip 10.1.0.1
 --netmask 255.255.0.0 --noipv6
-
 rootpw --iscrypted xyzzy
-
 firewall --disabled
-
 selinux --disabled
-
 authconfig --enableshadow --passalgo=sha512
-
 timezone --utc America/New\_York
-
 bootloader --location=mbr --driveorder=vda --append="crashkernel=auto
 console=ttyS0,115200 rd\_NO\_PLYMOUTH"
-
 zerombr
-
 clearpart --all --initlabel --drives=vda
-
 autopart
-
 repo --name="CentOS" --baseurl=http://10.0.1.1/CS6.8/ --cost=100
-
 %packages
-
 @core
-
 @base
-
 %end
+```
+
 
 Kickstart templates are flexible and powerful, and can be extended with
 the addition of pre- and post-install scripts. With a modest amount of
@@ -307,6 +317,8 @@ or an integrated enterprise backup platform.
 
 ### Network Configuration Files
 
+
+```
 mkdir -p \$HOME/backup/etc/sysconfig
 
 cp -a /etc/sysconfig/network /etc/sysconfig/network-scripts/ifcfg-\*
@@ -317,17 +329,25 @@ cp -p /etc/hosts \$HOME/backup/etc/.
 cp -p /etc/resolv.conf \$HOME/backup/etc/.
 
 cp -p /etc/nsswitch.conf \$HOME/backup/etc/.
+```
+
 
 ### YUM Configuration
 
+
+```
 mkdir -p \$HOME/backup/etc
 
 cp /etc/yum.conf \$HOME/backup/etc/.
 
 cp -a /etc/yum.repos.d/\* \$HOME/backup/etc/.
+```
+
 
 ### User Configuration
 
+
+```
 mkdir -p \$HOME/backup/etc
 
 cp -p /etc/passwd \$HOME/backup/etc/.
@@ -339,6 +359,8 @@ cp -p /etc/group \$HOME/backup/etc/.
 cp -p /etc/gshadow \$HOME/backup/etc/.
 
 cp -p /etc/sudoers \$HOME/backup/etc/.
+```
+
 
 ### SSH Host keys (Optional)
 
@@ -357,9 +379,13 @@ order to prevent the SSH key pair from being misappropriated.
 Accordingly, this step is optional, but it can be useful if one wants to
 re-create the original server as closely as possible.
 
+
+```
 mkdir -p \$HOME/backup/etc/ssh
 
 cp -p /etc/ssh/ssh\_host\*key\* \$HOME/backup/etc/ssh/.
+```
+
 
 ### SSH user keys (Optional)
 
@@ -375,15 +401,23 @@ redistributed to all hosts.
 
 For RSA keys:
 
+
+```
 mkdir -m 0700 -p \$HOME/backup/root/.ssh
 
 cp -p /root/.ssh/id\_rsa\* \$HOME/backup/root/.ssh/.
+```
+
 
 For DSA keys:
 
+
+```
 mkdir -m 0700 -p \$HOME/backup/root/.ssh
 
 cp /root/.ssh/id\_dsa\* \$HOME/backup/etc/root/.ssh/.
+```
+
 
 As with the SSH host keys, this practice is not generally recommended
 because the backup must be protected from compromise in order to prevent
@@ -397,9 +431,13 @@ The Intel® Manager for Lustre\* software installation program will
 generate an NTP configuration file. After installation completes, create
 a backup of the resulting file:
 
+
+```
 mkdir -p \$HOME/backup/etc
 
 cp /etc/ntp.conf \$HOME/backup/etc/.
+```
+
 
 ### Intel® Manager for Lustre\* SSL Certificates
 
@@ -418,6 +456,8 @@ are the same. To support successfully restoring Intel® Manager for
 Lustre\* software and restoring communication with the agents, create a
 backup of the following certificate files located on the manager server.
 
+
+```
 mkdir -p \$HOME/backup/var/lib/chroma
 
 cp /var/lib/chroma/authority.crt \~/backup/var/lib/chroma/.
@@ -428,7 +468,9 @@ cp /var/lib/chroma/authority.srl \~/backup/var/lib/chroma/.
 
 cp /var/lib/chroma/manager.crt \~/backup/var/lib/chroma/.
 
-cp /var/lib/chroma/manager.pem \~/backup/var/lib/chroma/.
+cp /var/lib/chroma/manager.pem \~/backup/var/lib/chroma/
+```
+.
 
 ### Intel® Manager for Lustre\* Database
 
@@ -446,10 +488,14 @@ reliable mechanism for capturing a consistent backup of the databases
 managed by PostgreSQL. The approximate command, when executed as the
 root superuser on a RHEL or CentOS based operating system is:
 
+
+```
 mkdir -p \$HOME/backup
 
 su - postgres -c "/usr/bin/pg\_dumpall --clean" | /bin/gzip &gt;
 \$HOME/backup/pgbackup-\`date +\\%Y-\\%m-\\%d-\\%H:\\%M:\\%S\`.sql.gz
+```
+
 
 Note that while the command is executed as root, the database backup
 program is in fact run as the PostgreSQL superuser, called postgres. The
@@ -511,7 +557,7 @@ This process is essentially the same as that used to originally
 provision the manager server, with additional steps to recover the
 database and SSL certificates. The server hardware and operating system
 should conform closely to the requirements under [Manager Server
-Requirements](#manager-server-requirements). Network connections,
+Requirements](ig_ch_03_building.md/#manager-server-requirements). Network connections,
 localization, user accounts, etc., should all be established as before
 the server/services failure. It is essential to ensure that the manager
 server is functionally identical to the original instance. As discussed
@@ -536,11 +582,15 @@ When installation completes, shutdown the Intel® Manager for Lustre\*
 software and its related services immediately, but keep the PostgreSQL
 database server running:
 
+
+```
 service rabbitmq-server stop
 
 service chroma-supervisor stop
 
 service httpd stop
+```
+
 
 **Caution**: Do not conduct any further configuration of Intel®
 Manager for Lustre\* software. Do not attempt to re-discover Intel® EE
@@ -552,9 +602,13 @@ installation is verified as working to your satisfaction.
 
 Restore the backup of /etc/ntp.conf and restart NTP:
 
+
+```
 cp \$HOME/backup/etc/ntp.conf /etc/ntp.conf
 
 service ntpd restart
+```
+
 
 ### Restore the Intel® Manager for Lustre\* SSL certificates
 

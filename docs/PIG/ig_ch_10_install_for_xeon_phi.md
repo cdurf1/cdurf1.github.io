@@ -1,5 +1,11 @@
 # Installing Intel® EE for Lustre\* software on Intel® Xeon Phi™ Coprocessors
-===========================================================================
+
+
+**In this Chapter:**
+
+- [Install Lustre\* client on an Intel® Xeon Phi™ Coprocessor](#install-lustre-client-on-an-intel-xeon-phi-coprocessor)
+- [Configure Lustre for the Intel® Xeon Phi™ Coprocessor](#configure-lustre-for-the-intel-xeon-phi-coprocessor)
+
 
 Install Lustre\* client on an Intel® Xeon Phi™ Coprocessor
 ----------------------------------------------------------
