@@ -1,3 +1,3 @@
-[dRAID Streaming Lustre docs](dR_sl.md)
+[dRAID Streaming Lustre docs](dr_sl.md)
 
 [IML Docs](IML.md)
