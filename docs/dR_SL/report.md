@@ -1,15 +1,10 @@
-1.  [[[]{#_Toc353174563 .anchor}]{#_Toc346289181
-    .anchor}]{#_Toc346186938
-    .anchor}![](media/image1.png){width="1.8298611111111112in"
-    height="1.3895833333333334in"}
-
-Lustre Streaming (MS05) and dRAID (MS09) Final Report
+# Lustre Streaming (MS05) and dRAID (MS09) Final Report
 
 Final Report
 
 High Performance Data Division
 
-1.  
+  
 
 INTEL FEDERAL, LLC PROPRIETARY
 
@@ -106,357 +101,147 @@ Document Revision History
 |                       |                       |     Vanda             |
 +-----------------------+-----------------------+-----------------------+
 
-1.  
+ 
 
 Contents
 
-[1 Executive Summary 8](#executive-summary)
-
-[2 Demonstration Environment 9](#demonstration-environment)
-
-[2.1 System Configuration 9](#system-configuration)
-
-[2.1.1 Natasha 9](#natasha)
-
-[2.1.2 Wolf 10](#wolf)
-
-[2.2 Tools 11](#tools)
-
-[2.2.1 ZPOOL 11](#zpool)
-
-[2.2.2 ZDB 11](#zdb)
-
-[3 MS05: Lustre and ZFS Block Allocation Improvements
-12](#ms05-lustre-and-zfs-block-allocation-improvements)
-
-[3.1 Introduction 12](#introduction)
-
-[3.1.1 ARC Buffer Data (ABD) Update 12](#arc-buffer-data-abd-update)
-
-[3.2 Metadata Isolation 13](#metadata-isolation)
-
-[3.2.1 Architecture 13](#architecture)
-
-[3.2.2 Implementation 13](#implementation)
-
-[3.2.2.1 Dedicated VDEVs 15](#dedicated-vdevs)
-
-[3.2.2.2 Segregated VDEVs 15](#segregated-vdevs)
-
-[3.2.2.3 VDEV Changes 17](#vdev-changes)
-
-[3.2.3 Changes and Deviations 20](#changes-and-deviations)
-
-[3.2.4 Demonstration 20](#demonstration)
-
-[3.2.4.1 Hybrid Metadata/Smallblock Isolation with dRAID VDEVs
-20](#hybrid-metadatasmallblock-isolation-with-draid-vdevs)
-
-[3.2.4.2 Observing Metaslab Regions 22](#observing-metaslab-regions)
-
-[3.2.4.3 Observing Free Space Fragmentation
-24](#observing-free-space-fragmentation)
-
-[3.2.4.4 Observing Allocations by Category
-26](#observing-allocations-by-category)
-
-[3.3 End-to-End 16 MB File Block I/O
-27](#end-to-end-16-mb-file-block-io)
-
-[3.3.1 Architecture 27](#architecture-1)
-
-[3.3.2 Implementation 28](#implementation-1)
-
-[3.3.3 Demonstration 29](#demonstration-1)
-
-[3.3.3.1 Configuring the file system for 16MB I/Os
-29](#configuring-the-file-system-for-16mb-ios)
-
-[3.3.3.2 Prepping Lustre Counters 31](#prepping-lustre-counters)
-
-[3.3.3.3 End to End Streaming 34](#end-to-end-streaming)
-
-[3.3.3.4 Fragmentation Improvements 41](#fragmentation-improvements)
-
-[4 MS09: dRAID 46](#ms09-draid)
-
-[4.1 Introduction 46](#introduction-1)
-
-[4.2 Parity Declustered RAIDZ and Rebuild
-46](#parity-declustered-raidz-and-rebuild)
-
-[4.2.1 Architecture 46](#architecture-2)
-
-[4.2.2 Implementation 47](#implementation-2)
-
-[4.2.2.1 dRAID 48](#draid)
-
-[4.2.2.2 Sequential Rebuild 49](#sequential-rebuild)
-
-[4.2.2.3 dRAID-aware Spare Space Rebalancing
-50](#draid-aware-spare-space-rebalancing)
-
-[4.2.3 Changes and Deviations 50](#changes-and-deviations-1)
-
-[4.2.4 Demonstration 50](#demonstration-2)
-
-[4.2.4.1 Arbitrary Pool Configuration 50](#arbitrary-pool-configuration)
-
-[4.2.4.2 Dynamic Rebuild Throttling 52](#dynamic-rebuild-throttling-1)
-
-[4.2.4.3 Rebuild Stop and Resume 54](#rebuild-stop-and-resume)
-
-[4.2.4.4 Rebalance 56](#rebalance)
-
-[4.3 ZED Fault Handling 58](#zed-fault-handling)
-
-[4.3.1 Architecture 58](#architecture-3)
-
-[4.3.2 Implementation 59](#implementation-3)
-
-[4.3.2.1 Spare Device Matching 60](#spare-device-matching)
-
-[4.3.2.2 Multi-path Support 60](#multi-path-support)
-
-[4.3.2.3 Improve ZED resiliency 60](#improve-zed-resiliency)
-
-[4.3.2.4 Multi-Fault Support 61](#multi-fault-support)
-
-[4.3.3 Changes and Deviations 61](#changes-and-deviations-2)
-
-[4.3.4 Demonstration 61](#demonstration-3)
-
-[4.3.4.1 Multi-Fault Handling 61](#multi-fault-handling)
-
-[5 Validation 71](#validation)
-
-[5.1 ZFS Test Suite 71](#zfs-test-suite)
-
-[5.2 ZTest/zloop Verification Tests 71](#ztestzloop-verification-tests)
-
-[5.3 File System Ager 72](#file-system-ager)
-
-[5.4 dRAID Exerciser 72](#draid-exerciser)
-
-[Appendix A. dRAID Configuration Examples
-73](#draid-configuration-examples)
-
-[A.1 ‘zdb –m’ for a dRAID pool without segregation
-73](#zdb-m-for-a-draid-pool-without-segregation)
-
-[A.2 ‘zdb –m’ for a dRAID pool with segregation enabled
-81](#zdb-m-for-a-draid-pool-with-segregation-enabled)
-
-[A.3 draidcfg output for the 80 drive demonstration (80.nvl)
-90](#draidcfg-output-for-the-80-drive-demonstration-80.nvl)
-
-[A.4 Zpool status for the 80 drive JBOD
-94](#zpool-status-for-the-80-drive-jbod)
-
-1.  
+- [Executive Summary](#executive-summary)
+- [Demonstration Environment](#demonstration-environment)
+- [System Configuration](#system-configuration)
+- [Natasha](#natasha)
+- [Wolf](#wolf)
+- [Tools](#tools)
+- [ZPOOL](#zpool)
+- [ZDB](#zdb)
+- [MS05: Lustre and ZFS Block Allocation Improvements](#ms05-lustre-and-zfs-block-allocation-improvements)
+- [Introduction](#introduction)
+- [ARC Buffer Data (ABD) Update](#arc-buffer-data-abd-update)
+- [Metadata Isolation](#metadata-isolation)
+- [Architecture](#architecture)
+- [Implementation](#implementation)
+- [Dedicated VDEVs](#dedicated-vdevs)
+- [Segregated VDEVs](#segregated-vdevs)
+- [VDEV Changes](#vdev-changes)
+- [Changes and Deviations](#changes-and-deviations)
+- [Demonstration](#demonstration)
+- [Hybrid Metadata/Smallblock Isolation with dRAID VDEVs](#hybrid-metadatasmallblock-isolation-with-draid-vdevs)
+- [Observing Metaslab Regions](#observing-metaslab-regions)
+- [Observing Free Space Fragmentation](#observing-free-space-fragmentation)
+- [Observing Allocations by Category](#observing-allocations-by-category)
+- [End-to-End 16 MB File Block I/O](#end-to-end-16-mb-file-block-io)
+- [Architecture](#architecture-1)
+- [Implementation](#implementation-1)
+- [Demonstration](#demonstration-1)
+- [Configuring the file system for 16MB I/Os](#configuring-the-file-system-for-16mb-ios)
+- [Prepping Lustre Counters](#prepping-lustre-counters)
+- [End to End Streaming](#end-to-end-streaming)
+- [Fragmentation Improvements](#fragmentation-improvements)
+- [MS09: dRAID](#ms09-draid)
+- [Introduction](#introduction-1)
+- [Parity Declustered RAIDZ and Rebuild](#parity-declustered-raidz-and-rebuild)
+- [Architecture](#architecture-2)
+- [Implementation](#implementation-2)
+- [dRAID](#draid)
+- [Sequential Rebuild](#sequential-rebuild)
+- [dRAID-aware Spare Space Rebalancing](#draid-aware-spare-space-rebalancing)
+- [Changes and Deviations0](#changes-and-deviations-1)
+- [Demonstration](#demonstration-2)
+- [Arbitrary Pool Configuration](#arbitrary-pool-configuration)
+- [Dynamic Rebuild Throttling](#dynamic-rebuild-throttling-1)
+- [Rebuild Stop and Resume](#rebuild-stop-and-resume)
+- [Rebalance](#rebalance)
+- [ZED Fault Handling](#zed-fault-handling)
+- [Architecture](#architecture-3)
+- [Implementation](#implementation-3)
+- [Spare Device Matching](#spare-device-matching)
+- [Multi-path Support](#multi-path-support)
+- [Improve ZED resiliency](#improve-zed-resiliency)
+- [Multi-Fault Support](#multi-fault-support)
+- [Changes and Deviations](#changes-and-deviations-2)
+- [Demonstration](#demonstration-3)
+- [Multi-Fault Handling](#multi-fault-handling)
+- [Validation](#validation)
+- [ZFS Test Suite](#zfs-test-suite)
+- [ZTest/zloop Verification Tests](#ztestzloop-verification-tests)
+- [File System Ager](#file-system-ager)
+- [dRAID Exerciser](#draid-exerciser)
+- [Appendix A. dRAID Configuration Examples](#draid-configuration-examples)
+- [‘zdb –m’ for a dRAID pool without segregation](#zdb-m-for-a-draid-pool-without-segregation)
+- [‘zdb –m’ for a dRAID pool with segregation enabled](#zdb-m-for-a-draid-pool-with-segregation-enabled)
+- [draidcfg output for the 80 drive demonstration (80.nvl)](#draidcfg-output-for-the-80-drive-demonstration-80.nvl)
+- [Zpool status for the 80 drive JBOD](#zpool-status-for-the-80-drive-jbod)
+
+  
 
 Tables
 
-[Table 3‑1. Lustre Streaming Performance Design Documents
+- [Table 3‑1. Lustre Streaming Performance Design Documents
 12](#_Toc488392498)
+- [Table 3‑2. I/O Size Evaluation Tools 35](#_Toc488392499
+- [Table 4‑1. Declustered RAIDZ Design Documents 46](#_Toc488392500)
+- [Table 5‑1. zTest dRAID Options 72](#_Toc488392501)
 
-[Table 3‑2. I/O Size Evaluation Tools 35](#_Toc488392499)
-
-[Table 4‑1. Declustered RAIDZ Design Documents 46](#_Toc488392500)
-
-[Table 5‑1. zTest dRAID Options 72](#_Toc488392501)
-
-1.  
+  
 
 Figures
 
-[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]{#_Toc487029616
-.anchor}]{#_Toc487028773 .anchor}]{#_Toc487027908
-.anchor}]{#_Toc487027040 .anchor}]{#_Toc487026198
-.anchor}]{#_Toc487025356 .anchor}]{#_Toc487024503
-.anchor}]{#_Toc487022064 .anchor}]{#_Toc487019889
-.anchor}]{#_Toc487015415 .anchor}]{#_Toc487014649
-.anchor}]{#_Toc487013883 .anchor}]{#_Toc487012265
-.anchor}]{#_Toc486975576 .anchor}]{#_Toc486974814
-.anchor}]{#_Toc486974065 .anchor}]{#_Toc486973299
-.anchor}]{#_Toc487029615 .anchor}]{#_Toc487028772
-.anchor}]{#_Toc487027907 .anchor}]{#_Toc487027039
-.anchor}]{#_Toc487026197 .anchor}]{#_Toc487025355
-.anchor}]{#_Toc487024502 .anchor}]{#_Toc487022063
-.anchor}]{#_Toc487019888 .anchor}]{#_Toc487015414
-.anchor}]{#_Toc487014648 .anchor}]{#_Toc487013882
-.anchor}]{#_Toc487012264 .anchor}]{#_Toc486975575
-.anchor}]{#_Toc486974813 .anchor}]{#_Toc486974064
-.anchor}]{#_Toc486973298 .anchor}]{#_Toc487029614
-.anchor}]{#_Toc487028771 .anchor}]{#_Toc487027906
-.anchor}]{#_Toc487027038 .anchor}]{#_Toc487026196
-.anchor}]{#_Toc487025354 .anchor}]{#_Toc487024501
-.anchor}]{#_Toc487022062 .anchor}]{#_Toc487019887
-.anchor}]{#_Toc487015413 .anchor}]{#_Toc487014647
-.anchor}]{#_Toc487013881 .anchor}]{#_Toc487012263
-.anchor}]{#_Toc486975574 .anchor}]{#_Toc486974812
-.anchor}]{#_Toc486974063 .anchor}]{#_Toc486973297
-.anchor}]{#_Toc487029613 .anchor}]{#_Toc487028770
-.anchor}]{#_Toc487027905 .anchor}]{#_Toc487027037
-.anchor}]{#_Toc487026195 .anchor}]{#_Toc487025353
-.anchor}]{#_Toc487024500 .anchor}]{#_Toc487022061
-.anchor}]{#_Toc487019886 .anchor}]{#_Toc487015412
-.anchor}]{#_Toc487014646 .anchor}]{#_Toc487013880
-.anchor}]{#_Toc487012262 .anchor}]{#_Toc486975573
-.anchor}]{#_Toc486974811 .anchor}]{#_Toc486974062
-.anchor}]{#_Toc486973296 .anchor}]{#_Toc487029612
-.anchor}]{#_Toc487028769 .anchor}]{#_Toc487027904
-.anchor}]{#_Toc487027036 .anchor}]{#_Toc487026194
-.anchor}]{#_Toc487025352 .anchor}]{#_Toc487024499
-.anchor}]{#_Toc487022060 .anchor}]{#_Toc487019885
-.anchor}]{#_Toc487015411 .anchor}]{#_Toc487014645
-.anchor}]{#_Toc487013879 .anchor}]{#_Toc487012261
-.anchor}]{#_Toc486975572 .anchor}]{#_Toc486974810
-.anchor}]{#_Toc486974061 .anchor}]{#_Toc486973295
-.anchor}]{#_Toc487029611 .anchor}]{#_Toc487028768
-.anchor}]{#_Toc487027903 .anchor}]{#_Toc487027035
-.anchor}]{#_Toc487026193 .anchor}]{#_Toc487025351
-.anchor}]{#_Toc487024498 .anchor}]{#_Toc487022059
-.anchor}]{#_Toc487019884 .anchor}]{#_Toc487015410
-.anchor}]{#_Toc487014644 .anchor}]{#_Toc487013878
-.anchor}]{#_Toc487012260 .anchor}]{#_Toc486975571
-.anchor}]{#_Toc486974809 .anchor}]{#_Toc486974060
-.anchor}]{#_Toc486973294 .anchor}]{#_Toc487029610
-.anchor}]{#_Toc487028767 .anchor}]{#_Toc487027902
-.anchor}]{#_Toc487027034 .anchor}]{#_Toc487026192
-.anchor}]{#_Toc487025350 .anchor}]{#_Toc487024497
-.anchor}]{#_Toc487022058 .anchor}]{#_Toc487019883
-.anchor}]{#_Toc487015409 .anchor}]{#_Toc487014643
-.anchor}]{#_Toc487013877 .anchor}]{#_Toc487012259
-.anchor}]{#_Toc486975570 .anchor}]{#_Toc486974808
-.anchor}]{#_Toc486974059 .anchor}]{#_Toc486973293
-.anchor}]{#_Toc487029609 .anchor}]{#_Toc487028766
-.anchor}]{#_Toc487027901 .anchor}]{#_Toc487027033
-.anchor}]{#_Toc487026191 .anchor}]{#_Toc487025349
-.anchor}]{#_Toc487024496 .anchor}]{#_Toc487022057
-.anchor}]{#_Toc487019882 .anchor}]{#_Toc487015408
-.anchor}]{#_Toc487014642 .anchor}]{#_Toc487013876
-.anchor}]{#_Toc487012258 .anchor}]{#_Toc486975569
-.anchor}]{#_Toc486974807 .anchor}]{#_Toc486974058
-.anchor}]{#_Toc486973292 .anchor}]{#_Toc462300734
-.anchor}]{#_Toc462301919 .anchor}]{#_Toc462300735
-.anchor}]{#_Toc462301920 .anchor}]{#_Toc462300736
-.anchor}]{#_Toc462301921 .anchor}]{#_Toc462300737
-.anchor}]{#_Toc462301922 .anchor}]{#_Toc462300738
-.anchor}]{#_Toc462301923 .anchor}]{#_Toc462300739
-.anchor}]{#_Toc462301924 .anchor}]{#_Toc462300740
-.anchor}]{#_Toc462301925 .anchor}]{#_Toc462300741
-.anchor}]{#_Toc462301926 .anchor}]{#_Toc462300742
-.anchor}]{#_Toc462301927 .anchor}]{#_Toc462300743
-.anchor}]{#_Toc462301928 .anchor}]{#_Toc462300744
-.anchor}]{#_Toc462301929 .anchor}]{#_Toc462300745
-.anchor}]{#_Toc462301930 .anchor}]{#_Toc462300746
-.anchor}]{#_Toc462301931 .anchor}]{#_Toc462300747
-.anchor}]{#_Toc462301932 .anchor}]{#_Toc462300748
-.anchor}]{#_Toc462301933 .anchor}]{#_Toc462300749
-.anchor}]{#_Toc462301934 .anchor}]{#_Toc462300750
-.anchor}]{#_Toc462301935 .anchor}]{#_Toc462300751
-.anchor}]{#_Toc462301936 .anchor}]{#_Toc462300752
-.anchor}]{#_Toc462301937 .anchor}]{#_Toc462300753
-.anchor}]{#_Toc462301938 .anchor}]{#_Toc462300754
-.anchor}]{#_Toc462301939 .anchor}]{#_Toc462300755
-.anchor}]{#_Toc462301940 .anchor}]{#_Toc462300756
-.anchor}]{#_Toc462301941 .anchor}]{#_Toc462300757
-.anchor}]{#_Toc462301942 .anchor}]{#_Toc462300758
-.anchor}]{#_Toc462301943 .anchor}]{#_Toc462300759
-.anchor}]{#_Toc462301944 .anchor}]{#_Toc462300760
-.anchor}]{#_Toc462301945 .anchor}]{#_Toc462300761
-.anchor}]{#_Toc462301946 .anchor}]{#_Toc462300762
-.anchor}]{#_Toc462301947 .anchor}]{#_Toc462300763
-.anchor}]{#_Toc462301948 .anchor}]{#_Toc462300764
-.anchor}]{#_Toc462301949 .anchor}]{#_Toc462300765
-.anchor}]{#_Toc462301950 .anchor}]{#_Toc462300766
-.anchor}]{#_Toc462301951 .anchor}]{#_Toc462300767
-.anchor}]{#_Toc462301952 .anchor}]{#_Toc462300768
-.anchor}]{#_Toc462301953 .anchor}Figure 2‑1. Natasha Pool Configuration
-10
 
-[Figure 3‑1. Transition from Unmodified RAIDZ to Hybrid Mirror
-Configuration 14](#_Toc488392503)
-
-[Figure 3‑2. End to End Data Flow 28](#_Toc488392504)
-
-[Figure 3‑3. Size Distribution of ZFS Write I/O 37](#_Toc488392505)
-
-[Figure 3‑4. Read/Write Disk Stats for Sequential Workload
-38](#_Toc488392506)
-
-[Figure 3‑5. Write/Read Bandwidth for Sequential Workload
-39](#_Toc488392507)
-
-[Figure 3‑6. Read/Write Disk Stats for Random Workload
-40](#_Toc488392508)
-
-[Figure 3‑7. Write/Read Bandwidth for Random Workload
-41](#_Toc488392509)
-
-[Figure 3‑8. Fragmentation Impact on RAIDZ1 Performance
-42](#_Toc488392510)
-
-[Figure 3‑9. Steps to Create Fragmented File System 43](#_Toc488392511)
-
-[Figure 3‑10. Fragmentation Comparison of Segregated and Unsegregated
-dRAIDs 44](#_Toc488392512)
-
-[Figure 3‑11. Performance Impact of Segregation on Fragmented File
-System 45](#_Toc488392513)
-
-[Figure 4‑1. Mapping Failed Drive to dRAID1 Permutation Groups
-47](#_Toc488392514)
-
-[Figure 4‑2. dRAID2 State Transitions 49](#_Toc488392515)
-
-[Figure 4‑3. Dynamic Rebuild Throttling 53](#_Toc488392516)
-
-[Figure 4‑4. Rebalance to a Replacement Drive 57](#_Toc488392517)
-
-[Figure 4‑5. ZED Architecture 58](#_Toc488392518)
-
-[Figure 4‑6. ZED FMA Components 59](#_Toc488392519)
+- [Figure 3‑1. Transition from Unmodified RAIDZ to Hybrid Mirror Configuration](#_Toc488392503)
+- [Figure 3‑2. End to End Data Flow](#_Toc488392504)
+- [Figure 3‑3. Size Distribution of ZFS Write I/O](#_Toc488392505)
+- [Figure 3‑4. Read/Write Disk Stats for Sequential Workload](#_Toc488392506)
+- [Figure 3‑5. Write/Read Bandwidth for Sequential Workload](#_Toc488392507)
+- [Figure 3‑6. Read/Write Disk Stats for Random Workload](#_Toc488392508)
+- [Figure 3‑7. Write/Read Bandwidth for Random Workload](#_Toc488392509)
+- [Figure 3‑8. Fragmentation Impact on RAIDZ1 Performance](#_Toc488392510)
+- [Figure 3‑9. Steps to Create Fragmented File System 43](#_Toc488392511)
+- [Figure 3‑10. Fragmentation Comparison of Segregated and Unsegregated dRAIDs](#_Toc488392512)
+- [Figure 3‑11. Performance Impact of Segregation on Fragmented File System](#_Toc488392513)
+- [Figure 4‑1. Mapping Failed Drive to dRAID1 Permutation Groups](#_Toc488392514)
+- [Figure 4‑2. dRAID2 State Transitions](#_Toc488392515)
+- [Figure 4‑3. Dynamic Rebuild Throttling](#_Toc488392516)
+- [Figure 4‑4. Rebalance to a Replacement Drive](#_Toc488392517)
+- [Figure 4‑5. ZED Architecture](#_Toc488392518)
+- [Figure 4‑6. ZED FMA Components](#_Toc488392519)
 
 Executive Summary
 =================
 
-1.  For MS04 and MS08, we demonstrated a prototype of the Lustre
-    Streaming and dRAID designs that implemented the core features
-    described in each High Level Design (HLD). For MS05 and MS09, we
-    presented an integrated Lustre and OpenZFS stack that demonstrated
-    the combined Lustre Streaming and dRAID features. This document
-    describes these additions to the prototype and the results of the
-    final demonstration.
+For MS04 and MS08, we demonstrated a prototype of the Lustre
+Streaming and dRAID designs that implemented the core features
+described in each High Level Design (HLD). For MS05 and MS09, we
+presented an integrated Lustre and OpenZFS stack that demonstrated
+the combined Lustre Streaming and dRAID features. This document
+describes these additions to the prototype and the results of the
+final demonstration.
 
-    All code developed during this project are being delivered to the
-    upstream repositories for Lustre (http://lustre.org/) and OpenZFS
-    (http://zfsonlinux.org/). Where possible, hyperlinks are provided in
-    the report to the contributions submitted. ZFS on Linux (ZoL) uses
-    GitHub (https://github.com/zfsonlinux/zfs) and the pull request
-    number records the submission. For example,
-    [PR-5182](https://github.com/zfsonlinux/zfs/pull/5182) is a link to
-    Pull Request \#5182 for the Metadata Isolation discussed in section
-    3.2.
+All code developed during this project are being delivered to the
+upstream repositories for Lustre (http://lustre.org/) and OpenZFS
+(http://zfsonlinux.org/). Where possible, hyperlinks are provided in
+the report to the contributions submitted. ZFS on Linux (ZoL) uses
+GitHub (https://github.com/zfsonlinux/zfs) and the pull request
+number records the submission. For example,
+[PR-5182](https://github.com/zfsonlinux/zfs/pull/5182) is a link to
+Pull Request \#5182 for the Metadata Isolation discussed in section
+3.2.
 
-    Our ultimate goal is to create an integrated, open-source software
-    stack capable of meeting the performance requirements of Argonne’s
-    Aurora supercomputer. Toward that end, the Intel developers have
-    been presenting technology deep dives to Cray in support of their
-    MS14 to performance tune the I/O system.
+Our ultimate goal is to create an integrated, open-source software
+stack capable of meeting the performance requirements of Argonne’s
+Aurora supercomputer. Toward that end, the Intel developers have
+been presenting technology deep dives to Cray in support of their
+MS14 to performance tune the I/O system.
 
-    With the recent release of Lustre 2.10 and ZoL 0.7.0, our target for
-    integration and release of the code developed during this program is
-    Lustre 2.11 and ZoL 0.8.0. Most of the changes for large block I/O
-    are already integrated in Lustre 2.10. We are depending on Lustre
-    2.11 to resolve instability seen during our testing (see Section
-    3.3.2 for more detail). The ZoL 0.7.0 release already includes ABD
-    and ZED/FMA, which we integrated during the prototype. Now that
-    dRAID and Metadata Isolation are complete, they are anticipated for
-    ZoL 0.8.0. A release candidate will be made available as soon as
-    they are merged into the tree to encourage broader testing and
-    acceptance of the features before the final 0.8.0 release.
+With the recent release of Lustre 2.10 and ZoL 0.7.0, our target for
+integration and release of the code developed during this program is
+Lustre 2.11 and ZoL 0.8.0. Most of the changes for large block I/O
+are already integrated in Lustre 2.10. We are depending on Lustre
+2.11 to resolve instability seen during our testing (see Section
+3.3.2 for more detail). The ZoL 0.7.0 release already includes ABD
+and ZED/FMA, which we integrated during the prototype. Now that
+dRAID and Metadata Isolation are complete, they are anticipated for
+ZoL 0.8.0. A release candidate will be made available as soon as
+they are merged into the tree to encourage broader testing and
+acceptance of the features before the final 0.8.0 release.
 
 Demonstration Environment 
 ==========================
@@ -481,48 +266,48 @@ stack (Section 3.3).
 
 ### Natasha
 
-1.  The Natasha configuration in this report is run on a fifteen node
-    test cluster. This cluster consists of the following components:
+The Natasha configuration in this report is run on a fifteen node
+test cluster. This cluster consists of the following components:
 
 -   Eight Lustre clients with 128GB of memory, 72 cores of Intel(R)
-    Xeon(R) CPU E5-2699 v3 @ 2.30GHz and Intel® OPA 1.
+Xeon(R) CPU E5-2699 v3 @ 2.30GHz and Intel® OPA 1.
 
 -   Four Lustre OSS each with 500 GB of memory, 72 cores of Intel(R)
-    Xeon(R) CPU E5-2699 v3 @ 2.30GHz, Intel® OPA 1.
+Xeon(R) CPU E5-2699 v3 @ 2.30GHz, Intel® OPA 1.
 
 -   Four 90 disk Intel JBOD Storage System JBOD2224S2DP-IDD with 24 2TB
-    HDD SAS 7200RPM 128MB Seagate Constellation ST2000NM0034 disks
+HDD SAS 7200RPM 128MB Seagate Constellation ST2000NM0034 disks
 
 -   One MDS with 500GB of memory, 72 cores of Intel(R) Xeon(R) CPU
-    E5-2699 v3 @ 2.30GHz, Intel® OPA 1 configured as a 4-way mirror with
-    1k node set to improve performance.
+E5-2699 v3 @ 2.30GHz, Intel® OPA 1 configured as a 4-way mirror with
+1k node set to improve performance.
 
-1.  We created the Lustre servers from available over the counter (COTS)
-    components. We built the JBODs with 90 drives to simulate the
-    proposed Aurora scalable storage unit (SSU) configuration. However,
-    the units we acquired did not have sufficient storage bandwidth
-    (SAS) to drive all 90 drives at full bandwidth. Therefore, we only
-    used one half of the available drives in our tests.
+We created the Lustre servers from available over the counter (COTS)
+components. We built the JBODs with 90 drives to simulate the
+proposed Aurora scalable storage unit (SSU) configuration. However,
+the units we acquired did not have sufficient storage bandwidth
+(SAS) to drive all 90 drives at full bandwidth. Therefore, we only
+used one half of the available drives in our tests.
 
-    Each OSS had 1 OST zpool configured with one dRAID2 VDEV of 43 child
-    drives as
+Each OSS had 1 OST zpool configured with one dRAID2 VDEV of 43 child
+drives as
 
 -   4 x (8 data + 2 parity) parity groups
 
 -   segregated special allocation class (Section 3.2) for small block
-    data and ZFS metadata
+data and ZFS metadata
 
 -   3 distributed spares.
 
-1.  All OSSs were connected as HA pairs. Though not shown during the
-    demonstration, failover between the servers had been done as part of
-    the continuous integration testing on the system. The pool
-    configuration is shown in below (Figure 2‑1).
+All OSSs were connected as HA pairs. Though not shown during the
+demonstration, failover between the servers had been done as part of
+the continuous integration testing on the system. The pool
+configuration is shown in below (Figure 2‑1).
 
-[[[[]{#_Toc488392502 .anchor}]{#_Toc486599627 .anchor}]{#_Toc486606479
-.anchor}]{#_Ref486509122 .anchor}Figure ‑. Natasha Pool Configuration
+**Natasha Pool Configuration**
 
-  ---------------------------------------------
+
+```
   \#zpool status
   
   pool: ssu\_1ost1
@@ -564,17 +349,18 @@ stack (Section 3.3).
   \$draid2-0-s1  AVAIL   
   
   \$draid2-0-s2  AVAIL
-  ---------------------------------------------
+```
 
-1.  
+
+  
 
 ### Wolf
 
-1.  The Wolf configuration in this report was run on a single node with
-    the following components:
+The Wolf configuration in this report was run on a single node with
+the following components:
 
 -   2 CPUs: 2 x Xeon DP Haswell (EP E5-2699 v3 LGA2011 2.3GHz 45MB 145W
-    18 cores CM8064401739300)
+18 cores CM8064401739300)
 
 -   64G Memory: 8 x 8GB (2133 Reg ECC 1.2V DDR4)
 
@@ -583,52 +369,52 @@ stack (Section 3.3).
 -   90 x Seagate SAS3 drives (ST2000NM003401)
 
 1.  Although the node had a 90 drive array, we configured the array with
-    one dRAID3 VDEV of 80 drives as
+one dRAID3 VDEV of 80 drives as
 
 -   7 (8 data + 3 parity) parity groups
 
 -   3 distributed spares
 
-1.  No special allocation class storage was added for this
-    demonstration. The pool configuration is shown in Appendix A.4.
+No special allocation class storage was added for this
+demonstration. The pool configuration is shown in Appendix A.4.
 
 Tools
 -----
 
-1.  ZFS includes a number of utilities for setting and querying the
-    state of its objects. We primarily used
-    [zpool(8)](https://www.freebsd.org/cgi/man.cgi?zpool(8)) and
-    [zdb(8)](https://www.freebsd.org/cgi/man.cgi?zdb(8)) during the
-    demonstration. The options most used are shown below.
+ZFS includes a number of utilities for setting and querying the
+state of its objects. We primarily used
+[zpool(8)](https://www.freebsd.org/cgi/man.cgi?zpool(8)) and
+[zdb(8)](https://www.freebsd.org/cgi/man.cgi?zdb(8)) during the
+demonstration. The options most used are shown below.
 
 ### ZPOOL
 
-1.  The ZFS “zpool” command is used throughout to query the status of a
-    pool created with a dRAID VDEV.
+The ZFS “zpool” command is used throughout to query the status of a
+pool created with a dRAID VDEV.
 
-    zpool status describes the status of the pool and its devices.
+zpool status describes the status of the pool and its devices.
 
-    zpool list –o describes the state of the specified options
-    associated with the pool
+zpool list –o describes the state of the specified options
+associated with the pool
 
-    zpool list –C a new command that describes the allocations made to
-    the different categories of storage (generic, small block, metadata)
-    within a segregated VDEV
+zpool list –C a new command that describes the allocations made to
+the different categories of storage (generic, small block, metadata)
+within a segregated VDEV
 
 ### ZDB
 
-1.  ZDB is a developer tool for debugging the file system. ,Various
-    portions of ZDB have been adapted to accommodate allocation class
-    information.
+ZDB is a developer tool for debugging the file system. ,Various
+portions of ZDB have been adapted to accommodate allocation class
+information.
 
-    zdb –m describes each metaslab and its assigned allocation class
+zdb –m describes each metaslab and its assigned allocation class
 
-    zdb -mm provides more information about metaslab usage, including
-    the storage category within each assigned class and a fragmentation
-    histogram which describes available free space.
+zdb -mm provides more information about metaslab usage, including
+the storage category within each assigned class and a fragmentation
+histogram which describes available free space.
 
-    zdb –b generates a block audit that can be used to validate ditto
-    block assignments within the VDEV.
+zdb –b generates a block audit that can be used to validate ditto
+block assignments within the VDEV.
 
 MS05: Lustre and ZFS Block Allocation Improvements
 ==================================================
@@ -636,31 +422,24 @@ MS05: Lustre and ZFS Block Allocation Improvements
 Introduction
 ------------
 
-1.  This chapter describes the implementation of the MS05 features and
-    their demonstration. The documentation below (Table 3‑1) describes
-    the scope, architecture, and high-level design of the Lustre
-    Streaming Performance Improvements proposed for this program.
+This chapter describes the implementation of the MS05 features and
+their demonstration. The documentation below (Table 3‑1) describes
+the scope, architecture, and high-level design of the Lustre
+Streaming Performance Improvements proposed for this program.
 
-[[[[[[]{#_Toc488392498 .anchor}]{#_Toc486599635 .anchor}]{#_Toc486606485
-.anchor}]{#_Toc462224955 .anchor}]{#_Toc462220589
-.anchor}]{#_Ref462004737 .anchor}Table ‑. Lustre Streaming Performance
-Design Documents
+**Lustre Streaming Performance Design Documents**
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Document                      Location
-  ----------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.  Scope Statement           1.  [MS2\_CORAL\_Lustre\_Streaming\_Performance\_Improvements\_Scope\_Statement\_V1.1\_final.pdf](https://wiki.hpdd.intel.com/download/attachments/36966823/MS2_CORAL_Lustre_Streaming_Performance_Improvements_Scope_Statement_V1.1_final.pdf?version=2&modificationDate=1458856882000&api=v2)
+Scope Statement [MS2\_CORAL\_Lustre\_Streaming\_Performance\_Improvements\_Scope\_Statement\_V1.1\_final.pdf](https://wiki.hpdd.intel.com/download/attachments/36966823/MS2_CORAL_Lustre_Streaming_Performance_Improvements_Scope_Statement_V1.1_final.pdf?version=2&modificationDate=1458856882000&api=v2)
                                 
 
-  1.  Solution Architecture     1.  [MS2\_CORAL\_Lustre\_Streaming\_Performance\_Improvements\_Solution\_Architecture\_V1.2\_final.pdf](https://wiki.hpdd.intel.com/download/attachments/36966823/MS2_CORAL_Lustre_Streaming_Performance_Improvements_Solution_Architecture_V1.2_final.pdf?version=2&modificationDate=1458857031000&api=v2)
+Solution Architecture [MS2\_CORAL\_Lustre\_Streaming\_Performance\_Improvements\_Solution\_Architecture\_V1.2\_final.pdf](https://wiki.hpdd.intel.com/download/attachments/36966823/MS2_CORAL_Lustre_Streaming_Performance_Improvements_Solution_Architecture_V1.2_final.pdf?version=2&modificationDate=1458857031000&api=v2)
                                 
 
-  1.  High Level Design (HLD)   1.  [MS3\_CORAL\_Lustre\_Streaming\_Improvements\_HLD\_v1.2\_final.pdf](https://wiki.hpdd.intel.com/download/attachments/36966823/MS3_CORAL_Lustre_Streaming_Improvements_HLD_v1.2_final.pdf?version=2&modificationDate=1458857322000&api=v2)
+ High Level Design (HLD) [MS3\_CORAL\_Lustre\_Streaming\_Improvements\_HLD\_v1.2\_final.pdf](https://wiki.hpdd.intel.com/download/attachments/36966823/MS3_CORAL_Lustre_Streaming_Improvements_HLD_v1.2_final.pdf?version=2&modificationDate=1458857322000&api=v2)
                                 
 
-  Prototype Report              1.  [MS4,MS8 Prototype\_Report\_Final.pdf](https://wiki.hpdd.intel.com/download/attachments/36966823/MS4%2CMS8%20Prototype_Report_Final.pdf?version=1&modificationDate=1476907192000&api=v2)
-                                
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Prototype Report [MS4,MS8 Prototype\_Report\_Final.pdf](https://wiki.hpdd.intel.com/download/attachments/36966823/MS4%2CMS8%20Prototype_Report_Final.pdf?version=1&modificationDate=1476907192000&api=v2)
+
 
 The final delivery includes the following components:
 
