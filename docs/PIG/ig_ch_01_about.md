@@ -79,7 +79,7 @@ Conventions used in this document include:
 Related Documentation
 ---------------------
 
--   *Intel® Enterprise Edition for Lustre\* Software, Version 3.1.0.3
+-   *Intel® Enterprise Edition for Lustre\* Software, Version 3.1.1.0
     Release Notes*
 
 -   *Intel® Manager for Lustre\* Software Online Help* (accessible from

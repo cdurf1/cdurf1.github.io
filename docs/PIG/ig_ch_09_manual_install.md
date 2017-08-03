@@ -6,12 +6,12 @@ installations may opt to deploy and configure a Lustre file system and
 then later install Intel® Manager for Lustre\* software to be used in
 Monitor-only- mode.
 
-The overall release tarball is ee-3.1.0.3.tar.gz. To deploy and
+The overall release tarball is ee-3.1.1.0.tar.gz. To deploy and
 configure Lustre manually, use these packages:
 
--   Lustre server packages:lustre-2.7.19.8-bundle.tar.gz
+-   Lustre server packages:lustre-2.7.19.10-bundle.tar.gz
 
--   Lustre client packages:lustre-client-2.7.19.8-bundle.tar.gz
+-   Lustre client packages:lustre-client-2.7.19.10-bundle.tar.gz
 
 -   e2fsprogs packages: e2fsprogs-1.42.13.wc5-bundle.tar.gz
 

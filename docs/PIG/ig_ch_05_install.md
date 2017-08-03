@@ -28,7 +28,7 @@ servers and avoids possible errors.
 file system manually, without Intel® Manager for Lustre\* software.
 Other installations may opt to deploy and configure a Lustre file system
 and then later install Intel® Manager for Lustre\* software to be used
-in Monitor-only mode. The overall release tarball is ee-3.1.0.3.tar.gz.
+in Monitor-only mode. The overall release tarball is ee-3.1.1.0.tar.gz.
 To deploy and configure Lustre manually, see [Installing and Configuring
 Lustre Manually](ig_ch_07_configure_clients.md/#installing-and-configuring-lustre-manually).
 
@@ -50,16 +50,16 @@ You will need the following information to perform this installation:
 To install the software, complete these steps:
 
 1.  Download the installation archive to a directory on the manager server (e.g. /tmp).
-1. Unpack the installation archive using tar: ee-3.1.0.3.tar.gz:
+1. Unpack the installation archive using tar: ee-3.1.1.0.tar.gz:
 ```
 # cd /tmp; mkdir install
-# tar –C install –xzf ee-3.1.0.3.tar.gz
+# tar –C install –xzf ee-3.1.1.0.tar.gz
 ```
 
 
 1. To install the Intel® EE for Lustre\* software, run:
 ```
-# cd /tmp/install/ ee-3.1.0.3
+# cd /tmp/install/ ee-3.1.1.0
 # ./install
 ```
 

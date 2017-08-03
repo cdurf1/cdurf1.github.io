@@ -147,7 +147,7 @@ Client Requirements
 -------------------
 
 A client accessing your Lustre file system (created with Intel® Manager
-for Lustre\* software) must be running Intel® EE for Lustre\* 3.1.0.3
+for Lustre\* software) must be running Intel® EE for Lustre\* 3.1.1.0
 client software. See [Configuring Clients](ig_ch_07_configure_clients.md) for
 instructions on installing software and configuring clients.
 

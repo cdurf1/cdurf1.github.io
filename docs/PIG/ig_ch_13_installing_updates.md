@@ -26,7 +26,7 @@ Intel® EE for Lustre\* software.
     updates in the remaining steps.
 
 3.  If your currently installed software version is 2.2.0.2 or later,
-    update directly to version 3.1.0.3.
+    update directly to version 3.1.1.0.
 
 Performing a version downgrade or rollback is not supported.
 

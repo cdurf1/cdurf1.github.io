@@ -9,7 +9,7 @@
 
 
 A client (compute node) accessing a storage appliance must be running
-Intel® EE for Lustre\* 3.1.0.3 client software. The Lustre file system
+Intel® EE for Lustre\* 3.1.1.0 client software. The Lustre file system
 must first be created or discovered at the Intel® Manager for Lustre\*
 dashboard (see the Intel® Manager for Lustre\* Online Help to do this).
 The Lustre client software must be installed on the client, and then the
@@ -25,7 +25,7 @@ or CentOS Linux, version 6.8 or 7.3.
 **Notes**:
 
 -   Before using the Red Hat or RHEL software referenced herein, please refer to Red Hat’s website for more information, including without limitation, information regarding the mitigation of potential security vulnerabilities in the Red Hat software.
-- Client support for el6 is distributed in the ee-contrib-3.1.0.3/el6/lustre-client-&lt;lu-version&gt;-bundle.tar.gz tarball.
+- Client support for el6 is distributed in the ee-contrib-3.1.1.0/el6/lustre-client-&lt;lu-version&gt;-bundle.tar.gz tarball.
 
 Intel® EE for Lustre\* software may be installed on file system
 *servers and clients* running SUSE Linux Enterprise version 11 with SP4,
