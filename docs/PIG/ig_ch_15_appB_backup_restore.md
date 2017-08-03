@@ -1,3 +1,4 @@
+[**Intel® Enterprise Edition for Lustre\* Software Installation Guide Table of Contents**](ig_TOC.md)
 # Appendix B - Backing up and Restoring Intel® Manager for Lustre\* Server Software
 
 **In this Chapter:**

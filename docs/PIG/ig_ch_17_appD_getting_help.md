@@ -1,3 +1,5 @@
+[**Intel® Enterprise Edition for Lustre\* Software Installation Guide Table of Contents**](ig_TOC.md)
+
 # Getting Help
 
 *For partners*: If you encounter a problem with Intel® EE for Lustre\*

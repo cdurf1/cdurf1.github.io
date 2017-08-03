@@ -1,3 +1,4 @@
+[**Intel® Enterprise Edition for Lustre\* Software Installation Guide Table of Contents**](ig_TOC.md)
 # Installing Updates to Intel® EE for Lustre\* software
 
 **Note**: Perform any OS update prior to updating the Intel® EE for

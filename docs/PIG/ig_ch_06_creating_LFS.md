@@ -1,3 +1,4 @@
+[**Intel® Enterprise Edition for Lustre\* Software Installation Guide Table of Contents**](ig_TOC.md)
 # Creating a Managed Lustre File System
 
 **In this Chapter:**
