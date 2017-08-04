@@ -16,22 +16,28 @@ The provided plugin (procname_uid) uses the shell as the scheduler.
 
 
 ```
-.. automodule:: chroma_core.lib.scheduler
+automodule:: chroma_core.lib.scheduler
 
-.. autofunction:: fetch
+autofunction:: fetch
 
-.. attribute:: FIELDS```
+attribute:: FIELDS
+```
 
-tuple of field names that the plugin will retrieve
+
+Tuple of field names that the plugin will retrieve
 
 
 ## <a name="1.3"></a>procname_uid
 
-.. automodule:: chroma_core.lib.scheduler.procname_uid
 
-.. autofunction:: fetch
+```
+automodule:: chroma_core.lib.scheduler.procname_uid
 
-.. autoattribute:: chroma_core.lib.scheduler.procname_uid.FIELDS
+autofunction:: fetch
+
+autoattribute:: chroma_core.lib.scheduler.procname_uid.FIELDS
+```
+
 
 ## <a name="1.4"></a>Legal Information
 
