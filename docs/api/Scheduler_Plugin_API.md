@@ -14,6 +14,8 @@ The provided plugin (procname_uid) uses the shell as the scheduler.
 
 ## <a name="1.2"></a>API
 
+
+```
 .. automodule:: chroma_core.lib.scheduler
 
 .. autofunction:: fetch
@@ -30,7 +32,6 @@ tuple of field names that the plugin will retrieve
 .. autofunction:: fetch
 
 .. autoattribute:: chroma_core.lib.scheduler.procname_uid.FIELDS
-
 
 ## <a name="1.4"></a>Legal Information
 
@@ -51,4 +52,4 @@ Intel and the Intel logo are trademarks of Intel Corporation in the U.S. and/or 
 
 This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit. (http\://www.openssl.org/)
 
-Copyright© 2017 Intel Corporation. All rights reserved.
+Copyright© 2014 Intel Corporation. All rights reserved.
