@@ -12,9 +12,9 @@ Installation Guide](docs/PIG/ig_TOC.md)
   
 -  [Intel® Manager for Lustre\* software API Reference](docs/API/api_TOC.md)
 
-    API reference for the Intel® Manager for Lustre* software including:
+    An API reference for the Intel® Manager for Lustre* software including:
     
-    - REST API
-    - Scheduler API
-    - Storage API
-    - Packaging API
+    - [REST API for Intel® Manager for Lustre* software](docs/api/rest_API.md)
+    - [Scheduler Plugin Developer's Guide for Intel® Manager for Lustre* software](docs/api/Scheduler_Plugin_API.md)
+    - [Storage Plugin Developer's Guide for Intel® Manager for Lustre* software](docs/api/Storage_Plugin_API.md)
+    - [Packaging Guide for Intel® Manager for Lustre* software](docs/api/Pkg_Guide.md)
