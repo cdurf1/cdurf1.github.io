@@ -8,4 +8,13 @@
 - [Intel® Enterprise Edition for Lustre\* Software
 Installation Guide](docs/PIG/ig_TOC.md)
 
-  This document provides detailed instructions for installing the Intel® Enterprise Edition for Lustre\* software.  
+  This document provides detailed instructions for installing the Intel® Enterprise Edition for Lustre\* software.
+  
+-  [Intel® Manager for Lustre\* software API Reference](docs/API/api_TOC.md)
+
+    API reference for the Intel® Manager for Lustre* software including:
+    
+    - REST API
+    - Scheduler API
+    - Storage API
+    - Packaging API
