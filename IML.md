@@ -6,7 +6,7 @@
   
   Online Help file for the Intel® Manager for Lustre Graphical User Interface
 - [Intel® Enterprise Edition for Lustre\* Software
-Installation Guide](docs/PIG/ig_TOC.md)
+Installation Guide](docs/Install_Guide/ig_TOC.md)
 
   This document provides detailed instructions for installing the Intel® Enterprise Edition for Lustre\* software.
   
