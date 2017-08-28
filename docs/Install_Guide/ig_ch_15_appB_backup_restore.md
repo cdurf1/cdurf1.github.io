@@ -10,23 +10,23 @@
 - [Package Update management environment (RPM & YUM)](#package-update-management-environment-rpm-yum)
 - [Identity configuration](#identity-configuration)
 - [Security configuration](#security-configuration)
-- [Manager for Lustre\* software](#intel-manager-for-lustre-software)
-- [Creating a Backup Manifest for the Manager for Lustre\* Server](#creating-a-backup-manifest-for-the-intel-manager-for-lustre-server)
+- [Manager for Lustre\* software](#manager-for-lustre-software)
+- [Creating a Backup Manifest for the Manager for Lustre\* Server](#creating-a-backup-manifest-for-the-manager-for-lustre-server)
 - [Network Configuration Files](#network-configuration-files)
 - [YUM Configuration](#yum-configuration)
 - [User Configuration](#user-configuration)
 - [SSH Host keys (Optional)](#ssh-host-keys-optional)
 - [SSH user keys (Optional)](#ssh-user-keys-optional)
 - [NTP Configuration](#ntp-configuration)
-- [Manager for Lustre\* SSL Certificates](#intel-manager-for-lustre-ssl-certificates)
-- [Manager for Lustre\* Database](#intel-manager-for-lustre-database)
-- [Restoring the Manager for Lustre\* Service](#restoring-the-intel-manager-for-lustre-service)
+- [Manager for Lustre\* SSL Certificates](#manager-for-lustre-ssl-certificates)
+- [Manager for Lustre\* Database](#manager-for-lustre-database)
+- [Restoring the Manager for Lustre\* Service](#restoring-the-manager-for-lustre-service)
 - [Re-install OS and Restore System Configuration](#re-install-os-and-restore-system-configuration)
-- [Re-install Manager for Lustre\* software](#re-install-intel-manager-for-lustre-software)
+- [Re-install Manager for Lustre\* software](#re-install-manager-for-lustre-software)
 - [Restore the NTP Configuration](#restore-the-ntp-configuration)
-- [Restore the Manager for Lustre\* SSL certificates](#restore-the-intel-manager-for-lustre-ssl-certificates)
+- [Restore the Manager for Lustre\* SSL certificates](#restore-the-manager-for-lustre-ssl-certificates)
 - [Restore the PostgresSQL Database](#restore-the-postgressql-database)
-- [Restart Manager for Lustre\* software](#restart-intel-manager-for-lustre-software)
+- [Restart Manager for Lustre\* software](#restart-manager-for-lustre-software)
 - [Potential Issues](#potential-issues)
 
 
@@ -632,7 +632,7 @@ overwritten.
 Run the restore command for PostgresSQL, assuming that the backup was
 created using the pg\_dumpall command as described in "Creating a Backup
 Manifest [– Manager for Lustre\*
-Database](#intel-manager-for-lustre-database)". Warning, this command
+Database](#manager-for-lustre-database)". Warning, this command
 will erase all existing database content:
 
 zcat \~/backup/pgbackup-\*.sql.gz | su - postgres -c "psql postgres"

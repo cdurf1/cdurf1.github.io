@@ -3,9 +3,9 @@
 
 **In this Chapter:**
 
-- [Installing Manager for Lustre\* software](#installing-intel-ee-for-lustre-software)
-- [Manager for Lustre\* Software Configuration Settings](#intel-manager-for-lustre-software-configuration-settings)
-- [Editing Manager for Lustre\* Software Configuration Settings](#editing-intel-manager-for-lustre-software-configuration-settings)
+- [Installing Manager for Lustre\* software](#installing-manager-for-lustre-software)
+- [Manager for Lustre\* Software Configuration Settings](#manager-for-lustre-software-configuration-settings)
+- [Editing Manager for Lustre\* Software Configuration Settings](#editing-manager-for-lustre-software-configuration-settings)
 
 
 This section describes how to install the Manager for Lustre\*

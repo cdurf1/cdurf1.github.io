@@ -13,13 +13,13 @@
 - [Security configuration](#security-configuration-1)
 - [Creating a Backup Manifest for a Metadata Server or Object Storage Server](#creating-a-backup-manifest-for-a-metadata-server-or-object-storage-server)
 - [Chroma Agent Configuration](#chroma-agent-configuration)
-- [Manager for Lustre\* YUM Repository Configuration](#intel-manager-for-lustre-yum-repository-configuration)
+- [Manager for Lustre\* YUM Repository Configuration](#manager-for-lustre-yum-repository-configuration)
 - [Network Configuration](#network-configuration)
 - [SELinux Configuration](#selinux-configuration)
 - [Lustre LNET Configuration](#lustre-lnet-configuration)
 - [Pacemaker and Corosync High Availability Framework](#pacemaker-and-corosync-high-availability-framework)
 - [System Services Startup Scripts (rc.sysinit)](#system-services-startup-scripts-rc.sysinit)
-- [Sample Automated Backup Script for Manager Lustre Servers](#sample-automated-backup-script-for-intel-ee-lustre-servers)
+- [Sample Automated Backup Script for Manager Lustre Servers](#sample-automated-backup-script-for-manager-lustre-servers)
 - [Restoring a Server from Backup](#restoring-a-server-from-backup)
 
 

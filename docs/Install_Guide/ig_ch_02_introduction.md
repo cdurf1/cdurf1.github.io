@@ -3,7 +3,7 @@
 
 **In this Chapter:**
 
-- [What is Manager for Lustre\* Software?](#what-is-intel-manager-for-lustre-software)
+- [What is Manager for Lustre\* Software?](#what-is-manager-for-lustre-software)
 - [What is Management Mode?](#what-is-management-mode)
 - [What is Monitor-only Mode?](#what-is-monitor-only-mode)
 - [The Configuration Page in Monitor-only mode](#the-configuration-page-in-monitor-only-mode)
