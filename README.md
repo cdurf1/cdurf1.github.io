@@ -3,3 +3,5 @@
 [IML Docs](IML.md)
 
 Intel®
+
+Intel&#xAE;
