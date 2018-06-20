@@ -1,5 +1,6 @@
 D__S Documentation
 List of Documents:
+
 [Coding](docs\doc\coding.md)
 
 [Coding](docs\doc\coding.md)
@@ -22,4 +23,4 @@ List of Documents:
 
 [API Reference](docs\doc\API_Ref\index.html)
 
-[Admin Guide](docs\doc\coding.md)
+[Admin Guide](docs\doc\daos_admin_guide.md)
