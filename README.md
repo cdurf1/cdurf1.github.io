@@ -3,4 +3,3 @@
 [IML Docs](IML.md)
 
 [D__S Docs](D__S.md)
-Intel&#xAE;
