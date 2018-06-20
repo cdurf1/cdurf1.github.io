@@ -1,26 +1,26 @@
-D__S Documentation
-List of Documents:
+# D__S Documentation
+## List of Documents:
 
-[Coding](docs\doc\coding.md)
+- [Coding](docs\doc\coding.md)
 
-[Coding](docs\doc\coding.md)
+- [Coding](docs\doc\coding.md)
 
-[Contributing](docs\doc\contributing.md)
+- [Contributing](docs\doc\contributing.md)
 
-[Debugging](docs\doc\debugging.md)
+- [Debugging](docs\doc\debugging.md)
 
-[Environment](docs\doc\environ.md)
+- [Environment](docs\doc\environ.md)
 
-[Internals](docs\doc\internals.md)
+- [Internals](docs\doc\internals.md)
 
-[Middleware](docs\doc\middleware.md)
+- [Middleware](docs\doc\middleware.md)
 
-[Overview](docs\doc\overview.md)
+- [Overview](docs\doc\overview.md)
 
-[Quickstart](docs\doc\quickstart.md)
+- [Quickstart](docs\doc\quickstart.md)
 
-[Testing](docs\doc\testing.md)
+- [Testing](docs\doc\testing.md)
 
-[API Reference](docs\doc\API_Ref\index.html)
+- [API Reference](docs\doc\API_Ref\index.html)
 
-[Admin Guide](docs\doc\daos_admin_guide.md)
+- [Admin Guide](docs\doc\daos_admin_guide.md)
