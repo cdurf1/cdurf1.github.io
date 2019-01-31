@@ -10,7 +10,7 @@ SPDK is an open source C library that when used in a storage application, can pr
 
 **SPDK Software Stack**
 
-![../../docs/graph/Fig_001.png](../../docs/graph/Fig_001.png "Interfaces for enumeration KV and Byte array objects")
+![spdk](../../docs/graph/Fig_065.png)
 
 ### SPDK NVMe Driver
 The NVMe driver is a C library linked to a storage application providing direct, zero-copy data transfer to and from NVMe SSDs. Other benefits of the SPDK NVMe driver are that it is entirely in user space, operates in polled-mode vs. interrupt-dependent, is asynchronous and lock-less.
