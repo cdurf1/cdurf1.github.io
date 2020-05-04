@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map>
-   <appContext helpID="introduction" path="concepts/Introduction.html"/>
-   <appContext helpID="distributed_asynchronous_object_storage"
-               path="concepts/DAOS_Intro.html"/>
-   <appContext helpID="terminology" path="concepts/Terminology.html"/>
-   <appContext helpID="daos_storage_model"
-               path="concepts/DAOS_Storage_Model_comb.html"/>
-</map>

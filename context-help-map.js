@@ -1,1 +1,0 @@
-var helpContexts = [{"appname":"", "appid":"introduction", "path":"concepts/Introduction.html"},{"appname":"", "appid":"distributed_asynchronous_object_storage", "path":"concepts/DAOS_Intro.html"},{"appname":"", "appid":"terminology", "path":"concepts/Terminology.html"},{"appname":"", "appid":"daos_storage_model", "path":"concepts/DAOS_Storage_Model_comb.html"}]
