@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structdaos__svc__rip__t">
+<title>daos_svc_rip_t Struct Reference</title>
+<indexterm><primary>daos_svc_rip_t</primary></indexterm>
+<para>
+<computeroutput>#include &lt;daos_task.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>const char * <link linkend="_structdaos__svc__rip__t_1aafb4e47bc006722deb58fd5e17531de3">grp</link></para>
+</listitem>
+            <listitem><para>d_rank_t <link linkend="_structdaos__svc__rip__t_1a725668728cdf219a18169482d866dbd7">rank</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structdaos__svc__rip__t_1a4b73e33b57ae387dc418906492d5f998">force</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>svc rip params </para>
+<para>
+Definition at line 143 of file daos_task.h.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structdaos__svc__rip__t_1a4b73e33b57ae387dc418906492d5f998"/>    <section>
+    <title>force</title>
+<indexterm><primary>force</primary><secondary>daos_svc_rip_t</secondary></indexterm>
+<indexterm><primary>daos_svc_rip_t</primary><secondary>force</secondary></indexterm>
+<para><computeroutput>bool force</computeroutput></para>
+<para>Abrupt shutdown, no cleanup </para>
+<para>
+Definition at line 149 of file daos_task.h.</para>
+    </section><anchor xml:id="_structdaos__svc__rip__t_1aafb4e47bc006722deb58fd5e17531de3"/>    <section>
+    <title>grp</title>
+<indexterm><primary>grp</primary><secondary>daos_svc_rip_t</secondary></indexterm>
+<indexterm><primary>daos_svc_rip_t</primary><secondary>grp</secondary></indexterm>
+<para><computeroutput>const char* grp</computeroutput></para>
+<para>Process set name of the DAOS servers managing the pool </para>
+<para>
+Definition at line 145 of file daos_task.h.</para>
+    </section><anchor xml:id="_structdaos__svc__rip__t_1a725668728cdf219a18169482d866dbd7"/>    <section>
+    <title>rank</title>
+<indexterm><primary>rank</primary><secondary>daos_svc_rip_t</secondary></indexterm>
+<indexterm><primary>daos_svc_rip_t</primary><secondary>rank</secondary></indexterm>
+<para><computeroutput>d_rank_t rank</computeroutput></para>
+<para>rank to kill </para>
+<para>
+Definition at line 147 of file daos_task.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/include/daos_task.h</section>
+</section>

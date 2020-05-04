@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structdaos__obj__fetch__shard">
+<title>daos_obj_fetch_shard Struct Reference</title>
+<indexterm><primary>daos_obj_fetch_shard</primary></indexterm>
+<para>
+<computeroutput>#include &lt;daos_task.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structdaos__obj__rw__t">daos_obj_fetch_t</link> <link linkend="_structdaos__obj__fetch__shard_1aed44df747a4f72fa84f5a0988f9c1305">base</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_structdaos__obj__fetch__shard_1ac92588540e8c1d014a08cd8a45462b19">flags</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_structdaos__obj__fetch__shard_1a25ed5a706fc0672283049cefe7782df6">shard</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Object shard fetch args </para>
+<para>
+Definition at line 721 of file daos_task.h.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structdaos__obj__fetch__shard_1aed44df747a4f72fa84f5a0988f9c1305"/>    <section>
+    <title>base</title>
+<indexterm><primary>base</primary><secondary>daos_obj_fetch_shard</secondary></indexterm>
+<indexterm><primary>daos_obj_fetch_shard</primary><secondary>base</secondary></indexterm>
+<para><computeroutput><link linkend="_structdaos__obj__rw__t">daos_obj_fetch_t</link> base</computeroutput></para>
+<para>base. </para>
+<para>
+Definition at line 723 of file daos_task.h.</para>
+    </section><anchor xml:id="_structdaos__obj__fetch__shard_1ac92588540e8c1d014a08cd8a45462b19"/>    <section>
+    <title>flags</title>
+<indexterm><primary>flags</primary><secondary>daos_obj_fetch_shard</secondary></indexterm>
+<indexterm><primary>daos_obj_fetch_shard</primary><secondary>flags</secondary></indexterm>
+<para><computeroutput>unsigned int flags</computeroutput></para>
+<para>Operation flags. </para>
+<para>
+Definition at line 725 of file daos_task.h.</para>
+    </section><anchor xml:id="_structdaos__obj__fetch__shard_1a25ed5a706fc0672283049cefe7782df6"/>    <section>
+    <title>shard</title>
+<indexterm><primary>shard</primary><secondary>daos_obj_fetch_shard</secondary></indexterm>
+<indexterm><primary>daos_obj_fetch_shard</primary><secondary>shard</secondary></indexterm>
+<para><computeroutput>unsigned int shard</computeroutput></para>
+<para>shard. </para>
+<para>
+Definition at line 727 of file daos_task.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/include/daos_task.h</section>
+</section>
