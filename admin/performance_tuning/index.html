@@ -42,7 +42,7 @@
     
     
       
-        <title>Performance Tuning - DAOS v0.9</title>
+        <title>Performance Tuning - DAOS v1.0</title>
       
     
     
@@ -62,8 +62,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="http://daos.io" title="DAOS v0.9" aria-label="DAOS v0.9" class="md-header-nav__button md-logo">
+        <a href="http://daos.io" title="DAOS v1.0" aria-label="DAOS v1.0" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              DAOS v0.9
+              DAOS v1.0
             </span>
             <span class="md-header-nav__topic">
               
@@ -274,12 +274,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="http://daos.io" title="DAOS v0.9" class="md-nav__button md-logo">
+    <a href="http://daos.io" title="DAOS v1.0" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    DAOS v0.9
+    DAOS v1.0
   </label>
   
     <div class="md-nav__source">
@@ -463,6 +463,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../predeployment_check/" title="Pre-deployment Checklist" class="md-nav__link">
+      Pre-deployment Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../deployment/" title="System Deployment" class="md-nav__link">
       System Deployment
     </a>
@@ -547,6 +559,13 @@
         <li class="md-nav__item">
   <a href="#benchmarking-daos" class="md-nav__link">
     Benchmarking DAOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-performance-tuning" class="md-nav__link">
+    Client Performance Tuning
   </a>
   
 </li>
@@ -748,8 +767,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../html/" title="DAOS API" class="md-nav__link">
-      DAOS API
+    <a href="../../html/index.html" title="DAOS API Documentation" class="md-nav__link">
+      DAOS API Documentation
     </a>
   </li>
 
@@ -837,6 +856,13 @@
         <li class="md-nav__item">
   <a href="#benchmarking-daos" class="md-nav__link">
     Benchmarking DAOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-performance-tuning" class="md-nav__link">
+    Client Performance Tuning
   </a>
   
 </li>
@@ -975,8 +1001,56 @@ do, however, provide a native DFS engine for FIO similar to what we do for
 IOR. That engine is available on GitHub: https://github.com/daos-stack/dfio</p>
 <p>Finally, DAOS provides a tool called daos_perf which allows benchmarking to the
 DAOS object API directly or to the internal VOS API, which bypasses the client
-and network stack and reports performance accessing the storage directy using
+and network stack and reports performance accessing the storage directly using
 VOS.</p>
+<h2 id="client-performance-tuning">Client Performance Tuning<a class="headerlink" href="#client-performance-tuning" title="Permanent link">&para;</a></h2>
+<p>For best performance, a DAOS client should specifically bind itself to a NUMA
+node instead of leaving core allocation and memory binding to chance.  This
+allows the DAOS Agent to detect the client's NUMA affinity from its PID and
+automatically assign a network interface with a matching NUMA node.  The network
+interface provided in the GetAttachInfo response is used to initialize CaRT.</p>
+<p>To override the automatically assigned interface, the client should set the
+environment variable <code>OFI_INTERFACE</code> to match the desired network
+interface.</p>
+<p>The DAOS Agent scans the client machine on the first GetAttachInfo request to
+determine the set of network interfaces available that support the DAOS Server's
+OFI provider.  This request occurs as part of the initialization sequence in the
+<code>libdaos daos_init()</code> performed by each client.</p>
+<p>Upon receipt, the Agent populates a cache of responses indexed by NUMA affinity.
+Provided a client application has bound itself to a specific NUMA node and that
+NUMA node has a network device associated with it, the DAOS Agent will provide a
+GetAttachInfo response with a network interface corresponding to the client's
+NUMA node.</p>
+<p>When more than one appropriate network interface exists per NUMA node, the agent
+uses a round-robin resource allocation scheme to load balance the responses for
+that NUMA node.</p>
+<p>If a client is bound to a NUMA node that has no matching network interface, then
+a default NUMA node is used for the purpose of selecting a response.  Provided
+that the DAOS Agent can detect any valid network device on any NUMA node, the
+default response will contain a valid network interface for the client.  When a
+default response is provided, a message in the Agent's log is emitted:</p>
+<pre><code>No network devices bound to client NUMA node X.  Using response from NUMA Y
+</code></pre>
+
+<p>To improve performance, it is worth figuring out if the client bound itself to
+the wrong NUMA node, or if expected network devices for that NUMA node are
+missing from the Agent's fabric scan.</p>
+<p>In some situations, the Agent may detect no network devices and the response
+cache will be empty.  In such a situation, the GetAttachInfo response will
+contain no interface assignment and the following info message will be found in
+the Agent's log:</p>
+<pre><code>No network devices detected in fabric scan; default AttachInfo response may be incorrect
+</code></pre>
+
+<p>In either situation, the admin may execute the command
+<code>'daos_agent net-scan'</code> with appropriate debug flags to gain more insight
+into the configuration problem.</p>
+<p><strong>Disabling the GetAttachInfo cache:</strong></p>
+<p>The default configuration enables the Agent GetAttachInfo cache.  If it is
+desired, the cache may be disabled prior to DAOS Agent startup by setting the
+Agent's environment variable <code>DAOS_AGENT_DISABLE_CACHE=true</code>.  The cache is
+loaded only at Agent startup.  If the network configuration changes while the
+Agent is running, it must be restarted to gain visibility to these changes.</p>
                 
                   
                 

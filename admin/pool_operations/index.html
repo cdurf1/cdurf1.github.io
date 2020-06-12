@@ -42,7 +42,7 @@
     
     
       
-        <title>Pool Operations - DAOS v0.9</title>
+        <title>Pool Operations - DAOS v1.0</title>
       
     
     
@@ -62,8 +62,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="http://daos.io" title="DAOS v0.9" aria-label="DAOS v0.9" class="md-header-nav__button md-logo">
+        <a href="http://daos.io" title="DAOS v1.0" aria-label="DAOS v1.0" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              DAOS v0.9
+              DAOS v1.0
             </span>
             <span class="md-header-nav__topic">
               
@@ -274,12 +274,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="http://daos.io" title="DAOS v0.9" class="md-nav__button md-logo">
+    <a href="http://daos.io" title="DAOS v1.0" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    DAOS v0.9
+    DAOS v1.0
   </label>
   
     <div class="md-nav__source">
@@ -453,6 +453,18 @@
   <li class="md-nav__item">
     <a href="../installation/" title="Software Installation" class="md-nav__link">
       Software Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../predeployment_check/" title="Pre-deployment Checklist" class="md-nav__link">
+      Pre-deployment Checklist
     </a>
   </li>
 
@@ -877,8 +889,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../html/" title="DAOS API" class="md-nav__link">
-      DAOS API
+    <a href="../../html/index.html" title="DAOS API Documentation" class="md-nav__link">
+      DAOS API Documentation
     </a>
   </li>
 
@@ -1167,8 +1179,14 @@ two pool service replica on rank 0 and 1.</p>
 <pre><code class="bash">$ dmg pool destroy --pool=${puuid}
 </code></pre>
 
-<p><strong>To see a list of the pools in your DAOS system:</strong></p>
-<pre><code class="bash">$ dmg system list-pools
+<p><strong>To evict handles/connections to a pool:</strong></p>
+<pre><code class="bash">$ dmg pool evict --pool=${puuid}
+`
+
+**To see a list of the pools in your DAOS system:**
+
+```bash
+$ dmg system list-pools
 </code></pre>
 
 <p>This will return a table of pool UUIDs and the ranks of their pool service
@@ -1296,7 +1314,7 @@ will be decided based on the remaining ACL rules.</p>
 <h2 id="pool-query">Pool Query<a class="headerlink" href="#pool-query" title="Permanent link">&para;</a></h2>
 <p>The pool query operation retrieves information (i.e., the number of targets,
 space usage, rebuild status, property list, and more) about a created pool. It
-is integrated into the dmg_old utility.</p>
+is integrated into the dmg utility.</p>
 <p><strong>To query a pool:</strong></p>
 <pre><code class="bash">$ dmg pool query --pool &lt;UUID&gt;
 </code></pre>
@@ -1336,21 +1354,33 @@ close to 0 means that one target is running out of space.</p>
 the management API and tool and will be documented here once available.</p>
 <h2 id="pool-modifications">Pool Modifications<a class="headerlink" href="#pool-modifications" title="Permanent link">&para;</a></h2>
 <h3 id="target-exclusion-and-self-healing">Target Exclusion and Self-Healing<a class="headerlink" href="#target-exclusion-and-self-healing" title="Permanent link">&para;</a></h3>
+<p>An operator can exclude one or more targets from a specific DAOS pool using the rank
+the target resides on as well as the target idx on that rank. If a target idx list is
+not provided then all targets on the rank will be excluded. Excluding a target will
+automatically start the rebuild process.</p>
 <p><strong>To exclude a target from a pool:</strong></p>
-<pre><code class="bash">$ dmg_old exclude --svc=${svcl} --pool=${puuid} --target=${rank}
+<pre><code class="bash">$ dmg pool exclude --pool=${puuid} --rank=${rank} --target-idx=${idx1},${idx2},${idx3}
 </code></pre>
 
+<p>The pool target exclude command accepts 3 parameters:</p>
+<ul>
+<li>The pool UUID of the pool that the targets will be excluded from.</li>
+<li>The rank of the target(s) te be excluded.</li>
+<li>The target Indices of the targets to be excluded from that rank (optional).</li>
+</ul>
 <h3 id="target-reintegration">Target Reintegration<a class="headerlink" href="#target-reintegration" title="Permanent link">&para;</a></h3>
 <p>After a target failure an operator can fix the underlying issue and reintegrate the
-affected targets to restore the pool to its original state.</p>
+affected targets to restore the pool to its original state. The operator can either
+reintegrate specific targets for a rank by supplying a target idx list, or reintegrate
+an entire rank by omitting the list.</p>
 <pre><code>$ dmg pool reintegrate --pool=${puuid} --rank=${rank} --target-idx=${idx1},${idx2},${idx3}
 </code></pre>
 
-<p>The pool reintegrate command accepts 3 required parameters:</p>
+<p>The pool reintegrate command accepts 3 parameters:</p>
 <ul>
 <li>The pool UUID of the pool that the targets will be reintegrated into.</li>
 <li>The rank of the affected targets.</li>
-<li>The target Indices of the targets to be reintegrated on that rank.</li>
+<li>The target Indices of the targets to be reintegrated on that rank (optional).</li>
 </ul>
 <p>When rebuild is triggered it will list the operations and their related targets by their rank ID
 and target index.</p>
@@ -1367,8 +1397,23 @@ Target (rank 5 idx 1) is down.
 
 <h3 id="pool-extension">Pool Extension<a class="headerlink" href="#pool-extension" title="Permanent link">&para;</a></h3>
 <h4 id="target-addition-space-rebalancing">Target Addition &amp; Space Rebalancing<a class="headerlink" href="#target-addition-space-rebalancing" title="Permanent link">&para;</a></h4>
-<p>Support for online target addition and automatic space rebalancing is
+<p>Full Support for online target addition and automatic space rebalancing is
 planned for DAOS v1.4 and will be documented here once available.</p>
+<p>Until then the following command(s) are placeholders and offer limited
+functionality related to Online Server Addition/Rebalancing operations.</p>
+<p>An operator can choose to extend a pool to include ranks not currently in the pool.
+This will automatically trigger a server rebalance operation where objects within the extended
+pool will be rebalanced across the new storage.</p>
+<pre><code>$ dmg pool extend --pool=${puuid} --ranks=${rank1},${rank2}...
+</code></pre>
+
+<p>The pool extend command accepts 2 required parameters:</p>
+<ul>
+<li>The pool UUID of the pool to be extended.</li>
+<li>A comma separated list of server ranks to include in the pool.</li>
+</ul>
+<p>The pool rebalance operation will work most efficiently when the pool is extended to its desired
+size in a single operation, as opposed to multiple, small extensions.</p>
 <h4 id="pool-shard-resize">Pool Shard Resize<a class="headerlink" href="#pool-shard-resize" title="Permanent link">&para;</a></h4>
 <p>Support for quiescent pool shard resize is currently not supported and
 is under consideration.</p>

@@ -42,7 +42,7 @@
     
     
       
-        <title>Environment Variables - DAOS v0.9</title>
+        <title>Environment Variables - DAOS v1.0</title>
       
     
     
@@ -62,8 +62,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="http://daos.io" title="DAOS v0.9" aria-label="DAOS v0.9" class="md-header-nav__button md-logo">
+        <a href="http://daos.io" title="DAOS v1.0" aria-label="DAOS v1.0" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              DAOS v0.9
+              DAOS v1.0
             </span>
             <span class="md-header-nav__topic">
               
@@ -274,12 +274,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="http://daos.io" title="DAOS v0.9" class="md-nav__button md-logo">
+    <a href="http://daos.io" title="DAOS v1.0" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    DAOS v0.9
+    DAOS v1.0
   </label>
   
     <div class="md-nav__source">
@@ -453,6 +453,18 @@
   <li class="md-nav__item">
     <a href="../installation/" title="Software Installation" class="md-nav__link">
       Software Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../predeployment_check/" title="Pre-deployment Checklist" class="md-nav__link">
+      Pre-deployment Checklist
     </a>
   </li>
 
@@ -769,8 +781,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../html/" title="DAOS API" class="md-nav__link">
-      DAOS API
+    <a href="../../html/index.html" title="DAOS API Documentation" class="md-nav__link">
+      DAOS API Documentation
     </a>
   </li>
 
@@ -1002,16 +1014,33 @@ the future.</p>
 <td>DAOS_PURGE_CREDITS</td>
 <td>The number of credits for probing object trees when aggregating unreferenced epochs. INTEGER. Default to 1000.</td>
 </tr>
+<tr>
+<td>CRT_DISABLE_MEM_PIN</td>
+<td>Disable memory pinning workaround on a server side. BOOL. Default to 0.</td>
+</tr>
 </tbody>
 </table>
 <hr />
 <h2 id="server-and-client">Server and Client<a class="headerlink" href="#server-and-client" title="Permanent link">&para;</a></h2>
-<p>Environment variables in this section apply to both server-side and client.
-|Variable|Description|
-|----|----|
-|FI_OFI_RXM_USE_SRX|Enable shared receive buffers for RXM-based providers (verbs, tcp). BOOL. Auto-defaults to 1.|
-|FI_UNIVERSE_SIZE|Sets expected universe size in OFI layer to be more than expected number of clients. INTEGER. Auto-defaults to 2048.|</p>
-<hr />
+<p>Environment variables in this section apply to both server-side and client.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FI_OFI_RXM_USE_SRX</td>
+<td>Enable shared receive buffers for RXM-based providers (verbs, tcp). BOOL. Auto-defaults to 1.</td>
+</tr>
+<tr>
+<td>FI_UNIVERSE_SIZE</td>
+<td>Sets expected universe size in OFI layer to be more than expected number of clients. INTEGER. Auto-defaults to 2048.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="client">Client<a class="headerlink" href="#client" title="Permanent link">&para;</a></h2>
 <p>Environment variables in this section only apply to the client-side.</p>
 <table>

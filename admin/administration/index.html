@@ -42,7 +42,7 @@
     
     
       
-        <title>System Administration - DAOS v0.9</title>
+        <title>System Administration - DAOS v1.0</title>
       
     
     
@@ -62,8 +62,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="http://daos.io" title="DAOS v0.9" aria-label="DAOS v0.9" class="md-header-nav__button md-logo">
+        <a href="http://daos.io" title="DAOS v1.0" aria-label="DAOS v1.0" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              DAOS v0.9
+              DAOS v1.0
             </span>
             <span class="md-header-nav__topic">
               
@@ -274,12 +274,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="http://daos.io" title="DAOS v0.9" class="md-nav__button md-logo">
+    <a href="http://daos.io" title="DAOS v1.0" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    DAOS v0.9
+    DAOS v1.0
   </label>
   
     <div class="md-nav__source">
@@ -463,6 +463,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../predeployment_check/" title="Pre-deployment Checklist" class="md-nav__link">
+      Pre-deployment Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../deployment/" title="System Deployment" class="md-nav__link">
       System Deployment
     </a>
@@ -530,15 +542,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#full-shutdown-and-restart" class="md-nav__link">
-    Full Shutdown and Restart
+  <a href="#query" class="md-nav__link">
+    Query
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#fresh-start" class="md-nav__link">
-    Fresh Start
+  <a href="#shutdown" class="md-nav__link">
+    Shutdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    Start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reformat" class="md-nav__link">
+    Reformat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-fresh-start" class="md-nav__link">
+    Manual Fresh Start
   </a>
   
 </li>
@@ -856,8 +889,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../html/" title="DAOS API" class="md-nav__link">
-      DAOS API
+    <a href="../../html/index.html" title="DAOS API Documentation" class="md-nav__link">
+      DAOS API Documentation
     </a>
   </li>
 
@@ -964,15 +997,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#full-shutdown-and-restart" class="md-nav__link">
-    Full Shutdown and Restart
+  <a href="#query" class="md-nav__link">
+    Query
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#fresh-start" class="md-nav__link">
-    Fresh Start
+  <a href="#shutdown" class="md-nav__link">
+    Shutdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    Start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reformat" class="md-nav__link">
+    Reformat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-fresh-start" class="md-nav__link">
+    Manual Fresh Start
   </a>
   
 </li>
@@ -1161,31 +1215,67 @@ boro-11:10001:
 </code></pre>
 
 <h2 id="system-operations">System Operations<a class="headerlink" href="#system-operations" title="Permanent link">&para;</a></h2>
-<h3 id="full-shutdown-and-restart">Full Shutdown and Restart<a class="headerlink" href="#full-shutdown-and-restart" title="Permanent link">&para;</a></h3>
-<p>A DAOS system can be restarted after a controlled shutdown providing
-no configurations changes have been made after the initial format.</p>
-<p>The DAOS Control Server instance acting as access point records DAOS
-I/O Server instances that join the system in a "membership".</p>
-<p>When up and running, the entire system (all I/O Server instances)
-can be shut down with the command:
-<code>dmg -l &lt;access_point_addr&gt; system stop</code>, after which DAOS Control
-Servers will continue to operate and listen on the management network.</p>
-<p>To start the system again (with no configuration changes) after a
-controlled shutdown, run the command
-<code>dmg -l &lt;access_point_addr&gt; system start</code>, DAOS I/O Servers
-managed by DAOS Control Servers will be started.</p>
-<p>To query the system membership, run the command
-<code>dmg -l &lt;access_point_addr&gt; system query</code>, this lists details
-(rank/uuid/control address/state) of DAOS I/O Servers in the
-system membership.</p>
+<p>The DAOS Control Server acting as the access point records details of DAOS I/O
+Server instances that join the DAOS system. Once an I/O Server has joined the
+DAOS system, it is identified by a unique system "rank". Multiple ranks can
+reside on the same host machine, accessible via the same network address.</p>
+<p>A DAOS system can be shutdown and restarted to perform maintenance and/or
+reboot hosts. Pool data and state will be maintained providing no changes are
+made to the rank's metadata stored on persistent memory.</p>
+<p>Storage reformat can also be performed after system shutdown. Pools will be
+removed and storage wiped.</p>
+<p>System commands will be handled by the DAOS Server listening at the access point
+address specified as the first entry in the DMG config file "hostlist" parameter.
+See
+<a href="https://github.com/daos-stack/daos/blob/master/utils/config/daos_control.yml"><code>daos_control.yml</code></a>
+for details.</p>
+<p>The "access point" address should be the same as that specified in the server
+config file
+<a href="https://github.com/daos-stack/daos/blob/master/utils/config/daos_server.yml"><code>daos_server.yml</code></a>
+specified when starting <code>daos_server</code> instances.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Controlled start/stop has some known limitations.
-"start" restarts all configured instances on all harnesses that can
-be located in the system membership, regardless of member state.
-Moreover, supplying the list of ranks to "start" and "stop" is not yet supported</p>
+<p>Controlled start/stop/reformat have some known limitations.
+Whilst individual system instances can be stopped, if a subset is restarted,
+existing pools will not be automatically integrated with restarted instances.</p>
 </div>
-<h3 id="fresh-start">Fresh Start<a class="headerlink" href="#fresh-start" title="Permanent link">&para;</a></h3>
+<h3 id="query">Query<a class="headerlink" href="#query" title="Permanent link">&para;</a></h3>
+<p>The system membership can be queried using the command:</p>
+<p><code>$ dmg system query [--verbose] [--ranks &lt;rankset&gt;]</code></p>
+<ul>
+<li><code>&lt;rankset&gt;</code> is a pattern describing rank ranges e.g. 0,5-10,20-100</li>
+<li><code>--verbose</code> flag gives more information on each rank</li>
+</ul>
+<p>Output table will provide system rank mappings to host address and instance
+UUID, in addition to rank state.</p>
+<h3 id="shutdown">Shutdown<a class="headerlink" href="#shutdown" title="Permanent link">&para;</a></h3>
+<p>When up and running, the entire system can be shutdown with the command:</p>
+<p><code>$ dmg system stop [--ranks &lt;rankset&gt;]</code></p>
+<ul>
+<li><code>&lt;rankset&gt;</code> is a pattern describing rank ranges e.g. 0,5-10,20-100</li>
+</ul>
+<p>Output table will indicate action and result.</p>
+<p>DAOS Control Servers will continue to operate and listen on the management
+network.</p>
+<h3 id="start">Start<a class="headerlink" href="#start" title="Permanent link">&para;</a></h3>
+<p>To start the system after a controlled shutdown run the command:</p>
+<p><code>$ dmg system start [--ranks &lt;rankset&gt;]</code></p>
+<ul>
+<li><code>&lt;rankset&gt;</code> is a pattern describing rank ranges e.g. 0,5-10,20-100</li>
+</ul>
+<p>Output table will indicate action and result.</p>
+<p>DAOS I/O Servers will be started.</p>
+<h3 id="reformat">Reformat<a class="headerlink" href="#reformat" title="Permanent link">&para;</a></h3>
+<p>To reformat the system after a controlled shutdown run the command:</p>
+<p><code>$ dmg storage format --system [--ranks &lt;rankset&gt;]</code></p>
+<ul>
+<li><code>--system</code> flag indicates that the format operation should be performed on
+  provided set of system ranks or all ranks if <code>--ranks</code> is omitted.</li>
+<li><code>&lt;rankset&gt;</code> is a pattern describing rank ranges e.g. 0,5-10,20-100</li>
+</ul>
+<p>Output table will indicate action and result.</p>
+<p>DAOS I/O Servers will be started and all DAOS pools will have been removed.</p>
+<h3 id="manual-fresh-start">Manual Fresh Start<a class="headerlink" href="#manual-fresh-start" title="Permanent link">&para;</a></h3>
 <p>To reset the DAOS metadata across all hosts, the system must be reformatted.
 First, ensure all <code>daos_server</code> processes on all hosts have been
 stopped, then for each SCM mount specified in the config file

@@ -42,7 +42,7 @@
     
     
       
-        <title>Software Installation - DAOS v0.9</title>
+        <title>Software Installation - DAOS v1.0</title>
       
     
     
@@ -62,8 +62,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="http://daos.io" title="DAOS v0.9" aria-label="DAOS v0.9" class="md-header-nav__button md-logo">
+        <a href="http://daos.io" title="DAOS v1.0" aria-label="DAOS v1.0" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              DAOS v0.9
+              DAOS v1.0
             </span>
             <span class="md-header-nav__topic">
               
@@ -274,12 +274,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="http://daos.io" title="DAOS v0.9" class="md-nav__button md-logo">
+    <a href="http://daos.io" title="DAOS v1.0" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    DAOS v0.9
+    DAOS v1.0
   </label>
   
     <div class="md-nav__source">
@@ -583,6 +583,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../predeployment_check/" title="Pre-deployment Checklist" class="md-nav__link">
+      Pre-deployment Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../deployment/" title="System Deployment" class="md-nav__link">
       System Deployment
     </a>
@@ -823,8 +835,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../html/" title="DAOS API" class="md-nav__link">
-      DAOS API
+    <a href="../../html/index.html" title="DAOS API Documentation" class="md-nav__link">
+      DAOS API Documentation
     </a>
   </li>
 
@@ -1012,7 +1024,7 @@
                 
                 <h1 id="software-installation">Software Installation<a class="headerlink" href="#software-installation" title="Permanent link">&para;</a></h1>
 <p>DAOS runs on both Intel 64 and ARM64 platforms and has been successfully tested
-on CentOS 7, OpenSUSE Leap 15.1, and Ubuntu 18.04 distributions.</p>
+on CentOS 7, OpenSUSE Leap 15.1, and Ubuntu 20.04 distributions.</p>
 <h2 id="software-dependencies">Software Dependencies<a class="headerlink" href="#software-dependencies" title="Permanent link">&para;</a></h2>
 <p>DAOS requires a C99-capable compiler, a Go compiler, and the scons build tool.
 Moreover, the DAOS stack leverages the following open source projects:</p>
@@ -1038,7 +1050,10 @@ Moreover, the DAOS stack leverages the following open source projects:</p>
     performance through fio-spdk plugin.</p>
 </li>
 <li>
-<p><a href="https://github.com/01org/isa-l"><em>ISA-L</em></a> for checksum and erasure code
+<p><a href="https://github.com/01org/isa-l"><em>ISA-L</em></a> for checksum and erasure code</p>
+</li>
+<li>
+<p><a href="https://github.com/01org/isa-l_crypto"><em>ISA-L_Crypto</em></a> for checksum
     computation.</p>
 </li>
 <li>
@@ -1075,7 +1090,7 @@ maintained in the Docker files:</p>
 <ul>
 <li><a href="https://github.com/daos-stack/daos/blob/master/utils/docker/Dockerfile.centos.7#L53-L76">CentOS</a></li>
 <li><a href="https://github.com/daos-stack/daos/blob/master/utils/docker/Dockerfile.leap.15#L16-L42">OpenSUSE</a></li>
-<li><a href="https://github.com/daos-stack/daos/blob/master/utils/docker/Dockerfile.ubuntu.18.04#L21-L39">Ubuntu</a></li>
+<li><a href="https://github.com/daos-stack/daos/blob/master/utils/docker/Dockerfile.ubuntu.20.04#L21-L39">Ubuntu</a></li>
 </ul>
 <p>The command lines to install the required packages can be extracted from
 the Docker files by removing the "RUN" command, which is specific to Docker.
@@ -1146,7 +1161,7 @@ On Mac, please make sure that the Docker settings under
 <p>This creates a CentOS 7 image, fetches the latest DAOS version from GitHub,
 builds it, and installs it in the image.
 For Ubuntu and other Linux distributions, replace Dockerfile.centos.7 with
-Dockerfile.ubuntu.18.04 and the appropriate version of interest.</p>
+Dockerfile.ubuntu.20.04 and the appropriate version of interest.</p>
 <p>Once the image created, one can start a container that will eventually run
 the DAOS service:</p>
 <pre><code class="bash">$ docker run -it -d --privileged --name server \
@@ -1238,13 +1253,13 @@ refer to the next section.</p>
           </a>
         
         
-          <a href="../deployment/" title="System Deployment" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../predeployment_check/" title="Pre-deployment Checklist" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                System Deployment
+                Pre-deployment Checklist
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

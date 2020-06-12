@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"structdaos__obj__sync__args.html#afd4dba31ae8bd29af4602b518d0ab400":[0,0,54,1],
+"structdaos__oclass__attr.html":[0,0,55],
 "structdaos__oclass__attr.html#a1787c3ebe216f351cc5e5657df4ed314":[0,0,55,3],
 "structdaos__oclass__attr.html#a17e6e44a36d3526b3d40c17410603e8c":[0,0,55,0],
 "structdaos__oclass__attr.html#a2596b44c5152c9a7a4005a43886b0590":[0,0,55,8],
