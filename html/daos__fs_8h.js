@@ -33,8 +33,6 @@ var daos__fs_8h =
     [ "dfs_mount_root_cont", "daos__fs_8h.html#a27000a4755148636a2ee973ec1e8b409", null ],
     [ "dfs_move", "daos__fs_8h.html#a054f1a57950e4bd35e22dbe68a3cd859", null ],
     [ "dfs_obj2id", "daos__fs_8h.html#a9bc7cbbf60d1e47964d1423cfed31151", null ],
-    [ "dfs_obj_anchor_set", "daos__fs_8h.html#a158200a32fbb8f23766f4eed69ccc4c4", null ],
-    [ "dfs_obj_anchor_split", "daos__fs_8h.html#af77af4a335a88dc8fc4fb9b608ff248d", null ],
     [ "dfs_obj_global2local", "daos__fs_8h.html#aaef818c617008ecfc074c8fa4d3d187b", null ],
     [ "dfs_obj_local2global", "daos__fs_8h.html#a9c525bd5a23582a8ead2d446362444c7", null ],
     [ "dfs_open", "daos__fs_8h.html#a43eee0ce15ae1ab80a4b83a06d494bd5", null ],

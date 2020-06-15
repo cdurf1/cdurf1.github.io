@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="Intel_Logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">DAOS API
-   &#160;<span id="projectnumber">Version 0.9</span>
+   &#160;<span id="projectnumber">Version 1.0</span>
    </div>
   </td>
  </tr>
@@ -175,10 +175,6 @@ Functions</h2></td></tr>
 <tr class="separator:adb4ba70e262cfc93051ce23a1b31ce84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3aed9b74d478f6cdfa79209d6c66a6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__fs_8h.html#aa3aed9b74d478f6cdfa79209d6c66a6f">dfs_iterate</a> (<a class="el" href="daos__fs_8h.html#afc65ec05277f052daed166445bf3c828">dfs_t</a> *dfs, <a class="el" href="daos__fs_8h.html#a51617a5017d3365ee5faf1452daed4b2">dfs_obj_t</a> *obj, <a class="el" href="structdaos__anchor__t.html">daos_anchor_t</a> *anchor, uint32_t *nr, size_t size, <a class="el" href="daos__fs_8h.html#aa5f09199712d2f96b642dd98e991f03a">dfs_filler_cb_t</a> op, void *udata)</td></tr>
 <tr class="separator:aa3aed9b74d478f6cdfa79209d6c66a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af77af4a335a88dc8fc4fb9b608ff248d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__fs_8h.html#af77af4a335a88dc8fc4fb9b608ff248d">dfs_obj_anchor_split</a> (<a class="el" href="daos__fs_8h.html#a51617a5017d3365ee5faf1452daed4b2">dfs_obj_t</a> *obj, uint32_t *nr, <a class="el" href="structdaos__anchor__t.html">daos_anchor_t</a> *anchors)</td></tr>
-<tr class="separator:af77af4a335a88dc8fc4fb9b608ff248d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a158200a32fbb8f23766f4eed69ccc4c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__fs_8h.html#a158200a32fbb8f23766f4eed69ccc4c4">dfs_obj_anchor_set</a> (<a class="el" href="daos__fs_8h.html#a51617a5017d3365ee5faf1452daed4b2">dfs_obj_t</a> *obj, uint32_t index, <a class="el" href="structdaos__anchor__t.html">daos_anchor_t</a> *anchor)</td></tr>
-<tr class="separator:a158200a32fbb8f23766f4eed69ccc4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea80aad002519a8f2606a09e50353968"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__fs_8h.html#aea80aad002519a8f2606a09e50353968">dfs_mkdir</a> (<a class="el" href="daos__fs_8h.html#afc65ec05277f052daed166445bf3c828">dfs_t</a> *dfs, <a class="el" href="daos__fs_8h.html#a51617a5017d3365ee5faf1452daed4b2">dfs_obj_t</a> *parent, const char *name, mode_t mode, daos_oclass_id_t cid)</td></tr>
 <tr class="separator:aea80aad002519a8f2606a09e50353968"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e049abc4666778f326b604c6f4b3c36"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__fs_8h.html#a1e049abc4666778f326b604c6f4b3c36">dfs_remove</a> (<a class="el" href="daos__fs_8h.html#afc65ec05277f052daed166445bf3c828">dfs_t</a> *dfs, <a class="el" href="daos__fs_8h.html#a51617a5017d3365ee5faf1452daed4b2">dfs_obj_t</a> *parent, const char *name, bool force, <a class="el" href="structdaos__obj__id__t.html">daos_obj_id_t</a> *oid)</td></tr>
@@ -275,7 +271,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Option to set the access time on an entry </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__fs_8h_source.html#l00678">678</a> of file <a class="el" href="daos__fs_8h_source.html">daos_fs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__fs_8h_source.html#l00640">640</a> of file <a class="el" href="daos__fs_8h_source.html">daos_fs.h</a>.</p>
 
 </div>
 </div>
@@ -292,7 +288,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Option to set the mode_t on an entry </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__fs_8h_source.html#l00676">676</a> of file <a class="el" href="daos__fs_8h_source.html">daos_fs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__fs_8h_source.html#l00638">638</a> of file <a class="el" href="daos__fs_8h_source.html">daos_fs.h</a>.</p>
 
 </div>
 </div>
@@ -309,7 +305,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Option to set the modify time on an entry </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__fs_8h_source.html#l00680">680</a> of file <a class="el" href="daos__fs_8h_source.html">daos_fs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__fs_8h_source.html#l00642">642</a> of file <a class="el" href="daos__fs_8h_source.html">daos_fs.h</a>.</p>
 
 </div>
 </div>
@@ -326,7 +322,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Option to set size of a file </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__fs_8h_source.html#l00682">682</a> of file <a class="el" href="daos__fs_8h_source.html">daos_fs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__fs_8h_source.html#l00644">644</a> of file <a class="el" href="daos__fs_8h_source.html">daos_fs.h</a>.</p>
 
 </div>
 </div>
@@ -1506,95 +1502,6 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>Object to convert </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">oid</td><td>Daos object ID.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, errno code on failure. </dd></dl>
-
-</div>
-</div>
-<a id="a158200a32fbb8f23766f4eed69ccc4c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a158200a32fbb8f23766f4eed69ccc4c4">&#9670;&nbsp;</a></span>dfs_obj_anchor_set()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int dfs_obj_anchor_set </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="daos__fs_8h.html#a51617a5017d3365ee5faf1452daed4b2">dfs_obj_t</a> *&#160;</td>
-          <td class="paramname"><em>obj</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structdaos__anchor__t.html">daos_anchor_t</a> *&#160;</td>
-          <td class="paramname"><em>anchor</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set an anchor with an index based on split done with dfs_obj_anchor_split. The anchor passed will be re-intialized and set to start and finish iteration based on the specified index.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>Dir object to split anchor for. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>Index of set this anchor for iteration. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">anchor</td><td>Hash anchor to set.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, errno code on failure. </dd></dl>
-
-</div>
-</div>
-<a id="af77af4a335a88dc8fc4fb9b608ff248d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af77af4a335a88dc8fc4fb9b608ff248d">&#9670;&nbsp;</a></span>dfs_obj_anchor_split()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int dfs_obj_anchor_split </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="daos__fs_8h.html#a51617a5017d3365ee5faf1452daed4b2">dfs_obj_t</a> *&#160;</td>
-          <td class="paramname"><em>obj</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t *&#160;</td>
-          <td class="paramname"><em>nr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structdaos__anchor__t.html">daos_anchor_t</a> *&#160;</td>
-          <td class="paramname"><em>anchors</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Provide a function for large directories to split an anchor to be able to execute a parallel readdir or iterate. This routine suggests the optimal number of anchors to use instead of just 1 and optionally returns all those anchors. The user would allocate the array of anchors after querying the number of anchors needed. Alternatively, user does not provide an array and can call <a class="el" href="daos__fs_8h.html#a158200a32fbb8f23766f4eed69ccc4c4">dfs_obj_anchor_set()</a> for every anchor to set.</p>
-<p>The user could suggest how many anchors to split the iteration over. This feature is not supported yet.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>Dir object to split anchor for. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>nr [in]: Number of anchors requested and allocated in <em>anchors</em>. Pass 0 for DAOS to recommend split num. [out]: Number of anchors recommended if 0 is passed in. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">anchors</td><td>Optional array of anchors that are split.</td></tr>
   </table>
   </dd>
 </dl>

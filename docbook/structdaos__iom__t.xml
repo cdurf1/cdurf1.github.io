@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structdaos__iom__t">
+<title>daos_iom_t Struct Reference</title>
+<indexterm><primary>daos_iom_t</primary></indexterm>
+<para>
+<computeroutput>#include &lt;daos_obj.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>daos_iod_type_t <link linkend="_structdaos__iom__t_1a717d00b3530c67811a1588b27cfcf687">iom_type</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_structdaos__iom__t_1a99ce9df3dbc9148a198fed0d0537f210">iom_nr</link></para>
+</listitem>
+            <listitem><para>daos_size_t <link linkend="_structdaos__iom__t_1a554ccebf7848b5928efe5d0be11a4299">iom_size</link></para>
+</listitem>
+            <listitem><para><link linkend="_structdaos__recx__t">daos_recx_t</link> <link linkend="_structdaos__iom__t_1ae2aa876e34e1594e40b4b48825ab1618">iom_recx_lo</link></para>
+</listitem>
+            <listitem><para><link linkend="_structdaos__recx__t">daos_recx_t</link> <link linkend="_structdaos__iom__t_1ac8a444dbd22866ca106838a9c8082bbb">iom_recx_hi</link></para>
+</listitem>
+            <listitem><para><link linkend="_structdaos__recx__t">daos_recx_t</link> * <link linkend="_structdaos__iom__t_1ae740ccca5fa0db507d676bdb06d6a8c6">iom_recxs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A I/O map represents the physical extent mapping inside an array for a given range of indices. </para>
+<para>
+Definition at line 249 of file daos_obj.h.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structdaos__iom__t_1a99ce9df3dbc9148a198fed0d0537f210"/>    <section>
+    <title>iom_nr</title>
+<indexterm><primary>iom_nr</primary><secondary>daos_iom_t</secondary></indexterm>
+<indexterm><primary>daos_iom_t</primary><secondary>iom_nr</secondary></indexterm>
+<para><computeroutput>unsigned int iom_nr</computeroutput></para>
+<para>Number of extents in the mapping, that&apos;s the size of all the external arrays listed below. 1 for SV. </para>
+<para>
+Definition at line 256 of file daos_obj.h.</para>
+    </section><anchor xml:id="_structdaos__iom__t_1ac8a444dbd22866ca106838a9c8082bbb"/>    <section>
+    <title>iom_recx_hi</title>
+<indexterm><primary>iom_recx_hi</primary><secondary>daos_iom_t</secondary></indexterm>
+<indexterm><primary>daos_iom_t</primary><secondary>iom_recx_hi</secondary></indexterm>
+<para><computeroutput><link linkend="_structdaos__recx__t">daos_recx_t</link> iom_recx_hi</computeroutput></para>
+<para>The recx with the highest offset within the requested extents daos_io_desc::iod_recxs. It is set to zero for single value, or there is only one returned recx. </para>
+<para>
+Definition at line 269 of file daos_obj.h.</para>
+    </section><anchor xml:id="_structdaos__iom__t_1ae2aa876e34e1594e40b4b48825ab1618"/>    <section>
+    <title>iom_recx_lo</title>
+<indexterm><primary>iom_recx_lo</primary><secondary>daos_iom_t</secondary></indexterm>
+<indexterm><primary>daos_iom_t</primary><secondary>iom_recx_lo</secondary></indexterm>
+<para><computeroutput><link linkend="_structdaos__recx__t">daos_recx_t</link> iom_recx_lo</computeroutput></para>
+<para>The recx with the lowest offset within the requested extents daos_io_desc::iod_recxs </para>
+<para>
+Definition at line 263 of file daos_obj.h.</para>
+    </section><anchor xml:id="_structdaos__iom__t_1ae740ccca5fa0db507d676bdb06d6a8c6"/>    <section>
+    <title>iom_recxs</title>
+<indexterm><primary>iom_recxs</primary><secondary>daos_iom_t</secondary></indexterm>
+<indexterm><primary>daos_iom_t</primary><secondary>iom_recxs</secondary></indexterm>
+<para><computeroutput><link linkend="_structdaos__recx__t">daos_recx_t</link>* iom_recxs</computeroutput></para>
+<para>All the returned recxs within the requested extents </para>
+<para>
+Definition at line 271 of file daos_obj.h.</para>
+    </section><anchor xml:id="_structdaos__iom__t_1a554ccebf7848b5928efe5d0be11a4299"/>    <section>
+    <title>iom_size</title>
+<indexterm><primary>iom_size</primary><secondary>daos_iom_t</secondary></indexterm>
+<indexterm><primary>daos_iom_t</primary><secondary>iom_size</secondary></indexterm>
+<para><computeroutput>daos_size_t iom_size</computeroutput></para>
+<para>Size of the single value or the record size </para>
+<para>
+Definition at line 258 of file daos_obj.h.</para>
+    </section><anchor xml:id="_structdaos__iom__t_1a717d00b3530c67811a1588b27cfcf687"/>    <section>
+    <title>iom_type</title>
+<indexterm><primary>iom_type</primary><secondary>daos_iom_t</secondary></indexterm>
+<indexterm><primary>daos_iom_t</primary><secondary>iom_type</secondary></indexterm>
+<para><computeroutput>daos_iod_type_t iom_type</computeroutput></para>
+<para>type of akey value (SV or AR) </para>
+<para>
+Definition at line 251 of file daos_obj.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/include/daos_obj.h</section>
+</section>

@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_daos__api_8h">
+<title>src/include/daos_api.h File Reference</title>
+<indexterm><primary>src/include/daos_api.h</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>d_rank_list_t * <link linkend="_daos__api_8h_1abc4655c8429eff6b7a5637027ec3dbb2">daos_rank_list_parse</link> (const char *str, const char *sep)</para>
+</listitem>
+            <listitem><para>int <link linkend="_daos__api_8h_1adf549ca36164793886c6a525f70ccc9a">daos_tx_open</link> (<link linkend="_structdaos__handle__t">daos_handle_t</link> coh, <link linkend="_structdaos__handle__t">daos_handle_t</link> *th, <link linkend="_structdaos__event">daos_event_t</link> *ev)</para>
+</listitem>
+            <listitem><para>int <link linkend="_daos__api_8h_1a4cb7e867cfd999985945c5d5e4fedac3">daos_tx_commit</link> (<link linkend="_structdaos__handle__t">daos_handle_t</link> th, <link linkend="_structdaos__event">daos_event_t</link> *ev)</para>
+</listitem>
+            <listitem><para>int <link linkend="_daos__api_8h_1aeeed38f424e4808a8343899d650339b3">daos_tx_open_snap</link> (<link linkend="_structdaos__handle__t">daos_handle_t</link> coh, daos_epoch_t epoch, <link linkend="_structdaos__handle__t">daos_handle_t</link> *th, <link linkend="_structdaos__event">daos_event_t</link> *ev)</para>
+</listitem>
+            <listitem><para>int <link linkend="_daos__api_8h_1a40cf0b9f0976d3173d55b2bce33a91f8">daos_tx_abort</link> (<link linkend="_structdaos__handle__t">daos_handle_t</link> th, <link linkend="_structdaos__event">daos_event_t</link> *ev)</para>
+</listitem>
+            <listitem><para>int <link linkend="_daos__api_8h_1acc1b2d05cbf0cb9ed6a4dc843d97fb82">daos_tx_close</link> (<link linkend="_structdaos__handle__t">daos_handle_t</link> th, <link linkend="_structdaos__event">daos_event_t</link> *ev)</para>
+</listitem>
+            <listitem><para>int <link linkend="_daos__api_8h_1a3a50870fb708e8044d112a8ec7af5100">daos_tx_hdl2epoch</link> (<link linkend="_structdaos__handle__t">daos_handle_t</link> th, daos_epoch_t *epoch)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>DAOS API methods </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_daos__api_8h_1abc4655c8429eff6b7a5637027ec3dbb2"/>    <section>
+    <title>daos_rank_list_parse()</title>
+<indexterm><primary>daos_rank_list_parse</primary><secondary>daos_api.h</secondary></indexterm>
+<indexterm><primary>daos_api.h</primary><secondary>daos_rank_list_parse</secondary></indexterm>
+<para><computeroutput>d_rank_list_t* daos_rank_list_parse (const char * str, const char * sep)</computeroutput></para>
+<para>Generate a rank list from a string with a seprator argument. This is a convenience function to generate the rank list required by daos_pool_connect().</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>str</entry>
+                                <entry>
+<para>string with the rank list </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>sep</entry>
+                                <entry>
+<para>separator of the ranks in <emphasis>str</emphasis>. dmg uses &quot;:&quot; as the separator.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>allocated rank list that user is responsible to free with d_rank_list_free(). </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_daos__api_8h_1a40cf0b9f0976d3173d55b2bce33a91f8"/>    <section>
+    <title>daos_tx_abort()</title>
+<indexterm><primary>daos_tx_abort</primary><secondary>daos_api.h</secondary></indexterm>
+<indexterm><primary>daos_api.h</primary><secondary>daos_tx_abort</secondary></indexterm>
+<para><computeroutput>int daos_tx_abort (<link linkend="_structdaos__handle__t">daos_handle_t</link> th, <link linkend="_structdaos__event">daos_event_t</link> * ev)</computeroutput></para>
+<para>Abort all updates on the transaction. The transaction can&apos;t be used for future updates anymore.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>th</entry>
+                                <entry>
+<para>Transaction handle to abort. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ev</entry>
+                                <entry>
+<para>Completion event, it is optional and can be NULL. The function will run in blocking mode if <emphasis>ev</emphasis> is NULL.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 if Success, negative if failed. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_daos__api_8h_1acc1b2d05cbf0cb9ed6a4dc843d97fb82"/>    <section>
+    <title>daos_tx_close()</title>
+<indexterm><primary>daos_tx_close</primary><secondary>daos_api.h</secondary></indexterm>
+<indexterm><primary>daos_api.h</primary><secondary>daos_tx_close</secondary></indexterm>
+<para><computeroutput>int daos_tx_close (<link linkend="_structdaos__handle__t">daos_handle_t</link> th, <link linkend="_structdaos__event">daos_event_t</link> * ev)</computeroutput></para>
+<para>Close and free the transaction handle. This is a local operation, no RPC involved.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>th</entry>
+                                <entry>
+<para>Transaction handle to free. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ev</entry>
+                                <entry>
+<para>Completion event, it is optional and can be NULL. The function will run in blocking mode if <emphasis>ev</emphasis> is NULL.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 if Success, negative if failed. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_daos__api_8h_1a4cb7e867cfd999985945c5d5e4fedac3"/>    <section>
+    <title>daos_tx_commit()</title>
+<indexterm><primary>daos_tx_commit</primary><secondary>daos_api.h</secondary></indexterm>
+<indexterm><primary>daos_api.h</primary><secondary>daos_tx_commit</secondary></indexterm>
+<para><computeroutput>int daos_tx_commit (<link linkend="_structdaos__handle__t">daos_handle_t</link> th, <link linkend="_structdaos__event">daos_event_t</link> * ev)</computeroutput></para>
+<para>Commit the transaction on the container it was created with. The transaction can&apos;t be used for future updates anymore. If -DER_RESTART was returned, the operations that have been done on this transaction need to be redone with a newer transaction since a conflict was detected with another transaction.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>th</entry>
+                                <entry>
+<para>Transaction handle to commit. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ev</entry>
+                                <entry>
+<para>Completion event, it is optional and can be NULL. The function will run in blocking mode if <emphasis>ev</emphasis> is NULL.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 if Success, negative if failed. Possible error values include: -DER_NO_HDL invalid transaction handle. -DER_INVAL Invalid parameter -DER_RESTART transaction conflict detected. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_daos__api_8h_1a3a50870fb708e8044d112a8ec7af5100"/>    <section>
+    <title>daos_tx_hdl2epoch()</title>
+<indexterm><primary>daos_tx_hdl2epoch</primary><secondary>daos_api.h</secondary></indexterm>
+<indexterm><primary>daos_api.h</primary><secondary>daos_tx_hdl2epoch</secondary></indexterm>
+<para><computeroutput>int daos_tx_hdl2epoch (<link linkend="_structdaos__handle__t">daos_handle_t</link> th, daos_epoch_t * epoch)</computeroutput></para>
+<para>Return epoch associated with the transaction handle.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>th</entry>
+                                <entry>
+<para>Transaction handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>epoch</entry>
+                                <entry>
+<para>Returned epoch value.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 if Success, negative if failed. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_daos__api_8h_1adf549ca36164793886c6a525f70ccc9a"/>    <section>
+    <title>daos_tx_open()</title>
+<indexterm><primary>daos_tx_open</primary><secondary>daos_api.h</secondary></indexterm>
+<indexterm><primary>daos_api.h</primary><secondary>daos_tx_open</secondary></indexterm>
+<para><computeroutput>int daos_tx_open (<link linkend="_structdaos__handle__t">daos_handle_t</link> coh, <link linkend="_structdaos__handle__t">daos_handle_t</link> * th, <link linkend="_structdaos__event">daos_event_t</link> * ev)</computeroutput></para>
+<para>Open a transaction on a container handle. This returns a transaction handle that is tagged with the current epoch. The transaction handle can be used for IOs that need to be committed transactionally.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>coh</entry>
+                                <entry>
+<para>Container handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>th</entry>
+                                <entry>
+<para>Returned transaction handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ev</entry>
+                                <entry>
+<para>Completion event, it is optional and can be NULL. The function will run in blocking mode if <emphasis>ev</emphasis> is NULL.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 if Success, negative if failed. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_daos__api_8h_1aeeed38f424e4808a8343899d650339b3"/>    <section>
+    <title>daos_tx_open_snap()</title>
+<indexterm><primary>daos_tx_open_snap</primary><secondary>daos_api.h</secondary></indexterm>
+<indexterm><primary>daos_api.h</primary><secondary>daos_tx_open_snap</secondary></indexterm>
+<para><computeroutput>int daos_tx_open_snap (<link linkend="_structdaos__handle__t">daos_handle_t</link> coh, daos_epoch_t epoch, <link linkend="_structdaos__handle__t">daos_handle_t</link> * th, <link linkend="_structdaos__event">daos_event_t</link> * ev)</computeroutput></para>
+<para>Create a read-only transaction from a snapshot. This does not create the snapshot, but only a read transaction to be able to read from a persistent snapshot in the container. If the user passes an epoch that is not snapshoted, or the snapshot was deleted, reads using that transaction might fail if the epoch was aggregated.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>coh</entry>
+                                <entry>
+<para>Container handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>epoch</entry>
+                                <entry>
+<para>Epoch of snapshot to read from. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>th</entry>
+                                <entry>
+<para>Returned read only transaction handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ev</entry>
+                                <entry>
+<para>Completion event, it is optional and can be NULL. The function will run in blocking mode if <emphasis>ev</emphasis> is NULL.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 if Success, negative if failed. </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>
