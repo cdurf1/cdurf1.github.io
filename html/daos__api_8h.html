@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="Intel_Logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">DAOS API
-   &#160;<span id="projectnumber">Version 0.9</span>
+   &#160;<span id="projectnumber">Version 1.0</span>
    </div>
   </td>
  </tr>
@@ -84,7 +84,6 @@ $(document).ready(function(){initNavTree('daos__api_8h.html',''); initResizable(
 
 <div class="header">
   <div class="summary">
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">daos_api.h File Reference</div>  </div>
@@ -93,19 +92,12 @@ $(document).ready(function(){initNavTree('daos__api_8h.html',''); initResizable(
 
 <p><a href="daos__api_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="daos__api_8h.html#a06fc87d81c62e9abb8790b6e5713c55baeca54c80ace170328bff03179c070de7">DAOS_TF_RDONLY</a> = (1 &lt;&lt; 0), 
-<a class="el" href="daos__api_8h.html#a06fc87d81c62e9abb8790b6e5713c55baec4d2d2d242c35e0e858fb2a5dad6e15">DAOS_TF_ZERO_COPY</a> = (1 &lt;&lt; 1)
- }</td></tr>
-<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:abc4655c8429eff6b7a5637027ec3dbb2"><td class="memItemLeft" align="right" valign="top">d_rank_list_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__api_8h.html#abc4655c8429eff6b7a5637027ec3dbb2">daos_rank_list_parse</a> (const char *str, const char *sep)</td></tr>
 <tr class="separator:abc4655c8429eff6b7a5637027ec3dbb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85fc0f9f93c742cfa39b65ac71c9ec07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__api_8h.html#a85fc0f9f93c742cfa39b65ac71c9ec07">daos_tx_open</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> coh, <a class="el" href="structdaos__handle__t.html">daos_handle_t</a> *th, uint64_t flags, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
-<tr class="separator:a85fc0f9f93c742cfa39b65ac71c9ec07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf549ca36164793886c6a525f70ccc9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__api_8h.html#adf549ca36164793886c6a525f70ccc9a">daos_tx_open</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> coh, <a class="el" href="structdaos__handle__t.html">daos_handle_t</a> *th, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
+<tr class="separator:adf549ca36164793886c6a525f70ccc9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cb7e867cfd999985945c5d5e4fedac3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__api_8h.html#a4cb7e867cfd999985945c5d5e4fedac3">daos_tx_commit</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> th, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
 <tr class="separator:a4cb7e867cfd999985945c5d5e4fedac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeeed38f424e4808a8343899d650339b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__api_8h.html#aeeed38f424e4808a8343899d650339b3">daos_tx_open_snap</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> coh, daos_epoch_t epoch, <a class="el" href="structdaos__handle__t.html">daos_handle_t</a> *th, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
@@ -114,8 +106,6 @@ Functions</h2></td></tr>
 <tr class="separator:a40cf0b9f0976d3173d55b2bce33a91f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc1b2d05cbf0cb9ed6a4dc843d97fb82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__api_8h.html#acc1b2d05cbf0cb9ed6a4dc843d97fb82">daos_tx_close</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> th, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
 <tr class="separator:acc1b2d05cbf0cb9ed6a4dc843d97fb82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcc4cc9d5c82aae3be3a3076bcb7e9e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__api_8h.html#abcc4cc9d5c82aae3be3a3076bcb7e9e1">daos_tx_restart</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> th, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
-<tr class="separator:abcc4cc9d5c82aae3be3a3076bcb7e9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a50870fb708e8044d112a8ec7af5100"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__api_8h.html#a3a50870fb708e8044d112a8ec7af5100">daos_tx_hdl2epoch</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> th, daos_epoch_t *epoch)</td></tr>
 <tr class="separator:a3a50870fb708e8044d112a8ec7af5100"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -123,30 +113,7 @@ Functions</h2></td></tr>
 <div class="textblock"><p>DAOS API methods </p>
 
 <p class="definition">Definition in file <a class="el" href="daos__api_8h_source.html">daos_api.h</a>.</p>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a06fc87d81c62e9abb8790b6e5713c55b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&nbsp;</a></span>anonymous enum</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">anonymous enum</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baeca54c80ace170328bff03179c070de7"></a>DAOS_TF_RDONLY&#160;</td><td class="fielddoc"><p>The transaction is read only. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baec4d2d2d242c35e0e858fb2a5dad6e15"></a>DAOS_TF_ZERO_COPY&#160;</td><td class="fielddoc"><p>Not copy application buffer (neither key buffer nor value buffer) when cache modification on client for the distributed transaction. </p>
-</td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="daos__api_8h_source.html#l00036">36</a> of file <a class="el" href="daos__api_8h_source.html">daos_api.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="abc4655c8429eff6b7a5637027ec3dbb2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc4655c8429eff6b7a5637027ec3dbb2">&#9670;&nbsp;</a></span>daos_rank_list_parse()</h2>
 
@@ -332,8 +299,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a85fc0f9f93c742cfa39b65ac71c9ec07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85fc0f9f93c742cfa39b65ac71c9ec07">&#9670;&nbsp;</a></span>daos_tx_open()</h2>
+<a id="adf549ca36164793886c6a525f70ccc9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf549ca36164793886c6a525f70ccc9a">&#9670;&nbsp;</a></span>daos_tx_open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,12 +320,6 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>flags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="structdaos__event.html">daos_event_t</a> *&#160;</td>
           <td class="paramname"><em>ev</em>&#160;</td>
         </tr>
@@ -374,7 +335,6 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coh</td><td>Container handle. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">th</td><td>Returned transaction handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>Transaction flags. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. The function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
   </table>
   </dd>
@@ -426,43 +386,6 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">coh</td><td>Container handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">epoch</td><td>Epoch of snapshot to read from. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">th</td><td>Returned read only transaction handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. The function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if Success, negative if failed. </dd></dl>
-
-</div>
-</div>
-<a id="abcc4cc9d5c82aae3be3a3076bcb7e9e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcc4cc9d5c82aae3be3a3076bcb7e9e1">&#9670;&nbsp;</a></span>daos_tx_restart()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int daos_tx_restart </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structdaos__handle__t.html">daos_handle_t</a>&#160;</td>
-          <td class="paramname"><em>th</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structdaos__event.html">daos_event_t</a> *&#160;</td>
-          <td class="paramname"><em>ev</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Restart the transaction handle. It drops all the modifications that have been issued via the handle. This is a local operation, no RPC involved.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle to be restarted. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. The function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
   </table>
   </dd>

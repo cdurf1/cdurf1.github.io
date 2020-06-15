@@ -245,6 +245,19 @@
   
     <li class="md-tabs__item">
       
+        <a href="../../release/releaseNote_v1_0/" class="md-tabs__link">
+          Releases
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
         <a href="../../dev/development/" class="md-tabs__link">
           Developer Zone
         </a>
@@ -353,7 +366,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../overview/architecture/" title="Architecture" class="md-nav__link">
+    <a href="../../overview/architecture.md" title="Architecture" class="md-nav__link">
       Architecture
     </a>
   </li>
@@ -463,7 +476,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../predeployment_check/" title="Pre-deployment Checklist" class="md-nav__link">
+    <a href="../predeployment_check.md" title="Pre-deployment Checklist" class="md-nav__link">
       Pre-deployment Checklist
     </a>
   </li>
@@ -511,7 +524,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tiering_uns/" title="Tiering and Unified Namespace" class="md-nav__link">
+    <a href="../tiering_uns.md" title="Tiering and Unified Namespace" class="md-nav__link">
       Tiering and Unified Namespace
     </a>
   </li>
@@ -559,13 +572,6 @@
         <li class="md-nav__item">
   <a href="#benchmarking-daos" class="md-nav__link">
     Benchmarking DAOS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#client-performance-tuning" class="md-nav__link">
-    Client Performance Tuning
   </a>
   
 </li>
@@ -716,10 +722,58 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
-      Developer Zone
+      Releases
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        Releases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/releaseNote_v1_0/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../licenses/Licensing/" title="Licensing" class="md-nav__link">
+      Licensing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Developer Zone
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
         Developer Zone
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -767,7 +821,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../html/index.html" title="DAOS API Documentation" class="md-nav__link">
+    <a href="../../html/" title="DAOS API Documentation" class="md-nav__link">
       DAOS API Documentation
     </a>
   </li>
@@ -860,13 +914,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#client-performance-tuning" class="md-nav__link">
-    Client Performance Tuning
-  </a>
-  
-</li>
-      
       
       
       
@@ -889,168 +936,79 @@
                 <h1 id="daos-performance-tuning">DAOS Performance Tuning<a class="headerlink" href="#daos-performance-tuning" title="Permanent link">&para;</a></h1>
 <p>This section will be expanded in a future revision.</p>
 <h2 id="network-performance">Network Performance<a class="headerlink" href="#network-performance" title="Permanent link">&para;</a></h2>
-<p>The DAOS CART layer can validate and benchmark network communications in the
-same context as an application and using the same networks/tuning options as
-regular DAOS.</p>
-<p>The CART self_test can run against the DAOS servers in a production environment
-in a non-destructive manner. CART self_test supports different message sizes,
-bulk transfers, multiple targets, and the following test scenarios:</p>
+<p>Similar to the Lustre Network stack, the DAOS CART layer can validate and benchmark network communications in the same context as
+an application and using the same networks/tuning options as regular
+DAOS. The CART self_test can run against the DAOS servers in a production
+environment in a non-destructive manner. CART self_test supports
+different message sizes, bulk transfers, multiple targets, and the
+following test scenarios:</p>
 <ul>
 <li>
-<p><strong>Selftest client to servers</strong> - where self_test issues RPCs directly
+<p><strong>Selftest client to servers</strong> where self_test issues RPCs directly
     to a list of servers</p>
 </li>
 <li>
-<p><strong>Cross-servers</strong> - where self_test sends instructions to the different
+<p><strong>Cross-servers</strong> where self_test sends instructions to the different
     servers that will issue cross-server RPCs. This model supports a
     many to many communication model.</p>
 </li>
 </ul>
-<p>Instructions to run CaRT self_test with test_group as the target server are as follows.</p>
-<pre><code class="bash">$ git clone https://github.com/daos-stack/daos.git
-$ cd daos
-$ git submodule init
-$ git submodule update
-$ scons --build-deps=yes install
-$ cd install/TESTING
-</code></pre>
-
-<p><strong>Prepare srvhostfile and clihostfile</strong></p>
-<ul>
-<li>
-<p>srvhostfile contains a list of nodes from which servers will launch</p>
-</li>
-<li>
-<p>clihostfile contains node from which self_test will launch</p>
-</li>
-</ul>
+<p>Instructions to run CaRT self_test with test_group as the target server are as follows. </p>
+<p>git clone https://github.com/daos-stack/daos.git
+cd daos
+git submodule init
+git submodule update
+scons --build-deps=yes install
+cd install/TESTING
+<strong>Prepare srvhostfile and clihostfile</strong>
+-   srvhostfile contains list of nodes from which servers will launch
+-   clihostfile contains node from which self_test will launch</p>
 <p>The example below uses Ethernet interface and Sockets provider.
-In the self_test commands:</p>
-<ul>
-<li>
-<p>(client-to-servers) Replace the argument for "--endpoint" accordingly.</p>
-</li>
-<li>
-<p>(cross-servers)     Replace the argument for "--endpoint" and "--master-endpoint" accordingly.</p>
-</li>
-<li>
-<p>For example, if you have 8 servers, you would specify "--endpoint 0-7:0" (and --master-endpoint 0-7:0)</p>
-</li>
-</ul>
-<p>The commands below will run self_test benchmark using the following message sizes:</p>
-<pre><code class="bash">b1048576     1Mb bulk transfer Get and Put
+In the self_test commands:
+-   (client-to-servers) Replace the argument for "--endpoint" accordingly. 
+-   (cross-servers)     Replace the argument for "--endpoint" and "--master-endpoint" accordingly. 
+-   For example, if you have 8 servers, you would specify "--endpoint 0-7:0" (and --master-endpoint 0-7:0)</p>
+<p>The commands below will run self_test benchmark using the following message sizes:
+b1048576     1Mb bulk transfer Get and Put
 b1048576 0   1Mb bulk transfer Get only
 0 b1048576   1Mb bulk transfer Put only
 I2048        2Kb iovec Input and Output
 i2048 0      2Kb iovec Input only
-0 i2048      2Kb iovec Output only
-</code></pre>
-
-<p>For full description of self_test usage, run:</p>
-<pre><code class="bash">$ ../bin/self_test --help
-</code></pre>
-
-<p><strong>To start test_group server:</strong></p>
-<pre><code class="bash">$ /usr/lib64/openmpi3/bin/orterun --mca btl self,tcp  -N 1 --hostfile srvhostfile --output-filename testLogs/ -x D_LOG_FILE=testLogs/test_group_srv.log -x D_LOG_FILE_APPEND_PID=1 -x D_LOG_MASK=WARN -x CRT_PHY_ADDR_STR=ofi+sockets -x OFI_INTERFACE=eth0 -x CRT_CTX_SHARE_ADDR=0 -x CRT_CTX_NUM=16  ../bin/crt_launch -e tests/test_group_np_srv --name self_test_srv_grp --cfg_path=. &amp;
-</code></pre>
-
-<p><strong>To run self_test in client-to-servers mode:</strong></p>
-<pre><code class="bash">$ /usr/lib64/openmpi3/bin/orterun --mca btl self,tcp  -N 1 --hostfile clihostfile --output-filename testLogs/ -x D_LOG_FILE=testLogs/self_test.log -x D_LOG_FILE_APPEND_PID=1 -x D_LOG_MASK=WARN -x CRT_PHY_ADDR_STR=ofi+sockets -x OFI_INTERFACE=eth0 -x CRT_CTX_SHARE_ADDR=0 -x CRT_CTX_NUM=16  ../bin/self_test --group-name self_test_srv_grp --endpoint 0-&lt;MAX_SERVER-1&gt;:0 --message-sizes &quot;b1048576,b1048576 0,0 b1048576,i2048,i2048 0,0 i2048&quot; --max-inflight-rpcs 16 --repetitions 100 -t -n -p .
-</code></pre>
-
-<p><strong>To run self_test in cross-servers mode:</strong></p>
-<pre><code class="bash">$ /usr/lib64/openmpi3/bin/orterun --mca btl self,tcp  -N 1 --hostfile clihostfile --output-filename testLogs/ -x D_LOG_FILE=testLogs/self_test.log -x D_LOG_FILE_APPEND_PID=1 -x D_LOG_MASK=WARN -x CRT_PHY_ADDR_STR=ofi+sockets -x OFI_INTERFACE=eth0 -x CRT_CTX_SHARE_ADDR=0 -x CRT_CTX_NUM=16  ../bin/self_test --group-name self_test_srv_grp --endpoint 0-&lt;MAX_SERVER-1&gt;:0 --master-endpoint 0-&lt;MAX_SERVER-1&gt;:0 --message-sizes &quot;b1048576,b1048576 0,0 b1048576,i2048,i2048 0,0 i2048&quot; --max-inflight-rpcs 16 --repetitions 100 -t -n -p .
-</code></pre>
-
-<p><strong>To shutdown test_group server:</strong></p>
-<pre><code class="bash">$ /usr/lib64/openmpi3/bin/orterun --mca btl self,tcp  -N 1 --hostfile clihostfile --output-filename testLogs/ -x D_LOG_FILE=testLogs/test_group_cli.log -x D_LOG_FILE_APPEND_PID=1 -x D_LOG_MASK=WARN -x CRT_PHY_ADDR_STR=ofi+sockets -x OFI_INTERFACE=eth0 -x CRT_CTX_SHARE_ADDR=0  tests/test_group_np_cli --name client-group --attach_to self_test_srv_grp --shut_only --cfg_path=.
-</code></pre>
-
+0 i2048      2Kb iovec Output only</p>
+<p>For full description of self_test usage, run:
+../bin/self_test --help</p>
+<p><strong>To start test_group server:</strong>
+/usr/lib64/openmpi3/bin/orterun --mca btl self,tcp  -N 1 --hostfile srvhostfile --output-filename testLogs/ -x D_LOG_FILE=testLogs/test_group_srv.log -x D_LOG_FILE_APPEND_PID=1 -x D_LOG_MASK=WARN -x CRT_PHY_ADDR_STR=ofi+sockets -x OFI_INTERFACE=eth0 -x CRT_CTX_SHARE_ADDR=0 -x CRT_CTX_NUM=16  ../bin/crt_launch -e tests/test_group_np_srv --name self_test_srv_grp --cfg_path=. &amp;</p>
+<p><strong>To run self_test in client-to-servers mode:</strong>
+/usr/lib64/openmpi3/bin/orterun --mca btl self,tcp  -N 1 --hostfile clihostfile --output-filename testLogs/ -x D_LOG_FILE=testLogs/self_test.log -x D_LOG_FILE_APPEND_PID=1 -x D_LOG_MASK=WARN -x CRT_PHY_ADDR_STR=ofi+sockets -x OFI_INTERFACE=eth0 -x CRT_CTX_SHARE_ADDR=0 -x CRT_CTX_NUM=16  ../bin/self_test --group-name self_test_srv_grp --endpoint 0-<MAX_SERVER-1>:0 --message-sizes "b1048576,b1048576 0,0 b1048576,i2048,i2048 0,0 i2048" --max-inflight-rpcs 16 --repetitions 100 -t -n -p .</p>
+<p><strong>To run self_test in cross-servers mode:</strong>
+/usr/lib64/openmpi3/bin/orterun --mca btl self,tcp  -N 1 --hostfile clihostfile --output-filename testLogs/ -x D_LOG_FILE=testLogs/self_test.log -x D_LOG_FILE_APPEND_PID=1 -x D_LOG_MASK=WARN -x CRT_PHY_ADDR_STR=ofi+sockets -x OFI_INTERFACE=eth0 -x CRT_CTX_SHARE_ADDR=0 -x CRT_CTX_NUM=16  ../bin/self_test --group-name self_test_srv_grp --endpoint 0-<MAX_SERVER-1>:0 --master-endpoint 0-<MAX_SERVER-1>:0 --message-sizes "b1048576,b1048576 0,0 b1048576,i2048,i2048 0,0 i2048" --max-inflight-rpcs 16 --repetitions 100 -t -n -p .</p>
+<p><strong>To shutdown test_group server:</strong>
+/usr/lib64/openmpi3/bin/orterun --mca btl self,tcp  -N 1 --hostfile clihostfile --output-filename testLogs/ -x D_LOG_FILE=testLogs/test_group_cli.log -x D_LOG_FILE_APPEND_PID=1 -x D_LOG_MASK=WARN -x CRT_PHY_ADDR_STR=ofi+sockets -x OFI_INTERFACE=eth0 -x CRT_CTX_SHARE_ADDR=0  tests/test_group_np_cli --name client-group --attach_to self_test_srv_grp --shut_only --cfg_path=.</p>
 <h2 id="benchmarking-daos">Benchmarking DAOS<a class="headerlink" href="#benchmarking-daos" title="Permanent link">&para;</a></h2>
-<p>DAOS can be benchmarked using several widely used IO benchmarks like IOR,
-mdtest, and FIO. There are several backends that can be used with those
-benchmarks.</p>
-<p>IOR (https://github.com/hpc/ior) with the following backends:</p>
+<p>DAOS can be benchmarked with both IOR and mdtest through the following
+backends:</p>
 <ul>
 <li>
-<p>POSIX, MPIIO &amp; HDF5 drivers over dfuse and the interception library.</p>
+<p>native MPI-IO plugin combined with the ROMIO DAOS ADIO driver</p>
 </li>
 <li>
-<p>MPI-IO plugin with the ROMIO DAOS ADIO driver to bypass POSIX and dfuse. The
-    MPIIO driver is available in the upstream MPICH repository.</p>
+<p>native HDF5 plugin combined with the HDF5 DAOS connector (under
+    development)</p>
 </li>
 <li>
-<p>HDF5 plugin with the HDF5 DAOS connector (under development). This maps the
-    HDF5 data model directly to the DAOS model bypassing POSIX.</p>
+<p>native POSIX plugin over dfuse and interception library (under
+    development)</p>
 </li>
 <li>
-<p>A custom DFS (DAOS File System) plugin, integrating IOR directly with libfs
+<p>a custom DFS plugin integrating mdtest &amp; IOR directly with libfs
     without requiring FUSE or an interception library</p>
 </li>
 <li>
-<p>A custom DAOS plugin, integrating IOR directly with the native DAOS
+<p>a custom DAOS plugin integrating IOR directly with the native DAOS
     array API.</p>
 </li>
 </ul>
-<p>mdtest is released in the same repository as IOR. The corresponding backends that are
-listed above support mdtest, except for the MPI-IO and HDF5 backends that were
-only designed to support IOR.</p>
-<p>FIO can also be used to benchmark DAOS performance using dfuse and the
-interception library with all the POSIX based engines like sync and libaio. We
-do, however, provide a native DFS engine for FIO similar to what we do for
-IOR. That engine is available on GitHub: https://github.com/daos-stack/dfio</p>
-<p>Finally, DAOS provides a tool called daos_perf which allows benchmarking to the
-DAOS object API directly or to the internal VOS API, which bypasses the client
-and network stack and reports performance accessing the storage directly using
-VOS.</p>
-<h2 id="client-performance-tuning">Client Performance Tuning<a class="headerlink" href="#client-performance-tuning" title="Permanent link">&para;</a></h2>
-<p>For best performance, a DAOS client should specifically bind itself to a NUMA
-node instead of leaving core allocation and memory binding to chance.  This
-allows the DAOS Agent to detect the client's NUMA affinity from its PID and
-automatically assign a network interface with a matching NUMA node.  The network
-interface provided in the GetAttachInfo response is used to initialize CaRT.</p>
-<p>To override the automatically assigned interface, the client should set the
-environment variable <code>OFI_INTERFACE</code> to match the desired network
-interface.</p>
-<p>The DAOS Agent scans the client machine on the first GetAttachInfo request to
-determine the set of network interfaces available that support the DAOS Server's
-OFI provider.  This request occurs as part of the initialization sequence in the
-<code>libdaos daos_init()</code> performed by each client.</p>
-<p>Upon receipt, the Agent populates a cache of responses indexed by NUMA affinity.
-Provided a client application has bound itself to a specific NUMA node and that
-NUMA node has a network device associated with it, the DAOS Agent will provide a
-GetAttachInfo response with a network interface corresponding to the client's
-NUMA node.</p>
-<p>When more than one appropriate network interface exists per NUMA node, the agent
-uses a round-robin resource allocation scheme to load balance the responses for
-that NUMA node.</p>
-<p>If a client is bound to a NUMA node that has no matching network interface, then
-a default NUMA node is used for the purpose of selecting a response.  Provided
-that the DAOS Agent can detect any valid network device on any NUMA node, the
-default response will contain a valid network interface for the client.  When a
-default response is provided, a message in the Agent's log is emitted:</p>
-<pre><code>No network devices bound to client NUMA node X.  Using response from NUMA Y
-</code></pre>
-
-<p>To improve performance, it is worth figuring out if the client bound itself to
-the wrong NUMA node, or if expected network devices for that NUMA node are
-missing from the Agent's fabric scan.</p>
-<p>In some situations, the Agent may detect no network devices and the response
-cache will be empty.  In such a situation, the GetAttachInfo response will
-contain no interface assignment and the following info message will be found in
-the Agent's log:</p>
-<pre><code>No network devices detected in fabric scan; default AttachInfo response may be incorrect
-</code></pre>
-
-<p>In either situation, the admin may execute the command
-<code>'daos_agent net-scan'</code> with appropriate debug flags to gain more insight
-into the configuration problem.</p>
-<p><strong>Disabling the GetAttachInfo cache:</strong></p>
-<p>The default configuration enables the Agent GetAttachInfo cache.  If it is
-desired, the cache may be disabled prior to DAOS Agent startup by setting the
-Agent's environment variable <code>DAOS_AGENT_DISABLE_CACHE=true</code>.  The cache is
-loaded only at Agent startup.  If the network configuration changes while the
-Agent is running, it must be restarted to gain visibility to these changes.</p>
                 
                   
                 
@@ -1072,7 +1030,7 @@ Agent is running, it must be restarted to gain visibility to these changes.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../tiering_uns/" title="Tiering and Unified Namespace" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../pool_operations/" title="Pool Operations" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1081,7 +1039,7 @@ Agent is running, it must be restarted to gain visibility to these changes.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Tiering and Unified Namespace
+                Pool Operations
               </span>
             </div>
           </a>

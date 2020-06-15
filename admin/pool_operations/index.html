@@ -245,6 +245,19 @@
   
     <li class="md-tabs__item">
       
+        <a href="../../release/releaseNote_v1_0/" class="md-tabs__link">
+          Releases
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
         <a href="../../dev/development/" class="md-tabs__link">
           Developer Zone
         </a>
@@ -353,7 +366,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../overview/architecture/" title="Architecture" class="md-nav__link">
+    <a href="../../overview/architecture.md" title="Architecture" class="md-nav__link">
       Architecture
     </a>
   </li>
@@ -463,7 +476,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../predeployment_check/" title="Pre-deployment Checklist" class="md-nav__link">
+    <a href="../predeployment_check.md" title="Pre-deployment Checklist" class="md-nav__link">
       Pre-deployment Checklist
     </a>
   </li>
@@ -540,12 +553,53 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#access-control-lists" class="md-nav__link">
-    Access Control Lists
+  <a href="#pool-access-control-lists" class="md-nav__link">
+    Pool Access Control Lists
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-control-entries" class="md-nav__link">
+    Access Control Entries
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity" class="md-nav__link">
+    Identity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enforcement" class="md-nav__link">
+    Enforcement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#creating-a-pool-with-a-custom-acl" class="md-nav__link">
@@ -556,14 +610,14 @@
         
           <li class="md-nav__item">
   <a href="#displaying-a-pools-acl" class="md-nav__link">
-    Displaying a Pool's ACL
+    Displaying a pool's ACL
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#modifying-a-pools-acl" class="md-nav__link">
-    Modifying a Pool's ACL
+    Modifying a pool's ACL
   </a>
   
     <nav class="md-nav">
@@ -577,15 +631,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-and-updating-aces" class="md-nav__link">
-    Adding and Updating ACEs
+  <a href="#updating-entries-in-an-existing-acl" class="md-nav__link">
+    Updating entries in an existing ACL
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#removing-an-ace" class="md-nav__link">
-    Removing an ACE
+  <a href="#removing-an-entry-from-the-acl" class="md-nav__link">
+    Removing an entry from the ACL
   </a>
   
 </li>
@@ -618,13 +672,6 @@
           <li class="md-nav__item">
   <a href="#target-exclusion-and-self-healing" class="md-nav__link">
     Target Exclusion and Self-Healing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#target-reintegration" class="md-nav__link">
-    Target Reintegration
   </a>
   
 </li>
@@ -685,7 +732,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tiering_uns/" title="Tiering and Unified Namespace" class="md-nav__link">
+    <a href="../tiering_uns.md" title="Tiering and Unified Namespace" class="md-nav__link">
       Tiering and Unified Namespace
     </a>
   </li>
@@ -838,10 +885,58 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
-      Developer Zone
+      Releases
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        Releases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/releaseNote_v1_0/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../licenses/Licensing/" title="Licensing" class="md-nav__link">
+      Licensing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Developer Zone
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
         Developer Zone
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -889,7 +984,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../html/index.html" title="DAOS API Documentation" class="md-nav__link">
+    <a href="../../html/" title="DAOS API Documentation" class="md-nav__link">
       DAOS API Documentation
     </a>
   </li>
@@ -983,12 +1078,53 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#access-control-lists" class="md-nav__link">
-    Access Control Lists
+  <a href="#pool-access-control-lists" class="md-nav__link">
+    Pool Access Control Lists
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-control-entries" class="md-nav__link">
+    Access Control Entries
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity" class="md-nav__link">
+    Identity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enforcement" class="md-nav__link">
+    Enforcement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#creating-a-pool-with-a-custom-acl" class="md-nav__link">
@@ -999,14 +1135,14 @@
         
           <li class="md-nav__item">
   <a href="#displaying-a-pools-acl" class="md-nav__link">
-    Displaying a Pool's ACL
+    Displaying a pool's ACL
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#modifying-a-pools-acl" class="md-nav__link">
-    Modifying a Pool's ACL
+    Modifying a pool's ACL
   </a>
   
     <nav class="md-nav">
@@ -1020,15 +1156,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-and-updating-aces" class="md-nav__link">
-    Adding and Updating ACEs
+  <a href="#updating-entries-in-an-existing-acl" class="md-nav__link">
+    Updating entries in an existing ACL
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#removing-an-ace" class="md-nav__link">
-    Removing an ACE
+  <a href="#removing-an-entry-from-the-acl" class="md-nav__link">
+    Removing an entry from the ACL
   </a>
   
 </li>
@@ -1061,13 +1197,6 @@
           <li class="md-nav__item">
   <a href="#target-exclusion-and-self-healing" class="md-nav__link">
     Target Exclusion and Self-Healing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#target-reintegration" class="md-nav__link">
-    Target Reintegration
   </a>
   
 </li>
@@ -1145,13 +1274,9 @@ storage pools from the command line.</p>
 
 <p>This command creates a pool distributed across the DAOS servers with a
 target size on each server with xxGB of SCM and yyTB of NVMe storage.
-The actual space allocated will be a base-2 representation for SCM
-(i.e., 20GB will be interpreted as 20GiB == <code>20*2^30</code> bytes) and base-10
-representation for NVMe (i.e. 20GB will be interpreted as <code>20*10^9</code>
-bytes) following the convention of units for memory and storage capacity.
 The UUID allocated to the newly created pool is printed to stdout
-(referred to as ${puuid}) as well as the rank where the pool service is
-located (referred to as ${svcl}).</p>
+(referred as ${puuid}) as well as the rank where the pool service is
+located (referred as ${svcl}).</p>
 <pre><code class="bash">$ dmg pool create --help
 ...
 [create command options]
@@ -1179,14 +1304,8 @@ two pool service replica on rank 0 and 1.</p>
 <pre><code class="bash">$ dmg pool destroy --pool=${puuid}
 </code></pre>
 
-<p><strong>To evict handles/connections to a pool:</strong></p>
-<pre><code class="bash">$ dmg pool evict --pool=${puuid}
-`
-
-**To see a list of the pools in your DAOS system:**
-
-```bash
-$ dmg system list-pools
+<p><strong>To see a list of the pools in your DAOS system:</strong></p>
+<pre><code class="bash">$ dmg system list-pools
 </code></pre>
 
 <p>This will return a table of pool UUIDs and the ranks of their pool service
@@ -1203,79 +1322,116 @@ a106d667-5c5d-4d6f-ac3a-89099196c41a    0
 <h2 id="pool-properties">Pool Properties<a class="headerlink" href="#pool-properties" title="Permanent link">&para;</a></h2>
 <p>At creation time, a list of pool properties can be specified through the
 API (not supported by the tool yet):</p>
-<table>
-<thead>
-<tr>
-<th><strong>Pool Property</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>DAOS_PROP_PO_LABEL</code><img width=80/></td>
-<td>A string that the administrator can associate with a pool.  e.g., project A, project B, IO500 test pool</td>
-</tr>
-<tr>
-<td><code>DAOS_PROP_PO_ACL</code></td>
-<td>Access control list (ACL) associated with the pool</td>
-</tr>
-<tr>
-<td><code>DAOS_PROP_PO_SPACE_RB</code></td>
-<td>Space reserved on each target for rebuild purpose</td>
-</tr>
-<tr>
-<td><code>DAOS_PROP_PO_SELF_HEAL</code></td>
-<td>Define whether the pool wants automatically-trigger or manually-triggered self-healing</td>
-</tr>
-<tr>
-<td><code>DAOS_PROP_PO_RECLAIM</code></td>
-<td>Tune space reclaim strategy based on time interval, batched commits or snapshot creation</td>
-</tr>
-</tbody>
-</table>
-<p>While those pool properties are currently stored persistently with pool
-metadata, many of them are still under development. Moreover, the
-ability to modify some of those properties on an existing pool will
-be provided in a future release.</p>
-<h2 id="access-control-lists">Access Control Lists<a class="headerlink" href="#access-control-lists" title="Permanent link">&para;</a></h2>
-<p>Client user and group access for pools are controlled by
-<a href="https://daos-stack.github.io/overview/security/#access-control-lists">Access Control Lists (ACLs)</a>.
-Most pool-related tasks are performed using the DMG administrative tool, which
-is authenticated by the administrative certificate rather than user-specific
-credentials.</p>
-<p>Access-controlled client pool accesses include:</p>
 <ul>
 <li>
-<p>Connecting to the pool.</p>
+<p>DAOS_PROP_CO_LABEL is a string that the administrator can
+    associate with a pool. e.g., project A, project B, IO500 test
+    pool</p>
 </li>
 <li>
-<p>Querying the pool.</p>
+<p>DAOS_PROP_PO_ACL is the access control list (ACL) associated with
+    the pool</p>
 </li>
 <li>
-<p>Creating containers in the pool.</p>
+<p>DAOS_PROP_PO_SPACE_RB is the space to be reserved on each target
+    for rebuild purpose.</p>
 </li>
 <li>
-<p>Deleting containers in the pool.</p>
+<p>DAOS_PROP_PO_SELF_HEAL defines whether the pool wants
+    automatically-trigger, or manually-triggered self-healing.</p>
+</li>
+<li>
+<p>DAOS_PROP_PO_RECLAIM is used to tune the space reclaim strategy
+    based on time interval, batched commits or snapshot creation.</p>
 </li>
 </ul>
-<p>This is reflected in the set of supported
-<a href="https://daos-stack.github.io/overview/security/#permissions">pool permissions</a>.</p>
-<p>A user must be able to connect to the pool in order to access any containers
-inside, regardless of their permissions on those containers.</p>
+<p>While those pool properties are currently stored persistently with pool
+metadata, many of them are still under development. Moreover, the
+ability to modify some of those properties on an existing pool will also
+be provided in a future release.</p>
+<h2 id="pool-access-control-lists">Pool Access Control Lists<a class="headerlink" href="#pool-access-control-lists" title="Permanent link">&para;</a></h2>
+<p>User and group access for pools is controlled by Access Control Lists (ACLs).
+A DAOS ACL is a list of zero or more Access Control Entries (ACEs). ACEs are
+the individual rules applied to each access decision.</p>
+<p>If no ACL is provided when creating the pool, the default ACL grants read and
+write access to the pool's owner-user and owner-group.</p>
+<h3 id="access-control-entries">Access Control Entries<a class="headerlink" href="#access-control-entries" title="Permanent link">&para;</a></h3>
+<p>ACEs are designated by a colon-separated string format:
+<code>TYPE:FLAGS:IDENTITY:PERMISSIONS</code></p>
+<p>Available values for these fields:</p>
+<ul>
+<li>TYPE: Allow (A)</li>
+<li>FLAGS: Group (G)</li>
+<li>IDENTITY: See below</li>
+<li>PERMISSIONS: Read (r), Write (w)</li>
+</ul>
+<h4 id="identity">Identity<a class="headerlink" href="#identity" title="Permanent link">&para;</a></h4>
+<p>The identity (also called the principal) is specified in the name@domain format.
+The domain should be left off if the name is a user/group on the local domain.
+Currently, this is the only case supported by DAOS.</p>
+<p>There are three special identities, <code>OWNER@</code>, <code>GROUP@</code> and <code>EVERYONE@</code>,
+which align with User, Group, and Other from traditional POSIX permission bits.
+When providing them in the ACE string format, they must be spelled exactly as
+written here, in uppercase with no domain appended.</p>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>A::daos_user@:rw</code></li>
+<li>Allow the UNIX user named daos_user to have read-write access</li>
+<li><code>A:G:project_users@:r</code></li>
+<li>Allow anyone in the UNIX group project_users to have read-only access</li>
+<li><code>A::EVERYONE@:r</code></li>
+<li>Allow any user not covered by other rules to have read-only access</li>
+</ul>
+<h3 id="enforcement">Enforcement<a class="headerlink" href="#enforcement" title="Permanent link">&para;</a></h3>
+<p>Access Control Entries (ACEs) will be enforced in the following order:</p>
+<ul>
+<li>Owner-User</li>
+<li>Named users</li>
+<li>Owner-Group and named groups</li>
+<li>Everyone</li>
+</ul>
+<p>In general, enforcement will be based on the first match, ignoring
+lower-priority entries. For example, if the user has an ACE for their user
+identity, they will not receive the permissions for any of their groups, even if
+those group entries have broader permissions than the user entry does. The user
+is expected to match at most one user entry.</p>
+<p>If no matching user entry is found, but entries match one or more of the user's
+groups, enforcement will be based on the union of the permissions of all
+matching groups.</p>
+<p>By default, if a user matches no ACEs in the list, access will be denied.</p>
+<h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h3>
+<p>The maximum length of the ACE list in a DAOS ACL structure is 64KiB.</p>
+<p>To calculate the actual length of an ACL, use the following formula for each
+ACE:</p>
+<ul>
+<li>The base size of an ACE is 256B.</li>
+<li>If the ACE principal is <em>not</em> one of the special principals:</li>
+<li>Add the length of the identity string + 1.</li>
+<li>If that value is not 64B aligned, round up to the nearest 64B boundary.</li>
+</ul>
 <h3 id="creating-a-pool-with-a-custom-acl">Creating a pool with a custom ACL<a class="headerlink" href="#creating-a-pool-with-a-custom-acl" title="Permanent link">&para;</a></h3>
 <p>To create a pool with a custom ACL:</p>
 <pre><code class="bash">$ dmg pool create --scm-size &lt;size&gt; --acl-file &lt;path&gt;
 </code></pre>
 
-<p>The ACL file format is detailed in the <a href="https://daos-stack.github.io/overview/security/#acl-file">here</a>.</p>
-<h3 id="displaying-a-pools-acl">Displaying a Pool's ACL<a class="headerlink" href="#displaying-a-pools-acl" title="Permanent link">&para;</a></h3>
+<p>The ACL file is expected to be a text file with one ACE listed on each line. For
+example:</p>
+<pre><code class="bash"># Entries:
+A::OWNER@:rw
+A:G:GROUP@:rw
+# Everyone should be allowed to read
+A::EVERYONE@:r
+</code></pre>
+
+<p>You may add comments to the ACL file by starting the line with <code>#</code>.</p>
+<h3 id="displaying-a-pools-acl">Displaying a pool's ACL<a class="headerlink" href="#displaying-a-pools-acl" title="Permanent link">&para;</a></h3>
 <p>To view a pool's ACL:</p>
 <pre><code class="bash">$ dmg pool get-acl --pool &lt;UUID&gt;
 </code></pre>
 
 <p>The output is in the same string format used in the ACL file during creation,
-with one Access Control Entry (i.e., ACE) per line.</p>
-<h3 id="modifying-a-pools-acl">Modifying a Pool's ACL<a class="headerlink" href="#modifying-a-pools-acl" title="Permanent link">&para;</a></h3>
+with one ACE per line.</p>
+<h3 id="modifying-a-pools-acl">Modifying a pool's ACL<a class="headerlink" href="#modifying-a-pools-acl" title="Permanent link">&para;</a></h3>
 <p>For all of these commands using an ACL file, the ACL file must be in the format
 noted above for pool creation.</p>
 <h4 id="overwriting-the-acl">Overwriting the ACL<a class="headerlink" href="#overwriting-the-acl" title="Permanent link">&para;</a></h4>
@@ -1283,7 +1439,7 @@ noted above for pool creation.</p>
 <pre><code class="bash">$ dmg pool overwrite-acl --pool &lt;UUID&gt; --acl-file &lt;path&gt;
 </code></pre>
 
-<h4 id="adding-and-updating-aces">Adding and Updating ACEs<a class="headerlink" href="#adding-and-updating-aces" title="Permanent link">&para;</a></h4>
+<h4 id="updating-entries-in-an-existing-acl">Updating entries in an existing ACL<a class="headerlink" href="#updating-entries-in-an-existing-acl" title="Permanent link">&para;</a></h4>
 <p>To add or update multiple entries in an existing pool ACL:</p>
 <pre><code class="bash">$ dmg pool update-acl --pool &lt;UUID&gt; --acl-file &lt;path&gt;
 </code></pre>
@@ -1295,18 +1451,21 @@ noted above for pool creation.</p>
 <p>If there is no existing entry for the principal in the ACL, the new entry is
 added to the ACL. If there is already an entry for the principal, that entry
 is replaced with the new one.</p>
-<h4 id="removing-an-ace">Removing an ACE<a class="headerlink" href="#removing-an-ace" title="Permanent link">&para;</a></h4>
-<p>To delete an entry for a given principal in an existing pool ACL:</p>
+<h4 id="removing-an-entry-from-the-acl">Removing an entry from the ACL<a class="headerlink" href="#removing-an-entry-from-the-acl" title="Permanent link">&para;</a></h4>
+<p>To delete an entry for a given principal, or identity, in an existing pool ACL:</p>
 <pre><code class="bash">$ dmg pool delete-acl --pool &lt;UUID&gt; --principal &lt;principal&gt;
 </code></pre>
 
-<p>The principal corresponds to the principal portion of an ACE that was
+<p>The principal corresponds to the principal/identity portion of an ACE that was
 set during pool creation or a previous pool ACL operation. For the delete
 operation, the principal argument must be formatted as follows:</p>
 <ul>
 <li>Named user: <code>u:username@</code></li>
 <li>Named group: <code>g:groupname@</code></li>
-<li>Special principals: <code>OWNER@</code>, <code>GROUP@</code>, and <code>EVERYONE@</code></li>
+<li>Special principals:</li>
+<li><code>OWNER@</code></li>
+<li><code>GROUP@</code></li>
+<li><code>EVERYONE@</code></li>
 </ul>
 <p>The entry for that principal will be completely removed. This does not always
 mean that the principal will have no access. Rather, their access to the pool
@@ -1314,106 +1473,52 @@ will be decided based on the remaining ACL rules.</p>
 <h2 id="pool-query">Pool Query<a class="headerlink" href="#pool-query" title="Permanent link">&para;</a></h2>
 <p>The pool query operation retrieves information (i.e., the number of targets,
 space usage, rebuild status, property list, and more) about a created pool. It
-is integrated into the dmg utility.</p>
+is integrated into the dmg_old utility.</p>
 <p><strong>To query a pool:</strong></p>
 <pre><code class="bash">$ dmg pool query --pool &lt;UUID&gt;
 </code></pre>
 
 <p>Below is the output for a pool created with SCM space only.</p>
-<pre><code class="bash">    pool=47293abe-aa6f-4147-97f6-42a9f796d64a
-    Pool 47293abe-aa6f-4147-97f6-42a9f796d64a, ntarget=64, disabled=8
-    Pool space info:
-    - Target(VOS) count:56
-    - SCM:
-        Total size: 28GB
-        Free: 28GB, min:505MB, max:512MB, mean:512MB
-    - NVMe:
-        Total size: 0
-        Free: 0, min:0, max:0, mean:0
-    Rebuild done, 10 objs, 1026 recs
+<pre><code>pool=47293abe-aa6f-4147-97f6-42a9f796d64a
+Pool 47293abe-aa6f-4147-97f6-42a9f796d64a, ntarget=64, disabled=8
+Pool space info:
+- Target(VOS) count:56
+- SCM:
+    Total size: 30064771072
+    Free: 30044570496, min:530139584, max:536869696, mean:536510187
+- NVMe:
+    Total size: 0
+    Free: 0, min:0, max:0, mean:0
+Rebuild done, 10 objs, 1026 recs
 </code></pre>
-
 <p>The total and free sizes are the sum across all the targets whereas
 min/max/mean gives information about individual targets. A min value
 close to 0 means that one target is running out of space.</p>
 <p>The example below shows a rebuild in progress and NVMe space allocated.</p>
-<pre><code class="bash">    pool=95886b8b-7eb8-454d-845c-fc0ae0ba5671
-    Pool 95886b8b-7eb8-454d-845c-fc0ae0ba5671, ntarget=64, disabled=8
-    Pool space info:
-    - Target(VOS) count:56
-    - SCM:
-        Total size: 28GB
-        Free: 28GB, min:470MB, max:512MB, mean:509MB
-    - NVMe:
-        Total size: 56GB
-        Free: 28GB, min:470MB, max:512MB, mean:509MB
-    Rebuild busy, 75 objs, 9722 recs
+<pre><code>pool=95886b8b-7eb8-454d-845c-fc0ae0ba5671
+Pool 95886b8b-7eb8-454d-845c-fc0ae0ba5671, ntarget=64, disabled=8
+Pool space info:
+- Target(VOS) count:56
+- SCM:
+    Total size: 30064771072
+    Free: 29885237632, min:493096384, max:536869696, mean:533664957
+- NVMe:
+    Total size: 60129542144
+    Free: 29885237632, min:493096384, max:536869696, mean:533664957
+Rebuild busy, 75 objs, 9722 recs
 </code></pre>
-
 <p>Additional status and telemetry data are planned to be exported through
 the management API and tool and will be documented here once available.</p>
 <h2 id="pool-modifications">Pool Modifications<a class="headerlink" href="#pool-modifications" title="Permanent link">&para;</a></h2>
 <h3 id="target-exclusion-and-self-healing">Target Exclusion and Self-Healing<a class="headerlink" href="#target-exclusion-and-self-healing" title="Permanent link">&para;</a></h3>
-<p>An operator can exclude one or more targets from a specific DAOS pool using the rank
-the target resides on as well as the target idx on that rank. If a target idx list is
-not provided then all targets on the rank will be excluded. Excluding a target will
-automatically start the rebuild process.</p>
 <p><strong>To exclude a target from a pool:</strong></p>
-<pre><code class="bash">$ dmg pool exclude --pool=${puuid} --rank=${rank} --target-idx=${idx1},${idx2},${idx3}
-</code></pre>
-
-<p>The pool target exclude command accepts 3 parameters:</p>
-<ul>
-<li>The pool UUID of the pool that the targets will be excluded from.</li>
-<li>The rank of the target(s) te be excluded.</li>
-<li>The target Indices of the targets to be excluded from that rank (optional).</li>
-</ul>
-<h3 id="target-reintegration">Target Reintegration<a class="headerlink" href="#target-reintegration" title="Permanent link">&para;</a></h3>
-<p>After a target failure an operator can fix the underlying issue and reintegrate the
-affected targets to restore the pool to its original state. The operator can either
-reintegrate specific targets for a rank by supplying a target idx list, or reintegrate
-an entire rank by omitting the list.</p>
-<pre><code>$ dmg pool reintegrate --pool=${puuid} --rank=${rank} --target-idx=${idx1},${idx2},${idx3}
-</code></pre>
-
-<p>The pool reintegrate command accepts 3 parameters:</p>
-<ul>
-<li>The pool UUID of the pool that the targets will be reintegrated into.</li>
-<li>The rank of the affected targets.</li>
-<li>The target Indices of the targets to be reintegrated on that rank (optional).</li>
-</ul>
-<p>When rebuild is triggered it will list the operations and their related targets by their rank ID
-and target index.</p>
-<pre><code>Target (rank 5 idx 0) is down.
-Target (rank 5 idx 1) is down.
-...
-(rank 5 idx 0) is excluded.
-(rank 5 idx 1) is excluded.
-</code></pre>
-
-<p>These should be the same values used when reintegrating the targets.</p>
-<pre><code>$ dmg pool reintegrate --pool=${puuid} --rank=5 --target-idx=0,1
+<pre><code>$ dmg_old exclude --svc=${svcl} --pool=${puuid} --target=${rank}
 </code></pre>
 
 <h3 id="pool-extension">Pool Extension<a class="headerlink" href="#pool-extension" title="Permanent link">&para;</a></h3>
 <h4 id="target-addition-space-rebalancing">Target Addition &amp; Space Rebalancing<a class="headerlink" href="#target-addition-space-rebalancing" title="Permanent link">&para;</a></h4>
-<p>Full Support for online target addition and automatic space rebalancing is
+<p>Support for online target addition and automatic space rebalancing is
 planned for DAOS v1.4 and will be documented here once available.</p>
-<p>Until then the following command(s) are placeholders and offer limited
-functionality related to Online Server Addition/Rebalancing operations.</p>
-<p>An operator can choose to extend a pool to include ranks not currently in the pool.
-This will automatically trigger a server rebalance operation where objects within the extended
-pool will be rebalanced across the new storage.</p>
-<pre><code>$ dmg pool extend --pool=${puuid} --ranks=${rank1},${rank2}...
-</code></pre>
-
-<p>The pool extend command accepts 2 required parameters:</p>
-<ul>
-<li>The pool UUID of the pool to be extended.</li>
-<li>A comma separated list of server ranks to include in the pool.</li>
-</ul>
-<p>The pool rebalance operation will work most efficiently when the pool is extended to its desired
-size in a single operation, as opposed to multiple, small extensions.</p>
 <h4 id="pool-shard-resize">Pool Shard Resize<a class="headerlink" href="#pool-shard-resize" title="Permanent link">&para;</a></h4>
 <p>Support for quiescent pool shard resize is currently not supported and
 is under consideration.</p>
@@ -1462,13 +1567,13 @@ with more information.</p>
           </a>
         
         
-          <a href="../tiering_uns/" title="Tiering and Unified Namespace" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../performance_tuning/" title="Performance Tuning" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Tiering and Unified Namespace
+                Performance Tuning
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

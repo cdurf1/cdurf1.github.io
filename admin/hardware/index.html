@@ -245,6 +245,19 @@
   
     <li class="md-tabs__item">
       
+        <a href="../../release/releaseNote_v1_0/" class="md-tabs__link">
+          Releases
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
         <a href="../../dev/development/" class="md-tabs__link">
           Developer Zone
         </a>
@@ -353,7 +366,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../overview/architecture/" title="Architecture" class="md-nav__link">
+    <a href="../../overview/architecture.md" title="Architecture" class="md-nav__link">
       Architecture
     </a>
   </li>
@@ -494,13 +507,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#storage-server-design" class="md-nav__link">
-    Storage Server Design
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#cpu-affinity" class="md-nav__link">
     CPU Affinity
   </a>
@@ -543,7 +549,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../predeployment_check/" title="Pre-deployment Checklist" class="md-nav__link">
+    <a href="../predeployment_check.md" title="Pre-deployment Checklist" class="md-nav__link">
       Pre-deployment Checklist
     </a>
   </li>
@@ -591,7 +597,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tiering_uns/" title="Tiering and Unified Namespace" class="md-nav__link">
+    <a href="../tiering_uns.md" title="Tiering and Unified Namespace" class="md-nav__link">
       Tiering and Unified Namespace
     </a>
   </li>
@@ -744,10 +750,58 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
-      Developer Zone
+      Releases
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        Releases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/releaseNote_v1_0/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../licenses/Licensing/" title="Licensing" class="md-nav__link">
+      Licensing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Developer Zone
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
         Developer Zone
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -795,7 +849,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../html/index.html" title="DAOS API Documentation" class="md-nav__link">
+    <a href="../../html/" title="DAOS API Documentation" class="md-nav__link">
       DAOS API Documentation
     </a>
   </li>
@@ -903,13 +957,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#storage-server-design" class="md-nav__link">
-    Storage Server Design
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#cpu-affinity" class="md-nav__link">
     CPU Affinity
   </a>
@@ -946,7 +993,7 @@
 <p>The purpose of this section is to describe processor, storage, and
 network requirements to deploy a DAOS system.</p>
 <h2 id="deployment-options">Deployment Options<a class="headerlink" href="#deployment-options" title="Permanent link">&para;</a></h2>
-<p>As illustrated in the figure below, a DAOS storage system can be deployed in two
+<p>As illustrated in the figure below, a DAOS system can be deployed in two
 different ways:</p>
 <ul>
 <li>
@@ -957,20 +1004,21 @@ different ways:</p>
     this approach usually requires high-density storage servers.</p>
 </li>
 <li>
-<p><strong>Hyper-converged Storage Model</strong>: In this model, the
+<p><strong>Disaggregated Storage Model</strong>: In the disaggregated model, the
     storage nodes are integrated into compute racks and can be either
-    dedicated or shared nodes. The DAOS servers are thus massively distributed,
-    and storage access is non-uniform and must take locality into account.
-    This model is common in hyper-converged infrastructure.</p>
+    dedicated or shared (e.g., in a hyper-converged infrastructure)
+    nodes. The DAOS servers are thus massively distributed and storage
+    access is non-uniform and must take locality into account.</p>
 </li>
 </ul>
-<p>While DAOS is mostly deployed following the pooled model, active research is
-conducted to efficiently support the hyper-converged model as well.</p>
-<p><img alt="" src="../media/Fig_073.png" /></p>
+<p>While DAOS is mostly deployed following the pooled model, active
+research is conducted to efficiently support the disaggregated model as
+well.</p>
+<p><img alt="" src="../media/image1.png" /></p>
 <h2 id="processor-requirements">Processor Requirements<a class="headerlink" href="#processor-requirements" title="Permanent link">&para;</a></h2>
 <p>DAOS requires a 64-bit processor architecture and is primarily developed
 on Intel 64 architecture. The DAOS software and the libraries it depends
-on (e.g., ISA-L, SPDK, PMDK, and DPDK) can take advantage of Intel SSE
+on (e.g., ISA-L, SPDK, PMDK, and DPDK) can take advantage of Intel® SSE
 and AVX extensions.</p>
 <p>DAOS is also regularly tested on 64-bit ARM processors configured in
 Little Endian mode. The same build instructions that are used for x86-64
@@ -979,15 +1027,13 @@ make the necessary adjustments automatically in their respective build
 systems for ARM platforms.</p>
 <h2 id="network-requirements">Network Requirements<a class="headerlink" href="#network-requirements" title="Permanent link">&para;</a></h2>
 <p>The DAOS network layer relies on libfabrics and supports OFI providers
-for Ethernet/sockets, InfiniBand/verbs, RoCE, Cray GNI, and Intel
-Omni-Path Architecture (OPA). An RDMA-capable fabric is preferred for better
+for Ethernet/sockets, InfiniBand/verbs, RoCE, Cray’s GNI, and the Intel
+Omni-Path Architecture. An RDMA-capable fabric is preferred for better
 performance. DAOS can support multiple rails by binding different
 instances of the DAOS server to individual network cards.</p>
-<p>The DAOS control plane provides methods for administering and managing
-the DAOS servers using a secure socket layer interface. An additional
-out-of-band network connecting the nodes in the DAOS
+<p>An additional out-of-band network connecting the nodes in the DAOS
 service cluster is required for DAOS administration. Management traffic
-between clients and servers use IP over Fabric.</p>
+uses IP over Fabric.</p>
 <h2 id="storage-requirements">Storage Requirements<a class="headerlink" href="#storage-requirements" title="Permanent link">&para;</a></h2>
 <p>DAOS requires each storage node to have direct access to storage-class
 memory (SCM). While DAOS is primarily tested and tuned for Optane DC
@@ -996,48 +1042,37 @@ Memory Development Kit (PMDK) and the DAX feature of the Linux and
 Windows operating systems as described in the SNIA NVM Programming
 Model<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. As a result, the open-source DAOS software stack should be
 able to run transparently over any storage-class memory
-supported by the PMDK.</p>
-<p>The storage node can optionally be equipped with NVMe (non-volatile
+supported by PMDK.</p>
+<p>The storage node can be optionally equipped with NVMe (non-volatile
 memory express) SSDs to provide capacity. HDDs, as well as SATA and SAS
 SSDs, are not supported by DAOS. Both NVMe 3D-NAND and Optane SSDs are
 supported. Optane SSDs are preferred for DAOS installation that targets
 a very high IOPS rate. NVMe-oF devices are also supported by the
-userspace storage stack but have never been tested.</p>
-<p>A minimum 6% ratio of SCM to SSD capacity will guarantee that DAOS has
-enough space in SCM to store its internal metadata
+userspace storage stack, but have never been tested.</p>
+<p>The minimal recommended ratio between SCM and SSDs capacity is 6% to
+guarantee that DAOS has enough space in SCM to store internal metadata
 (e.g., pool metadata, SSD block allocation tracking).</p>
 <p>For testing purposes, SCM can be emulated with DRAM by mounting a tmpfs
 filesystem, and NVMe SSDs can be also emulated with DRAM or a loopback
 file.</p>
-<h2 id="storage-server-design">Storage Server Design<a class="headerlink" href="#storage-server-design" title="Permanent link">&para;</a></h2>
-<p>The hardware design of a DAOS storage server balances the network
-bandwidth of the fabric with the aggregate storage bandwidth of the NVMe
-storage devices.  This relationship sets the number of NVMe drives.
-For example, 8 PCIe4 x4 NVMe SSDs balance a 200gbps PCIe4 x16 network adapter.
-The capacity of the SSDs will determine the minimum capacity of the
-Optane PMem DIMMs needed to provide the 6% ratio for DAOS metadata.</p>
-<p><img alt="" src="../media/Fig_074.png" /></p>
 <h2 id="cpu-affinity">CPU Affinity<a class="headerlink" href="#cpu-affinity" title="Permanent link">&para;</a></h2>
-<p>Recent Xeon data center platforms use two processor CPUs connected
-together with the Ultra Path Interconnect (UPI). PCIe lanes in these
-servers have a natural affinity to one CPU.
+<p>On recent Xeon platforms, PCIe slots have a natural affinity to one CPU.
 Although globally accessible from any of the system cores, NVMe SSDs and
 network interface cards connected through the PCIe bus may provide
 different performance characteristics (e.g., higher latency, lower
-bandwidth) to each CPU. Accessing non-local PCIe devices may involve
-traffic over the UPI link that might become a point of congestion.
-Similarly, persistent memory is non-uniformly
+bandwidth) to each CPU. Accessing “remote” PCIe devices may involve
+traffic over the UPI (Ultra Path Interconnect) link that might become a
+point of congestion. Similarly, persistent memory is non-uniformly
 accessible (NUMA), and CPU affinity must be respected for maximal
 performance.</p>
 <p>Therefore, when running in a multi-socket and multi-rail environment,
 the DAOS service must be able to detect the CPU to PCIe device and
 persistent memory affinity and minimize as much as possible non-local
 access. This can be achieved by spawning one instance of the I/O server
-per CPU, then accessing only the persistent memory and PCI devices
-local to that CPU from that server instance. The DAOS control plane is
-responsible for detecting the storage and network affinity and
-starting the I/O servers accordingly.</p>
-<p><img alt="" src="../media/Fig_075.png" /></p>
+per CPU, then accessing only local persistent memory and PCI devices
+from that server instance. The control plane is responsible for
+detecting the storage and network affinity and starting the I/O servers
+accordingly.</p>
 <h2 id="fault-domains">Fault Domains<a class="headerlink" href="#fault-domains" title="Permanent link">&para;</a></h2>
 <p>DAOS relies on single-ported storage massively distributed across
 different storage nodes. Each storage node is thus a single point of
@@ -1045,7 +1080,7 @@ failure. DAOS achieves fault tolerance by providing data redundancy
 across storage nodes in different fault domains.</p>
 <p>DAOS assumes that fault domains are hierarchical and do not overlap. For
 instance, the first level of a fault domain could be the racks and the
-second one, the storage nodes.</p>
+second one the storage nodes.</p>
 <p>For efficient placement and optimal data resilience, more fault
 domains are better. As a result, it is preferable to distribute storage
 nodes across as many racks as possible.</p>
@@ -1053,9 +1088,7 @@ nodes across as many racks as possible.</p>
 <hr />
 <ol>
 <li id="fn:1">
-<p><a href="https://www.snia.org/sites/default/files/
-technical_work/final/NVMProgrammingModel_v1.2.pdf">https://www.snia.org/sites/default/files/
-technical_work/final/NVMProgrammingModel_v1.2.pdf</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p><a href="https://www.snia.org/sites/default/files/technical_work/final/NVMProgrammingModel_v1.2.pdf">https://www.snia.org/sites/default/files/technical_work/final/NVMProgrammingModel_v1.2.pdf</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
