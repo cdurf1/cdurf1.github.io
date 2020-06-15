@@ -17,7 +17,6 @@ var annotated_dup =
     [ "daos_cont_close_t", "structdaos__cont__close__t.html", "structdaos__cont__close__t" ],
     [ "daos_cont_create_snap_t", "structdaos__cont__create__snap__t.html", "structdaos__cont__create__snap__t" ],
     [ "daos_cont_create_t", "structdaos__cont__create__t.html", "structdaos__cont__create__t" ],
-    [ "daos_cont_delete_acl_t", "structdaos__cont__delete__acl__t.html", "structdaos__cont__delete__acl__t" ],
     [ "daos_cont_destroy_snap_t", "structdaos__cont__destroy__snap__t.html", "structdaos__cont__destroy__snap__t" ],
     [ "daos_cont_destroy_t", "structdaos__cont__destroy__t.html", "structdaos__cont__destroy__t" ],
     [ "daos_cont_get_attr_t", "structdaos__cont__get__attr__t.html", "structdaos__cont__get__attr__t" ],
@@ -29,7 +28,6 @@ var annotated_dup =
     [ "daos_cont_set_attr_t", "structdaos__cont__set__attr__t.html", "structdaos__cont__set__attr__t" ],
     [ "daos_cont_set_prop_t", "structdaos__cont__set__prop__t.html", "structdaos__cont__set__prop__t" ],
     [ "daos_cont_subscribe_t", "structdaos__cont__subscribe__t.html", "structdaos__cont__subscribe__t" ],
-    [ "daos_cont_update_acl_t", "structdaos__cont__update__acl__t.html", "structdaos__cont__update__acl__t" ],
     [ "daos_epoch_range_t", "structdaos__epoch__range__t.html", "structdaos__epoch__range__t" ],
     [ "daos_event", "structdaos__event.html", "structdaos__event" ],
     [ "daos_handle_t", "structdaos__handle__t.html", "structdaos__handle__t" ],
@@ -82,7 +80,6 @@ var annotated_dup =
     [ "daos_tx_commit_t", "structdaos__tx__commit__t.html", "structdaos__tx__commit__t" ],
     [ "daos_tx_open_snap_t", "structdaos__tx__open__snap__t.html", "structdaos__tx__open__snap__t" ],
     [ "daos_tx_open_t", "structdaos__tx__open__t.html", "structdaos__tx__open__t" ],
-    [ "daos_tx_restart_t", "structdaos__tx__restart__t.html", "structdaos__tx__restart__t" ],
     [ "dfs_attr_t", "structdfs__attr__t.html", "structdfs__attr__t" ],
     [ "dfs_iod_t", "structdfs__iod__t.html", "structdfs__iod__t" ],
     [ "duns_attr_t", "structduns__attr__t.html", "structduns__attr__t" ]

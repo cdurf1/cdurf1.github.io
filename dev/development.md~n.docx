@@ -1,0 +1,90 @@
+<h1 id="development-environment">Development Environment</h1>
+<p>This section covers specific instructions to create a developer-friendly environment to contribute to the DAOS development. This includes how to regenerate the protobuf files or add new Go package dependencies, which is only required for development purposes.</p>
+<h2 id="building-daos-for-development">Building DAOS for Development</h2>
+<p>For development, it is recommended to build and install each dependency in a unique subdirectory. The DAOS build system supports this through the TARGET_PREFIX variable. Once the submodules have been initialized and updated, run the following commands:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a>$ <span class="ex">scons</span> PREFIX=<span class="va">${daos_prefix_path}</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>      <span class="va">TARGET_PREFIX=${daos_prefix_path}</span>/opt <span class="fu">install</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>      <span class="ex">--build-deps</span>=yes</span>
+<span id="cb1-4"><a href="#cb1-4"></a>      <span class="ex">--config</span>=force</span></code></pre></div>
+<p>Installing the components into seperate directories allow upgrading the components individually by replacing –build-deps=yes with –update-prereq={component_name}. This requires a change to the environment configuration from before. For automated environment setup, source utils/sl/utils/setup_local.sh.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="va">ARGOBOTS=${daos_prefix_path}</span>/opt/argobots</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="va">CART=${daos_prefix_path}</span>/opt/cart</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="va">FIO=${daos_prefix_path}</span>/opt/fio</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="va">FUSE=${daos_prefix_path}</span>/opt/fuse</span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="va">ISAL=${daos_prefix_path}</span>/opt/isal</span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="va">MERCURY=${daos_prefix_path}</span>/opt/mercury</span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="va">OFI=${daos_prefix_path}</span>/opt/ofi</span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="va">OPENPA=${daos_prefix_path}</span>/opt/openpa</span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="va">PMDK=${daos_prefix_path}</span>/opt/pmdk</span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="va">PROTOBUFC=${daos_prefix_path}</span>/opt/protobufc</span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="va">SPDK=${daos_prefix_path}</span>/opt/spdk</span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="va">PATH=$CART</span>/bin/:<span class="va">${daos_prefix_path}</span>/bin/:<span class="va">$PATH</span></span></code></pre></div>
+<p>With this approach, DAOS would get built using the prebuilt dependencies in ${daos_prefix_path}/opt, and required options are saved for future compilations. So, after the first time, during development, only “scons –config=force” and “scons –config=force install” would suffice for compiling changes to DAOS source code.</p>
+<p>If you wish to compile DAOS with clang rather than gcc, set COMPILER=clang on the scons command line. This option is also saved for future com pilations.</p>
+<h2 id="go-dependencies">Go dependencies</h2>
+<p>Developers contributing Go code may need to change the external dependencies located in the src/control/vendor directory. The DAOS codebase uses <a href="https://github.com/golang/go/wiki/Modules">Go Modules</a> to manage these dependencies. As this feature is built in to Go distributions starting with version 1.11, no additional tools are needed to manage dependencies.</p>
+<p>Among other benefits, one of the major advantages of using Go Modules is that it removes the requirement for builds to be done within the $GOPATH, which simplifies our build system and other internal tooling.</p>
+<p>While it is possible to use Go Modules without checking a vendor directory into SCM, the DAOS project continues to use vendored dependencies in order to insulate our build system from transient network issues and other problems associated with nonvendored builds.</p>
+<p>The following is a short list of example workflows. For more details, please refer to <a href="https://github.com/golang/go/wiki/Modules#quick-start">one</a> of <a href="https://engineering.kablamo.com.au/posts/2018/just-tell-me-how-to-use-go-modules/">the</a> <a href="https://blog.golang.org/migrating-to-go-modules">many</a> resources available online.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># add a new dependency</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>$ <span class="bu">cd</span> ~/daos/src/control <span class="co"># or wherever your daos clone lives</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>$ <span class="ex">go</span> get github.com/awesome/thing</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co"># make sure that github.com/awesome/thing is imported somewhere in the codebase</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>$ <span class="ex">./run_go_tests.sh</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co"># note that go.mod and go.sum have been updated automatically</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="co">#</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="co"># when ready to commit and push for review:</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>$ <span class="ex">go</span> mod vendor</span>
+<span id="cb3-10"><a href="#cb3-10"></a>$ <span class="fu">git</span> commit -a <span class="co"># should pick up go.mod, go.sum, vendor/*, etc.</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># update an existing dependency</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>$ <span class="bu">cd</span> ~/daos/src/control <span class="co"># or wherever your daos clone lives</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>$ <span class="ex">go</span> get -u github.com/awesome/thing</span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co"># make sure that github.com/awesome/thing is imported somewhere in the codebase</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>$ <span class="ex">./run_go_tests.sh</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co"># note that go.mod and go.sum have been updated automatically</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">#</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co"># when ready to commit and push for review:</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>$ <span class="ex">go</span> mod vendor</span>
+<span id="cb4-10"><a href="#cb4-10"></a>$ <span class="fu">git</span> commit -a <span class="co"># should pick up go.mod, go.sum, vendor/*, etc.</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># replace/remove an existing dependency</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>$ <span class="bu">cd</span> ~/daos/src/control <span class="co"># or wherever your daos clone lives</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>$ <span class="ex">go</span> get github.com/other/thing</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># make sure that github.com/other/thing is imported somewhere in the codebase,</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="co"># and that github.com/awesome/thing is no longer imported</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>$ <span class="ex">./run_go_tests.sh</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># note that go.mod and go.sum have been updated automatically</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="co">#</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="co"># when ready to commit and push for review:</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a>$ <span class="ex">go</span> mod tidy</span>
+<span id="cb5-11"><a href="#cb5-11"></a>$ <span class="ex">go</span> mod vendor</span>
+<span id="cb5-12"><a href="#cb5-12"></a>$ <span class="fu">git</span> commit -a <span class="co"># should pick up go.mod, go.sum, vendor/*, etc.</span></span></code></pre></div>
+<p>In all cases, after updating the vendor directory, it is a good idea to verify that your changes were applied as expected. In order to do this, a simple workflow is to clear the caches to force a clean build and then run the test script, which is vendor-aware and will not try to download missing modules:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a>$ <span class="bu">cd</span> ~/daos/src/control <span class="co"># or wherever your daos clone lives</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>$ <span class="ex">go</span> clean -modcache -cache</span>
+<span id="cb6-3"><a href="#cb6-3"></a>$ <span class="ex">./run_go_tests.sh</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>$ <span class="fu">ls</span> ~/go/pkg/mod <span class="co"># ~/go/pkg/mod should either not exist or be empty</span></span></code></pre></div>
+<h2 id="protobuf-compiler">Protobuf Compiler</h2>
+<p>The DAOS control plane infrastructure uses <a href="https://github.com/protocolbuffers/protobuf">Protocol Buffers</a> as the data serialization format for its RPC requests. Not all developers will need to compile the *.proto files, but if Protobuf changes are needed, the developer must regenerate the corresponding C and Go source files using a Protobuf compiler compatible with proto3 syntax.</p>
+<h3 id="recommended-versions">Recommended Versions</h3>
+<p>The recommended installation method is to clone the git repositories, check out the tagged releases noted below, and install from source. Later versions may work, but are not guaranteed. You may encounter installation errors when building from source relating to insufficient permissions. If that occurs, you may try relocating the repo to /var/tmp/ in order to build and install from there.</p>
+<ul>
+<li><a href="https://github.com/protocolbuffers/protobuf">Protocol Buffers</a> v3.11.4. <a href="https://github.com/protocolbuffers/protobuf/blob/master/src/README.md">Installation instructions</a>.</li>
+<li><a href="https://github.com/protobuf-c/protobuf-c">Protobuf-C</a> v1.3.3. <a href="https://github.com/protobuf-c/protobuf-c/blob/master/README.md">Installation instructions</a>.</li>
+<li>gRPC plugin: <a href="https://github.com/golang/protobuf">protoc-gen-go</a> v1.3.4. <strong>Must match the proto version in src/control/go.mod.</strong> Install the specific version using GIT_TAG instructions <a href="https://github.com/golang/protobuf/blob/master/README.md">here</a>.</li>
+</ul>
+<h3 id="compiling-protobuf-files">Compiling Protobuf Files</h3>
+<p>The source (.proto) files live under $DAOSREPO/src/proto. The preferred mechanism for generating compiled C/Go protobuf definitions is to use the Makefile in this directory. Care should be taken to keep the Makefile updated when source files are added or removed, or generated file destinations are updated.</p>
+<p>Note that the generated files are checked into SCM and are not generated as part of the normal DAOS build process. This allows developers to ensure that the generated files are correct after any changes to the source files are made.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a>$ <span class="bu">cd</span> ~/daos/src/proto <span class="co"># or wherever your daos clone lives</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>$ <span class="fu">make</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="ex">protoc</span> -I /home/foo/daos/src/proto/mgmt/ --go_out=plugins=grpc:/home/foo/daos/src/control/common/proto/mgmt/ acl.proto</span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="ex">protoc</span> -I /home/foo/daos/src/proto/mgmt/ --go_out=plugins=grpc:/home/foo/daos/src/control/common/proto/mgmt/ mgmt.proto</span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="ex">...</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>$ <span class="fu">git</span> status</span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="ex">...</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="co">#       modified:   ../control/common/proto/mgmt/acl.pb.go</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="co">#       modified:   ../control/common/proto/mgmt/mgmt.pb.go</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="ex">...</span></span></code></pre></div>
+<p>After verifying that the generated C/Go files are correct, add and commit them as you would any other file.</p>

@@ -42,7 +42,7 @@
     
     
       
-        <title>Security Model - DAOS v0.9</title>
+        <title>Security Model - DAOS v1.0</title>
       
     
     
@@ -62,8 +62,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="http://daos.io" title="DAOS v0.9" aria-label="DAOS v0.9" class="md-header-nav__button md-logo">
+        <a href="http://daos.io" title="DAOS v1.0" aria-label="DAOS v1.0" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              DAOS v0.9
+              DAOS v1.0
             </span>
             <span class="md-header-nav__topic">
               
@@ -192,13 +192,16 @@
     <ul class="md-tabs__list">
       
         
-  <li class="md-tabs__item">
-    
-      <a href="../.." class="md-tabs__link">
-        Home
-      </a>
-    
-  </li>
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../doc/index.md" class="md-tabs__link">
+          Home
+        </a>
+      
+    </li>
+  
 
       
         
@@ -245,6 +248,19 @@
   
     <li class="md-tabs__item">
       
+        <a href="../../release/releaseNote_v1_0/" class="md-tabs__link">
+          Releases
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
         <a href="../../dev/development/" class="md-tabs__link">
           Developer Zone
         </a>
@@ -274,12 +290,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="http://daos.io" title="DAOS v0.9" class="md-nav__button md-logo">
+    <a href="http://daos.io" title="DAOS v1.0" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    DAOS v0.9
+    DAOS v1.0
   </label>
   
     <div class="md-nav__source">
@@ -309,10 +325,34 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
+    <a href="../../doc/index.md" title="Home" class="md-nav__link">
       Home
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -355,7 +395,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../architecture/" title="Architecture" class="md-nav__link">
+    <a href="../architecture.md" title="Architecture" class="md-nav__link">
       Architecture
     </a>
   </li>
@@ -434,134 +474,12 @@
     Authentication
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#client-library" class="md-nav__link">
-    Client Library
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#daos-management-network" class="md-nav__link">
-    DAOS Management Network
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
   <a href="#authorization" class="md-nav__link">
     Authorization
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#component-certificates" class="md-nav__link">
-    Component Certificates
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#access-control-lists" class="md-nav__link">
-    Access Control Lists
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#access-control-entries" class="md-nav__link">
-    Access Control Entries
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#type" class="md-nav__link">
-    Type
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flags" class="md-nav__link">
-    Flags
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#principal" class="md-nav__link">
-    Principal
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#permissions" class="md-nav__link">
-    Permissions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#denying-access" class="md-nav__link">
-    Denying Access
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ace-examples" class="md-nav__link">
-    ACE Examples
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enforcement" class="md-nav__link">
-    Enforcement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#acl-file" class="md-nav__link">
-    ACL File
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -630,6 +548,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../admin/predeployment_check.md" title="Pre-deployment Checklist" class="md-nav__link">
+      Pre-deployment Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../admin/deployment/" title="System Deployment" class="md-nav__link">
       System Deployment
     </a>
@@ -666,7 +596,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../admin/tiering_uns/" title="Tiering and Unified Namespace" class="md-nav__link">
+    <a href="../../admin/tiering_uns.md" title="Tiering and Unified Namespace" class="md-nav__link">
       Tiering and Unified Namespace
     </a>
   </li>
@@ -819,10 +749,58 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
-      Developer Zone
+      Releases
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        Releases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/releaseNote_v1_0/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../licenses/Licensing/" title="Licensing" class="md-nav__link">
+      Licensing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Developer Zone
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
         Developer Zone
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -870,8 +848,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../html/" title="DAOS API" class="md-nav__link">
-      DAOS API
+    <a href="../../html/" title="DAOS API Documentation" class="md-nav__link">
+      DAOS API Documentation
     </a>
   </li>
 
@@ -954,134 +932,12 @@
     Authentication
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#client-library" class="md-nav__link">
-    Client Library
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#daos-management-network" class="md-nav__link">
-    DAOS Management Network
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
   <a href="#authorization" class="md-nav__link">
     Authorization
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#component-certificates" class="md-nav__link">
-    Component Certificates
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#access-control-lists" class="md-nav__link">
-    Access Control Lists
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#access-control-entries" class="md-nav__link">
-    Access Control Entries
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#type" class="md-nav__link">
-    Type
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flags" class="md-nav__link">
-    Flags
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#principal" class="md-nav__link">
-    Principal
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#permissions" class="md-nav__link">
-    Permissions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#denying-access" class="md-nav__link">
-    Denying Access
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ace-examples" class="md-nav__link">
-    ACE Examples
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enforcement" class="md-nav__link">
-    Enforcement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#acl-file" class="md-nav__link">
-    ACL File
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1104,226 +960,15 @@
                   <a href="https://github.com/daos-stack/daos/edit/master/docs/overview/security.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="security-model">Security Model<a class="headerlink" href="#security-model" title="Permanent link">&para;</a></h1>
-<p>DAOS uses a flexible security model that separates authentication from
-authorization. It is designed to have a minimal impact on the I/O path.</p>
-<p>There are two areas of DAOS that require access control. At the user level,
-clients must be able to read and modify only pools and containers to which they
-have been granted access. At the system and administrative levels, only
-authorized components must be able to access the DAOS management network.</p>
+                <p><a id="4.4"></a></p>
+<h1 id="security-model">Security Model<a class="headerlink" href="#security-model" title="Permanent link">&para;</a></h1>
+<p>DAOS uses a flexible security model that seperates authentication from authorization. It is designed to have very minimal impact on the I/O path.</p>
+<p><a id="4.4.1"></a></p>
 <h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
-<p>There are different means of authentication, depending on whether the caller is
-accessing client resources or the DAOS management network.</p>
-<h3 id="client-library">Client Library<a class="headerlink" href="#client-library" title="Permanent link">&para;</a></h3>
-<p>The client library is an untrusted component. A trusted process, the DAOS agent,
-runs on the client node and authenticates the user process.</p>
-<p>The DAOS security model is designed to support different authentication methods
-for client processes. Currently, we support AUTH_SYS authentication only.</p>
-<h3 id="daos-management-network">DAOS Management Network<a class="headerlink" href="#daos-management-network" title="Permanent link">&para;</a></h3>
-<p>Each trusted DAOS component (agent, server, and administrative tool) is
-authenticated by means of a certificate generated for that component. These
-components identify one another over the DAOS management network via
-mutually-authenticated TLS.</p>
+<p>The DAOS security model is designed to support different authentication methods. By default, a local agent runs on the client node and authenticats the user process through AUTH_SYS. Authentication can be handle by a third party service like munge or Kerberos.</p>
+<p><a id="4.4.2"></a></p>
 <h2 id="authorization">Authorization<a class="headerlink" href="#authorization" title="Permanent link">&para;</a></h2>
-<p>Client authorization for resources is controlled by the Access Control List
-(ACL) on the resource, while authorization on the management network is
-achieved by settings on the
-<a href="https://daos-stack.github.io/admin/deployment/#certificate-configuration">certificates</a>
-generated while setting up the DAOS system.</p>
-<h3 id="component-certificates">Component Certificates<a class="headerlink" href="#component-certificates" title="Permanent link">&para;</a></h3>
-<p>Access to DAOS management RPCs is controlled via the CommonName (CN) set in
-each management component certificate. A given management RPC may only be
-invoked by a component which connects with the correct certificate.</p>
-<h3 id="access-control-lists">Access Control Lists<a class="headerlink" href="#access-control-lists" title="Permanent link">&para;</a></h3>
-<p>Client access to resources like pools and containers is controlled by
-DAOS Access Control Lists (ACL). These ACLs are derived in part from NFSv4 ACLs,
-and adapted for the unique needs of a distributed system.</p>
-<p>The client may request read-only or read-write access to the resource. If the
-resource ACL doesn't grant them the requested access level, they won't
-be able to connect. While connected, their handle to that resource grants their
-permissions for specific actions.</p>
-<p>The permissions of a handle last for the duration of its existence, similar to
-an open file descriptor in a POSIX system. A handle cannot currently be revoked.</p>
-<h4 id="access-control-entries">Access Control Entries<a class="headerlink" href="#access-control-entries" title="Permanent link">&para;</a></h4>
-<p>In the input and output of DAOS tools, an ACE is defined using a colon-separated
-string format:\
-<code>TYPE:FLAGS:PRINCIPAL:PERMISSIONS</code></p>
-<p>The contents of all the fields are case-sensitive.</p>
-<h5 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h5>
-<p>The type of entry. Only one type of ACE is supported at this time.</p>
-<ul>
-<li>A (Allow): Allow access to the specified principal for the given permissions.</li>
-</ul>
-<h5 id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h5>
-<p>The flags provide additional information about how the ACE should be
-interpreted.</p>
-<ul>
-<li>G (Group): The principal should be interpreted as a group.</li>
-</ul>
-<h5 id="principal">Principal<a class="headerlink" href="#principal" title="Permanent link">&para;</a></h5>
-<p>The principal (also called the identity) is specified in the name@domain format.
-The domain should be left off if the name is a UNIX user/group on the local
-domain. Currently, this is the only case supported by DAOS.</p>
-<p>There are three special principals, <code>OWNER@</code>, <code>GROUP@</code>, and <code>EVERYONE@</code>,
-which align with User, Group, and Other from traditional POSIX permission bits.
-When providing them in the ACE string format, they must be spelled exactly as
-written here, in uppercase with no domain appended. The <code>GROUP@</code> entry must
-also have the <code>G</code> (group) flag.</p>
-<h5 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h5>
-<p>The permissions in a resource's ACL permit a certain type of user access to
-the resource.</p>
-<table>
-<thead>
-<tr>
-<th>Permission</th>
-<th>Pool Meaning</th>
-<th>Container Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>r (Read)</td>
-<td>Alias for 't'</td>
-<td>Read data and attributes</td>
-</tr>
-<tr>
-<td>w (Write)</td>
-<td>Alias for 'c' + 'd'</td>
-<td>Write data and attributes</td>
-</tr>
-<tr>
-<td>c (Create)</td>
-<td>Create containers</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>d (Delete)</td>
-<td>Delete any container</td>
-<td>Delete this container</td>
-</tr>
-<tr>
-<td>t (Get-Prop)</td>
-<td>Connect/query</td>
-<td>Get container properties</td>
-</tr>
-<tr>
-<td>T (Set-Prop)</td>
-<td>N/A</td>
-<td>Change container properties</td>
-</tr>
-<tr>
-<td>a (Get-ACL)</td>
-<td>N/A</td>
-<td>Get container ACL</td>
-</tr>
-<tr>
-<td>A (Set-ACL)</td>
-<td>N/A</td>
-<td>Change container ACL</td>
-</tr>
-<tr>
-<td>o (Set-Owner)</td>
-<td>N/A</td>
-<td>Change owner user and group</td>
-</tr>
-</tbody>
-</table>
-<p>ACLs containing permissions not applicable to the given resource are considered
-invalid.</p>
-<p>To allow a user/group to connect to a resource, that principal's permissions
-must include at least some form of read access (for example, read or get-prop).
-A user with write-only permissions will be rejected when requesting RW access to
-a resource.</p>
-<h5 id="denying-access">Denying Access<a class="headerlink" href="#denying-access" title="Permanent link">&para;</a></h5>
-<p>Currently, only "Allow" Access Control Entries are supported.</p>
-<p>However, it is possible to deny access to a specific user by creating an Allow
-entry for them with no permissions. This is fundamentally different from
-removing a user's ACE, which allows other ACEs in the ACL to determine their
-access.</p>
-<p>It is not possible to deny access to a specific group in this way, due to
-<a href="#enforcement">the way group permissions are enforced</a>.</p>
-<h5 id="ace-examples">ACE Examples<a class="headerlink" href="#ace-examples" title="Permanent link">&para;</a></h5>
-<ul>
-<li><code>A::daos_user@:rw</code><ul>
-<li>Allow the UNIX user named daos_user to have read-write access.</li>
-</ul>
-</li>
-<li><code>A:G:project_users@:tc</code><ul>
-<li>Allow anyone in the UNIX group project_users to access a pool's contents and
-create containers.</li>
-</ul>
-</li>
-<li><code>A::OWNER@:rwdtTaAo</code><ul>
-<li>Allow the UNIX user who owns the container to have full control.</li>
-</ul>
-</li>
-<li><code>A:G:GROUP@:rwdtT</code><ul>
-<li>Allow the UNIX group that owns the container to read and write data, delete
-  the container, and manipulate container properties.</li>
-</ul>
-</li>
-<li><code>A::EVERYONE@:r</code><ul>
-<li>Allow any user not covered by other rules to have read-only access.</li>
-</ul>
-</li>
-<li><code>A::daos_user@:</code><ul>
-<li>Deny the UNIX user named daos_user any access to the resource.</li>
-</ul>
-</li>
-</ul>
-<h4 id="enforcement">Enforcement<a class="headerlink" href="#enforcement" title="Permanent link">&para;</a></h4>
-<p>Access Control Entries (ACEs) will be enforced in the following order:</p>
-<ul>
-<li>Owner-User</li>
-<li>Named users</li>
-<li>Owner-Group and named groups</li>
-<li>Everyone</li>
-</ul>
-<p>In general, enforcement will be based on the first match, ignoring
-lower-priority entries.</p>
-<p>If the user is the owner of the resource and there is an OWNER@ entry, they
-will receive the owner permissions only. They will not receive any of the
-permissions in the named user/group entries, even if they would match those
-other entries.</p>
-<p>If the user isn't the owner, or there is no OWNER@ entry, but there is an ACE
-for their user identity, they will receive the permissions for their user
-identity only. They will not receive the permissions for any of their
-groups, even if those group entries have broader permissions than the user entry
-does. The user is expected to match at most one user entry.</p>
-<p>If no matching user entry is found, but entries match one or more of the user's
-groups, enforcement will be based on the union of the permissions of all
-matching groups, including the owner-group.</p>
-<p>If no matching groups are found, the "Everyone" entry's permissions will be
-used, if it exists.</p>
-<p>By default, if a user matches no ACEs in the list, access will be denied.</p>
-<h4 id="acl-file">ACL File<a class="headerlink" href="#acl-file" title="Permanent link">&para;</a></h4>
-<p>Tools that accept an ACL file expect it to be a simple text file with one ACE
-on each line. A line may be marked as a comment by adding a <code>#</code> as the first
-non-whitespace character on the line.</p>
-<p>For example:</p>
-<pre><code># ACL for my container
-# Owner can't touch data - just do admin-type things
-A::OWNER@:dtTaAo
-# My project's users can generate and access data
-A:G:my_great_project@:rw
-# Bob can use the data to generate a report
-A::bob@:r
-</code></pre>
-
-<p>That the permission bits and the ACEs themselves don't need to be in any
-specific order. However the order may be different when the resulting ACL is
-parsed and displayed by DAOS.</p>
-<h4 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h4>
-<p>The maximum size of the ACE list in a DAOS ACL internal data structure is 64KiB.</p>
-<p>To calculate the internal data size of an ACL, use the following formula for
-each ACE:</p>
-<ul>
-<li>The base size of an ACE is 256 bytes.</li>
-<li>If the ACE principal is <em>not</em> one of the special principals:</li>
-<li>Add the length of the principal string + 1.</li>
-<li>If that value is not 64-byte aligned, round up to the nearest 64 byte
-    boundary.</li>
-</ul>
+<p>DAOS supports a subset of the NFSv4 ACLs for both pools and containers through the properties API.</p>
                 
                   
                 

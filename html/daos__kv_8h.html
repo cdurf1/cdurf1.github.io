@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="Intel_Logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">DAOS API
-   &#160;<span id="projectnumber">Version 0.9</span>
+   &#160;<span id="projectnumber">Version 1.0</span>
    </div>
   </td>
  </tr>
@@ -188,12 +188,12 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>Fetch flags (currently ignored). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>key associated with the update operation. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">size</td><td>[in]: Size of the user buf. if the size is unknown, set to DAOS_REC_ANY). [out]: The actual size of the value. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>Pointer to user buffer. If NULL, only size is returned. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>Pointer to user buffer. If NULL, only size is returned. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. Function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>These values will be returned by <em>ev::ev_error</em> in non-blocking mode: 0 Success -DER_NO_HDL Invalid object open handle -DER_INVAL Invalid parameter -DER_NO_PERM Permission denied -DER_UNREACH Network is unreachable -DER_REC2BIG Record does not fit in buffer -DER_EP_RO Epoch is read-only </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>These values will be returned by <em>ev::ev_error</em> in non-blocking mode: 0 Success -DER_NO_HDL Invalid object open handle -DER_INVAL Invalid parameter -DER_NO_PERM Permission denied -DER_UNREACH Network is unreachable -DER_EP_RO Epoch is read-only </dd></dl>
 
 </div>
 </div>
