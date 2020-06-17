@@ -2,137 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>http://daos.io/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/overview/terminology/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>http://daos.io/overview/architecture/</loc>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/overview/storage/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/overview/transaction/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/overview/fault/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/overview/security/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/admin/hardware/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/admin/installation/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>http://daos.io/admin/predeployment_check/</loc>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/admin/deployment/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/admin/administration/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/admin/pool_operations/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>http://daos.io/admin/tiering_uns/</loc>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/admin/performance_tuning/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/admin/troubleshooting/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/admin/utilities_examples/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/admin/env_variables/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/user/container/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/user/interface/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/user/posix/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/user/hpc/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/user/spark/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/release/releaseNote_v1_0/</loc>
-     <lastmod>2020-06-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://daos.io/licenses/Licensing/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/dev/development/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://daos.io/dev/contributing/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <lastmod>2020-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -141,8 +136,8 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://daos.io/html/</loc>
-     <lastmod>2020-06-16</lastmod>
+     <loc></loc>
+     
      <changefreq>daily</changefreq>
     </url>
     <url>
