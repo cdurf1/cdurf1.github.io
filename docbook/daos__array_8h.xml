@@ -170,7 +170,7 @@ Parameters                    </title>
 <indexterm><primary>daos_array_destroy</primary><secondary>daos_array.h</secondary></indexterm>
 <indexterm><primary>daos_array.h</primary><secondary>daos_array_destroy</secondary></indexterm>
 <para><computeroutput>int daos_array_destroy (<link linkend="_structdaos__handle__t">daos_handle_t</link> oh, <link linkend="_structdaos__handle__t">daos_handle_t</link> th, <link linkend="_structdaos__event">daos_event_t</link> * ev)</computeroutput></para>
-<para>Destroy the array object by punching all data (keys) in the array object including the metadata associated with the array. daos_obj_punch() is called underneath. The oh still needs to be closed with a call to <link linkend="_daos__array_8h_1a28fed60c9a468122c8c54dbdb8b8ec0c">daos_array_close()</link>, but any other access with that handle, or other array open handles, will fail. The destroy will happen regardless of any open handle, so it&apos;s the user responsibility to ensure that there is no further access to the array before the destory is called.</para>
+<para>Destroy the array object by punching all data (keys) in the array object including the metadata associated with the array. daos_obj_punch() is called underneath. The oh still needs to be closed with a call to <link linkend="_daos__array_8h_1a28fed60c9a468122c8c54dbdb8b8ec0c">daos_array_close()</link>, but any other access with that handle, or other array open handles, will fail. The destroy will happen regardless of any open handle, so it&apos;s the user responsibility to ensure that there is no further access to the array before the destroy is called.</para>
 
 <para>
                 <formalpara>
@@ -452,7 +452,7 @@ Parameters                    </title>
                             <row>
                                 <entry>out                                </entry>                                <entry>chunk_size</entry>
                                 <entry>
-<para>Contiguous bytes to store per DKey before moving to a differen dkey. </para>
+<para>Contiguous bytes to store per DKey before moving to a different dkey. </para>
 </entry>
                             </row>
                             <row>
@@ -528,7 +528,7 @@ Parameters                    </title>
                             <row>
                                 <entry>in                                </entry>                                <entry>chunk_size</entry>
                                 <entry>
-<para>Contiguous bytes to store per DKey before moving to a differen dkey. </para>
+<para>Contiguous bytes to store per DKey before moving to a different dkey. </para>
 </entry>
                             </row>
                             <row>
@@ -644,7 +644,7 @@ Parameters                    </title>
                             <row>
                                 <entry>in                                </entry>                                <entry>sgl</entry>
                                 <entry>
-<para>A scatter/gather list (sgl) to the store array data. Buffer sizes do not have to match the indiviual range sizes as long as the total size does. User allocates the buffer(s) and sets the length of each buffer. </para>
+<para>A scatter/gather list (sgl) to the store array data. Buffer sizes do not have to match the individual range sizes as long as the total size does. User allocates the buffer(s) and sets the length of each buffer. </para>
 </entry>
                             </row>
                             <row>
@@ -754,7 +754,7 @@ Parameters                    </title>
                             <row>
                                 <entry>in                                </entry>                                <entry>sgl</entry>
                                 <entry>
-<para>A scatter/gather list (sgl) to the store array data. Buffer sizes do not have to match the indiviual range sizes as long as the total size does. </para>
+<para>A scatter/gather list (sgl) to the store array data. Buffer sizes do not have to match the individual range sizes as long as the total size does. </para>
 </entry>
                             </row>
                             <row>

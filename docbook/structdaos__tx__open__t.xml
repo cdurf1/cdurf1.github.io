@@ -12,6 +12,8 @@
 </listitem>
             <listitem><para><link linkend="_structdaos__handle__t">daos_handle_t</link> * <link linkend="_structdaos__tx__open__t_1afe354de0e9d0f58ea97b79df58c30bcc">th</link></para>
 </listitem>
+            <listitem><para>uint64_t <link linkend="_structdaos__tx__open__t_1a899a76dc5f03f0d4ea3793c339e07ee9">flags</link></para>
+</listitem>
         </itemizedlist>
 </simplesect>
 <section>
@@ -19,7 +21,7 @@
 
 <para>Transaction Open args </para>
 <para>
-Definition at line 526 of file daos_task.h.</para>
+Definition at line 546 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -30,7 +32,15 @@ Definition at line 526 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> coh</computeroutput></para>
 <para>Container open handle. </para>
 <para>
-Definition at line 528 of file daos_task.h.</para>
+Definition at line 548 of file daos_task.h.</para>
+    </section><anchor xml:id="_structdaos__tx__open__t_1a899a76dc5f03f0d4ea3793c339e07ee9"/>    <section>
+    <title>flags</title>
+<indexterm><primary>flags</primary><secondary>daos_tx_open_t</secondary></indexterm>
+<indexterm><primary>daos_tx_open_t</primary><secondary>flags</secondary></indexterm>
+<para><computeroutput>uint64_t flags</computeroutput></para>
+<para>Transaction flags. </para>
+<para>
+Definition at line 552 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__tx__open__t_1afe354de0e9d0f58ea97b79df58c30bcc"/>    <section>
     <title>th</title>
 <indexterm><primary>th</primary><secondary>daos_tx_open_t</secondary></indexterm>
@@ -38,7 +48,7 @@ Definition at line 528 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link>* th</computeroutput></para>
 <para>Returned transaction open handle. </para>
 <para>
-Definition at line 530 of file daos_task.h.</para>
+Definition at line 550 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

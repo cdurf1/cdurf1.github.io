@@ -3,6 +3,7 @@ var structdaos__obj__list__t =
     [ "akey", "structdaos__obj__list__t.html#ab032fc0d4a38d84ac9d0274512a2cf60", null ],
     [ "akey_anchor", "structdaos__obj__list__t.html#add7cac4a39ef271f4190ae8b1c2d899f", null ],
     [ "anchor", "structdaos__obj__list__t.html#ac376c63cd592209e79c0b58caa5f105f", null ],
+    [ "csum", "structdaos__obj__list__t.html#a2b0efd23c5b18e41e7612f378834db3b", null ],
     [ "dkey", "structdaos__obj__list__t.html#ab089b7883c4c375bdcdd7e4f7fada640", null ],
     [ "dkey_anchor", "structdaos__obj__list__t.html#a598f6fb316a8bc3d69f1b428e500284e", null ],
     [ "eprs", "structdaos__obj__list__t.html#ab2a02b83b2477243a616d05ac4938705", null ],

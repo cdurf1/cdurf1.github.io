@@ -21,7 +21,7 @@
 
 <para>Container snapshot creation args </para>
 <para>
-Definition at line 508 of file daos_task.h.</para>
+Definition at line 528 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 508 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> coh</computeroutput></para>
 <para>Container open handle. </para>
 <para>
-Definition at line 510 of file daos_task.h.</para>
+Definition at line 530 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__create__snap__t_1a627c0d024a3c1a700a06c76783d0630d"/>    <section>
     <title>epoch</title>
 <indexterm><primary>epoch</primary><secondary>daos_cont_create_snap_t</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 510 of file daos_task.h.</para>
 <para><computeroutput>daos_epoch_t* epoch</computeroutput></para>
 <para>Returned epoch of persistent snapshot taken. </para>
 <para>
-Definition at line 512 of file daos_task.h.</para>
+Definition at line 532 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__create__snap__t_1a5ac083a645d964373f022d03df4849c8"/>    <section>
     <title>name</title>
 <indexterm><primary>name</primary><secondary>daos_cont_create_snap_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 512 of file daos_task.h.</para>
 <para><computeroutput>char* name</computeroutput></para>
 <para>Optional null terminated name for snapshot. </para>
 <para>
-Definition at line 514 of file daos_task.h.</para>
+Definition at line 534 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

@@ -21,7 +21,7 @@
 
 <para>pool container list args </para>
 <para>
-Definition at line 280 of file daos_task.h.</para>
+Definition at line 282 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 280 of file daos_task.h.</para>
 <para><computeroutput>struct daos_pool_cont_info* cont_buf</computeroutput></para>
 <para>Array of container structures. </para>
 <para>
-Definition at line 286 of file daos_task.h.</para>
+Definition at line 288 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__list__cont__t_1ad3b6545f4de5c48203bb8dc7e1803c49"/>    <section>
     <title>ncont</title>
 <indexterm><primary>ncont</primary><secondary>daos_pool_list_cont_t</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 286 of file daos_task.h.</para>
 <para><computeroutput>daos_size_t* ncont</computeroutput></para>
 <para>[in] length of <emphasis>cont_buf</emphasis>. [out] num of containers in the pool. </para>
 <para>
-Definition at line 284 of file daos_task.h.</para>
+Definition at line 286 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__list__cont__t_1af65e0a5ef9986001524f96e09ae666a3"/>    <section>
     <title>poh</title>
 <indexterm><primary>poh</primary><secondary>daos_pool_list_cont_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 284 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> poh</computeroutput></para>
 <para>Pool open handle. </para>
 <para>
-Definition at line 282 of file daos_task.h.</para>
+Definition at line 284 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

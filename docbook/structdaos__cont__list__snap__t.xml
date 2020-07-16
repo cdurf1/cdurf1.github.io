@@ -25,7 +25,7 @@
 
 <para>Container snapshot listing args </para>
 <para>
-Definition at line 491 of file daos_task.h.</para>
+Definition at line 511 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -36,7 +36,7 @@ Definition at line 491 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__anchor__t">daos_anchor_t</link>* anchor</computeroutput></para>
 <para>Hash anchor for the next call. </para>
 <para>
-Definition at line 504 of file daos_task.h.</para>
+Definition at line 524 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__list__snap__t_1a7fe83fe613282d305d3aeacba805f901"/>    <section>
     <title>coh</title>
 <indexterm><primary>coh</primary><secondary>daos_cont_list_snap_t</secondary></indexterm>
@@ -44,7 +44,7 @@ Definition at line 504 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> coh</computeroutput></para>
 <para>Container open handle. </para>
 <para>
-Definition at line 493 of file daos_task.h.</para>
+Definition at line 513 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__list__snap__t_1afa3ac1b94e8518e8baf13461fcb62dd6"/>    <section>
     <title>epochs</title>
 <indexterm><primary>epochs</primary><secondary>daos_cont_list_snap_t</secondary></indexterm>
@@ -52,7 +52,7 @@ Definition at line 493 of file daos_task.h.</para>
 <para><computeroutput>daos_epoch_t* epochs</computeroutput></para>
 <para>preallocated array of epochs to store snapshots. </para>
 <para>
-Definition at line 500 of file daos_task.h.</para>
+Definition at line 520 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__list__snap__t_1a26fc633cf551a2621e172633486c85ef"/>    <section>
     <title>names</title>
 <indexterm><primary>names</primary><secondary>daos_cont_list_snap_t</secondary></indexterm>
@@ -60,7 +60,7 @@ Definition at line 500 of file daos_task.h.</para>
 <para><computeroutput>char** names</computeroutput></para>
 <para>preallocated array of names of the snapshots. </para>
 <para>
-Definition at line 502 of file daos_task.h.</para>
+Definition at line 522 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

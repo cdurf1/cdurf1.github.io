@@ -16,7 +16,7 @@
 </listitem>
             <listitem><para>unsigned int <link linkend="_structdaos__oclass__attr_1a17e6e44a36d3526b3d40c17410603e8c">ca_grp_nr</link></para>
 </listitem>
-            <listitem><para><anchor xml:id="_structdaos__oclass__attr_1a5cae83e4c1aa38dab3b77c56da79dd1b"/>union {</para>
+            <listitem><para><anchor xml:id="_structdaos__oclass__attr_1a89d1859a797591e7d2bcd9bb5be4c8d9"/>union {</para>
         <itemizedlist>
             <listitem><para>   struct <emphasis role="strong">daos_rp_attr</emphasis> {</para>
         <itemizedlist>

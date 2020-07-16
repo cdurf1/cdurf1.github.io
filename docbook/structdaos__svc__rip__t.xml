@@ -21,7 +21,7 @@
 
 <para>svc rip params </para>
 <para>
-Definition at line 140 of file daos_task.h.</para>
+Definition at line 142 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 140 of file daos_task.h.</para>
 <para><computeroutput>bool force</computeroutput></para>
 <para>Abrupt shutdown, no cleanup </para>
 <para>
-Definition at line 146 of file daos_task.h.</para>
+Definition at line 148 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__svc__rip__t_1aafb4e47bc006722deb58fd5e17531de3"/>    <section>
     <title>grp</title>
 <indexterm><primary>grp</primary><secondary>daos_svc_rip_t</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 146 of file daos_task.h.</para>
 <para><computeroutput>const char* grp</computeroutput></para>
 <para>Process set name of the DAOS servers managing the pool </para>
 <para>
-Definition at line 142 of file daos_task.h.</para>
+Definition at line 144 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__svc__rip__t_1a725668728cdf219a18169482d866dbd7"/>    <section>
     <title>rank</title>
 <indexterm><primary>rank</primary><secondary>daos_svc_rip_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 142 of file daos_task.h.</para>
 <para><computeroutput>d_rank_t rank</computeroutput></para>
 <para>rank to kill </para>
 <para>
-Definition at line 144 of file daos_task.h.</para>
+Definition at line 146 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

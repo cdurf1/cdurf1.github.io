@@ -17,7 +17,7 @@
 
 <para>poo disconnect args </para>
 <para>
-Definition at line 238 of file daos_task.h.</para>
+Definition at line 240 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -28,7 +28,7 @@ Definition at line 238 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> poh</computeroutput></para>
 <para>Pool open handle. </para>
 <para>
-Definition at line 240 of file daos_task.h.</para>
+Definition at line 242 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

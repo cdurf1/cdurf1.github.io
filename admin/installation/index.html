@@ -245,7 +245,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../release/releaseNote_v1_0/" class="md-tabs__link">
+        <a href="../../release/releaseNote_v1_0_1/" class="md-tabs__link">
           Releases
         </a>
       
@@ -501,6 +501,19 @@
   <a href="#distribution-packages" class="md-nav__link">
     Distribution Packages
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-daos-from-rpms" class="md-nav__link">
+    Installing DAOS from RPMs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -812,7 +825,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/releaseNote_v1_0/" title="Release Notes" class="md-nav__link">
+    <a href="../../release/releaseNote_v1_0_1/" title="Release Notes" class="md-nav__link">
       Release Notes
     </a>
   </li>
@@ -884,7 +897,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../html/index.html" title="DAOS API Documentation" class="md-nav__link">
+    <a href="../../html/" title="DAOS API Documentation" class="md-nav__link">
       DAOS API Documentation
     </a>
   </li>
@@ -974,6 +987,19 @@
   <a href="#distribution-packages" class="md-nav__link">
     Distribution Packages
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-daos-from-rpms" class="md-nav__link">
+    Installing DAOS from RPMs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1074,6 +1100,7 @@
                 <h1 id="software-installation">Software Installation<a class="headerlink" href="#software-installation" title="Permanent link">&para;</a></h1>
 <p>DAOS runs on both Intel 64 and ARM64 platforms and has been successfully tested
 on CentOS 7, OpenSUSE Leap 15.1, and Ubuntu 20.04 distributions.</p>
+<p>The majority of testing has been performed on Centos 7.7 and SLES 15, with Centos being used in the majority of the test cycles.</p>
 <h2 id="software-dependencies">Software Dependencies<a class="headerlink" href="#software-dependencies" title="Permanent link">&para;</a></h2>
 <p>DAOS requires a C99-capable compiler, a Go compiler, and the scons build tool.
 Moreover, the DAOS stack leverages the following open source projects:</p>
@@ -1120,9 +1147,23 @@ Moreover, the DAOS stack leverages the following open source projects:</p>
 <p>The DAOS build system can be configured to download and build any missing
 dependencies automatically.</p>
 <h2 id="distribution-packages">Distribution Packages<a class="headerlink" href="#distribution-packages" title="Permanent link">&para;</a></h2>
-<p>DAOS RPM and deb packaging is under development and will be available for DAOS
-v1.0. Integration with the <a href="https://spack.io/">Spack</a> package manager is also
+<p>DAOS RPM packaging is currently available, and DEB packaging is under development and will be available in a future DAOS release. Integration with the <a href="https://spack.io/">Spack</a> package manager is also
 under consideration.</p>
+<h3 id="installing-daos-from-rpms">Installing DAOS from RPMs<a class="headerlink" href="#installing-daos-from-rpms" title="Permanent link">&para;</a></h3>
+<p>DAOS RPMs are available from the Intel&copy; Registration Center.
+Clicking the <a href="https://registrationcenter.intel.com/forms/?productid=3412">Intel&copy; Registration Center</a> link will take you to the registration center, where you will create an account. After creating an account, the following files can be downloaded:</p>
+<ul>
+<li>debug.tar</li>
+<li>packages.tar</li>
+<li>source.tar</li>
+</ul>
+<p>Perform the following steps after download:</p>
+<ol>
+<li>Download the packages directly or transfer them to the host node.</li>
+<li>Extract the 'packages.tar' file.</li>
+<li>Perform <code>yum -y install epel-release</code>.</li>
+<li>Perform a <code>yum install *</code> in the packages folder.</li>
+</ol>
 <h2 id="daos-from-scratch">DAOS from Scratch<a class="headerlink" href="#daos-from-scratch" title="Permanent link">&para;</a></h2>
 <p>The following instructions have been verified with CentOS. Installations on other
 Linux distributions might be similar with some variations.

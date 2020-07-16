@@ -12,10 +12,6 @@
 </listitem>
             <listitem><para>uint32_t <link linkend="_structdaos__key__desc__t_1a0045348784e873fe5b436dc5187f34e3">kd_val_type</link></para>
 </listitem>
-            <listitem><para>uint16_t <link linkend="_structdaos__key__desc__t_1a0c2b7c65cd87c2ac99556752fed16790">kd_csum_type</link></para>
-</listitem>
-            <listitem><para>uint16_t <link linkend="_structdaos__key__desc__t_1a67034737da6ffd41805782226bc3745b">kd_csum_len</link></para>
-</listitem>
         </itemizedlist>
 </simplesect>
 <section>
@@ -23,34 +19,18 @@
 
 <para>Key descriptor used for key enumeration. The actual key and checksum are stored in a separate buffer (i.e. sgl) </para>
 <para>
-Definition at line 298 of file daos_obj.h.</para>
+Definition at line 303 of file daos_obj.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
-<anchor xml:id="_structdaos__key__desc__t_1a67034737da6ffd41805782226bc3745b"/>    <section>
-    <title>kd_csum_len</title>
-<indexterm><primary>kd_csum_len</primary><secondary>daos_key_desc_t</secondary></indexterm>
-<indexterm><primary>daos_key_desc_t</primary><secondary>kd_csum_len</secondary></indexterm>
-<para><computeroutput>uint16_t kd_csum_len</computeroutput></para>
-<para>Checksum length </para>
-<para>
-Definition at line 309 of file daos_obj.h.</para>
-    </section><anchor xml:id="_structdaos__key__desc__t_1a0c2b7c65cd87c2ac99556752fed16790"/>    <section>
-    <title>kd_csum_type</title>
-<indexterm><primary>kd_csum_type</primary><secondary>daos_key_desc_t</secondary></indexterm>
-<indexterm><primary>daos_key_desc_t</primary><secondary>kd_csum_type</secondary></indexterm>
-<para><computeroutput>uint16_t kd_csum_type</computeroutput></para>
-<para>Checksum type </para>
-<para>
-Definition at line 307 of file daos_obj.h.</para>
-    </section><anchor xml:id="_structdaos__key__desc__t_1abf51ea8a799cb106f76784e1f07e603b"/>    <section>
+<anchor xml:id="_structdaos__key__desc__t_1abf51ea8a799cb106f76784e1f07e603b"/>    <section>
     <title>kd_key_len</title>
 <indexterm><primary>kd_key_len</primary><secondary>daos_key_desc_t</secondary></indexterm>
 <indexterm><primary>daos_key_desc_t</primary><secondary>kd_key_len</secondary></indexterm>
 <para><computeroutput>daos_size_t kd_key_len</computeroutput></para>
 <para>Key length </para>
 <para>
-Definition at line 300 of file daos_obj.h.</para>
+Definition at line 305 of file daos_obj.h.</para>
     </section><anchor xml:id="_structdaos__key__desc__t_1a0045348784e873fe5b436dc5187f34e3"/>    <section>
     <title>kd_val_type</title>
 <indexterm><primary>kd_val_type</primary><secondary>daos_key_desc_t</secondary></indexterm>
@@ -58,7 +38,7 @@ Definition at line 300 of file daos_obj.h.</para>
 <para><computeroutput>uint32_t kd_val_type</computeroutput></para>
 <para>Flag for akey value types: DAOS_IOD_SINGLE, DAOS_IOD_ARRAY. It is ignored for dkey enumeration. </para>
 <para>
-Definition at line 305 of file daos_obj.h.</para>
+Definition at line 310 of file daos_obj.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

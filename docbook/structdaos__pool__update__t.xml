@@ -23,7 +23,7 @@
 
 <para>pool target update (add/exclude) args </para>
 <para>
-Definition at line 244 of file daos_task.h.</para>
+Definition at line 246 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -34,7 +34,7 @@ Definition at line 244 of file daos_task.h.</para>
 <para><computeroutput>const char* grp</computeroutput></para>
 <para>Process set name of the DAOS servers managing the pool </para>
 <para>
-Definition at line 248 of file daos_task.h.</para>
+Definition at line 250 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__update__t_1afcc363aa1e5e2300d19ecfd1c88f3f44"/>    <section>
     <title>svc</title>
 <indexterm><primary>svc</primary><secondary>daos_pool_update_t</secondary></indexterm>
@@ -42,7 +42,7 @@ Definition at line 248 of file daos_task.h.</para>
 <para><computeroutput>d_rank_list_t* svc</computeroutput></para>
 <para>Pool service replica ranks. </para>
 <para>
-Definition at line 250 of file daos_task.h.</para>
+Definition at line 252 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__update__t_1a8c5344fc1f3de1c0a590a576263f8559"/>    <section>
     <title>tgts</title>
 <indexterm><primary>tgts</primary><secondary>daos_pool_update_t</secondary></indexterm>
@@ -50,7 +50,7 @@ Definition at line 250 of file daos_task.h.</para>
 <para><computeroutput>struct <link linkend="_structd__tgt__list">d_tgt_list</link>* tgts</computeroutput></para>
 <para>Target array </para>
 <para>
-Definition at line 252 of file daos_task.h.</para>
+Definition at line 254 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__update__t_1aad00e3514ef2dd4e2535dab4d84d0273"/>    <section>
     <title>uuid</title>
 <indexterm><primary>uuid</primary><secondary>daos_pool_update_t</secondary></indexterm>
@@ -58,7 +58,7 @@ Definition at line 252 of file daos_task.h.</para>
 <para><computeroutput>const uuid_t uuid</computeroutput></para>
 <para>UUID of the pool. </para>
 <para>
-Definition at line 246 of file daos_task.h.</para>
+Definition at line 248 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

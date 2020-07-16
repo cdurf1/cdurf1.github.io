@@ -18,7 +18,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line 72 of file daos_types.h.</para>
+Definition at line 75 of file daos_types.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -29,7 +29,7 @@ Definition at line 72 of file daos_types.h.</para>
 <para><computeroutput>uint8_t da_buf[DAOS_ANCHOR_BUF_MAX]</computeroutput></para>
 <para>see enum daos_anchor_flags </para>
 <para>
-Definition at line 76 of file daos_types.h.</para>
+Definition at line 79 of file daos_types.h.</para>
     </section><anchor xml:id="_structdaos__anchor__t_1a96375363d60fa414eac39f5aa45524d9"/>    <section>
     <title>da_shard</title>
 <indexterm><primary>da_shard</primary><secondary>daos_anchor_t</secondary></indexterm>
@@ -37,7 +37,7 @@ Definition at line 76 of file daos_types.h.</para>
 <para><computeroutput>uint16_t da_shard</computeroutput></para>
 <para>daos_anchor_type_t </para>
 <para>
-Definition at line 74 of file daos_types.h.</para>
+Definition at line 77 of file daos_types.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

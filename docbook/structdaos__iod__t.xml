@@ -25,7 +25,7 @@
 
 <para>An I/O descriptor is a list of extents (effectively records associated with contiguous array indices) to update/fetch in a particular array identified by its akey. </para>
 <para>
-Definition at line 215 of file daos_obj.h.</para>
+Definition at line 212 of file daos_obj.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -36,7 +36,7 @@ Definition at line 215 of file daos_obj.h.</para>
 <para><computeroutput>daos_key_t iod_name</computeroutput></para>
 <para>akey for this iod </para>
 <para>
-Definition at line 217 of file daos_obj.h.</para>
+Definition at line 214 of file daos_obj.h.</para>
     </section><anchor xml:id="_structdaos__iod__t_1ae3fc1824baeb4c40877357dd0ff0b12a"/>    <section>
     <title>iod_size</title>
 <indexterm><primary>iod_size</primary><secondary>daos_iod_t</secondary></indexterm>
@@ -44,7 +44,7 @@ Definition at line 217 of file daos_obj.h.</para>
 <para><computeroutput>daos_size_t iod_size</computeroutput></para>
 <para>Size of the single value or the record size of the array </para>
 <para>
-Definition at line 231 of file daos_obj.h.</para>
+Definition at line 228 of file daos_obj.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

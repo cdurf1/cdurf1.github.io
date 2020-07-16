@@ -23,7 +23,7 @@
 
 <para>Object sync args </para>
 <para>
-Definition at line 702 of file daos_task.h.</para>
+Definition at line 724 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -34,7 +34,7 @@ Definition at line 702 of file daos_task.h.</para>
 <para><computeroutput>daos_epoch_t epoch</computeroutput></para>
 <para>epoch. </para>
 <para>
-Definition at line 706 of file daos_task.h.</para>
+Definition at line 728 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__obj__sync__args_1afd4dba31ae8bd29af4602b518d0ab400"/>    <section>
     <title>epochs_p</title>
 <indexterm><primary>epochs_p</primary><secondary>daos_obj_sync_args</secondary></indexterm>
@@ -42,7 +42,7 @@ Definition at line 706 of file daos_task.h.</para>
 <para><computeroutput>daos_epoch_t** epochs_p</computeroutput></para>
 <para>epochp. </para>
 <para>
-Definition at line 708 of file daos_task.h.</para>
+Definition at line 730 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__obj__sync__args_1a6221fbfc5193b1c86f07e4d58ce1b87d"/>    <section>
     <title>nr</title>
 <indexterm><primary>nr</primary><secondary>daos_obj_sync_args</secondary></indexterm>
@@ -50,7 +50,7 @@ Definition at line 708 of file daos_task.h.</para>
 <para><computeroutput>int* nr</computeroutput></para>
 <para>nr. </para>
 <para>
-Definition at line 710 of file daos_task.h.</para>
+Definition at line 732 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__obj__sync__args_1aef20019954d183ed757cd90ac3288242"/>    <section>
     <title>oh</title>
 <indexterm><primary>oh</primary><secondary>daos_obj_sync_args</secondary></indexterm>
@@ -58,7 +58,7 @@ Definition at line 710 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> oh</computeroutput></para>
 <para>Object open handle </para>
 <para>
-Definition at line 704 of file daos_task.h.</para>
+Definition at line 726 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

@@ -19,7 +19,7 @@
 
 <para>Array destroy args </para>
 <para>
-Definition at line 889 of file daos_task.h.</para>
+Definition at line 915 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -30,7 +30,7 @@ Definition at line 889 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> oh</computeroutput></para>
 <para>Array open handle. </para>
 <para>
-Definition at line 891 of file daos_task.h.</para>
+Definition at line 917 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__array__destroy__t_1a8df9d41740502f16e867061d9bc0c585"/>    <section>
     <title>th</title>
 <indexterm><primary>th</primary><secondary>daos_array_destroy_t</secondary></indexterm>
@@ -38,7 +38,7 @@ Definition at line 891 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> th</computeroutput></para>
 <para>Transaction open handle. </para>
 <para>
-Definition at line 893 of file daos_task.h.</para>
+Definition at line 919 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

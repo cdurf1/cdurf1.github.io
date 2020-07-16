@@ -29,7 +29,7 @@
 </listitem></itemizedlist>
 </para>
 <para>
-Definition at line 189 of file daos_obj.h.</para>
+Definition at line 186 of file daos_obj.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -40,7 +40,7 @@ Definition at line 189 of file daos_obj.h.</para>
 <para><computeroutput>uint64_t rx_idx</computeroutput></para>
 <para>Indice of the first record in the extent </para>
 <para>
-Definition at line 191 of file daos_obj.h.</para>
+Definition at line 188 of file daos_obj.h.</para>
     </section><anchor xml:id="_structdaos__recx__t_1a4e59e78b6556122c19cf04c6d1ba8e28"/>    <section>
     <title>rx_nr</title>
 <indexterm><primary>rx_nr</primary><secondary>daos_recx_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 191 of file daos_obj.h.</para>
 <para><computeroutput>uint64_t rx_nr</computeroutput></para>
 <para>Number of contiguous records in the extent If <emphasis>rx_nr</emphasis> is equal to 1, the extent is composed of a single record at indice <emphasis>rx_idx</emphasis> </para>
 <para>
-Definition at line 197 of file daos_obj.h.</para>
+Definition at line 194 of file daos_obj.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

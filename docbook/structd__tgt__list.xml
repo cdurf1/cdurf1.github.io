@@ -21,7 +21,7 @@
 
 <para>Pool target list, each target is identified by rank &amp; target index within the rank </para>
 <para>
-Definition at line 203 of file daos_types.h.</para>
+Definition at line 212 of file daos_types.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 203 of file daos_types.h.</para>
 <para><computeroutput>uint32_t tl_nr</computeroutput></para>
 <para>number of ranks &amp; tgts </para>
 <para>
-Definition at line 209 of file daos_types.h.</para>
+Definition at line 218 of file daos_types.h.</para>
     </section><anchor xml:id="_structd__tgt__list_1a9759507f86520e5e451fd0a4d132da89"/>    <section>
     <title>tl_ranks</title>
 <indexterm><primary>tl_ranks</primary><secondary>d_tgt_list</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 209 of file daos_types.h.</para>
 <para><computeroutput>d_rank_t* tl_ranks</computeroutput></para>
 <para>array of ranks </para>
 <para>
-Definition at line 205 of file daos_types.h.</para>
+Definition at line 214 of file daos_types.h.</para>
     </section><anchor xml:id="_structd__tgt__list_1a789edcb837d0be34b80b87ab4e7d8717"/>    <section>
     <title>tl_tgts</title>
 <indexterm><primary>tl_tgts</primary><secondary>d_tgt_list</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 205 of file daos_types.h.</para>
 <para><computeroutput>int32_t* tl_tgts</computeroutput></para>
 <para>array of targets </para>
 <para>
-Definition at line 207 of file daos_types.h.</para>
+Definition at line 216 of file daos_types.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

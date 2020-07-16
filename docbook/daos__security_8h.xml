@@ -219,7 +219,7 @@ Definition at line 50 of file daos_security.h.</para>
 </programlisting>
 <para>Mask of all valid permission bits in DAOS </para>
 <para>
-Definition at line 180 of file daos_security.h.</para>
+Definition at line 181 of file daos_security.h.</para>
     </section><anchor xml:id="_daos__security_8h_1ab8bc9560561bacf657a4688630f9ce06"/>    <section>
     <title>DAOS_ACL_PERM_CONT_ALL</title>
 <indexterm><primary>DAOS_ACL_PERM_CONT_ALL</primary><secondary>daos_security.h</secondary></indexterm>
@@ -235,12 +235,13 @@ Definition at line 180 of file daos_security.h.</para>
 </programlisting>
 <para>Mask of all valid permissions for DAOS containers </para>
 <para>
-Definition at line 168 of file daos_security.h.</para>
+Definition at line 169 of file daos_security.h.</para>
     </section><anchor xml:id="_daos__security_8h_1a821041c70bd1e5747c7002c9bdf5e049"/>    <section>
     <title>DAOS_ACL_PERM_POOL_ALL</title>
 <indexterm><primary>DAOS_ACL_PERM_POOL_ALL</primary><secondary>daos_security.h</secondary></indexterm>
 <indexterm><primary>daos_security.h</primary><secondary>DAOS_ACL_PERM_POOL_ALL</secondary></indexterm>
 <para><computeroutput>#define DAOS_ACL_PERM_POOL_ALL</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(DAOS_ACL_PERM_READ&#32;|&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DAOS_ACL_PERM_GET_PROP&#32;|&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DAOS_ACL_PERM_WRITE&#32;|&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DAOS_ACL_PERM_CREATE_CONT&#32;|&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DAOS_ACL_PERM_DEL_CONT)

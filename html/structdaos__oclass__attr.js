@@ -7,9 +7,9 @@ var structdaos__oclass__attr =
     [ "e_k", "structdaos__oclass__attr.html#a5cc770c0b4ba4f4dc8a01d554984aca2", null ],
     [ "e_len", "structdaos__oclass__attr.html#ad2bee4b5d002a0caa45e354df58aacfa", null ],
     [ "e_p", "structdaos__oclass__attr.html#a270236fe33067544b3302be503bb44df", null ],
-    [ "ec", "structdaos__oclass__attr.html#a5da6e2b7f8f56c2cac2d8e31525c265f", null ],
+    [ "ec", "structdaos__oclass__attr.html#ab4385be38f8a364661b752d985edc3c7", null ],
     [ "r_num", "structdaos__oclass__attr.html#a2596b44c5152c9a7a4005a43886b0590", null ],
     [ "r_proto", "structdaos__oclass__attr.html#aea8e66a3714bc82fb0ad724c71467285", null ],
-    [ "rp", "structdaos__oclass__attr.html#a1c65553d5f5baaaab388ade315524aeb", null ],
-    [ "u", "structdaos__oclass__attr.html#a5cae83e4c1aa38dab3b77c56da79dd1b", null ]
+    [ "rp", "structdaos__oclass__attr.html#a8c075d16ab2e3d15a9145ab4d09b24aa", null ],
+    [ "u", "structdaos__oclass__attr.html#a89d1859a797591e7d2bcd9bb5be4c8d9", null ]
 ];

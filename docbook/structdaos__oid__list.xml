@@ -16,7 +16,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line 160 of file daos_obj.h.</para>
+Definition at line 157 of file daos_obj.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -27,7 +27,7 @@ Definition at line 160 of file daos_obj.h.</para>
 <para><computeroutput>uint32_t ol_nr</computeroutput></para>
 <para>Input/output number of oids </para>
 <para>
-Definition at line 162 of file daos_obj.h.</para>
+Definition at line 159 of file daos_obj.h.</para>
     </section><anchor xml:id="_structdaos__oid__list_1ac1be02c7e0a58408259abb75ea2f2b24"/>    <section>
     <title>ol_oids</title>
 <indexterm><primary>ol_oids</primary><secondary>daos_oid_list</secondary></indexterm>
@@ -35,7 +35,7 @@ Definition at line 162 of file daos_obj.h.</para>
 <para><computeroutput><link linkend="_structdaos__obj__id__t">daos_obj_id_t</link>* ol_oids</computeroutput></para>
 <para>OID buffer </para>
 <para>
-Definition at line 165 of file daos_obj.h.</para>
+Definition at line 162 of file daos_obj.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

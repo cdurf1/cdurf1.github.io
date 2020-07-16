@@ -25,7 +25,7 @@
 
 <para>pool add/remove replicas args </para>
 <para>
-Definition at line 328 of file daos_task.h.</para>
+Definition at line 330 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -36,7 +36,7 @@ Definition at line 328 of file daos_task.h.</para>
 <para><computeroutput>d_rank_list_t* failed</computeroutput></para>
 <para>Optional, list of ranks which could not be added/removed. </para>
 <para>
-Definition at line 338 of file daos_task.h.</para>
+Definition at line 340 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__replicas__t_1a7142af3238843b1b28f5f93888d9b931"/>    <section>
     <title>group</title>
 <indexterm><primary>group</primary><secondary>daos_pool_replicas_t</secondary></indexterm>
@@ -44,7 +44,7 @@ Definition at line 338 of file daos_task.h.</para>
 <para><computeroutput>const char* group</computeroutput></para>
 <para>Name of DAOS server process set managing the service. </para>
 <para>
-Definition at line 332 of file daos_task.h.</para>
+Definition at line 334 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__replicas__t_1afcc363aa1e5e2300d19ecfd1c88f3f44"/>    <section>
     <title>svc</title>
 <indexterm><primary>svc</primary><secondary>daos_pool_replicas_t</secondary></indexterm>
@@ -52,7 +52,7 @@ Definition at line 332 of file daos_task.h.</para>
 <para><computeroutput>d_rank_list_t* svc</computeroutput></para>
 <para>List of service ranks. </para>
 <para>
-Definition at line 334 of file daos_task.h.</para>
+Definition at line 336 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__replicas__t_1aa2e2a20f76f0373beb2a556233cbaf5f"/>    <section>
     <title>targets</title>
 <indexterm><primary>targets</primary><secondary>daos_pool_replicas_t</secondary></indexterm>
@@ -60,7 +60,7 @@ Definition at line 334 of file daos_task.h.</para>
 <para><computeroutput>d_rank_list_t* targets</computeroutput></para>
 <para>Ranks of the replicas to be added/removed. </para>
 <para>
-Definition at line 336 of file daos_task.h.</para>
+Definition at line 338 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__replicas__t_1aad00e3514ef2dd4e2535dab4d84d0273"/>    <section>
     <title>uuid</title>
 <indexterm><primary>uuid</primary><secondary>daos_pool_replicas_t</secondary></indexterm>
@@ -68,7 +68,7 @@ Definition at line 336 of file daos_task.h.</para>
 <para><computeroutput>const uuid_t uuid</computeroutput></para>
 <para>UUID of the pool. </para>
 <para>
-Definition at line 330 of file daos_task.h.</para>
+Definition at line 332 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

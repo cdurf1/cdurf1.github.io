@@ -27,7 +27,7 @@
 
 <para>KV put args </para>
 <para>
-Definition at line 913 of file daos_task.h.</para>
+Definition at line 939 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -38,7 +38,7 @@ Definition at line 913 of file daos_task.h.</para>
 <para><computeroutput>const void* buf</computeroutput></para>
 <para>Value buffer. </para>
 <para>
-Definition at line 925 of file daos_task.h.</para>
+Definition at line 951 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__kv__put__t_1af690a5e43f182f75d4fcf438c0c826ef"/>    <section>
     <title>buf_size</title>
 <indexterm><primary>buf_size</primary><secondary>daos_kv_put_t</secondary></indexterm>
@@ -46,7 +46,7 @@ Definition at line 925 of file daos_task.h.</para>
 <para><computeroutput>daos_size_t buf_size</computeroutput></para>
 <para>Value size. </para>
 <para>
-Definition at line 923 of file daos_task.h.</para>
+Definition at line 949 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__kv__put__t_1a899a76dc5f03f0d4ea3793c339e07ee9"/>    <section>
     <title>flags</title>
 <indexterm><primary>flags</primary><secondary>daos_kv_put_t</secondary></indexterm>
@@ -54,7 +54,7 @@ Definition at line 923 of file daos_task.h.</para>
 <para><computeroutput>uint64_t flags</computeroutput></para>
 <para>Operation flags. </para>
 <para>
-Definition at line 919 of file daos_task.h.</para>
+Definition at line 945 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__kv__put__t_1acd3d88da3c0e0313c3645ff34f62f542"/>    <section>
     <title>key</title>
 <indexterm><primary>key</primary><secondary>daos_kv_put_t</secondary></indexterm>
@@ -62,7 +62,7 @@ Definition at line 919 of file daos_task.h.</para>
 <para><computeroutput>const char* key</computeroutput></para>
 <para>Key. </para>
 <para>
-Definition at line 921 of file daos_task.h.</para>
+Definition at line 947 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__kv__put__t_1aef20019954d183ed757cd90ac3288242"/>    <section>
     <title>oh</title>
 <indexterm><primary>oh</primary><secondary>daos_kv_put_t</secondary></indexterm>
@@ -70,7 +70,7 @@ Definition at line 921 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> oh</computeroutput></para>
 <para>KV open handle. </para>
 <para>
-Definition at line 915 of file daos_task.h.</para>
+Definition at line 941 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__kv__put__t_1a8df9d41740502f16e867061d9bc0c585"/>    <section>
     <title>th</title>
 <indexterm><primary>th</primary><secondary>daos_kv_put_t</secondary></indexterm>
@@ -78,7 +78,7 @@ Definition at line 915 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> th</computeroutput></para>
 <para>Transaction open handle. </para>
 <para>
-Definition at line 917 of file daos_task.h.</para>
+Definition at line 943 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

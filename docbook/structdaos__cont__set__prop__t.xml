@@ -19,7 +19,7 @@
 
 <para>Container set properties args </para>
 <para>
-Definition at line 408 of file daos_task.h.</para>
+Definition at line 410 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -30,7 +30,7 @@ Definition at line 408 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> coh</computeroutput></para>
 <para>Container open handle. </para>
 <para>
-Definition at line 410 of file daos_task.h.</para>
+Definition at line 412 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__set__prop__t_1a8786d65cd566e6cbdb43d0afeca96a46"/>    <section>
     <title>prop</title>
 <indexterm><primary>prop</primary><secondary>daos_cont_set_prop_t</secondary></indexterm>
@@ -38,7 +38,7 @@ Definition at line 410 of file daos_task.h.</para>
 <para><computeroutput>daos_prop_t* prop</computeroutput></para>
 <para>Property entries to set/update. </para>
 <para>
-Definition at line 412 of file daos_task.h.</para>
+Definition at line 414 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

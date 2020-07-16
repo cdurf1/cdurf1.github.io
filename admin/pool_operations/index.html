@@ -245,7 +245,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../release/releaseNote_v1_0/" class="md-tabs__link">
+        <a href="../../release/releaseNote_v1_0_1/" class="md-tabs__link">
           Releases
         </a>
       
@@ -635,6 +635,26 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pool-exclude" class="md-nav__link">
+    Pool Exclude
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pool-drain" class="md-nav__link">
+    Pool Drain
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#target-reintegration" class="md-nav__link">
     Target Reintegration
@@ -866,7 +886,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/releaseNote_v1_0/" title="Release Notes" class="md-nav__link">
+    <a href="../../release/releaseNote_v1_0_1/" title="Release Notes" class="md-nav__link">
       Release Notes
     </a>
   </li>
@@ -938,7 +958,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../html/index.html" title="DAOS API Documentation" class="md-nav__link">
+    <a href="../../html/" title="DAOS API Documentation" class="md-nav__link">
       DAOS API Documentation
     </a>
   </li>
@@ -1113,6 +1133,26 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pool-exclude" class="md-nav__link">
+    Pool Exclude
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pool-drain" class="md-nav__link">
+    Pool Drain
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#target-reintegration" class="md-nav__link">
@@ -1403,6 +1443,7 @@ close to 0 means that one target is running out of space.</p>
 the management API and tool and will be documented here once available.</p>
 <h2 id="pool-modifications">Pool Modifications<a class="headerlink" href="#pool-modifications" title="Permanent link">&para;</a></h2>
 <h3 id="target-exclusion-and-self-healing">Target Exclusion and Self-Healing<a class="headerlink" href="#target-exclusion-and-self-healing" title="Permanent link">&para;</a></h3>
+<h2 id="pool-exclude">Pool Exclude<a class="headerlink" href="#pool-exclude" title="Permanent link">&para;</a></h2>
 <p>An operator can exclude one or more targets from a specific DAOS pool using the rank
 the target resides on as well as the target idx on that rank. If a target idx list is
 not provided then all targets on the rank will be excluded. Excluding a target will
@@ -1414,8 +1455,26 @@ automatically start the rebuild process.</p>
 <p>The pool target exclude command accepts 3 parameters:</p>
 <ul>
 <li>The pool UUID of the pool that the targets will be excluded from.</li>
-<li>The rank of the target(s) te be excluded.</li>
+<li>The rank of the target(s) to be excluded.</li>
 <li>The target Indices of the targets to be excluded from that rank (optional).</li>
+</ul>
+<h2 id="pool-drain">Pool Drain<a class="headerlink" href="#pool-drain" title="Permanent link">&para;</a></h2>
+<p>Alternatively when an operator would like to remove one or more pool targets
+without the system operating in degraded mode Drain can be used. A pool drain operation will
+initiate rebuild without excluding the designated target until after the rebuild is complete.
+This allows the target(s) drained to continue to perform I/O while the rebuild
+operation is ongoing. Drain additionally enables non-replicated data to be
+rebuilt onto another target whereas in a conventional failure scenario non-replicated
+data would not be integrated into a rebuild and would be lost.</p>
+<p><strong>To drain a target from a pool:</strong></p>
+<pre><code class="bash">$ dmg pool drain --pool=${puuid} --rank=${rank} --target-idx=${idx1},${idx2},${idx3}
+</code></pre>
+
+<p>The pool target drain command accepts 3 parameters:</p>
+<ul>
+<li>The pool UUID of the pool that the targets will be drained from.</li>
+<li>The rank of the target(s) to be drained.</li>
+<li>The target Indices of the targets to be drained from that rank (optional).</li>
 </ul>
 <h3 id="target-reintegration">Target Reintegration<a class="headerlink" href="#target-reintegration" title="Permanent link">&para;</a></h3>
 <p>After a target failure an operator can fix the underlying issue and reintegrate the

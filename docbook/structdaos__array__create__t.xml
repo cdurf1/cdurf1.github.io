@@ -27,7 +27,7 @@
 
 <para>Array create args </para>
 <para>
-Definition at line 815 of file daos_task.h.</para>
+Definition at line 841 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -38,7 +38,7 @@ Definition at line 815 of file daos_task.h.</para>
 <para><computeroutput>daos_size_t cell_size</computeroutput></para>
 <para>Size of array records. </para>
 <para>
-Definition at line 823 of file daos_task.h.</para>
+Definition at line 849 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__array__create__t_1a4d7d468ea49cde0fe1e1e4842a80333c"/>    <section>
     <title>chunk_size</title>
 <indexterm><primary>chunk_size</primary><secondary>daos_array_create_t</secondary></indexterm>
@@ -46,7 +46,7 @@ Definition at line 823 of file daos_task.h.</para>
 <para><computeroutput>daos_size_t chunk_size</computeroutput></para>
 <para>Number of records stored under 1 dkey. </para>
 <para>
-Definition at line 825 of file daos_task.h.</para>
+Definition at line 851 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__array__create__t_1a7fe83fe613282d305d3aeacba805f901"/>    <section>
     <title>coh</title>
 <indexterm><primary>coh</primary><secondary>daos_array_create_t</secondary></indexterm>
@@ -54,7 +54,7 @@ Definition at line 825 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> coh</computeroutput></para>
 <para>Container open handle. </para>
 <para>
-Definition at line 817 of file daos_task.h.</para>
+Definition at line 843 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__array__create__t_1abf0833e309cc0c2b147aa35b54a02ad7"/>    <section>
     <title>oh</title>
 <indexterm><primary>oh</primary><secondary>daos_array_create_t</secondary></indexterm>
@@ -62,7 +62,7 @@ Definition at line 817 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link>* oh</computeroutput></para>
 <para>Returned array open handle </para>
 <para>
-Definition at line 827 of file daos_task.h.</para>
+Definition at line 853 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__array__create__t_1aaa43d8da43a7c933a007abe42e86aa1c"/>    <section>
     <title>oid</title>
 <indexterm><primary>oid</primary><secondary>daos_array_create_t</secondary></indexterm>
@@ -70,7 +70,7 @@ Definition at line 827 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__obj__id__t">daos_obj_id_t</link> oid</computeroutput></para>
 <para>Array ID. </para>
 <para>
-Definition at line 819 of file daos_task.h.</para>
+Definition at line 845 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__array__create__t_1a8df9d41740502f16e867061d9bc0c585"/>    <section>
     <title>th</title>
 <indexterm><primary>th</primary><secondary>daos_array_create_t</secondary></indexterm>
@@ -78,7 +78,7 @@ Definition at line 819 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> th</computeroutput></para>
 <para>Transaction open handle. </para>
 <para>
-Definition at line 821 of file daos_task.h.</para>
+Definition at line 847 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

@@ -245,7 +245,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../release/releaseNote_v1_0/" class="md-tabs__link">
+        <a href="../../release/releaseNote_v1_0_1/" class="md-tabs__link">
           Releases
         </a>
       
@@ -716,6 +716,19 @@
     System Validation
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launch-the-client-application" class="md-nav__link">
+    Launch the client application
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -927,7 +940,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/releaseNote_v1_0/" title="Release Notes" class="md-nav__link">
+    <a href="../../release/releaseNote_v1_0_1/" title="Release Notes" class="md-nav__link">
       Release Notes
     </a>
   </li>
@@ -999,7 +1012,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../html/index.html" title="DAOS API Documentation" class="md-nav__link">
+    <a href="../../html/" title="DAOS API Documentation" class="md-nav__link">
       DAOS API Documentation
     </a>
   </li>
@@ -1279,6 +1292,19 @@
   <a href="#system-validation" class="md-nav__link">
     System Validation
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launch-the-client-application" class="md-nav__link">
+    Launch the client application
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1992,27 +2018,30 @@ $ sudo systemctl start daos_agent.service
 <h2 id="system-validation">System Validation<a class="headerlink" href="#system-validation" title="Permanent link">&para;</a></h2>
 <p>To validate that the DAOS system is properly installed, the <code>daos_test</code>
 suite can be executed. Ensure the DAOS Agent is configured before running
-<code>daos_test</code> and that the following environment variables are properly set:</p>
-<ul>
-<li>
-<p><code>CRT_PHY_ADDR_STR</code> must be set to match the provider specified in the server
-  yaml configuration file (e.g. export <code>CRT_PHY_ADDR_STR="ofi+sockets"</code>)</p>
-</li>
-<li>
-<p><code>OFI_INTERFACE</code> is set to the network interface you want to user on the client
-  node.</p>
-</li>
-<li>
-<p><code>OFI_DOMAIN</code> must optionally be set for infiniband deployments.</p>
-</li>
-<li>
-<p><code>DAOS_AGENT_DRPC_DIR</code> must also optionally be set if the agent is using a
-  non-default path for the socket.</p>
-</li>
-</ul>
-<p>While those environment variables need to be set up for DAOS v1.0, versions 1.2
-and upward automatically set up the environment via the agent and don't require
-any special environment set up to run applications.</p>
+<code>daos_test</code>.  If the agent is using a non-default path for the socket, then
+configure <code>DAOS_AGENT_DRPC_DIR</code> in the client environment to point to this new
+location.</p>
+<p>DAOS automatically configures a client with a compatible fabric provider,
+network interface, network domain, CaRT timeout, and CaRT context share address,
+that will allow it to connect to the DAOS system.</p>
+<p>The client may not override the fabric provider or the CaRT context share
+address.</p>
+<p>A client application may override the three remaining settings by configuring
+environment variables in the client's shell prior to launch.</p>
+<p>To manually configure the CaRT timeout, set <code>CRT_TIMEOUT</code> such as:</p>
+<pre><code>export CRT_TIMEOUT=5
+</code></pre>
+
+<p>To manually configure the network interface, set <code>OFI_INTERFACE</code> such as:</p>
+<pre><code>export OFI_INTERFACE=lo
+</code></pre>
+
+<p>When manually configuring an Infiniband device with a verbs provider, the network
+device domain is required.  To manually configure the domain, set <code>OFI_DOMAIN</code> such as:</p>
+<pre><code>export OFI_DOMAIN=hfi1_0
+</code></pre>
+
+<h3 id="launch-the-client-application">Launch the client application<a class="headerlink" href="#launch-the-client-application" title="Permanent link">&para;</a></h3>
 <pre><code class="bash">mpirun -np &lt;num_clients&gt; --hostfile &lt;hostfile&gt; ./daos_test
 </code></pre>
 

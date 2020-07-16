@@ -21,7 +21,7 @@
 
 <para>Container Object ID allocation args </para>
 <para>
-Definition at line 481 of file daos_task.h.</para>
+Definition at line 501 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 481 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> coh</computeroutput></para>
 <para>Container open handle. </para>
 <para>
-Definition at line 483 of file daos_task.h.</para>
+Definition at line 503 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__alloc__oids__t_1a1f8e94efa589d0f382b51ff31f291414"/>    <section>
     <title>num_oids</title>
 <indexterm><primary>num_oids</primary><secondary>daos_cont_alloc_oids_t</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 483 of file daos_task.h.</para>
 <para><computeroutput>daos_size_t num_oids</computeroutput></para>
 <para>Number of unique IDs requested. </para>
 <para>
-Definition at line 485 of file daos_task.h.</para>
+Definition at line 505 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__alloc__oids__t_1a97c475f718cd4fbb4c94716dc248dcae"/>    <section>
     <title>oid</title>
 <indexterm><primary>oid</primary><secondary>daos_cont_alloc_oids_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 485 of file daos_task.h.</para>
 <para><computeroutput>uint64_t* oid</computeroutput></para>
 <para>starting oid that was allocated up to oid + num_oids. </para>
 <para>
-Definition at line 487 of file daos_task.h.</para>
+Definition at line 507 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

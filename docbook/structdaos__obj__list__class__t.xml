@@ -21,7 +21,7 @@
 
 <para>Object class list args </para>
 <para>
-Definition at line 582 of file daos_task.h.</para>
+Definition at line 610 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 582 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__anchor__t">daos_anchor_t</link>* anchor</computeroutput></para>
 <para>Hash anchor for the next call. </para>
 <para>
-Definition at line 588 of file daos_task.h.</para>
+Definition at line 616 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__obj__list__class__t_1a41d2211e3c5ffcb51bcf8fcd7cf5c09d"/>    <section>
     <title>clist</title>
 <indexterm><primary>clist</primary><secondary>daos_obj_list_class_t</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 588 of file daos_task.h.</para>
 <para><computeroutput>struct <link linkend="_structdaos__oclass__list">daos_oclass_list</link>* clist</computeroutput></para>
 <para>Sink buffer for returned class list. </para>
 <para>
-Definition at line 586 of file daos_task.h.</para>
+Definition at line 614 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__obj__list__class__t_1a7fe83fe613282d305d3aeacba805f901"/>    <section>
     <title>coh</title>
 <indexterm><primary>coh</primary><secondary>daos_obj_list_class_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 586 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> coh</computeroutput></para>
 <para>Container open handle. </para>
 <para>
-Definition at line 584 of file daos_task.h.</para>
+Definition at line 612 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

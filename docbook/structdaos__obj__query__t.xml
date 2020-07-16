@@ -23,7 +23,7 @@
 
 <para>Object query args </para>
 <para>
-Definition at line 633 of file daos_task.h.</para>
+Definition at line 661 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -34,7 +34,7 @@ Definition at line 633 of file daos_task.h.</para>
 <para><computeroutput>struct <link linkend="_structdaos__obj__attr">daos_obj_attr</link>* oa</computeroutput></para>
 <para>Returned object attributes. </para>
 <para>
-Definition at line 639 of file daos_task.h.</para>
+Definition at line 667 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__obj__query__t_1aef20019954d183ed757cd90ac3288242"/>    <section>
     <title>oh</title>
 <indexterm><primary>oh</primary><secondary>daos_obj_query_t</secondary></indexterm>
@@ -42,7 +42,7 @@ Definition at line 639 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> oh</computeroutput></para>
 <para>Object open handle </para>
 <para>
-Definition at line 635 of file daos_task.h.</para>
+Definition at line 663 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__obj__query__t_1a85bbd106accde080979d133d4dbb8b08"/>    <section>
     <title>ranks</title>
 <indexterm><primary>ranks</primary><secondary>daos_obj_query_t</secondary></indexterm>
@@ -50,7 +50,7 @@ Definition at line 635 of file daos_task.h.</para>
 <para><computeroutput>d_rank_list_t* ranks</computeroutput></para>
 <para>Ordered list of ranks where the object is stored. </para>
 <para>
-Definition at line 641 of file daos_task.h.</para>
+Definition at line 669 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__obj__query__t_1a8df9d41740502f16e867061d9bc0c585"/>    <section>
     <title>th</title>
 <indexterm><primary>th</primary><secondary>daos_obj_query_t</secondary></indexterm>
@@ -58,7 +58,7 @@ Definition at line 641 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> th</computeroutput></para>
 <para>Transaction open handle. </para>
 <para>
-Definition at line 637 of file daos_task.h.</para>
+Definition at line 665 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

@@ -14,7 +14,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line 152 of file daos_types.h.</para>
+Definition at line 161 of file daos_types.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -25,7 +25,7 @@ Definition at line 152 of file daos_types.h.</para>
 <para><computeroutput>daos_epoch_t epr_hi</computeroutput></para>
 <para>High bound of the epoch range </para>
 <para>
-Definition at line 156 of file daos_types.h.</para>
+Definition at line 165 of file daos_types.h.</para>
     </section><anchor xml:id="_structdaos__epoch__range__t_1a3778052250f76c49455012c4cebf617a"/>    <section>
     <title>epr_lo</title>
 <indexterm><primary>epr_lo</primary><secondary>daos_epoch_range_t</secondary></indexterm>
@@ -33,7 +33,7 @@ Definition at line 156 of file daos_types.h.</para>
 <para><computeroutput>daos_epoch_t epr_lo</computeroutput></para>
 <para>Low bound of the epoch range </para>
 <para>
-Definition at line 154 of file daos_types.h.</para>
+Definition at line 163 of file daos_types.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

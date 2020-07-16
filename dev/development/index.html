@@ -245,7 +245,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../release/releaseNote_v1_0/" class="md-tabs__link">
+        <a href="../../release/releaseNote_v1_0_1/" class="md-tabs__link">
           Releases
         </a>
       
@@ -690,7 +690,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/releaseNote_v1_0/" title="Release Notes" class="md-nav__link">
+    <a href="../../release/releaseNote_v1_0_1/" title="Release Notes" class="md-nav__link">
       Release Notes
     </a>
   </li>
@@ -836,7 +836,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../html/index.html" title="DAOS API Documentation" class="md-nav__link">
+    <a href="../../html/" title="DAOS API Documentation" class="md-nav__link">
       DAOS API Documentation
     </a>
   </li>
@@ -981,12 +981,11 @@ environment to contribute to the DAOS development. This includes how to
 regenerate the protobuf files or add new Go package dependencies, which is
 only required for development purposes.</p>
 <h2 id="building-daos-for-development">Building DAOS for Development<a class="headerlink" href="#building-daos-for-development" title="Permanent link">&para;</a></h2>
-<p>For development, it is recommended to build and install each dependency in a
-unique subdirectory. The DAOS build system supports this through the
-TARGET_PREFIX variable. Once the submodules have been initialized and updated,
-run the following commands:</p>
+<p>Prerequisite when built using --build-deps are installed in component specific
+directories under PREFIX/prereq/$TARGET_TYPE.  Once the submodules have been
+initialized and updated, run the following commands:</p>
 <pre><code class="bash">$ scons PREFIX=${daos_prefix_path}
-      TARGET_PREFIX=${daos_prefix_path}/opt install
+      install
       --build-deps=yes
       --config=force
 </code></pre>
@@ -996,29 +995,38 @@ components individually by replacing --build-deps=yes with
 --update-prereq={component_name}. This requires a change to the environment
 configuration from before. For automated environment setup, source
 utils/sl/utils/setup_local.sh.</p>
-<pre><code class="bash">ARGOBOTS=${daos_prefix_path}/opt/argobots
-CART=${daos_prefix_path}/opt/cart
-FIO=${daos_prefix_path}/opt/fio
-FUSE=${daos_prefix_path}/opt/fuse
-ISAL=${daos_prefix_path}/opt/isal
-MERCURY=${daos_prefix_path}/opt/mercury
-OFI=${daos_prefix_path}/opt/ofi
-OPENPA=${daos_prefix_path}/opt/openpa
-PMDK=${daos_prefix_path}/opt/pmdk
-PROTOBUFC=${daos_prefix_path}/opt/protobufc
-SPDK=${daos_prefix_path}/opt/spdk
-
-
-PATH=$CART/bin/:${daos_prefix_path}/bin/:$PATH
+<p>The install path should be relocatable with the exception that daos_admin
+will not be able to find the new location of daos and dependencies. All other
+libraries and binaries should work without any change due to relative
+paths.  Editing the .build-vars.sh file to replace the old with the new can
+restore the capability of setup_local.sh to automate path setup.</p>
+<p>To run daos_server, either the rpath in daos_admin needs to be patched to
+the new installation location of spdk and isal or LD_LIBRARY_PATH needs to
+be set.  This can be done using SL_SPDK_PREFIX and SL_ISAL_PREFIX set when
+sourcing setup_local.sh.   This can also be done with the following commands</p>
+<pre><code>source utils/sl/setup_local.sh
+sudo -E utils/setup_daos_admin.sh [path to new location of daos]
 </code></pre>
 
-<p>With this approach, DAOS would get built using the prebuilt dependencies in
-${daos_prefix_path}/opt, and required options are saved for future compilations.
+<p>This script is intended only for developer setup of daos_admin.</p>
+<p>With this approach, DAOS gets built using the prebuilt dependencies in
+${daos_prefix_path}/prereq, and required options are saved for future compilations.
 So, after the first time, during development, only "scons --config=force" and
 "scons --config=force install" would suffice for compiling changes to DAOS
 source code.</p>
 <p>If you wish to compile DAOS with clang rather than gcc, set COMPILER=clang on
-the scons command line.   This option is also saved for future com pilations.</p>
+the scons command line.   This option is also saved for future compilations.</p>
+<p>Additionally, users can specify BUILD_TYPE=[dev|release|debug] and scons will
+save the intermediate build for the various BUILD_TYPE, COMPILER, and TARGET_TYPE
+options so a user can switch between options without a full rebuild and thus
+with minimal cost.   By default, TARGET_TYPE is set to 'default' which means
+it uses the BUILD_TYPE setting.  To avoid rebuilding prerequisites for every
+BUILD_TYPE setting, TARGET_TYPE can be explicitly set to a BUILD_TYPE setting
+to always use that set of prerequisites.  These settings are stored in daos.conf
+so setting the values on subsequent builds is not necessary.</p>
+<p>If needed, ALT_PREFIX can be set to a colon separated prefix path where to
+look for already built components.  If set, the build will check these
+paths for components before proceeding to build.</p>
 <h2 id="go-dependencies">Go dependencies<a class="headerlink" href="#go-dependencies" title="Permanent link">&para;</a></h2>
 <p>Developers contributing Go code may need to change the external dependencies
 located in the src/control/vendor directory. The DAOS codebase uses
@@ -1099,9 +1107,7 @@ you may try relocating the repo to /var/tmp/ in order to build and install from 
 <ul>
 <li><a href="https://github.com/protocolbuffers/protobuf">Protocol Buffers</a> v3.11.4. <a href="https://github.com/protocolbuffers/protobuf/blob/master/src/README.md">Installation instructions</a>.</li>
 <li><a href="https://github.com/protobuf-c/protobuf-c">Protobuf-C</a> v1.3.3. <a href="https://github.com/protobuf-c/protobuf-c/blob/master/README.md">Installation instructions</a>.</li>
-<li>gRPC plugin: <a href="https://github.com/golang/protobuf">protoc-gen-go</a> v1.3.4. <strong>Must match the proto version in
-src/control/go.mod.</strong> Install the specific version using GIT_TAG instructions
-<a href="https://github.com/golang/protobuf/blob/master/README.md">here</a>.</li>
+<li>gRPC plugin: <a href="https://github.com/golang/protobuf">protoc-gen-go</a> is the version specified in <a href="https://github.com/daos-stack/daos/blob/master/src/control/go.mod">go.mod</a>. This plugin is automatically installed by the Makefile in $DAOSREPO/src/proto.</li>
 </ul>
 <h3 id="compiling-protobuf-files">Compiling Protobuf Files<a class="headerlink" href="#compiling-protobuf-files" title="Permanent link">&para;</a></h3>
 <p>The source (.proto) files live under $DAOSREPO/src/proto. The preferred
@@ -1147,7 +1153,7 @@ as you would any other file.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../release/releaseNote_v1_0/" title="Release Notes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../release/releaseNote_v1_0_1/" title="Release Notes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
