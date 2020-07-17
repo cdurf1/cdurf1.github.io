@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#daos-version-10-release-notes" tabindex="0" class="md-skip">
+      <a href="#daos-version-101-release-notes" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -1305,7 +1305,7 @@
                   <a href="https://github.com/daos-stack/daos/edit/master/docs/release/releaseNote_v1_0_1.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="daos-version-10-release-notes">DAOS Version 1.0 Release Notes<a class="headerlink" href="#daos-version-10-release-notes" title="Permanent link">&para;</a></h1>
+                <h1 id="daos-version-101-release-notes">DAOS Version 1.0.1 Release Notes<a class="headerlink" href="#daos-version-101-release-notes" title="Permanent link">&para;</a></h1>
 <p>We are pleased to announce the release of DAOS version 1.0, a key DAOS milestone focused on a newly created high-performance object store that is ultimately shifting the HPC and big data paradigm. Recently awarded the top spot in the <a href="https://www.vi4io.org/io500/list/19-11/10node?fields=information__system,information__institution,information__storage_vendor,information__filesystem_type,information__client_nodes,information__client_total_procs,io500__score,io500__bw,io500__md,information__data,information__list_id&amp;equation=&amp;sort_asc=false&amp;sort_by=io500__score&amp;radarmax=6&amp;query=">IO500 10-node Challenge</a>, DAOS is fully optimized for Intel® architecture and non-volatile memory (NVM).</p>
 <p>This release is targeted towards benchmarking, partner integration, evaluation, and brings support for the following features:</p>
 <ul>
@@ -1319,6 +1319,7 @@
 <li>Replication and Self-Healing (Preview)</li>
 </ul>
 <p>This release is not yet intended for production use.</p>
+<p><strong>NOTE:</strong> This incremental release (v1.0.1) includes a fix that addresses a possible security vulnerability in Java. </p>
 <p>DAOS is an open-source, software-defined storage (SDS) and storage-as-a-service (STaaS) platform. This technology was developed from the ground up for nextgen NVM technologies like Intel® 3D NAND Technology and Intel® Optane™ technology. DAOS operates end-to-end in user-space for ease of deployment and to maximize IOPS, bandwidth, and minimize latency. DAOS is a scale-out solution allowing small and medium deployments to grow as much as required (i.e., 100’s of PB with millions of client nodes and thousands of storage servers) to serve the most demanding scientific, Big Data and AI workloads.</p>
 <p>The primary storage for the first US Exascale supercomputer (the Aurora system at Argonne National Laboratory - ANL) will be a 230PB DAOS tier composed to deliver an aggregated bandwidth of at least 25TB/s. Intel is collaborating closely with different partners to propose DAOS-based solutions for production deployments. DAOS is gaining traction among the enterprise and hyperscalers.</p>
 <p>Designed to address evolving storage needs, DAOS is a new storage platform for the convergence of traditional modeling and simulation, data science analytics, and artificial intelligence. </p>
@@ -1401,9 +1402,9 @@ Clicking the <a href="https://registrationcenter.intel.com/forms/?productid=3412
 <h3 id="aggregation-issue">Aggregation Issue<a class="headerlink" href="#aggregation-issue" title="Permanent link">&para;</a></h3>
 <p>The aggregation service is only activated after the system has idled for more than 5 seconds, so the aggregation is always suspended if there are sustained I/O requests from application. As a result, storage node will run out of SCM space even there is plenty of free space in SSD.</p>
 <h2 id="fixed-issues-details">Fixed Issues Details<a class="headerlink" href="#fixed-issues-details" title="Permanent link">&para;</a></h2>
-<p>First release, this section will be updated in subsequent releases
-Change Log
-No changes for this first release.</p>
+<p>This incremental release (v1.0.1) includes a fix that addresses a possible security vulnerability in Java.</p>
+<p>We have updated <code>log4j-core</code> in <code>/src/client/java</code> from 2.11.1 to 2.13.3.</p>
+<p>This fix was incorporated to version 1.0.1 due to a <a href="https://logging.apache.org/log4j/2.x/changes-report.html">GitHub security vulnerability alert</a></p>
                 
                   
                 
