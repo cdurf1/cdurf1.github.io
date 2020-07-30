@@ -14,6 +14,8 @@
 </listitem>
             <listitem><para><anchor xml:id="_structdaos__array__iod__t_1a561a6eebfef4bba81f150ff4403da844"/>daos_size_t <emphasis role="strong">arr_nr_short_read</emphasis></para>
 </listitem>
+            <listitem><para><anchor xml:id="_structdaos__array__iod__t_1aed9a103214228bf973fa0f8b085b5801"/>daos_size_t <emphasis role="strong">arr_nr_read</emphasis></para>
+</listitem>
         </itemizedlist>
 </simplesect>
 <section>

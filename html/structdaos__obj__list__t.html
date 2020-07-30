@@ -125,13 +125,15 @@ Data Fields</h2></td></tr>
 <tr class="separator:add7cac4a39ef271f4190ae8b1c2d899f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54f908cf4722e1872884f4a2567be290"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__obj__list__t.html#a54f908cf4722e1872884f4a2567be290">versions</a></td></tr>
 <tr class="separator:a54f908cf4722e1872884f4a2567be290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b0efd23c5b18e41e7612f378834db3b"><td class="memItemLeft" align="right" valign="top">d_iov_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__obj__list__t.html#a2b0efd23c5b18e41e7612f378834db3b">csum</a></td></tr>
+<tr class="separator:a2b0efd23c5b18e41e7612f378834db3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f89e2bd7740e3dab2fcb22f339f9e3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__obj__list__t.html#a3f89e2bd7740e3dab2fcb22f339f9e3e">incr_order</a></td></tr>
 <tr class="separator:a3f89e2bd7740e3dab2fcb22f339f9e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Object list args </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00714">714</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00736">736</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="ab032fc0d4a38d84ac9d0274512a2cf60"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab032fc0d4a38d84ac9d0274512a2cf60">&#9670;&nbsp;</a></span>akey</h2>
@@ -146,7 +148,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Attribute key. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00722">722</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00744">744</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -163,7 +165,24 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>anchor for list_akey. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00747">747</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00769">769</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+
+</div>
+</div>
+<a id="a2b0efd23c5b18e41e7612f378834db3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b0efd23c5b18e41e7612f378834db3b">&#9670;&nbsp;</a></span>csum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">d_iov_t* csum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Serialized checksum info for enumerated keys and data in sgl. (for internal use only) </p>
+
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00775">775</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -180,7 +199,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Distribution key. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00720">720</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00742">742</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -197,7 +216,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>anchor for list_dkey. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00745">745</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00767">767</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -214,7 +233,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>epoch ranges </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00736">736</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00758">758</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -231,7 +250,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>order. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00751">751</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00777">777</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -248,7 +267,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Key descriptors holding enumerated keys. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00726">726</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00748">748</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -265,7 +284,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>number of dkeys/akeys/kds entries </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00724">724</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00746">746</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -282,7 +301,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Object open handle </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00716">716</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00738">738</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -299,7 +318,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>record extents. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00734">734</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00756">756</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -316,7 +335,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Scatter gather list for memory buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00728">728</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00750">750</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -333,7 +352,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>total buf size for sgl buf, in case it uses bulk transfer. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00730">730</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00752">752</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -350,7 +369,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Transaction open handle. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00718">718</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00740">740</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -367,7 +386,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>type of value. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00732">732</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00754">754</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -384,7 +403,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>versions. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00749">749</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00771">771</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>

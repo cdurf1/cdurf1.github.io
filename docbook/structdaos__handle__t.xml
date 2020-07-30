@@ -17,7 +17,7 @@
 
 <para>Generic handle for various DAOS components like container, object, etc. </para>
 <para>
-Definition at line 116 of file daos_types.h.</para>
+Definition at line 119 of file daos_types.h.</para>
 <para>
 The documentation for this struct was generated from the following file:</para>
 src/include/daos_types.h</section>

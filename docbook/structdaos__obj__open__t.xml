@@ -23,7 +23,7 @@
 
 <para>Object open args </para>
 <para>
-Definition at line 592 of file daos_task.h.</para>
+Definition at line 620 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -34,7 +34,7 @@ Definition at line 592 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> coh</computeroutput></para>
 <para>Container open handle. </para>
 <para>
-Definition at line 594 of file daos_task.h.</para>
+Definition at line 622 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__obj__open__t_1ac1b4d694fc07a39e06900e82872aac7f"/>    <section>
     <title>mode</title>
 <indexterm><primary>mode</primary><secondary>daos_obj_open_t</secondary></indexterm>
@@ -42,7 +42,7 @@ Definition at line 594 of file daos_task.h.</para>
 <para><computeroutput>unsigned int mode</computeroutput></para>
 <para>Object open mode. </para>
 <para>
-Definition at line 598 of file daos_task.h.</para>
+Definition at line 626 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__obj__open__t_1abf0833e309cc0c2b147aa35b54a02ad7"/>    <section>
     <title>oh</title>
 <indexterm><primary>oh</primary><secondary>daos_obj_open_t</secondary></indexterm>
@@ -50,7 +50,7 @@ Definition at line 598 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link>* oh</computeroutput></para>
 <para>Returned object handle. </para>
 <para>
-Definition at line 600 of file daos_task.h.</para>
+Definition at line 628 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__obj__open__t_1aaa43d8da43a7c933a007abe42e86aa1c"/>    <section>
     <title>oid</title>
 <indexterm><primary>oid</primary><secondary>daos_obj_open_t</secondary></indexterm>
@@ -58,7 +58,7 @@ Definition at line 600 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__obj__id__t">daos_obj_id_t</link> oid</computeroutput></para>
 <para>Object ID. </para>
 <para>
-Definition at line 596 of file daos_task.h.</para>
+Definition at line 624 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

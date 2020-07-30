@@ -17,7 +17,7 @@
 
 <para>Object close args </para>
 <para>
-Definition at line 604 of file daos_task.h.</para>
+Definition at line 632 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -28,7 +28,7 @@ Definition at line 604 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> oh</computeroutput></para>
 <para>Object open handle </para>
 <para>
-Definition at line 606 of file daos_task.h.</para>
+Definition at line 634 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

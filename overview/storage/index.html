@@ -42,7 +42,7 @@
     
     
       
-        <title>Storage Model - DAOS v1.0</title>
+        <title>Storage Model - DAOS v1.0.1</title>
       
     
     
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="http://daos.io" title="DAOS v1.0" aria-label="DAOS v1.0" class="md-header-nav__button md-logo">
+        <a href="http://daos.io" title="DAOS v1.0.1" aria-label="DAOS v1.0.1" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              DAOS v1.0
+              DAOS v1.0.1
             </span>
             <span class="md-header-nav__topic">
               
@@ -245,7 +245,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../release/releaseNote_v1_0/" class="md-tabs__link">
+        <a href="../../release/releaseNote_v1_0_1/" class="md-tabs__link">
           Releases
         </a>
       
@@ -287,12 +287,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="http://daos.io" title="DAOS v1.0" class="md-nav__button md-logo">
+    <a href="http://daos.io" title="DAOS v1.0.1" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    DAOS v1.0
+    DAOS v1.0.1
   </label>
   
     <div class="md-nav__source">
@@ -368,7 +368,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../architecture.md" title="Architecture" class="md-nav__link">
+    <a href="../architecture/" title="Architecture" class="md-nav__link">
       Architecture
     </a>
   </li>
@@ -405,13 +405,6 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#daos-target" class="md-nav__link">
-    DAOS Target
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#daos-pool" class="md-nav__link">
@@ -535,7 +528,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../admin/predeployment_check.md" title="Pre-deployment Checklist" class="md-nav__link">
+    <a href="../../admin/predeployment_check/" title="Pre-deployment Checklist" class="md-nav__link">
       Pre-deployment Checklist
     </a>
   </li>
@@ -583,7 +576,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../admin/tiering_uns.md" title="Tiering and Unified Namespace" class="md-nav__link">
+    <a href="../../admin/tiering_uns/" title="Tiering and Unified Namespace" class="md-nav__link">
       Tiering and Unified Namespace
     </a>
   </li>
@@ -751,7 +744,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/releaseNote_v1_0/" title="Release Notes" class="md-nav__link">
+    <a href="../../release/releaseNote_v1_0_1/" title="Release Notes" class="md-nav__link">
       Release Notes
     </a>
   </li>
@@ -763,8 +756,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../licenses/Licensing/" title="Licensing" class="md-nav__link">
-      Licensing
+    <a href="../../v1.0/" title="Release 1.0" class="md-nav__link">
+      Release 1.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../v0.9/" title="Release 0.9" class="md-nav__link">
+      Release 0.9
     </a>
   </li>
 
@@ -915,13 +920,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#daos-target" class="md-nav__link">
-    DAOS Target
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#daos-pool" class="md-nav__link">
     DAOS Pool
   </a>
@@ -962,7 +960,6 @@
                 
                 
                 <h1 id="storage-model">Storage Model<a class="headerlink" href="#storage-model" title="Permanent link">&para;</a></h1>
-<p>We consider a data center with hundreds of thousands of compute nodes interconnected via a scalable high-performance fabric (i.e., Ethernet, RoCE or Infiniband), where all or a subset of the nodes, called storage nodes, have direct access to byte-addressable storage-class memory (SCM) and, optionally, block-based NVMe storage. The DAOS server is a multi-tenant daemon running on a Linux instance (i.e., natively on the physical node or in a VM or container) of each storage node and exporting through the network the locally-attached storage. Inside a DAOS server, the storage is statically partitioned across multiple targets to optimize concurrency. To avoid contention, each target has its private storage, own pool of service threads and dedicated network context that can be directly addressed over the fabric independently of the other targets hosted on the same storage node. The number of targets exported by a DAOS server instance is configurable and depends on the underlying hardware (i.e., number of SCM modules, CPUs, NVMe SSDs, ...). A target is the unit of fault. All DAOS servers connected to the same fabric are grouped to form a DAOS system, identified by a system name. Membership of the DAOS servers is recorded into the system map that assigns a unique integer rank to each server. Two different systems comprise two disjoint sets of servers and do not coordinate with each other.</p>
 <p>The <a href="#f4.1">figure </a> below represents the fundamental abstractions of the DAOS storage model.</p>
 <p><a id="f4.1"></a>
 <img alt="../graph/daos_abstractions.png" src="../../graph/daos_abstractions.png" title="DAOS Storage Abstractions" /></p>
@@ -995,10 +992,6 @@
 </tr>
 </tbody>
 </table>
-<p><a id="4.1.1"></a></p>
-<h2 id="daos-target">DAOS Target<a class="headerlink" href="#daos-target" title="Permanent link">&para;</a></h2>
-<p>A target is typically associated with a single-ported SCM module and NVMe SSD attached to a single storage node. Moreover, a target does not implement any internal data protection mechanism against storage media failure. As a result, a target is a single point of failure. A dynamic state is associated with each target and is set to either up and running, or down and not available. A target is the unit of performance. Hardware components associated with the target, such as the backend storage medium, the server, and the network, have limited capability and capacity. Target performance parameters such as bandwidth and latency are exported to the upper layers.</p>
-<p><a id="4.1.2"></a></p>
 <h2 id="daos-pool">DAOS Pool<a class="headerlink" href="#daos-pool" title="Permanent link">&para;</a></h2>
 <p>A pool is identified by a unique UUID and maintains target memberships in a persistent versioned list called the pool map. The membership is definitive and consistent, and membership changes are sequentially numbered. The pool map not only records the list of active targets, it also contains the storage topology under the form of a tree that is used to identify targets sharing common hardware components. For instance, the first level of the tree can represent targets sharing the same motherboard, and then the second level can represent all motherboards sharing the same rack and finally the third level can represent all racks in the same cage. This framework effectively represents hierarchical fault domains, which are then used to avoid placing redundant data on targets subject to correlated failures. At any point in time, new targets can be added to the pool map, and failed ones can be excluded. Moreover, the pool map is fully versioned, which effectively assigns a unique sequence to each modification of the map, more particularly for failed node removal.</p>
 <p>A pool shard is a reservation of persistent memory optionally combined with a pre-allocated space on NVMe storage on a specific target. It has a fixed capacity and fails operations when full. Current space usage can be queried at any time and reports the total amount of bytes used by any data type stored in the pool shard.</p>
@@ -1108,7 +1101,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../terminology/" title="Terminology" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../architecture/" title="Architecture" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1117,7 +1110,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Terminology
+                Architecture
               </span>
             </div>
           </a>

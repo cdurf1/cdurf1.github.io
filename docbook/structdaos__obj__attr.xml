@@ -19,7 +19,7 @@
 
 <para>Object attributes (metadata). <emphasis>oa_class</emphasis> and <emphasis>oa_oa</emphasis> are mutually exclusive. </para>
 <para>
-Definition at line 139 of file daos_obj.h.</para>
+Definition at line 136 of file daos_obj.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -30,7 +30,7 @@ Definition at line 139 of file daos_obj.h.</para>
 <para><computeroutput>struct <link linkend="_structdaos__oclass__attr">daos_oclass_attr</link>* oa_oa</computeroutput></para>
 <para>Optional, class attributes of object with private class </para>
 <para>
-Definition at line 143 of file daos_obj.h.</para>
+Definition at line 140 of file daos_obj.h.</para>
     </section><anchor xml:id="_structdaos__obj__attr_1a8be2e844a3022a0520454382d51bae6b"/>    <section>
     <title>oa_rank</title>
 <indexterm><primary>oa_rank</primary><secondary>daos_obj_attr</secondary></indexterm>
@@ -38,7 +38,7 @@ Definition at line 143 of file daos_obj.h.</para>
 <para><computeroutput>d_rank_t oa_rank</computeroutput></para>
 <para>Optional, affinity target for the object </para>
 <para>
-Definition at line 141 of file daos_obj.h.</para>
+Definition at line 138 of file daos_obj.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

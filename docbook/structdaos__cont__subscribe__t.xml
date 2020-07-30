@@ -19,7 +19,7 @@
 
 <para>Container subscribe args </para>
 <para>
-Definition at line 432 of file daos_task.h.</para>
+Definition at line 452 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -30,7 +30,7 @@ Definition at line 432 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> coh</computeroutput></para>
 <para>Container open handle. </para>
 <para>
-Definition at line 434 of file daos_task.h.</para>
+Definition at line 454 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

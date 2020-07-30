@@ -25,7 +25,7 @@
 
 <para>mgmt set params </para>
 <para>
-Definition at line 150 of file daos_task.h.</para>
+Definition at line 152 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -36,7 +36,7 @@ Definition at line 150 of file daos_task.h.</para>
 <para><computeroutput>const char* grp</computeroutput></para>
 <para>Process set name of the DAOS servers managing the pool </para>
 <para>
-Definition at line 152 of file daos_task.h.</para>
+Definition at line 154 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__set__params__t_1a3c9e1911e32476da4aa8b1951b3b634c"/>    <section>
     <title>key_id</title>
 <indexterm><primary>key_id</primary><secondary>daos_set_params_t</secondary></indexterm>
@@ -44,7 +44,7 @@ Definition at line 152 of file daos_task.h.</para>
 <para><computeroutput>uint32_t key_id</computeroutput></para>
 <para>key ID of the parameter </para>
 <para>
-Definition at line 156 of file daos_task.h.</para>
+Definition at line 158 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__set__params__t_1a725668728cdf219a18169482d866dbd7"/>    <section>
     <title>rank</title>
 <indexterm><primary>rank</primary><secondary>daos_set_params_t</secondary></indexterm>
@@ -52,7 +52,7 @@ Definition at line 156 of file daos_task.h.</para>
 <para><computeroutput>d_rank_t rank</computeroutput></para>
 <para>Ranks to set parameter. -1 means setting on all servers </para>
 <para>
-Definition at line 154 of file daos_task.h.</para>
+Definition at line 156 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__set__params__t_1a4e630859cc0e2a22bd6acf39a6a8e218"/>    <section>
     <title>value</title>
 <indexterm><primary>value</primary><secondary>daos_set_params_t</secondary></indexterm>
@@ -60,7 +60,7 @@ Definition at line 154 of file daos_task.h.</para>
 <para><computeroutput>uint64_t value</computeroutput></para>
 <para>value of the parameter </para>
 <para>
-Definition at line 158 of file daos_task.h.</para>
+Definition at line 160 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__set__params__t_1af718f46e2108c284c21e3446a360faad"/>    <section>
     <title>value_extra</title>
 <indexterm><primary>value_extra</primary><secondary>daos_set_params_t</secondary></indexterm>
@@ -68,7 +68,7 @@ Definition at line 158 of file daos_task.h.</para>
 <para><computeroutput>uint64_t value_extra</computeroutput></para>
 <para>optional extra value to set the fail </para>
 <para>
-Definition at line 160 of file daos_task.h.</para>
+Definition at line 162 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

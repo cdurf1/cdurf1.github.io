@@ -21,7 +21,7 @@
 
 <para>Array set size args </para>
 <para>
-Definition at line 879 of file daos_task.h.</para>
+Definition at line 905 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 879 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> oh</computeroutput></para>
 <para>Array open handle. </para>
 <para>
-Definition at line 881 of file daos_task.h.</para>
+Definition at line 907 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__array__set__size__t_1a3d21cb9e70cd023737ac2179c37a8dc8"/>    <section>
     <title>size</title>
 <indexterm><primary>size</primary><secondary>daos_array_set_size_t</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 881 of file daos_task.h.</para>
 <para><computeroutput>daos_size_t size</computeroutput></para>
 <para>truncate size of the array. </para>
 <para>
-Definition at line 885 of file daos_task.h.</para>
+Definition at line 911 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__array__set__size__t_1a8df9d41740502f16e867061d9bc0c585"/>    <section>
     <title>th</title>
 <indexterm><primary>th</primary><secondary>daos_array_set_size_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 885 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> th</computeroutput></para>
 <para>Transaction open handle. </para>
 <para>
-Definition at line 883 of file daos_task.h.</para>
+Definition at line 909 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

@@ -21,7 +21,7 @@
 
 <para>Object class query args </para>
 <para>
-Definition at line 572 of file daos_task.h.</para>
+Definition at line 600 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 572 of file daos_task.h.</para>
 <para><computeroutput>struct <link linkend="_structdaos__oclass__attr">daos_oclass_attr</link>* cattr</computeroutput></para>
 <para>Object class attributes. </para>
 <para>
-Definition at line 578 of file daos_task.h.</para>
+Definition at line 606 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__obj__query__class__t_1a0a0851242238193058e72905887b5666"/>    <section>
     <title>cid</title>
 <indexterm><primary>cid</primary><secondary>daos_obj_query_class_t</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 578 of file daos_task.h.</para>
 <para><computeroutput>daos_oclass_id_t cid</computeroutput></para>
 <para>Object class ID. </para>
 <para>
-Definition at line 576 of file daos_task.h.</para>
+Definition at line 604 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__obj__query__class__t_1a7fe83fe613282d305d3aeacba805f901"/>    <section>
     <title>coh</title>
 <indexterm><primary>coh</primary><secondary>daos_obj_query_class_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 576 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> coh</computeroutput></para>
 <para>Container open handle. </para>
 <para>
-Definition at line 574 of file daos_task.h.</para>
+Definition at line 602 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

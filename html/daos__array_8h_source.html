@@ -132,90 +132,91 @@ $(document).ready(function(){initNavTree('daos__array_8h_source.html',''); initR
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">     * read.</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">     */</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    daos_size_t     arr_nr_short_read;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;} <a class="code" href="structdaos__array__iod__t.html">daos_array_iod_t</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;daos_array_generate_id(<a class="code" href="structdaos__obj__id__t.html">daos_obj_id_t</a> *oid, daos_oclass_id_t cid, <span class="keywordtype">bool</span> add_attr,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;               uint32_t args)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">static</span> daos_ofeat_t feat;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    uint64_t        hdr;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    feat = DAOS_OF_DKEY_UINT64 | DAOS_OF_KV_FLAT;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (add_attr)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        feat = feat | DAOS_OF_ARRAY;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">/* TODO: add check at here, it should return error if user specified</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">     * bits reserved by DAOS</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    oid-&gt;hi &amp;= (1ULL &lt;&lt; OID_FMT_INTR_BITS) - 1;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    hdr  = ((uint64_t)OID_FMT_VER &lt;&lt; OID_FMT_VER_SHIFT);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    hdr |= ((uint64_t)feat &lt;&lt; OID_FMT_FEAT_SHIFT);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    hdr |= ((uint64_t)cid &lt;&lt; OID_FMT_CLASS_SHIFT);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    oid-&gt;hi |= hdr;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<a class="code" href="daos__array_8h.html#aeed8064a0c8949b7547660a09404ac8f">daos_array_create</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> coh, <a class="code" href="structdaos__obj__id__t.html">daos_obj_id_t</a> oid, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th,</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;          daos_size_t cell_size, daos_size_t chunk_size,</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;          <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> *oh, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<a class="code" href="daos__array_8h.html#a309d54604a2e97fddd1b9396ed61cb3d">daos_array_open</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> coh, <a class="code" href="structdaos__obj__id__t.html">daos_obj_id_t</a> oid, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th,</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mode, daos_size_t *cell_size,</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        daos_size_t *chunk_size, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> *oh, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<a class="code" href="daos__array_8h.html#a9c841c2fb4b79566dfe4edff46a7e1bb">daos_array_open_with_attr</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> coh, <a class="code" href="structdaos__obj__id__t.html">daos_obj_id_t</a> oid,</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;              <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mode,</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;              daos_size_t cell_size, daos_size_t chunk_size,</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;              <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> *oh, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<a class="code" href="daos__array_8h.html#a17971d649a2052cb44cfb4a3ddd36e18">daos_array_local2global</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, d_iov_t *glob);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<a class="code" href="daos__array_8h.html#a98d549b722a6164b6c500b9811e2b52d">daos_array_global2local</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> coh, d_iov_t glob, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mode,</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> *oh);</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<a class="code" href="daos__array_8h.html#a28fed60c9a468122c8c54dbdb8b8ec0c">daos_array_close</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<a class="code" href="daos__array_8h.html#a036a9c34cb863dba486097576cc45400">daos_array_read</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, <a class="code" href="structdaos__array__iod__t.html">daos_array_iod_t</a> *iod,</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        d_sg_list_t *sgl, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<a class="code" href="daos__array_8h.html#ab011b04b0f1cce149f677b07e7295c58">daos_array_write</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, <a class="code" href="structdaos__array__iod__t.html">daos_array_iod_t</a> *iod,</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;         d_sg_list_t *sgl, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<a class="code" href="daos__array_8h.html#a8129cd2cc09b3e6f7fcf6dd9d792a635">daos_array_get_size</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, daos_size_t *size,</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<a class="code" href="daos__array_8h.html#a4b5b648c935a34d9f3e5d0de1e1641d8">daos_array_set_size</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, daos_size_t size,</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<a class="code" href="daos__array_8h.html#ad922154fcc6593928cf36005c203d1ec">daos_array_destroy</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<a class="code" href="daos__array_8h.html#aa2e69755706bafcf5670a5e55c1900c9">daos_array_punch</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, <a class="code" href="structdaos__array__iod__t.html">daos_array_iod_t</a> *iod,</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;         <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<a class="code" href="daos__array_8h.html#a3baced5fa05df343d638896b47fb73d6">daos_array_get_attr</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, daos_size_t *chunk_size,</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            daos_size_t *cell_size);</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160; </div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="preprocessor">#if defined(__cplusplus)</span></div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;}</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __DAOS_ARRAY_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    daos_size_t     arr_nr_read;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;} <a class="code" href="structdaos__array__iod__t.html">daos_array_iod_t</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;daos_array_generate_id(<a class="code" href="structdaos__obj__id__t.html">daos_obj_id_t</a> *oid, daos_oclass_id_t cid, <span class="keywordtype">bool</span> add_attr,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;               uint32_t args)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">static</span> daos_ofeat_t feat;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    uint64_t        hdr;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    feat = DAOS_OF_DKEY_UINT64 | DAOS_OF_KV_FLAT;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (add_attr)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        feat = feat | DAOS_OF_ARRAY;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">/* TODO: add check at here, it should return error if user specified</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">     * bits reserved by DAOS</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    oid-&gt;hi &amp;= (1ULL &lt;&lt; OID_FMT_INTR_BITS) - 1;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    hdr  = ((uint64_t)OID_FMT_VER &lt;&lt; OID_FMT_VER_SHIFT);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    hdr |= ((uint64_t)feat &lt;&lt; OID_FMT_FEAT_SHIFT);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    hdr |= ((uint64_t)cid &lt;&lt; OID_FMT_CLASS_SHIFT);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    oid-&gt;hi |= hdr;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<a class="code" href="daos__array_8h.html#aeed8064a0c8949b7547660a09404ac8f">daos_array_create</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> coh, <a class="code" href="structdaos__obj__id__t.html">daos_obj_id_t</a> oid, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;          daos_size_t cell_size, daos_size_t chunk_size,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;          <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> *oh, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<a class="code" href="daos__array_8h.html#a309d54604a2e97fddd1b9396ed61cb3d">daos_array_open</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> coh, <a class="code" href="structdaos__obj__id__t.html">daos_obj_id_t</a> oid, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th,</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mode, daos_size_t *cell_size,</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        daos_size_t *chunk_size, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> *oh, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<a class="code" href="daos__array_8h.html#a9c841c2fb4b79566dfe4edff46a7e1bb">daos_array_open_with_attr</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> coh, <a class="code" href="structdaos__obj__id__t.html">daos_obj_id_t</a> oid,</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;              <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mode,</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;              daos_size_t cell_size, daos_size_t chunk_size,</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;              <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> *oh, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<a class="code" href="daos__array_8h.html#a17971d649a2052cb44cfb4a3ddd36e18">daos_array_local2global</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, d_iov_t *glob);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<a class="code" href="daos__array_8h.html#a98d549b722a6164b6c500b9811e2b52d">daos_array_global2local</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> coh, d_iov_t glob, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mode,</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> *oh);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<a class="code" href="daos__array_8h.html#a28fed60c9a468122c8c54dbdb8b8ec0c">daos_array_close</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<a class="code" href="daos__array_8h.html#a036a9c34cb863dba486097576cc45400">daos_array_read</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, <a class="code" href="structdaos__array__iod__t.html">daos_array_iod_t</a> *iod,</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        d_sg_list_t *sgl, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<a class="code" href="daos__array_8h.html#ab011b04b0f1cce149f677b07e7295c58">daos_array_write</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, <a class="code" href="structdaos__array__iod__t.html">daos_array_iod_t</a> *iod,</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;         d_sg_list_t *sgl, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<a class="code" href="daos__array_8h.html#a8129cd2cc09b3e6f7fcf6dd9d792a635">daos_array_get_size</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, daos_size_t *size,</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<a class="code" href="daos__array_8h.html#a4b5b648c935a34d9f3e5d0de1e1641d8">daos_array_set_size</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, daos_size_t size,</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<a class="code" href="daos__array_8h.html#ad922154fcc6593928cf36005c203d1ec">daos_array_destroy</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<a class="code" href="daos__array_8h.html#aa2e69755706bafcf5670a5e55c1900c9">daos_array_punch</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="code" href="structdaos__handle__t.html">daos_handle_t</a> th, <a class="code" href="structdaos__array__iod__t.html">daos_array_iod_t</a> *iod,</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;         <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="keywordtype">int</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<a class="code" href="daos__array_8h.html#a3baced5fa05df343d638896b47fb73d6">daos_array_get_attr</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> oh, daos_size_t *chunk_size,</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;            daos_size_t *cell_size);</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="preprocessor">#if defined(__cplusplus)</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;}</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __DAOS_ARRAY_H__ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="adaos__array_8h_html_a9c841c2fb4b79566dfe4edff46a7e1bb"><div class="ttname"><a href="daos__array_8h.html#a9c841c2fb4b79566dfe4edff46a7e1bb">daos_array_open_with_attr</a></div><div class="ttdeci">int daos_array_open_with_attr(daos_handle_t coh, daos_obj_id_t oid, daos_handle_t th, unsigned int mode, daos_size_t cell_size, daos_size_t chunk_size, daos_handle_t *oh, daos_event_t *ev)</div></div>
@@ -233,12 +234,12 @@ $(document).ready(function(){initNavTree('daos__array_8h_source.html',''); initR
 <div class="ttc" id="astructdaos__range__t_html"><div class="ttname"><a href="structdaos__range__t.html">daos_range_t</a></div><div class="ttdef"><b>Definition:</b> <a href="daos__array_8h_source.html#l00040">daos_array.h:40</a></div></div>
 <div class="ttc" id="astructdaos__array__iod__t_html"><div class="ttname"><a href="structdaos__array__iod__t.html">daos_array_iod_t</a></div><div class="ttdef"><b>Definition:</b> <a href="daos__array_8h_source.html#l00048">daos_array.h:48</a></div></div>
 <div class="ttc" id="adaos__array_8h_html_a17971d649a2052cb44cfb4a3ddd36e18"><div class="ttname"><a href="daos__array_8h.html#a17971d649a2052cb44cfb4a3ddd36e18">daos_array_local2global</a></div><div class="ttdeci">int daos_array_local2global(daos_handle_t oh, d_iov_t *glob)</div></div>
-<div class="ttc" id="astructdaos__handle__t_html"><div class="ttname"><a href="structdaos__handle__t.html">daos_handle_t</a></div><div class="ttdef"><b>Definition:</b> <a href="daos__types_8h_source.html#l00116">daos_types.h:116</a></div></div>
+<div class="ttc" id="astructdaos__handle__t_html"><div class="ttname"><a href="structdaos__handle__t.html">daos_handle_t</a></div><div class="ttdef"><b>Definition:</b> <a href="daos__types_8h_source.html#l00119">daos_types.h:119</a></div></div>
 <div class="ttc" id="adaos__array_8h_html_a4b5b648c935a34d9f3e5d0de1e1641d8"><div class="ttname"><a href="daos__array_8h.html#a4b5b648c935a34d9f3e5d0de1e1641d8">daos_array_set_size</a></div><div class="ttdeci">int daos_array_set_size(daos_handle_t oh, daos_handle_t th, daos_size_t size, daos_event_t *ev)</div></div>
 <div class="ttc" id="astructdaos__array__iod__t_html_a028f318baa33edeb89b00ac8e0980454"><div class="ttname"><a href="structdaos__array__iod__t.html#a028f318baa33edeb89b00ac8e0980454">daos_array_iod_t::arr_rgs</a></div><div class="ttdeci">daos_range_t * arr_rgs</div><div class="ttdef"><b>Definition:</b> <a href="daos__array_8h_source.html#l00052">daos_array.h:52</a></div></div>
 <div class="ttc" id="adaos__array_8h_html_aa2e69755706bafcf5670a5e55c1900c9"><div class="ttname"><a href="daos__array_8h.html#aa2e69755706bafcf5670a5e55c1900c9">daos_array_punch</a></div><div class="ttdeci">int daos_array_punch(daos_handle_t oh, daos_handle_t th, daos_array_iod_t *iod, daos_event_t *ev)</div></div>
 <div class="ttc" id="astructdaos__range__t_html_a040bb23c8c89cc44c12fcf2af2f5123f"><div class="ttname"><a href="structdaos__range__t.html#a040bb23c8c89cc44c12fcf2af2f5123f">daos_range_t::rg_len</a></div><div class="ttdeci">daos_size_t rg_len</div><div class="ttdef"><b>Definition:</b> <a href="daos__array_8h_source.html#l00044">daos_array.h:44</a></div></div>
-<div class="ttc" id="astructdaos__event_html"><div class="ttname"><a href="structdaos__event.html">daos_event</a></div><div class="ttdef"><b>Definition:</b> <a href="daos__types_8h_source.html#l00168">daos_types.h:168</a></div></div>
+<div class="ttc" id="astructdaos__event_html"><div class="ttname"><a href="structdaos__event.html">daos_event</a></div><div class="ttdef"><b>Definition:</b> <a href="daos__types_8h_source.html#l00177">daos_types.h:177</a></div></div>
 <div class="ttc" id="adaos__array_8h_html_ab011b04b0f1cce149f677b07e7295c58"><div class="ttname"><a href="daos__array_8h.html#ab011b04b0f1cce149f677b07e7295c58">daos_array_write</a></div><div class="ttdeci">int daos_array_write(daos_handle_t oh, daos_handle_t th, daos_array_iod_t *iod, d_sg_list_t *sgl, daos_event_t *ev)</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

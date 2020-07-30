@@ -25,7 +25,7 @@
 
 <para>pool get attributes args </para>
 <para>
-Definition at line 300 of file daos_task.h.</para>
+Definition at line 302 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -36,7 +36,7 @@ Definition at line 300 of file daos_task.h.</para>
 <para><computeroutput>int n</computeroutput></para>
 <para>Number of attributes. </para>
 <para>
-Definition at line 304 of file daos_task.h.</para>
+Definition at line 306 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__get__attr__t_1a3e21e2c9e75716907b2090ca8fda0a60"/>    <section>
     <title>names</title>
 <indexterm><primary>names</primary><secondary>daos_pool_get_attr_t</secondary></indexterm>
@@ -44,7 +44,7 @@ Definition at line 304 of file daos_task.h.</para>
 <para><computeroutput>const char* const * names</computeroutput></para>
 <para>Array of <emphasis>n</emphasis> null-terminated attribute names. </para>
 <para>
-Definition at line 306 of file daos_task.h.</para>
+Definition at line 308 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__get__attr__t_1af65e0a5ef9986001524f96e09ae666a3"/>    <section>
     <title>poh</title>
 <indexterm><primary>poh</primary><secondary>daos_pool_get_attr_t</secondary></indexterm>
@@ -52,7 +52,7 @@ Definition at line 306 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> poh</computeroutput></para>
 <para>Pool open handle. </para>
 <para>
-Definition at line 302 of file daos_task.h.</para>
+Definition at line 304 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__get__attr__t_1a400fb89b01337e8e824c465ff6fed3c5"/>    <section>
     <title>sizes</title>
 <indexterm><primary>sizes</primary><secondary>daos_pool_get_attr_t</secondary></indexterm>
@@ -60,7 +60,7 @@ Definition at line 302 of file daos_task.h.</para>
 <para><computeroutput>size_t* sizes</computeroutput></para>
 <para>[in]: Array of <emphasis>n</emphasis> buf sizes. [out]: Array of actual sizes. </para>
 <para>
-Definition at line 310 of file daos_task.h.</para>
+Definition at line 312 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__get__attr__t_1ac31e63060224a2873fe54edf02b58c2a"/>    <section>
     <title>values</title>
 <indexterm><primary>values</primary><secondary>daos_pool_get_attr_t</secondary></indexterm>
@@ -68,7 +68,7 @@ Definition at line 310 of file daos_task.h.</para>
 <para><computeroutput>void* const * values</computeroutput></para>
 <para>Array of <emphasis>n</emphasis> buffers to store attribute values. </para>
 <para>
-Definition at line 308 of file daos_task.h.</para>
+Definition at line 310 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

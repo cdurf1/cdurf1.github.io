@@ -21,7 +21,7 @@
 
 <para>pool management pool list args </para>
 <para>
-Definition at line 342 of file daos_task.h.</para>
+Definition at line 344 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 342 of file daos_task.h.</para>
 <para><computeroutput>const char* grp</computeroutput></para>
 <para>Process set name of the DAOS servers managing the pool </para>
 <para>
-Definition at line 344 of file daos_task.h.</para>
+Definition at line 346 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__mgmt__list__pools__t_1a8c7326f9dd44641813110108d786b149"/>    <section>
     <title>npools</title>
 <indexterm><primary>npools</primary><secondary>daos_mgmt_list_pools_t</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 344 of file daos_task.h.</para>
 <para><computeroutput>daos_size_t* npools</computeroutput></para>
 <para>length of array </para>
 <para>
-Definition at line 348 of file daos_task.h.</para>
+Definition at line 350 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__mgmt__list__pools__t_1a617bea3285807d9977f4e95084ac9fe0"/>    <section>
     <title>pools</title>
 <indexterm><primary>pools</primary><secondary>daos_mgmt_list_pools_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 348 of file daos_task.h.</para>
 <para><computeroutput>daos_mgmt_pool_info_t* pools</computeroutput></para>
 <para>Array of pool mgmt information structures. </para>
 <para>
-Definition at line 346 of file daos_task.h.</para>
+Definition at line 348 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

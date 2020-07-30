@@ -21,7 +21,7 @@
 
 <para>pool list attributes args </para>
 <para>
-Definition at line 290 of file daos_task.h.</para>
+Definition at line 292 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 290 of file daos_task.h.</para>
 <para><computeroutput>char* buf</computeroutput></para>
 <para>Buffer containing concatenation of all attribute names. </para>
 <para>
-Definition at line 294 of file daos_task.h.</para>
+Definition at line 296 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__list__attr__t_1af65e0a5ef9986001524f96e09ae666a3"/>    <section>
     <title>poh</title>
 <indexterm><primary>poh</primary><secondary>daos_pool_list_attr_t</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 294 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> poh</computeroutput></para>
 <para>Pool open handle. </para>
 <para>
-Definition at line 292 of file daos_task.h.</para>
+Definition at line 294 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__list__attr__t_1ae3c15c00c8f7ae14ae18501067cb5ac4"/>    <section>
     <title>size</title>
 <indexterm><primary>size</primary><secondary>daos_pool_list_attr_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 292 of file daos_task.h.</para>
 <para><computeroutput>size_t* size</computeroutput></para>
 <para>[in]: Buffer size. [out]: Aggregate size of all attribute names </para>
 <para>
-Definition at line 296 of file daos_task.h.</para>
+Definition at line 298 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

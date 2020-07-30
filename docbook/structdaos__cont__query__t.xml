@@ -21,7 +21,7 @@
 
 <para>Container query args </para>
 <para>
-Definition at line 398 of file daos_task.h.</para>
+Definition at line 400 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 398 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> coh</computeroutput></para>
 <para>Container open handle. </para>
 <para>
-Definition at line 400 of file daos_task.h.</para>
+Definition at line 402 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__query__t_1af78dcd92d352ca0f2e933703cbaabcf6"/>    <section>
     <title>info</title>
 <indexterm><primary>info</primary><secondary>daos_cont_query_t</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 400 of file daos_task.h.</para>
 <para><computeroutput>daos_cont_info_t* info</computeroutput></para>
 <para>Returned container information. </para>
 <para>
-Definition at line 402 of file daos_task.h.</para>
+Definition at line 404 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__query__t_1a8786d65cd566e6cbdb43d0afeca96a46"/>    <section>
     <title>prop</title>
 <indexterm><primary>prop</primary><secondary>daos_cont_query_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 402 of file daos_task.h.</para>
 <para><computeroutput>daos_prop_t* prop</computeroutput></para>
 <para>Optional, returned container properties. </para>
 <para>
-Definition at line 404 of file daos_task.h.</para>
+Definition at line 406 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

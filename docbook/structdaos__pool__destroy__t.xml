@@ -19,9 +19,9 @@
 <section>
 <title>Detailed Description</title>
 
-<para>pool destory args </para>
+<para>pool destroy args </para>
 <para>
-Definition at line 190 of file daos_task.h.</para>
+Definition at line 192 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 190 of file daos_task.h.</para>
 <para><computeroutput>int force</computeroutput></para>
 <para>Force destruction even if there are active connections </para>
 <para>
-Definition at line 196 of file daos_task.h.</para>
+Definition at line 198 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__destroy__t_1aafb4e47bc006722deb58fd5e17531de3"/>    <section>
     <title>grp</title>
 <indexterm><primary>grp</primary><secondary>daos_pool_destroy_t</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 196 of file daos_task.h.</para>
 <para><computeroutput>const char* grp</computeroutput></para>
 <para>Process set name of the DAOS servers managing the pool </para>
 <para>
-Definition at line 194 of file daos_task.h.</para>
+Definition at line 196 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__pool__destroy__t_1aad00e3514ef2dd4e2535dab4d84d0273"/>    <section>
     <title>uuid</title>
 <indexterm><primary>uuid</primary><secondary>daos_pool_destroy_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 194 of file daos_task.h.</para>
 <para><computeroutput>const uuid_t uuid</computeroutput></para>
 <para>UUID of the pool to destroy. </para>
 <para>
-Definition at line 192 of file daos_task.h.</para>
+Definition at line 194 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

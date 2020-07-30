@@ -23,7 +23,7 @@
 
 <para>Array read/write args </para>
 <para>
-Definition at line 857 of file daos_task.h.</para>
+Definition at line 883 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -34,7 +34,7 @@ Definition at line 857 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__array__iod__t">daos_array_iod_t</link>* iod</computeroutput></para>
 <para>Array IO descriptos. </para>
 <para>
-Definition at line 863 of file daos_task.h.</para>
+Definition at line 889 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__array__io__t_1aef20019954d183ed757cd90ac3288242"/>    <section>
     <title>oh</title>
 <indexterm><primary>oh</primary><secondary>daos_array_io_t</secondary></indexterm>
@@ -42,7 +42,7 @@ Definition at line 863 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> oh</computeroutput></para>
 <para>Array open handle. </para>
 <para>
-Definition at line 859 of file daos_task.h.</para>
+Definition at line 885 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__array__io__t_1a170878ca472dc37d01dc1a98038b4a1e"/>    <section>
     <title>sgl</title>
 <indexterm><primary>sgl</primary><secondary>daos_array_io_t</secondary></indexterm>
@@ -50,7 +50,7 @@ Definition at line 859 of file daos_task.h.</para>
 <para><computeroutput>d_sg_list_t* sgl</computeroutput></para>
 <para>memory descriptors. </para>
 <para>
-Definition at line 865 of file daos_task.h.</para>
+Definition at line 891 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__array__io__t_1a8df9d41740502f16e867061d9bc0c585"/>    <section>
     <title>th</title>
 <indexterm><primary>th</primary><secondary>daos_array_io_t</secondary></indexterm>
@@ -58,7 +58,7 @@ Definition at line 865 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> th</computeroutput></para>
 <para>Transaction open handle. </para>
 <para>
-Definition at line 861 of file daos_task.h.</para>
+Definition at line 887 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

@@ -21,7 +21,7 @@
 
 <para>Array get size args </para>
 <para>
-Definition at line 869 of file daos_task.h.</para>
+Definition at line 895 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 869 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> oh</computeroutput></para>
 <para>Array open handle. </para>
 <para>
-Definition at line 871 of file daos_task.h.</para>
+Definition at line 897 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__array__get__size__t_1a388912d6ab41a7faa2329bbe2ecd7c1a"/>    <section>
     <title>size</title>
 <indexterm><primary>size</primary><secondary>daos_array_get_size_t</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 871 of file daos_task.h.</para>
 <para><computeroutput>daos_size_t* size</computeroutput></para>
 <para>Returned array size in number of records. </para>
 <para>
-Definition at line 875 of file daos_task.h.</para>
+Definition at line 901 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__array__get__size__t_1a8df9d41740502f16e867061d9bc0c585"/>    <section>
     <title>th</title>
 <indexterm><primary>th</primary><secondary>daos_array_get_size_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 875 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> th</computeroutput></para>
 <para>Transaction open handle. </para>
 <para>
-Definition at line 873 of file daos_task.h.</para>
+Definition at line 899 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

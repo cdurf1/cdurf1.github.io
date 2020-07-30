@@ -25,7 +25,7 @@
 
 <para>Container attribute get args </para>
 <para>
-Definition at line 453 of file daos_task.h.</para>
+Definition at line 473 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -36,7 +36,7 @@ Definition at line 453 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> coh</computeroutput></para>
 <para>Container open handle. </para>
 <para>
-Definition at line 455 of file daos_task.h.</para>
+Definition at line 475 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__get__attr__t_1a76f11d9a0a47b94f72c2d0e77fb32240"/>    <section>
     <title>n</title>
 <indexterm><primary>n</primary><secondary>daos_cont_get_attr_t</secondary></indexterm>
@@ -44,7 +44,7 @@ Definition at line 455 of file daos_task.h.</para>
 <para><computeroutput>int n</computeroutput></para>
 <para>Number of attributes. </para>
 <para>
-Definition at line 457 of file daos_task.h.</para>
+Definition at line 477 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__get__attr__t_1a3e21e2c9e75716907b2090ca8fda0a60"/>    <section>
     <title>names</title>
 <indexterm><primary>names</primary><secondary>daos_cont_get_attr_t</secondary></indexterm>
@@ -52,7 +52,7 @@ Definition at line 457 of file daos_task.h.</para>
 <para><computeroutput>const char* const * names</computeroutput></para>
 <para>Array of <emphasis>n</emphasis> null-terminated attribute names. </para>
 <para>
-Definition at line 459 of file daos_task.h.</para>
+Definition at line 479 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__get__attr__t_1a400fb89b01337e8e824c465ff6fed3c5"/>    <section>
     <title>sizes</title>
 <indexterm><primary>sizes</primary><secondary>daos_cont_get_attr_t</secondary></indexterm>
@@ -60,7 +60,7 @@ Definition at line 459 of file daos_task.h.</para>
 <para><computeroutput>size_t* sizes</computeroutput></para>
 <para>[in]: Array of <emphasis>n</emphasis> buffer sizes. [out]: Array of actual sizes </para>
 <para>
-Definition at line 463 of file daos_task.h.</para>
+Definition at line 483 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__get__attr__t_1ac31e63060224a2873fe54edf02b58c2a"/>    <section>
     <title>values</title>
 <indexterm><primary>values</primary><secondary>daos_cont_get_attr_t</secondary></indexterm>
@@ -68,7 +68,7 @@ Definition at line 463 of file daos_task.h.</para>
 <para><computeroutput>void* const * values</computeroutput></para>
 <para>Array of <emphasis>n</emphasis> buffers to store attribute values. </para>
 <para>
-Definition at line 461 of file daos_task.h.</para>
+Definition at line 481 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

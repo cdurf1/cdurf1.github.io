@@ -21,7 +21,7 @@
 
 <para>Container attribute list args </para>
 <para>
-Definition at line 443 of file daos_task.h.</para>
+Definition at line 463 of file daos_task.h.</para>
 </section>
 <section>
 <title>Field Documentation</title>
@@ -32,7 +32,7 @@ Definition at line 443 of file daos_task.h.</para>
 <para><computeroutput>char* buf</computeroutput></para>
 <para>Buffer containing concatenation of all attribute names. </para>
 <para>
-Definition at line 447 of file daos_task.h.</para>
+Definition at line 467 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__list__attr__t_1a7fe83fe613282d305d3aeacba805f901"/>    <section>
     <title>coh</title>
 <indexterm><primary>coh</primary><secondary>daos_cont_list_attr_t</secondary></indexterm>
@@ -40,7 +40,7 @@ Definition at line 447 of file daos_task.h.</para>
 <para><computeroutput><link linkend="_structdaos__handle__t">daos_handle_t</link> coh</computeroutput></para>
 <para>Container open handle. </para>
 <para>
-Definition at line 445 of file daos_task.h.</para>
+Definition at line 465 of file daos_task.h.</para>
     </section><anchor xml:id="_structdaos__cont__list__attr__t_1ae3c15c00c8f7ae14ae18501067cb5ac4"/>    <section>
     <title>size</title>
 <indexterm><primary>size</primary><secondary>daos_cont_list_attr_t</secondary></indexterm>
@@ -48,7 +48,7 @@ Definition at line 445 of file daos_task.h.</para>
 <para><computeroutput>size_t* size</computeroutput></para>
 <para>[in]: Buffer size. [out]: Aggregate size of all attribute names. </para>
 <para>
-Definition at line 449 of file daos_task.h.</para>
+Definition at line 469 of file daos_task.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

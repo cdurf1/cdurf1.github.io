@@ -42,7 +42,7 @@
     
     
       
-        <title>Transaction Model - DAOS v1.0</title>
+        <title>Transaction Model - DAOS v1.0.1</title>
       
     
     
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="http://daos.io" title="DAOS v1.0" aria-label="DAOS v1.0" class="md-header-nav__button md-logo">
+        <a href="http://daos.io" title="DAOS v1.0.1" aria-label="DAOS v1.0.1" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              DAOS v1.0
+              DAOS v1.0.1
             </span>
             <span class="md-header-nav__topic">
               
@@ -245,7 +245,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../release/releaseNote_v1_0/" class="md-tabs__link">
+        <a href="../../release/releaseNote_v1_0_1/" class="md-tabs__link">
           Releases
         </a>
       
@@ -287,12 +287,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="http://daos.io" title="DAOS v1.0" class="md-nav__button md-logo">
+    <a href="http://daos.io" title="DAOS v1.0.1" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    DAOS v1.0
+    DAOS v1.0.1
   </label>
   
     <div class="md-nav__source">
@@ -368,7 +368,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../architecture.md" title="Architecture" class="md-nav__link">
+    <a href="../architecture/" title="Architecture" class="md-nav__link">
       Architecture
     </a>
   </li>
@@ -419,8 +419,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#epoch-timestamp-ordering" class="md-nav__link">
-    Epoch &amp; Timestamp Ordering
+  <a href="#epoch-and-timestamp-ordering" class="md-nav__link">
+    Epoch and Timestamp Ordering
   </a>
   
 </li>
@@ -528,7 +528,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../admin/predeployment_check.md" title="Pre-deployment Checklist" class="md-nav__link">
+    <a href="../../admin/predeployment_check/" title="Pre-deployment Checklist" class="md-nav__link">
       Pre-deployment Checklist
     </a>
   </li>
@@ -576,7 +576,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../admin/tiering_uns.md" title="Tiering and Unified Namespace" class="md-nav__link">
+    <a href="../../admin/tiering_uns/" title="Tiering and Unified Namespace" class="md-nav__link">
       Tiering and Unified Namespace
     </a>
   </li>
@@ -744,7 +744,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/releaseNote_v1_0/" title="Release Notes" class="md-nav__link">
+    <a href="../../release/releaseNote_v1_0_1/" title="Release Notes" class="md-nav__link">
       Release Notes
     </a>
   </li>
@@ -756,8 +756,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../licenses/Licensing/" title="Licensing" class="md-nav__link">
-      Licensing
+    <a href="../../v1.0/" title="Release 1.0" class="md-nav__link">
+      Release 1.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../v0.9/" title="Release 0.9" class="md-nav__link">
+      Release 0.9
     </a>
   </li>
 
@@ -908,8 +920,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#epoch-timestamp-ordering" class="md-nav__link">
-    Epoch &amp; Timestamp Ordering
+  <a href="#epoch-and-timestamp-ordering" class="md-nav__link">
+    Epoch and Timestamp Ordering
   </a>
   
 </li>
@@ -952,7 +964,7 @@
 <p>The DAOS API supports distributed transactions that allow any update operations against objects belonging to the same container to be combined into a single ACID transaction. Distributed consistency is provided via a lockless optimistic concurrency control mechanism based on multi-version timestamp ordering. DAOS transactions are serializable and can be used on an ad-hoc basis for parts of the datasets that need it.</p>
 <p>The DAOS versioning mechanism allows creating persistent container snapshots which provide point-in-time distributed consistent views of a container which can be used to build producer-consumer pipeline.</p>
 <p><a id="4.2.1"></a></p>
-<h2 id="epoch-timestamp-ordering">Epoch &amp; Timestamp Ordering<a class="headerlink" href="#epoch-timestamp-ordering" title="Permanent link">&para;</a></h2>
+<h2 id="epoch-and-timestamp-ordering">Epoch and Timestamp Ordering<a class="headerlink" href="#epoch-and-timestamp-ordering" title="Permanent link">&para;</a></h2>
 <p>Each DAOS I/O operation is tagged with a timestamp called epoch. An epoch is a 64-bit integer that integrates both logical and physical clocks (see <a href="https://cse.buffalo.edu/tech-reports/2014-04.pdf">HLC paper</a>). The DAOS API provides helper functions to convert an epoch to traditional POSIX time (i.e., struct timespec, see clock_gettime(3)).</p>
 <p><a id="4.2.2"></a></p>
 <h2 id="container-snapshot">Container Snapshot<a class="headerlink" href="#container-snapshot" title="Permanent link">&para;</a></h2>
