@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_daos__uns_8h">
+<title>src/include/daos_uns.h File Reference</title>
+<indexterm><primary>src/include/daos_uns.h</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structduns__attr__t">duns_attr_t</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_daos__uns_8h_1aae9d29885dfb321968f20d86baff6e48">DUNS_XATTR_NAME</link>   &quot;user.daos&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_daos__uns_8h_1a5358fccff57eb95f1cce94c2ad65becf">DUNS_MAX_XATTR_LEN</link>   170</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_daos__uns_8h_1aed5d956858070fac62f6effe9c6540e1">duns_create_path</link> (<link linkend="_structdaos__handle__t">daos_handle_t</link> poh, const char *path, struct <link linkend="_structduns__attr__t">duns_attr_t</link> *attrp)</para>
+</listitem>
+            <listitem><para>int <link linkend="_daos__uns_8h_1abdbf8f5eb7ab131249f3675fc1b3c653">duns_resolve_path</link> (const char *path, struct <link linkend="_structduns__attr__t">duns_attr_t</link> *attr)</para>
+</listitem>
+            <listitem><para>int <link linkend="_daos__uns_8h_1a5cd91a183d4b7ccf5d948739dff143c4">duns_destroy_path</link> (<link linkend="_structdaos__handle__t">daos_handle_t</link> poh, const char *path)</para>
+</listitem>
+            <listitem><para>int <link linkend="_daos__uns_8h_1a678a3b99eceb1403bae24b874e45d8fd">duns_parse_attr</link> (char *str, daos_size_t len, struct <link linkend="_structduns__attr__t">duns_attr_t</link> *attr)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>DAOS Unified Namespace API</para>
+
+<para>The unified namespace API provides functions and tools to be able to link files and directories in a system namespace to a location in the DAOS tier (pool and container), in addition to other properties such as object class. </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_daos__uns_8h_1a5358fccff57eb95f1cce94c2ad65becf"/>    <section>
+    <title>DUNS_MAX_XATTR_LEN</title>
+<indexterm><primary>DUNS_MAX_XATTR_LEN</primary><secondary>daos_uns.h</secondary></indexterm>
+<indexterm><primary>daos_uns.h</primary><secondary>DUNS_MAX_XATTR_LEN</secondary></indexterm>
+<para><computeroutput>#define DUNS_MAX_XATTR_LEN   170</computeroutput></para>
+<para>Length of the extended attribute </para>
+<para>
+Definition at line 61 of file daos_uns.h.</para>
+    </section><anchor xml:id="_daos__uns_8h_1aae9d29885dfb321968f20d86baff6e48"/>    <section>
+    <title>DUNS_XATTR_NAME</title>
+<indexterm><primary>DUNS_XATTR_NAME</primary><secondary>daos_uns.h</secondary></indexterm>
+<indexterm><primary>daos_uns.h</primary><secondary>DUNS_XATTR_NAME</secondary></indexterm>
+<para><computeroutput>#define DUNS_XATTR_NAME   &quot;user.daos&quot;</computeroutput></para>
+<para>extended attribute name that will container the UNS info </para>
+<para>
+Definition at line 59 of file daos_uns.h.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_daos__uns_8h_1aed5d956858070fac62f6effe9c6540e1"/>    <section>
+    <title>duns_create_path()</title>
+<indexterm><primary>duns_create_path</primary><secondary>daos_uns.h</secondary></indexterm>
+<indexterm><primary>daos_uns.h</primary><secondary>duns_create_path</secondary></indexterm>
+<para><computeroutput>int duns_create_path (<link linkend="_structdaos__handle__t">daos_handle_t</link> poh, const char * path, struct <link linkend="_structduns__attr__t">duns_attr_t</link> * attrp)</computeroutput></para>
+<para>Create a special directory (POSIX) or file (HDF5) depending on the container type, and create a new DAOS container in the pool that is passed in <emphasis>attr.da_puuid</emphasis>. The uuid of the container is returned in <emphasis>attr.da_cuuid</emphasis>. Set extended attributes on the dir/file created that points to pool uuid, container uuid. This is to be used in a unified namespace solution to be able to map a path in the unified namespace to a location in the DAOS tier.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>poh</entry>
+                                <entry>
+<para>Pool handle </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>path</entry>
+                                <entry>
+<para>Valid path in an existing namespace. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in,out                                </entry>                                <entry>attrp</entry>
+                                <entry>
+<para>Struct containing the attributes. The uuid of the container created is returned in da_cuuid.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 on Success. errno code on failure. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_daos__uns_8h_1a5cd91a183d4b7ccf5d948739dff143c4"/>    <section>
+    <title>duns_destroy_path()</title>
+<indexterm><primary>duns_destroy_path</primary><secondary>daos_uns.h</secondary></indexterm>
+<indexterm><primary>daos_uns.h</primary><secondary>duns_destroy_path</secondary></indexterm>
+<para><computeroutput>int duns_destroy_path (<link linkend="_structdaos__handle__t">daos_handle_t</link> poh, const char * path)</computeroutput></para>
+<para>Destroy a container and remove the path associated with it in the UNS.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>poh</entry>
+                                <entry>
+<para>Pool handle </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>path</entry>
+                                <entry>
+<para>Valid path in an existing namespace.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 on Success. errno code on failure. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_daos__uns_8h_1a678a3b99eceb1403bae24b874e45d8fd"/>    <section>
+    <title>duns_parse_attr()</title>
+<indexterm><primary>duns_parse_attr</primary><secondary>daos_uns.h</secondary></indexterm>
+<indexterm><primary>daos_uns.h</primary><secondary>duns_parse_attr</secondary></indexterm>
+<para><computeroutput>int duns_parse_attr (char * str, daos_size_t len, struct <link linkend="_structduns__attr__t">duns_attr_t</link> * attr)</computeroutput></para>
+<para>Convert a string into <link linkend="_structduns__attr__t">duns_attr_t</link>.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>str</entry>
+                                <entry>
+<para>Input string </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>len</entry>
+                                <entry>
+<para>Length of input string </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>attr</entry>
+                                <entry>
+<para>Struct containing the xattrs on the path.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 on Success. errno code on failure. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_daos__uns_8h_1abdbf8f5eb7ab131249f3675fc1b3c653"/>    <section>
+    <title>duns_resolve_path()</title>
+<indexterm><primary>duns_resolve_path</primary><secondary>daos_uns.h</secondary></indexterm>
+<indexterm><primary>daos_uns.h</primary><secondary>duns_resolve_path</secondary></indexterm>
+<para><computeroutput>int duns_resolve_path (const char * path, struct <link linkend="_structduns__attr__t">duns_attr_t</link> * attr)</computeroutput></para>
+<para>Retrieve the extended attributes on a path corresponding to DAOS location and properties of that path. This includes the pool and container uuid and the container type. The rest of the fields are not populated in attr struct.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>path</entry>
+                                <entry>
+<para>Valid path in an existing namespace. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>attr</entry>
+                                <entry>
+<para>Struct containing the xattrs on the path.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 on Success. errno code on failure. </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>
