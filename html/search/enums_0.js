@@ -1,8 +1,15 @@
 var searchData=
 [
-  ['daos_5facl_5faccess_5ftype_901',['daos_acl_access_type',['../daos__security_8h.html#a29ea0eb0de30a30bdfb08e77e2fb146f',1,'daos_security.h']]],
-  ['daos_5facl_5fflags_902',['daos_acl_flags',['../daos__security_8h.html#a08ce0e314a139201d03d8b965bbc4220',1,'daos_security.h']]],
-  ['daos_5facl_5fperm_903',['daos_acl_perm',['../daos__security_8h.html#aad2be72f90918d6084c5ee81ddb7d673',1,'daos_security.h']]],
-  ['daos_5facl_5fprincipal_5ftype_904',['daos_acl_principal_type',['../daos__security_8h.html#ae5134a9b969724c62e7c10e294f50db0',1,'daos_security.h']]],
-  ['daos_5fsnapshot_5fopts_905',['daos_snapshot_opts',['../daos__cont_8h.html#aa9db6759d54439124fe8d210d2c0254e',1,'daos_cont.h']]]
+  ['crt_5fbulk_5fop_5ft_3088',['crt_bulk_op_t',['../group___c_a_r_t___t_y_p_e_s.html#gaa2d66daa6ec15b1a33c1622a761e906a',1,'types.h']]],
+  ['crt_5fbulk_5fperm_5ft_3089',['crt_bulk_perm_t',['../group___c_a_r_t___t_y_p_e_s.html#ga0baa03079c26075653589c9138e74e0e',1,'types.h']]],
+  ['crt_5fgroup_5fmod_5fop_5ft_3090',['crt_group_mod_op_t',['../group___c_a_r_t___t_y_p_e_s.html#ga45d6c2aa7ad84115a6398b74d29150e5',1,'types.h']]],
+  ['crt_5finit_5fflag_5fbits_3091',['crt_init_flag_bits',['../group___c_a_r_t___t_y_p_e_s.html#gaad03f467ebc70e6873998feeaa0a9dae',1,'types.h']]],
+  ['crt_5fiv_5fflag_5ft_3092',['crt_iv_flag_t',['../group___c_a_r_t___i_v.html#ga6d408f183e73af0d68a024787964c35d',1,'iv.h']]],
+  ['crt_5fiv_5fperm_5ft_3093',['crt_iv_perm_t',['../group___c_a_r_t___i_v.html#gabff4b49b9995c3193719c9b4f7f50c05',1,'iv.h']]],
+  ['crt_5fiv_5fshortcut_5ft_3094',['crt_iv_shortcut_t',['../group___c_a_r_t___i_v.html#ga91e51b5b8e4e432e303fc002083f5a24',1,'iv.h']]],
+  ['crt_5fiv_5fsync_5fevent_5ft_3095',['crt_iv_sync_event_t',['../group___c_a_r_t___i_v.html#ga516a13818f6625a6e755cb6c2e81d96c',1,'iv.h']]],
+  ['crt_5fiv_5fsync_5fflag_5ft_3096',['crt_iv_sync_flag_t',['../group___c_a_r_t___i_v.html#gacd74f81b4412ff87eb5b23ab8350e6f1',1,'iv.h']]],
+  ['crt_5fiv_5fsync_5fmode_5ft_3097',['crt_iv_sync_mode_t',['../group___c_a_r_t___i_v.html#ga874cbc2487afde54f59cdfd1fa835d0a',1,'iv.h']]],
+  ['crt_5fproc_5fop_5ft_3098',['crt_proc_op_t',['../group___c_a_r_t.html#gacfbc8243090b9821fcb4a138a205cb34',1,'api.h']]],
+  ['crt_5frpc_5fflags_3099',['crt_rpc_flags',['../group___c_a_r_t___t_y_p_e_s.html#gac5e13c70990b688489dbb68e6d8a6400',1,'types.h']]]
 ];

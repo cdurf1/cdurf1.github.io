@@ -95,14 +95,14 @@ $(document).ready(function(){initNavTree('daos__api_8h.html',''); initResizable(
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="daos__api_8h.html#a06fc87d81c62e9abb8790b6e5713c55baeca54c80ace170328bff03179c070de7">DAOS_TF_RDONLY</a> = (1 &lt;&lt; 0), 
-<a class="el" href="daos__api_8h.html#a06fc87d81c62e9abb8790b6e5713c55baec4d2d2d242c35e0e858fb2a5dad6e15">DAOS_TF_ZERO_COPY</a> = (1 &lt;&lt; 1)
+<tr class="memitem:aaf8fd5f0e57d456151c951e0f3715fc4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="daos__api_8h.html#aaf8fd5f0e57d456151c951e0f3715fc4aeca54c80ace170328bff03179c070de7">DAOS_TF_RDONLY</a> = (1 &lt;&lt; 0), 
+<a class="el" href="daos__api_8h.html#aaf8fd5f0e57d456151c951e0f3715fc4aec4d2d2d242c35e0e858fb2a5dad6e15">DAOS_TF_ZERO_COPY</a> = (1 &lt;&lt; 1)
  }</td></tr>
-<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:aaf8fd5f0e57d456151c951e0f3715fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abc4655c8429eff6b7a5637027ec3dbb2"><td class="memItemLeft" align="right" valign="top">d_rank_list_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__api_8h.html#abc4655c8429eff6b7a5637027ec3dbb2">daos_rank_list_parse</a> (const char *str, const char *sep)</td></tr>
+<tr class="memitem:abc4655c8429eff6b7a5637027ec3dbb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structd__rank__list__t.html">d_rank_list_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__api_8h.html#abc4655c8429eff6b7a5637027ec3dbb2">daos_rank_list_parse</a> (const char *str, const char *sep)</td></tr>
 <tr class="separator:abc4655c8429eff6b7a5637027ec3dbb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85fc0f9f93c742cfa39b65ac71c9ec07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__api_8h.html#a85fc0f9f93c742cfa39b65ac71c9ec07">daos_tx_open</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> coh, <a class="el" href="structdaos__handle__t.html">daos_handle_t</a> *th, uint64_t flags, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
 <tr class="separator:a85fc0f9f93c742cfa39b65ac71c9ec07"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,8 +124,8 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="daos__api_8h_source.html">daos_api.h</a>.</p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a06fc87d81c62e9abb8790b6e5713c55b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="aaf8fd5f0e57d456151c951e0f3715fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf8fd5f0e57d456151c951e0f3715fc4">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,15 +135,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Flags for daos_tx_open </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baeca54c80ace170328bff03179c070de7"></a>DAOS_TF_RDONLY&#160;</td><td class="fielddoc"><p>The transaction is read only. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aaf8fd5f0e57d456151c951e0f3715fc4aeca54c80ace170328bff03179c070de7"></a>DAOS_TF_RDONLY&#160;</td><td class="fielddoc"><p>The transaction is read only. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baec4d2d2d242c35e0e858fb2a5dad6e15"></a>DAOS_TF_ZERO_COPY&#160;</td><td class="fielddoc"><p>Not copy application data buffer when cache modification on client for the distributed transaction.</p>
-<p>Please note that the key buffer will always be copied when caching. Then the TX sponsor can reuse or release related key' buffer after the operation returning to avoid more programming restriction under DAOS transaction model. </p>
+<tr><td class="fieldname"><a id="aaf8fd5f0e57d456151c951e0f3715fc4aec4d2d2d242c35e0e858fb2a5dad6e15"></a>DAOS_TF_ZERO_COPY&#160;</td><td class="fielddoc"><p>Do not copy caller data buffers during modifications associated with the transaction. The buffers must remain unchanged until the daos_tx_commit operation for the transaction completes.</p>
+<p>Key buffers are always copied, regardless of this flag. They can be released or repurposed after corresponding operations complete. </p>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="daos__api_8h_source.html#l00036">36</a> of file <a class="el" href="daos__api_8h_source.html">daos_api.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__api_8h_source.html#l00020">20</a> of file <a class="el" href="daos__api_8h_source.html">daos_api.h</a>.</p>
 
 </div>
 </div>
@@ -155,7 +156,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">d_rank_list_t* daos_rank_list_parse </td>
+          <td class="memname"><a class="el" href="structd__rank__list__t.html">d_rank_list_t</a>* daos_rank_list_parse </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>str</em>, </td>
@@ -210,7 +211,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Abort all updates on the transaction. The transaction can't be used for future updates anymore.</p>
+<p>Abort all modifications on the transaction. The transaction handle cannot be used for any new IO.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle to abort. </td></tr>
@@ -247,7 +248,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Close and free the transaction handle. This is a local operation, no RPC involved.</p>
+<p>Close the transaction handle. This is a local operation, no RPC involved.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle to free. </td></tr>
@@ -284,7 +285,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Commit the transaction on the container it was created with. The transaction can't be used for future updates anymore. If -DER_RESTART was returned, the operations that have been done on this transaction need to be redone with a newer transaction since a conflict was detected with another transaction.</p>
+<p>Commit the transaction. If the operation succeeds, the transaction handle cannot be used for any new IO. If -DER_TX_RESTART is returned, the caller needs to restart the transaction with the same transaction handle, by calling daos_tx_restart, re-executing the caller code for this transaction, and calling daos_tx_commit again.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle to commit. </td></tr>
@@ -292,7 +293,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if Success, negative if failed. Possible error values include: -DER_NO_HDL invalid transaction handle. -DER_INVAL Invalid parameter -DER_RESTART transaction conflict detected. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if Success, negative if failed. Possible error values include: -DER_NO_HDL invalid transaction handle. -DER_INVAL Invalid parameter -DER_TX_RESTART transaction needs to restart (e.g., due to conflicts). </dd></dl>
 
 </div>
 </div>
@@ -377,7 +378,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Open a transaction on a container handle. This returns a transaction handle that is tagged with the current epoch. The transaction handle can be used for IOs that need to be committed transactionally.</p>
+<p>Open a transaction on a container handle. The resulting transaction handle can be used for IOs in this container that need to be committed transactionally.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coh</td><td>Container handle. </td></tr>
@@ -428,7 +429,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create a read-only transaction from a snapshot. This does not create the snapshot, but only a read transaction to be able to read from a persistent snapshot in the container. If the user passes an epoch that is not snapshoted, or the snapshot was deleted, reads using that transaction might fail if the epoch was aggregated.</p>
+<p>Create a read-only transaction from a snapshot. This does not create the snapshot, but only a read transaction to be able to read from a snapshot created with daos_cont_create_snap. If the user passes an epoch that is not snapshoted, or the snapshot was deleted, reads using that transaction may get undefined results.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coh</td><td>Container handle. </td></tr>
@@ -467,7 +468,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Restart the transaction handle after encountering a -DER_TX_RESTART error. It drops all the modifications that have been issued via the handle. Whether the restarted transaction observes any conflicting modifications committed after this transaction was originally opened is undefined. If callers would like to retry transactions for their own purposes, they shall open new transactions instead. This is a local operation, no RPC involved.</p>
+<p>Restart the transaction after encountering a -DER_TX_RESTART error. This drops all the IOs that have been issued via the transaction handle. Whether the restarted transaction observes any conflicting modifications committed after this transaction was originally opened is undefined. If callers would like to retry transactions for their own purposes, they shall open new transactions instead. This is a local operation, no RPC involved.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle to be restarted. </td></tr>

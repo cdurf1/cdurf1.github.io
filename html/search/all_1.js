@@ -1,5 +1,17 @@
 var searchData=
 [
-  ['buf_8',['buf',['../structdaos__pool__list__attr__t.html#a1fe855c208bc17a51a4d34fefdb2d5b1',1,'daos_pool_list_attr_t::buf()'],['../structdaos__cont__list__attr__t.html#a1fe855c208bc17a51a4d34fefdb2d5b1',1,'daos_cont_list_attr_t::buf()'],['../structdaos__kv__get__t.html#a5bc5fa69bee375df074734a2c4858604',1,'daos_kv_get_t::buf()'],['../structdaos__kv__put__t.html#a0ccd7535cf45ea4a389b855324c47142',1,'daos_kv_put_t::buf()']]],
-  ['buf_5fsize_9',['buf_size',['../structdaos__kv__get__t.html#a11844455a0ac2f84beff06d9c6fe88d0',1,'daos_kv_get_t::buf_size()'],['../structdaos__kv__put__t.html#af690a5e43f182f75d4fcf438c0c826ef',1,'daos_kv_put_t::buf_size()']]]
+  ['acl_15',['acl',['../structdaos__cont__update__acl__t.html#af343c8160c72116af8dbdca3248bc103',1,'daos_cont_update_acl_t']]],
+  ['akey_16',['akey',['../structdaos__obj__list__t.html#ab032fc0d4a38d84ac9d0274512a2cf60',1,'daos_obj_list_t']]],
+  ['akey_5fanchor_17',['akey_anchor',['../structdaos__obj__list__t.html#add7cac4a39ef271f4190ae8b1c2d899f',1,'daos_obj_list_t']]],
+  ['akey_5fnr_18',['akey_nr',['../structdaos__obj__punch__t.html#a0df4720076d1674bb7e55ec5c4dcc6ed',1,'daos_obj_punch_t']]],
+  ['akeys_19',['akeys',['../structdaos__obj__punch__t.html#abc3026f5d7aeb0ad4f2f5bbf4996a651',1,'daos_obj_punch_t']]],
+  ['anchor_20',['anchor',['../structdaos__cont__list__snap__t.html#ac376c63cd592209e79c0b58caa5f105f',1,'daos_cont_list_snap_t::anchor()'],['../structdaos__obj__list__class__t.html#ac376c63cd592209e79c0b58caa5f105f',1,'daos_obj_list_class_t::anchor()'],['../structdaos__kv__list__t.html#ac376c63cd592209e79c0b58caa5f105f',1,'daos_kv_list_t::anchor()']]],
+  ['api_2eh_21',['api.h',['../api_8h.html',1,'']]],
+  ['arr_5fnr_22',['arr_nr',['../structdaos__array__iod__t.html#a2b9be7050a799f9975ba4c10baf150ee',1,'daos_array_iod_t']]],
+  ['arr_5frgs_23',['arr_rgs',['../structdaos__array__iod__t.html#a028f318baa33edeb89b00ac8e0980454',1,'daos_array_iod_t']]],
+  ['array_5fcreate_24',['array_create',['../structdaos__task__args.html#aac1c4a2dc9d1bc9c8b372ecb9cf527a9',1,'daos_task_args']]],
+  ['at_5fcb_25',['at_cb',['../structdss__acc__task.html#a0f6a18a044034be429ed9aecfae1fb6b',1,'dss_acc_task']]],
+  ['at_5foffload_5ftype_26',['at_offload_type',['../structdss__acc__task.html#a617a0476cf95a9481be09bae2168c028',1,'dss_acc_task']]],
+  ['at_5fopcode_27',['at_opcode',['../structdss__acc__task.html#a3897a96de1bc2d2223bd2c103751a9e1',1,'dss_acc_task']]],
+  ['at_5fparams_28',['at_params',['../structdss__acc__task.html#abb1b846a1b7d2609b646c5b12d173cdd',1,'dss_acc_task']]]
 ];

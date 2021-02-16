@@ -1,8 +1,26 @@
 var searchData=
 [
-  ['kd_5fkey_5flen_399',['kd_key_len',['../structdaos__key__desc__t.html#abf51ea8a799cb106f76784e1f07e603b',1,'daos_key_desc_t']]],
-  ['kd_5fval_5ftype_400',['kd_val_type',['../structdaos__key__desc__t.html#a0045348784e873fe5b436dc5187f34e3',1,'daos_key_desc_t']]],
-  ['kds_401',['kds',['../structdaos__obj__list__t.html#ad18e6de859bab889577e42129c68217c',1,'daos_obj_list_t::kds()'],['../structdaos__kv__list__t.html#ad18e6de859bab889577e42129c68217c',1,'daos_kv_list_t::kds()']]],
-  ['key_402',['key',['../structdaos__kv__get__t.html#acd3d88da3c0e0313c3645ff34f62f542',1,'daos_kv_get_t::key()'],['../structdaos__kv__put__t.html#acd3d88da3c0e0313c3645ff34f62f542',1,'daos_kv_put_t::key()'],['../structdaos__kv__remove__t.html#acd3d88da3c0e0313c3645ff34f62f542',1,'daos_kv_remove_t::key()']]],
-  ['key_5fid_403',['key_id',['../structdaos__set__params__t.html#a3c9e1911e32476da4aa8b1951b3b634c',1,'daos_set_params_t']]]
+  ['handler_1139',['handler',['../structdrpc.html#aef8cdddac3caeb07b29363f1850f2880',1,'drpc::handler()'],['../structdss__drpc__handler.html#aef8cdddac3caeb07b29363f1850f2880',1,'dss_drpc_handler::handler()']]],
+  ['hash_2eh_1140',['hash.h',['../hash_8h.html',1,'']]],
+  ['hash_5fft_1141',['hash_ft',['../structhash__ft.html',1,'']]],
+  ['heap_2eh_1142',['heap.h',['../heap_8h.html',1,'']]],
+  ['hop_5fcompare_1143',['hop_compare',['../structd__binheap__ops.html#ae85da870159288880dc5d0a3046a6419',1,'d_binheap_ops']]],
+  ['hop_5fenter_1144',['hop_enter',['../structd__binheap__ops.html#ae84efa2e339d59c778a34627a5baa5cc',1,'d_binheap_ops']]],
+  ['hop_5fexit_1145',['hop_exit',['../structd__binheap__ops.html#a8fbb093904a48a5dae0bdb031d1ec5b2',1,'d_binheap_ops']]],
+  ['hop_5ffree_1146',['hop_free',['../structd__hlink__ops.html#a0b9c9e40d7ba2092d546fa3f9d188bfc',1,'d_hlink_ops']]],
+  ['hop_5fkey_5fcmp_1147',['hop_key_cmp',['../structd__hash__table__ops__t.html#a2bfceb073124e85834f6d7d321374e73',1,'d_hash_table_ops_t']]],
+  ['hop_5fkey_5fhash_1148',['hop_key_hash',['../structd__hash__table__ops__t.html#aa0ac76c2589bd567d5feae3af00c35fc',1,'d_hash_table_ops_t']]],
+  ['hop_5fkey_5finit_1149',['hop_key_init',['../structd__hash__table__ops__t.html#a99899bd5ae3f15d5d8eeddbd2dc7bb9d',1,'d_hash_table_ops_t']]],
+  ['hop_5frec_5faddref_1150',['hop_rec_addref',['../structd__hash__table__ops__t.html#a961ee23e4fae5fbf5e8ff6f5eb26c0f4',1,'d_hash_table_ops_t']]],
+  ['hop_5frec_5fdecref_1151',['hop_rec_decref',['../structd__hash__table__ops__t.html#ae4ba445b2785280addc71ce16b6cc401',1,'d_hash_table_ops_t']]],
+  ['hop_5frec_5ffree_1152',['hop_rec_free',['../structd__hash__table__ops__t.html#aa90a00c00c5c97e9724ddbaf09812c89',1,'d_hash_table_ops_t']]],
+  ['hop_5frec_5fhash_1153',['hop_rec_hash',['../structd__hash__table__ops__t.html#a005d4ff55059c51cefe8175d04838b3c',1,'d_hash_table_ops_t']]],
+  ['hop_5frec_5fndecref_1154',['hop_rec_ndecref',['../structd__hash__table__ops__t.html#a675abc269f5307f7c5b00c67ba02329d',1,'d_hash_table_ops_t']]],
+  ['ht_5fbits_1155',['ht_bits',['../structd__hash__table.html#a29c301df429f2363aea8c00963d982c7',1,'d_hash_table']]],
+  ['ht_5fbuckets_1156',['ht_buckets',['../structd__hash__table.html#a555c072d7b482ba4bfae20d41cc45b72',1,'d_hash_table']]],
+  ['ht_5ffeats_1157',['ht_feats',['../structd__hash__table.html#adb3b0a2c833e2175bffbc1aa448e5b56',1,'d_hash_table']]],
+  ['ht_5flock_1158',['ht_lock',['../structd__hash__table.html#abbd93ff3feef842f1fe64ae312be7f12',1,'d_hash_table']]],
+  ['ht_5flocks_1159',['ht_locks',['../structd__hash__table.html#a97bb941198945e2d10e4ed6899475d69',1,'d_hash_table']]],
+  ['ht_5fops_1160',['ht_ops',['../structd__hash__table.html#ac66f2f06d0658aae8ba2793b53e2e3a6',1,'d_hash_table']]],
+  ['ht_5fpriv_1161',['ht_priv',['../structd__hash__table.html#a6332f4388ee226f34d93a351fb4bc507',1,'d_hash_table']]]
 ];
