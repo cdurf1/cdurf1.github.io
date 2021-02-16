@@ -1,7 +1,26 @@
 var searchData=
 [
-  ['failed_800',['failed',['../structdaos__pool__replicas__t.html#a4e01f9ed4f764d7c92ecda734176f900',1,'daos_pool_replicas_t']]],
-  ['flags_801',['flags',['../structdaos__pool__connect__t.html#ac92588540e8c1d014a08cd8a45462b19',1,'daos_pool_connect_t::flags()'],['../structdaos__cont__open__t.html#ac92588540e8c1d014a08cd8a45462b19',1,'daos_cont_open_t::flags()'],['../structdaos__tx__open__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_tx_open_t::flags()'],['../structdaos__tx__commit__t.html#a773b39d480759f67926cb18ae2219281',1,'daos_tx_commit_t::flags()'],['../structdaos__obj__punch__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_obj_punch_t::flags()'],['../structdaos__obj__query__key__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_obj_query_key_t::flags()'],['../structdaos__obj__rw__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_obj_rw_t::flags()'],['../structdaos__kv__get__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_kv_get_t::flags()'],['../structdaos__kv__put__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_kv_put_t::flags()'],['../structdaos__kv__remove__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_kv_remove_t::flags()']]],
-  ['foo_802',['foo',['../structdaos__target__perf__t.html#a819b717d29c6c488a332fefeeb3815ba',1,'daos_target_perf_t']]],
-  ['force_803',['force',['../structdaos__pool__destroy__t.html#a52de43b6faa0d9601f10db8b3826f11a',1,'daos_pool_destroy_t::force()'],['../structdaos__cont__destroy__t.html#a52de43b6faa0d9601f10db8b3826f11a',1,'daos_cont_destroy_t::force()']]]
+  ['fa_5fargument_2627',['fa_argument',['../structd__fault__attr__t.html#a468221c91b25b58d5c86eeb1c0022db6',1,'d_fault_attr_t']]],
+  ['fa_5ferr_5fcode_2628',['fa_err_code',['../structd__fault__attr__t.html#ac2992ac10ea6a83b9009282609f3b76d',1,'d_fault_attr_t']]],
+  ['fa_5fid_2629',['fa_id',['../structd__fault__attr__t.html#aa20dfe0c352e8f444e82368baaaf00cd',1,'d_fault_attr_t']]],
+  ['fa_5finterval_2630',['fa_interval',['../structd__fault__attr__t.html#a67ed1ff6cdb829b5bc5c863a20f66dbd',1,'d_fault_attr_t']]],
+  ['fa_5flock_2631',['fa_lock',['../structd__fault__attr__t.html#a44c787b295175d4fd81a1b25431a252f',1,'d_fault_attr_t']]],
+  ['fa_5fmax_5ffaults_2632',['fa_max_faults',['../structd__fault__attr__t.html#ae9ab77b3d89687a1c4b7259509c67d85',1,'d_fault_attr_t']]],
+  ['fa_5fnum_5ffaults_2633',['fa_num_faults',['../structd__fault__attr__t.html#a20526f705b87c9f6fa616ddc45292818',1,'d_fault_attr_t']]],
+  ['fa_5fnum_5fhits_2634',['fa_num_hits',['../structd__fault__attr__t.html#afea11f697114cbc35965b8a1d69b43f7',1,'d_fault_attr_t']]],
+  ['fa_5fprobability_5fx_2635',['fa_probability_x',['../structd__fault__attr__t.html#a5b3e426a52cbc94ff7e67d950b2c7f4a',1,'d_fault_attr_t']]],
+  ['fa_5frand_5fstate_2636',['fa_rand_state',['../structd__fault__attr__t.html#a301a9310d6bee0e3177ec0264a75b8f1',1,'d_fault_attr_t']]],
+  ['fac_5faname_2637',['fac_aname',['../structdlog__fac.html#a19558b459339bb1fc1474aa8f517fcfb',1,'dlog_fac']]],
+  ['fac_5fcnt_2638',['fac_cnt',['../structd__log__xstate.html#acc70cdacae0d5e7ad987f6912b7d18f6',1,'d_log_xstate']]],
+  ['fac_5flname_2639',['fac_lname',['../structdlog__fac.html#a9bb738bf67adf6fe995635b9ef8c7b74',1,'dlog_fac']]],
+  ['fac_5fmask_2640',['fac_mask',['../structdlog__fac.html#ae02e94247e269e93dc3dd7ab652621fc',1,'dlog_fac']]],
+  ['failed_2641',['failed',['../structdaos__pool__replicas__t.html#a4e01f9ed4f764d7c92ecda734176f900',1,'daos_pool_replicas_t']]],
+  ['flags_2642',['flags',['../structunixcomm.html#ac8bf36fe0577cba66bccda3a6f7e80a4',1,'unixcomm::flags()'],['../structdaos__pool__connect__t.html#ac92588540e8c1d014a08cd8a45462b19',1,'daos_pool_connect_t::flags()'],['../structdaos__cont__open__t.html#ac92588540e8c1d014a08cd8a45462b19',1,'daos_cont_open_t::flags()'],['../structdaos__tx__open__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_tx_open_t::flags()'],['../structdaos__tx__commit__t.html#a773b39d480759f67926cb18ae2219281',1,'daos_tx_commit_t::flags()'],['../structdaos__obj__punch__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_obj_punch_t::flags()'],['../structdaos__obj__query__key__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_obj_query_key_t::flags()'],['../structdaos__obj__rw__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_obj_rw_t::flags()'],['../structdaos__kv__get__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_kv_get_t::flags()'],['../structdaos__kv__put__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_kv_put_t::flags()'],['../structdaos__kv__remove__t.html#a899a76dc5f03f0d4ea3793c339e07ee9',1,'daos_kv_remove_t::flags()']]],
+  ['foo_2643',['foo',['../structdaos__target__perf__t.html#a819b717d29c6c488a332fefeeb3815ba',1,'daos_target_perf_t']]],
+  ['force_2644',['force',['../structdaos__pool__destroy__t.html#a52de43b6faa0d9601f10db8b3826f11a',1,'daos_pool_destroy_t::force()'],['../structdaos__cont__destroy__t.html#a52de43b6faa0d9601f10db8b3826f11a',1,'daos_cont_destroy_t::force()']]],
+  ['fr_5fepoch_2645',['fr_epoch',['../structevt__filter.html#a4f8332a7ad609cd2aed56ff7ca59068c',1,'evt_filter']]],
+  ['fr_5fepr_2646',['fr_epr',['../structevt__filter.html#a3adb508789c79cab2f6b937cec7320bc',1,'evt_filter']]],
+  ['fr_5fex_2647',['fr_ex',['../structevt__filter.html#a924a57074a6d5316655e258759cc501c',1,'evt_filter']]],
+  ['fr_5fpunch_5fepc_2648',['fr_punch_epc',['../structevt__filter.html#aecb8dbc3039604e31c2c354d3cc209ef',1,'evt_filter']]],
+  ['fr_5fpunch_5fminor_5fepc_2649',['fr_punch_minor_epc',['../structevt__filter.html#a0222a7a71c282f8f5f037aa779f9e7d2',1,'evt_filter']]]
 ];

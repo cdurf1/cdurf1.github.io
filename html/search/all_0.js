@@ -1,11 +1,18 @@
 var searchData=
 [
-  ['acl_0',['acl',['../structdaos__cont__update__acl__t.html#af343c8160c72116af8dbdca3248bc103',1,'daos_cont_update_acl_t']]],
-  ['akey_1',['akey',['../structdaos__obj__list__t.html#ab032fc0d4a38d84ac9d0274512a2cf60',1,'daos_obj_list_t']]],
-  ['akey_5fanchor_2',['akey_anchor',['../structdaos__obj__list__t.html#add7cac4a39ef271f4190ae8b1c2d899f',1,'daos_obj_list_t']]],
-  ['akey_5fnr_3',['akey_nr',['../structdaos__obj__punch__t.html#a0df4720076d1674bb7e55ec5c4dcc6ed',1,'daos_obj_punch_t']]],
-  ['akeys_4',['akeys',['../structdaos__obj__punch__t.html#abc3026f5d7aeb0ad4f2f5bbf4996a651',1,'daos_obj_punch_t']]],
-  ['anchor_5',['anchor',['../structdaos__cont__list__snap__t.html#ac376c63cd592209e79c0b58caa5f105f',1,'daos_cont_list_snap_t::anchor()'],['../structdaos__obj__list__class__t.html#ac376c63cd592209e79c0b58caa5f105f',1,'daos_obj_list_class_t::anchor()'],['../structdaos__kv__list__t.html#ac376c63cd592209e79c0b58caa5f105f',1,'daos_kv_list_t::anchor()']]],
-  ['arr_5fnr_6',['arr_nr',['../structdaos__array__iod__t.html#a2b9be7050a799f9975ba4c10baf150ee',1,'daos_array_iod_t']]],
-  ['arr_5frgs_7',['arr_rgs',['../structdaos__array__iod__t.html#a028f318baa33edeb89b00ac8e0980454',1,'daos_array_iod_t']]]
+  ['_5fd_5fadd_5fcache_0',['_D_ADD_CACHE',['../group___g_u_r_t___d_e_b_u_g.html#ga5d673e9cf7ee82649b722e8966bdc605',1,'debug_setup.h']]],
+  ['_5fd_5flog_1',['_D_LOG',['../group___g_u_r_t___d_e_b_u_g.html#ga4d6546a8a1a13622b619eb3b83f9241a',1,'debug.h']]],
+  ['_5fd_5flog_5fallocate_5fdbg_5fbit_2',['_D_LOG_ALLOCATE_DBG_BIT',['../group___g_u_r_t___d_e_b_u_g.html#ga86b7e19fbea4c8ab4433342f23762cbd',1,'debug_setup.h']]],
+  ['_5fd_5flog_5fallocate_5flog_5ffacility_3',['_D_LOG_ALLOCATE_LOG_FACILITY',['../group___g_u_r_t___d_e_b_u_g.html#gaa03605abc5766a6f99b1a2815cd0df83',1,'debug_setup.h']]],
+  ['_5fd_5flog_5fcheck_4',['_D_LOG_CHECK',['../group___g_u_r_t___d_e_b_u_g.html#gaf86151f3ff3ab2f24b652f4f59fc46fc',1,'debug.h']]],
+  ['_5fd_5flog_5fdeallocate_5fdbg_5fbit_5',['_D_LOG_DEALLOCATE_DBG_BIT',['../group___g_u_r_t___d_e_b_u_g.html#gab549e77c27363fa61626cf6135cac79a',1,'debug_setup.h']]],
+  ['_5fd_5flog_5fdeclare_5fcache_6',['_D_LOG_DECLARE_CACHE',['../group___g_u_r_t___d_e_b_u_g.html#ga8b0d18c54ccf2bc378f0c87f10ce9497',1,'debug_setup.h']]],
+  ['_5fd_5flog_5fdeclare_5fenum_7',['_D_LOG_DECLARE_ENUM',['../group___g_u_r_t___d_e_b_u_g.html#ga48f74ea9785cc0b93e5fd5a0d0714079',1,'debug_setup.h']]],
+  ['_5fd_5flog_5finitialize_5ffield_8',['_D_LOG_INITIALIZE_FIELD',['../group___g_u_r_t___d_e_b_u_g.html#ga820bd4319d68e456e7e8e1519cc1683f',1,'debug_setup.h']]],
+  ['_5fd_5flog_5finstantiate_5fcache_9',['_D_LOG_INSTANTIATE_CACHE',['../group___g_u_r_t___d_e_b_u_g.html#ga26005ff46215f6b8a748abe0c8068b2b',1,'debug_setup.h']]],
+  ['_5fd_5flog_5fnocheck_10',['_D_LOG_NOCHECK',['../group___g_u_r_t___d_e_b_u_g.html#gadd1ec480905a14dcfcbe3fbe7c5bce0a',1,'debug.h']]],
+  ['_5fd_5ftrace_5fnocheck_11',['_D_TRACE_NOCHECK',['../group___g_u_r_t___d_e_b_u_g.html#gaf5ca712dd30a81c8d2afb2506a4a1845',1,'debug.h']]],
+  ['_5fdrpc_5f_5fcall_12',['_Drpc__Call',['../struct___drpc_____call.html',1,'']]],
+  ['_5fdrpc_5f_5fresponse_13',['_Drpc__Response',['../struct___drpc_____response.html',1,'']]],
+  ['_5fgurt_5fgettime_14',['_gurt_gettime',['../group___g_u_r_t.html#ga38e9033a8e62c5dc166632311e4e32a4',1,'common.h']]]
 ];

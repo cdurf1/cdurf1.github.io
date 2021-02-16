@@ -133,11 +133,11 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abc4655c8429eff6b7a5637027ec3dbb2"><td class="memItemLeft" align="right" valign="top">d_rank_list_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#abc4655c8429eff6b7a5637027ec3dbb2">daos_rank_list_parse</a> (const char *str, const char *sep)</td></tr>
+<tr class="memitem:abc4655c8429eff6b7a5637027ec3dbb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structd__rank__list__t.html">d_rank_list_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#abc4655c8429eff6b7a5637027ec3dbb2">daos_rank_list_parse</a> (const char *str, const char *sep)</td></tr>
 <tr class="separator:abc4655c8429eff6b7a5637027ec3dbb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d32bebaa76e264a8825074b360c2f2d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#a2d32bebaa76e264a8825074b360c2f2d">daos_cont_local2global</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> coh, d_iov_t *glob)</td></tr>
+<tr class="memitem:a2d32bebaa76e264a8825074b360c2f2d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#a2d32bebaa76e264a8825074b360c2f2d">daos_cont_local2global</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> coh, <a class="el" href="structd__iov__t.html">d_iov_t</a> *glob)</td></tr>
 <tr class="separator:a2d32bebaa76e264a8825074b360c2f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa780e37e03ace1bb78baec4ca2096c75"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#aa780e37e03ace1bb78baec4ca2096c75">daos_cont_global2local</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> poh, d_iov_t glob, <a class="el" href="structdaos__handle__t.html">daos_handle_t</a> *coh)</td></tr>
+<tr class="memitem:aa780e37e03ace1bb78baec4ca2096c75"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#aa780e37e03ace1bb78baec4ca2096c75">daos_cont_global2local</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> poh, <a class="el" href="structd__iov__t.html">d_iov_t</a> glob, <a class="el" href="structdaos__handle__t.html">daos_handle_t</a> *coh)</td></tr>
 <tr class="separator:aa780e37e03ace1bb78baec4ca2096c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3817d3dcd223893f448a1514eca479a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#a3817d3dcd223893f448a1514eca479a4">daos_cont_create</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> poh, const uuid_t uuid, <a class="el" href="structdaos__prop__t.html">daos_prop_t</a> *cont_prop, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
 <tr class="separator:a3817d3dcd223893f448a1514eca479a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,7 +207,7 @@ Functions</h2></td></tr>
 <p>DAOS_COO_NOSLIP disables the automatic epoch slip at epoch commit time. See daos_epoch_commit().</p>
 <p>DAOS_COO_FORCE skips the check to see if the pool meets the redundancy factor/level requirements of the container. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__cont_8h_source.html#l00051">51</a> of file <a class="el" href="daos__cont_8h_source.html">daos_cont.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__cont_8h_source.html#l00034">34</a> of file <a class="el" href="daos__cont_8h_source.html">daos_cont.h</a>.</p>
 
 </div>
 </div>
@@ -230,7 +230,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="daos__cont_8h_source.html#l00564">564</a> of file <a class="el" href="daos__cont_8h_source.html">daos_cont.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__cont_8h_source.html#l00550">550</a> of file <a class="el" href="daos__cont_8h_source.html">daos_cont.h</a>.</p>
 
 </div>
 </div>
@@ -846,7 +846,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">d_iov_t&#160;</td>
+          <td class="paramtype"><a class="el" href="structd__iov__t.html">d_iov_t</a>&#160;</td>
           <td class="paramname"><em>glob</em>, </td>
         </tr>
         <tr>
@@ -1004,7 +1004,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">d_iov_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="structd__iov__t.html">d_iov_t</a> *&#160;</td>
           <td class="paramname"><em>glob</em>&#160;</td>
         </tr>
         <tr>
@@ -1087,7 +1087,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>These values will be returned by <em>ev::ev_error</em> in non-blocking mode: 0 Success -DER_INVAL Invalid parameter -DER_UNREACH Network is unreachable -DER_NO_PERM Permission denied -DER_NONEXIST Container is nonexistent </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>These values will be returned by <em>ev::ev_error</em> in non-blocking mode: 0 Success -DER_INVAL Invalid parameter -DER_UNREACH Network is unreachable -DER_NO_PERM Permission denied -DER_NONEXIST Container is nonexistent -DER_RF #failures exceed RF, data possibly lost </dd></dl>
 
 </div>
 </div>
@@ -1483,7 +1483,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">d_rank_list_t* daos_rank_list_parse </td>
+          <td class="memname"><a class="el" href="structd__rank__list__t.html">d_rank_list_t</a>* daos_rank_list_parse </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>str</em>, </td>

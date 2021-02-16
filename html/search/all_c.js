@@ -1,15 +1,16 @@
 var searchData=
 [
-  ['pi_5fbits_424',['pi_bits',['../structdaos__pool__info__t.html#a7e2d4a6399f6a6c0173dffc941ea01f1',1,'daos_pool_info_t']]],
-  ['pi_5fleader_425',['pi_leader',['../structdaos__pool__info__t.html#a4ced6f2dbd149346d3b6bac2d46d9688',1,'daos_pool_info_t']]],
-  ['pi_5fmap_5fver_426',['pi_map_ver',['../structdaos__pool__info__t.html#a67ee77d992f0f2be597eaa73739a44eb',1,'daos_pool_info_t']]],
-  ['pi_5fndisabled_427',['pi_ndisabled',['../structdaos__pool__info__t.html#ae922e563f62764a70663fe1ad1e47861',1,'daos_pool_info_t']]],
-  ['pi_5fnnodes_428',['pi_nnodes',['../structdaos__pool__info__t.html#a0cdbd513abacc6447da6a0556f4a423a',1,'daos_pool_info_t']]],
-  ['pi_5fntargets_429',['pi_ntargets',['../structdaos__pool__info__t.html#afc7f611bcdcf18ba183c009e472f4ebc',1,'daos_pool_info_t']]],
-  ['pi_5frebuild_5fst_430',['pi_rebuild_st',['../structdaos__pool__info__t.html#ab2cf5c5b165c32250af2f3e60b0074dc',1,'daos_pool_info_t']]],
-  ['pi_5fspace_431',['pi_space',['../structdaos__pool__info__t.html#a52a790f75a9c4d388c635d02ca7e516d',1,'daos_pool_info_t']]],
-  ['pi_5fuuid_432',['pi_uuid',['../structdaos__pool__info__t.html#a59e54b9261b587cedd76f8f79c313f34',1,'daos_pool_info_t']]],
-  ['poh_433',['poh',['../structdaos__pool__connect__t.html#ab12b4c1b5d0fa473ea78d3bd89131589',1,'daos_pool_connect_t::poh()'],['../structdaos__pool__disconnect__t.html#af65e0a5ef9986001524f96e09ae666a3',1,'daos_pool_disconnect_t::poh()'],['../structdaos__pool__query__t.html#af65e0a5ef9986001524f96e09ae666a3',1,'daos_pool_query_t::poh()'],['../structdaos__pool__query__target__t.html#af65e0a5ef9986001524f96e09ae666a3',1,'daos_pool_query_target_t::poh()'],['../structdaos__pool__list__cont__t.html#af65e0a5ef9986001524f96e09ae666a3',1,'daos_pool_list_cont_t::poh()'],['../structdaos__pool__list__attr__t.html#af65e0a5ef9986001524f96e09ae666a3',1,'daos_pool_list_attr_t::poh()'],['../structdaos__pool__get__attr__t.html#af65e0a5ef9986001524f96e09ae666a3',1,'daos_pool_get_attr_t::poh()'],['../structdaos__pool__set__attr__t.html#af65e0a5ef9986001524f96e09ae666a3',1,'daos_pool_set_attr_t::poh()'],['../structdaos__pool__del__attr__t.html#af65e0a5ef9986001524f96e09ae666a3',1,'daos_pool_del_attr_t::poh()'],['../structdaos__pool__stop__svc__t.html#af65e0a5ef9986001524f96e09ae666a3',1,'daos_pool_stop_svc_t::poh()'],['../structdaos__cont__create__t.html#af65e0a5ef9986001524f96e09ae666a3',1,'daos_cont_create_t::poh()'],['../structdaos__cont__open__t.html#af65e0a5ef9986001524f96e09ae666a3',1,'daos_cont_open_t::poh()'],['../structdaos__cont__destroy__t.html#af65e0a5ef9986001524f96e09ae666a3',1,'daos_cont_destroy_t::poh()']]],
-  ['pools_434',['pools',['../structdaos__mgmt__list__pools__t.html#a617bea3285807d9977f4e95084ac9fe0',1,'daos_mgmt_list_pools_t']]],
-  ['prop_435',['prop',['../structdaos__pool__create__t.html#a8786d65cd566e6cbdb43d0afeca96a46',1,'daos_pool_create_t::prop()'],['../structdaos__pool__query__t.html#a8786d65cd566e6cbdb43d0afeca96a46',1,'daos_pool_query_t::prop()'],['../structdaos__cont__create__t.html#a8786d65cd566e6cbdb43d0afeca96a46',1,'daos_cont_create_t::prop()'],['../structdaos__cont__query__t.html#a8786d65cd566e6cbdb43d0afeca96a46',1,'daos_cont_query_t::prop()'],['../structdaos__cont__set__prop__t.html#a8786d65cd566e6cbdb43d0afeca96a46',1,'daos_cont_set_prop_t::prop()']]]
+  ['maxval_1253',['maxval',['../uniond__tm__stats__t_1_1maxval.html',1,'d_tm_stats_t']]],
+  ['mgpi_5fsvc_1254',['mgpi_svc',['../structdaos__mgmt__pool__info__t.html#a66515899a21c8281fa2db8b2535e0ad6',1,'daos_mgmt_pool_info_t']]],
+  ['minval_1255',['minval',['../uniond__tm__stats__t_1_1minval.html',1,'d_tm_stats_t']]],
+  ['mo_5ftx_5fabort_1256',['mo_tx_abort',['../structumem__ops__t.html#a3b90cfd604f891bc5341636197555def',1,'umem_ops_t']]],
+  ['mo_5ftx_5fadd_1257',['mo_tx_add',['../structumem__ops__t.html#a28a12a6bc8592318d316b64d23fd7429',1,'umem_ops_t']]],
+  ['mo_5ftx_5fadd_5fcallback_1258',['mo_tx_add_callback',['../structumem__ops__t.html#a1ebba98fdef00f2ed5a7bdfc99dae87c',1,'umem_ops_t']]],
+  ['mo_5ftx_5fadd_5fptr_1259',['mo_tx_add_ptr',['../structumem__ops__t.html#ab55968d8d17907be014c4a729a1a1026',1,'umem_ops_t']]],
+  ['mo_5ftx_5falloc_1260',['mo_tx_alloc',['../structumem__ops__t.html#a558d78da8cf37e38ef7cbcbd04b6c195',1,'umem_ops_t']]],
+  ['mo_5ftx_5fbegin_1261',['mo_tx_begin',['../structumem__ops__t.html#ae764081bb7385b7692d1087d2a08c5b3',1,'umem_ops_t']]],
+  ['mo_5ftx_5fcommit_1262',['mo_tx_commit',['../structumem__ops__t.html#adea1cd601a1787bde0e6a4c60428f727',1,'umem_ops_t']]],
+  ['mo_5ftx_5ffree_1263',['mo_tx_free',['../structumem__ops__t.html#ac160e799062285590fb03367898447bb',1,'umem_ops_t']]],
+  ['mo_5ftx_5fxadd_1264',['mo_tx_xadd',['../structumem__ops__t.html#a91ff002a789cb0f3295bbdf4bba6c8bf',1,'umem_ops_t']]],
+  ['mode_1265',['mode',['../structdaos__pool__create__t.html#a6b29e4f37f4482274af785ad5ffe96a7',1,'daos_pool_create_t::mode()'],['../structdaos__obj__open__t.html#ac1b4d694fc07a39e06900e82872aac7f',1,'daos_obj_open_t::mode()'],['../structdaos__array__open__t.html#ac1b4d694fc07a39e06900e82872aac7f',1,'daos_array_open_t::mode()'],['../structdaos__kv__open__t.html#ac1b4d694fc07a39e06900e82872aac7f',1,'daos_kv_open_t::mode()']]]
 ];
