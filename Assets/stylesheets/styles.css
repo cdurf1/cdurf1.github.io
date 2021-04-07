@@ -1,0 +1,140 @@
+@charset "utf-8";
+body {
+    background-color: rgba(0,113,197,1.00);
+    color: rgba(255,255,255,1.00);
+    font-family: ubuntu;
+    font-style: normal;
+    font-weight: 300;
+}
+h1 {
+    font-size: xx-large;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    top: 1px;
+}
+header  {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 10px;
+    vertical-align: top;
+}
+
+h2 {
+    margin-left: 20px;
+}
+p {
+    margin-left: 250px;
+    background-color: rgba(255,255,255,1.00);
+    color: rgba(0,113,197,1.00);
+    border-left-width: thick;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-family: ubuntu;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    float: none;
+    border-radius: 10px;
+}
+#navbarDropdown1 {
+    color: rgba(0,113,197,1.00);
+    font-family: ubuntu;
+    font-style: normal;
+    font-weight: 500;
+}
+
+
+section {
+}
+footer {
+    position: fixed;
+    bottom: 5px;
+}
+header {
+    text-align: center;
+    padding-top: 50px;
+}
+nav {
+}
+.navlist   {
+    list-style-type: none;
+    list-style-image: none;
+}
+#navbarDropdown1 {
+}
+
+.navlistitem {
+    float: left;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    overflow-x: hidden;
+    background-color: rgba(0,93,177,1.00);
+    list-style-image: none;
+    list-style-type: none;
+    list-style-position: outside;
+    color: rgba(255,255,255,1.00);
+}
+.navbar.navbar-expand-lg.navbar-light.bg-light .navbar-brand {
+    color: rgba(0,113,197,1.00);
+    font-family: ubuntu;
+    font-style: normal;
+    font-weight: 700;
+}
+body img {
+
+}
+.md-header-nav__topic {
+}
+
+aside {
+    float: left;
+    background-color: rgba(255,255,255,1.00);
+    margin-left: 20px;
+    width: 200px;
+    border-radius: 10px;
+}
+aside nav ul {
+    margin-top: 20px;
+    margin-left: 10px;
+    text-align: left;
+    clear: left;
+}
+
+nav-item {
+}
+aside nav ul {
+    color: rgba(255,255,255,1.00);
+}
+.nav-item:hover {
+    text-decoration: none;
+    text-align: right;
+    float: none;
+    clear: none;
+}
+body section table {
+    background-color: rgba(255,255,255,1.00);
+    color: rgba(0,113,197,1.00);
+    float: left;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    min-width: 0px;
+    width: auto;
+}
+section table caption {
+    color: rgba(255,255,255,1.00);
+}
