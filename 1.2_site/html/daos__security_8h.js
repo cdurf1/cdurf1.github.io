@@ -71,7 +71,6 @@ var daos__security_8h =
     [ "daos_acl_principal_to_gid", "daos__security_8h.html#a1dc782b2cccdee7c433d0a7bdc6fba0b", null ],
     [ "daos_acl_principal_to_uid", "daos__security_8h.html#a2983d9e3ecb4b9cde346578cafb175d5", null ],
     [ "daos_acl_remove_ace", "daos__security_8h.html#ae9ef8ca19b32a2ed1f1e7672a48fc23e", null ],
-    [ "daos_acl_to_stream", "daos__security_8h.html#a53f87fb1bd0efe76b7a5e68f6c6d0c33", null ],
     [ "daos_acl_to_strs", "daos__security_8h.html#adad0544d69586cc7cdf3149de5712bfe", null ],
     [ "daos_acl_uid_to_principal", "daos__security_8h.html#ad5232b83868adb948710d14af46bfebe", null ],
     [ "daos_acl_validate", "daos__security_8h.html#ad0a9f2f679dc7f937eef33816ab2c4d8", null ]

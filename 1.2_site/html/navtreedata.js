@@ -23,7 +23,6 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "DAOS API", "index.html", [
-    [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -49,9 +48,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"functions_s.html",
-"structdaos__kv__put__t.html#aef20019954d183ed757cd90ac3288242",
-"structdaos__target__info__t.html#acb16b4eba38943d2a0464cf5ea6c5544"
+"globals.html",
+"structdaos__obj__query__class__t.html#ada9c80821116446255b52e7ca22b01ba"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

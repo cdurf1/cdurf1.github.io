@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="daos_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">DAOS API
-   &#160;<span id="projectnumber">Latest</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
   </td>
  </tr>
@@ -101,21 +101,15 @@ Macros</h2></td></tr>
 <tr class="memitem:a28790aa071e2f975324089c87b077d94"><td class="memItemLeft" align="right" valign="top"><a id="a28790aa071e2f975324089c87b077d94"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>DAOS_COND_KEY_UPDATE</b>&#160;&#160;&#160;DAOS_COND_DKEY_UPDATE</td></tr>
 <tr class="separator:a28790aa071e2f975324089c87b077d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb714e87cf7b9fcea1f294c0750bdb26"><td class="memItemLeft" align="right" valign="top"><a id="acb714e87cf7b9fcea1f294c0750bdb26"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>DAOS_COND_KEY_GET</b>&#160;&#160;&#160;DAOS_COND_DKEY_FETCH</td></tr>
-<tr class="separator:acb714e87cf7b9fcea1f294c0750bdb26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80ab508926fb5ab4c10f8aca275316a6"><td class="memItemLeft" align="right" valign="top"><a id="a80ab508926fb5ab4c10f8aca275316a6"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>DAOS_COND_KEY_REMOVE</b>&#160;&#160;&#160;DAOS_COND_PUNCH</td></tr>
-<tr class="separator:a80ab508926fb5ab4c10f8aca275316a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449735544b0a616ae57f1d8980f045af"><td class="memItemLeft" align="right" valign="top"><a id="a449735544b0a616ae57f1d8980f045af"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DAOS_COND_KEY_FETCH</b>&#160;&#160;&#160;DAOS_COND_DKEY_FETCH</td></tr>
+<tr class="separator:a449735544b0a616ae57f1d8980f045af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1aaa9bde4e80cefe836ed43b5ef9cc"><td class="memItemLeft" align="right" valign="top"><a id="a7f1aaa9bde4e80cefe836ed43b5ef9cc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DAOS_COND_KEY_PUNCH</b>&#160;&#160;&#160;DAOS_COND_DKEY_PUNCH</td></tr>
+<tr class="separator:a7f1aaa9bde4e80cefe836ed43b5ef9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad05d00c41c670cd91e2e3fc8ca69f7bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__kv_8h.html#ad05d00c41c670cd91e2e3fc8ca69f7bd">daos_kv_open</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> coh, <a class="el" href="structdaos__obj__id__t.html">daos_obj_id_t</a> oid, unsigned int mode, <a class="el" href="structdaos__handle__t.html">daos_handle_t</a> *oh, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
-<tr class="separator:ad05d00c41c670cd91e2e3fc8ca69f7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0bebe7eb7bf3c618b4fb71e8a39c71d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__kv_8h.html#af0bebe7eb7bf3c618b4fb71e8a39c71d">daos_kv_close</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
-<tr class="separator:af0bebe7eb7bf3c618b4fb71e8a39c71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada5a9ad798e7b54fcf6b8bbe674bbf36"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__kv_8h.html#ada5a9ad798e7b54fcf6b8bbe674bbf36">daos_kv_destroy</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="el" href="structdaos__handle__t.html">daos_handle_t</a> th, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
-<tr class="separator:ada5a9ad798e7b54fcf6b8bbe674bbf36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f3cd19cee87b92e19b860b42458f848"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__kv_8h.html#a3f3cd19cee87b92e19b860b42458f848">daos_kv_put</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="el" href="structdaos__handle__t.html">daos_handle_t</a> th, uint64_t flags, const char *key, daos_size_t size, const void *buf, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
 <tr class="separator:a3f3cd19cee87b92e19b860b42458f848"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23cae3d831736069a32833f64f5f5cc7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__kv_8h.html#a23cae3d831736069a32833f64f5f5cc7">daos_kv_get</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> oh, <a class="el" href="structdaos__handle__t.html">daos_handle_t</a> th, uint64_t flags, const char *key, daos_size_t *size, void *buf, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
@@ -131,87 +125,6 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="daos__kv_8h_source.html">daos_kv.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="af0bebe7eb7bf3c618b4fb71e8a39c71d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0bebe7eb7bf3c618b4fb71e8a39c71d">&#9670;&nbsp;</a></span>daos_kv_close()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int daos_kv_close </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structdaos__handle__t.html">daos_handle_t</a>&#160;</td>
-          <td class="paramname"><em>oh</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structdaos__event.html">daos_event_t</a> *&#160;</td>
-          <td class="paramname"><em>ev</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Close an opened KV object.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">oh</td><td>KV object open handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. Function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>These values will be returned by <em>ev::ev_error</em> in non-blocking mode: 0 Success -DER_NO_HDL Invalid object open handle </dd></dl>
-
-</div>
-</div>
-<a id="ada5a9ad798e7b54fcf6b8bbe674bbf36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada5a9ad798e7b54fcf6b8bbe674bbf36">&#9670;&nbsp;</a></span>daos_kv_destroy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int daos_kv_destroy </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structdaos__handle__t.html">daos_handle_t</a>&#160;</td>
-          <td class="paramname"><em>oh</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structdaos__handle__t.html">daos_handle_t</a>&#160;</td>
-          <td class="paramname"><em>th</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structdaos__event.html">daos_event_t</a> *&#160;</td>
-          <td class="paramname"><em>ev</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Destroy the kV object by punching all data (keys) in the kv object. daos_obj_punch() is called underneath. The oh still needs to be closed with a call to <a class="el" href="daos__kv_8h.html#af0bebe7eb7bf3c618b4fb71e8a39c71d">daos_kv_close()</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">oh</td><td>KV object open handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. Function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>These values will be returned by <em>ev::ev_error</em> in non-blocking mode: 0 Success -DER_NO_HDL Invalid object open handle -DER_INVAL Invalid parameter </dd></dl>
-
-</div>
-</div>
 <a id="a23cae3d831736069a32833f64f5f5cc7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a23cae3d831736069a32833f64f5f5cc7">&#9670;&nbsp;</a></span>daos_kv_get()</h2>
 
@@ -272,15 +185,15 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">oh</td><td>Object open handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>Fetch flags. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>Fetch flags (currently ignored). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>key associated with the update operation. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">size</td><td>[in]: Size of the user buf. if the size is unknown, set to DAOS_REC_ANY). [out]: The actual size of the value. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>Pointer to user buffer. If NULL, only size is returned. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>Pointer to user buffer. If NULL, only size is returned. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. Function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>These values will be returned by <em>ev::ev_error</em> in non-blocking mode: 0 Success -DER_NO_HDL Invalid object open handle -DER_INVAL Invalid parameter -DER_NO_PERM Permission denied -DER_UNREACH Network is unreachable -DER_REC2BIG Record does not fit in buffer -DER_EP_RO Epoch is read-only </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>These values will be returned by <em>ev::ev_error</em> in non-blocking mode: 0 Success -DER_NO_HDL Invalid object open handle -DER_INVAL Invalid parameter -DER_NO_PERM Permission denied -DER_UNREACH Network is unreachable -DER_EP_RO Epoch is read-only </dd></dl>
 
 </div>
 </div>
@@ -356,64 +269,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad05d00c41c670cd91e2e3fc8ca69f7bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad05d00c41c670cd91e2e3fc8ca69f7bd">&#9670;&nbsp;</a></span>daos_kv_open()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int daos_kv_open </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structdaos__handle__t.html">daos_handle_t</a>&#160;</td>
-          <td class="paramname"><em>coh</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structdaos__obj__id__t.html">daos_obj_id_t</a>&#160;</td>
-          <td class="paramname"><em>oid</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>mode</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structdaos__handle__t.html">daos_handle_t</a> *&#160;</td>
-          <td class="paramname"><em>oh</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structdaos__event.html">daos_event_t</a> *&#160;</td>
-          <td class="paramname"><em>ev</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Open a KV object. This is a local operation (no RPC involved). The feat bits in the oid must set DAOS_OF_KV_FLAT.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">coh</td><td>Container open handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">oid</td><td>Object ID. It is required that the feat for dkey type be set to DAOS_OF_KV_FLAT. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>Open mode: DAOS_OO_RO/RW </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">oh</td><td>Returned kv object open handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. The function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>These values will be returned by <em>ev::ev_error</em> in non-blocking mode: 0 Success -DER_NO_HDL Invalid container handle -DER_INVAL Invalid parameter </dd></dl>
-
-</div>
-</div>
 <a id="a3f3cd19cee87b92e19b860b42458f848"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f3cd19cee87b92e19b860b42458f848">&#9670;&nbsp;</a></span>daos_kv_put()</h2>
 
@@ -469,12 +324,12 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Insert or update a single object KV pair. If a value existed before it will be overwritten (punched first if not previously an atomic value) with the new atomic value described by the sgl.</p>
+<p>Insert or update a single object KV pair. The key specified will be mapped to a dkey in DAOS. The object akey will be the same as the dkey. If a value existed before it will be overwritten (punched first if not previously an atomic value) with the new atomic value described by the sgl.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">oh</td><td>Object open handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>Update flags. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>Update flags (currently ignored). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Key associated with the update operation. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size of the buffer to be inserted as an atomic val. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>Pointer to user buffer of the atomic value. </td></tr>
@@ -534,7 +389,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">oh</td><td>Object open handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>Remove flags. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>Remove flags (currently ignored). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Key to be punched/removed. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. Function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
   </table>

@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="daos_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">DAOS API
-   &#160;<span id="projectnumber">Latest</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
   </td>
  </tr>
@@ -94,10 +94,12 @@ $(document).ready(function(){initNavTree('structdaos__pool__replicas__t.html',''
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a0c9cfc131b27ae3b98b1533bba4c58ef"><td class="memItemLeft" align="right" valign="top">uuid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__pool__replicas__t.html#a0c9cfc131b27ae3b98b1533bba4c58ef">uuid</a></td></tr>
-<tr class="separator:a0c9cfc131b27ae3b98b1533bba4c58ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad00e3514ef2dd4e2535dab4d84d0273"><td class="memItemLeft" align="right" valign="top">const uuid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__pool__replicas__t.html#aad00e3514ef2dd4e2535dab4d84d0273">uuid</a></td></tr>
+<tr class="separator:aad00e3514ef2dd4e2535dab4d84d0273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7142af3238843b1b28f5f93888d9b931"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__pool__replicas__t.html#a7142af3238843b1b28f5f93888d9b931">group</a></td></tr>
 <tr class="separator:a7142af3238843b1b28f5f93888d9b931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcc363aa1e5e2300d19ecfd1c88f3f44"><td class="memItemLeft" align="right" valign="top">d_rank_list_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__pool__replicas__t.html#afcc363aa1e5e2300d19ecfd1c88f3f44">svc</a></td></tr>
+<tr class="separator:afcc363aa1e5e2300d19ecfd1c88f3f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2e2a20f76f0373beb2a556233cbaf5f"><td class="memItemLeft" align="right" valign="top">d_rank_list_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__pool__replicas__t.html#aa2e2a20f76f0373beb2a556233cbaf5f">targets</a></td></tr>
 <tr class="separator:aa2e2a20f76f0373beb2a556233cbaf5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e01f9ed4f764d7c92ecda734176f900"><td class="memItemLeft" align="right" valign="top">d_rank_list_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__pool__replicas__t.html#a4e01f9ed4f764d7c92ecda734176f900">failed</a></td></tr>
@@ -106,7 +108,7 @@ Data Fields</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>pool add/remove replicas args </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00289">289</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00328">328</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a4e01f9ed4f764d7c92ecda734176f900"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e01f9ed4f764d7c92ecda734176f900">&#9670;&nbsp;</a></span>failed</h2>
@@ -121,7 +123,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Optional, list of ranks which could not be added/removed. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00297">297</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00338">338</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -138,7 +140,24 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Name of DAOS server process set managing the service. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00293">293</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00332">332</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+
+</div>
+</div>
+<a id="afcc363aa1e5e2300d19ecfd1c88f3f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcc363aa1e5e2300d19ecfd1c88f3f44">&#9670;&nbsp;</a></span>svc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">d_rank_list_t* svc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>List of service ranks. </p>
+
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00334">334</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -155,24 +174,24 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Ranks of the replicas to be added/removed. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00295">295</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00336">336</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
-<a id="a0c9cfc131b27ae3b98b1533bba4c58ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c9cfc131b27ae3b98b1533bba4c58ef">&#9670;&nbsp;</a></span>uuid</h2>
+<a id="aad00e3514ef2dd4e2535dab4d84d0273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad00e3514ef2dd4e2535dab4d84d0273">&#9670;&nbsp;</a></span>uuid</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uuid_t uuid</td>
+          <td class="memname">const uuid_t uuid</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>UUID of the pool. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00291">291</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00330">330</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>

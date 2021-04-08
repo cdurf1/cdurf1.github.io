@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="daos_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">DAOS API
-   &#160;<span id="projectnumber">Latest</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
   </td>
  </tr>
@@ -96,32 +96,49 @@ $(document).ready(function(){initNavTree('structdaos__pool__query__target__t.htm
 Data Fields</h2></td></tr>
 <tr class="memitem:af65e0a5ef9986001524f96e09ae666a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdaos__handle__t.html">daos_handle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__pool__query__target__t.html#af65e0a5ef9986001524f96e09ae666a3">poh</a></td></tr>
 <tr class="separator:af65e0a5ef9986001524f96e09ae666a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0191a954af3d36b86e402530b70bbc8"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__pool__query__target__t.html#ac0191a954af3d36b86e402530b70bbc8">tgt_idx</a></td></tr>
-<tr class="separator:ac0191a954af3d36b86e402530b70bbc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a725668728cdf219a18169482d866dbd7"><td class="memItemLeft" align="right" valign="top">d_rank_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__pool__query__target__t.html#a725668728cdf219a18169482d866dbd7">rank</a></td></tr>
-<tr class="separator:a725668728cdf219a18169482d866dbd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51366d52415efcb89e1f19cd28974a5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdaos__target__info__t.html">daos_target_info_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__pool__query__target__t.html#a51366d52415efcb89e1f19cd28974a5d">info</a></td></tr>
-<tr class="separator:a51366d52415efcb89e1f19cd28974a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f55acd63b21c61714ce641623f9b2d2"><td class="memItemLeft" align="right" valign="top">d_rank_list_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__pool__query__target__t.html#a9f55acd63b21c61714ce641623f9b2d2">tgts</a></td></tr>
+<tr class="separator:a9f55acd63b21c61714ce641623f9b2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e01f9ed4f764d7c92ecda734176f900"><td class="memItemLeft" align="right" valign="top">d_rank_list_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__pool__query__target__t.html#a4e01f9ed4f764d7c92ecda734176f900">failed</a></td></tr>
+<tr class="separator:a4e01f9ed4f764d7c92ecda734176f900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84ec469fc6868690bc24977fcab3f7cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdaos__target__info__t.html">daos_target_info_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaos__pool__query__target__t.html#a84ec469fc6868690bc24977fcab3f7cb">info_list</a></td></tr>
+<tr class="separator:a84ec469fc6868690bc24977fcab3f7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>pool target query args </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00219">219</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00268">268</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a51366d52415efcb89e1f19cd28974a5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51366d52415efcb89e1f19cd28974a5d">&#9670;&nbsp;</a></span>info</h2>
+<a id="a4e01f9ed4f764d7c92ecda734176f900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e01f9ed4f764d7c92ecda734176f900">&#9670;&nbsp;</a></span>failed</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structdaos__target__info__t.html">daos_target_info_t</a>* info</td>
+          <td class="memname">d_rank_list_t* failed</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returned storage information of target. </p>
+<p>Optional, buffer to store faulty targets on failure. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00227">227</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00274">274</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+
+</div>
+</div>
+<a id="a84ec469fc6868690bc24977fcab3f7cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84ec469fc6868690bc24977fcab3f7cb">&#9670;&nbsp;</a></span>info_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdaos__target__info__t.html">daos_target_info_t</a>* info_list</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returned storage information of targets. </p>
+
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00276">276</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
@@ -138,41 +155,24 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Pool open handle. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00221">221</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00270">270</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
-<a id="a725668728cdf219a18169482d866dbd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a725668728cdf219a18169482d866dbd7">&#9670;&nbsp;</a></span>rank</h2>
+<a id="a9f55acd63b21c61714ce641623f9b2d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f55acd63b21c61714ce641623f9b2d2">&#9670;&nbsp;</a></span>tgts</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">d_rank_t rank</td>
+          <td class="memname">d_rank_list_t* tgts</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Rank of target to query. </p>
+<p>Array of targets to query. </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00225">225</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
-
-</div>
-</div>
-<a id="ac0191a954af3d36b86e402530b70bbc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0191a954af3d36b86e402530b70bbc8">&#9670;&nbsp;</a></span>tgt_idx</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t tgt_idx</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Single targets to query. </p>
-
-<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00223">223</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__task_8h_source.html#l00272">272</a> of file <a class="el" href="daos__task_8h_source.html">daos_task.h</a>.</p>
 
 </div>
 </div>
