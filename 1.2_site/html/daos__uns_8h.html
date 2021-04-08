@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="daos_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">DAOS API
-   &#160;<span id="projectnumber">Latest</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
   </td>
  </tr>
@@ -136,7 +136,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Length of the extended attribute </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__uns_8h_source.html#l00056">56</a> of file <a class="el" href="daos__uns_8h_source.html">daos_uns.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__uns_8h_source.html#l00061">61</a> of file <a class="el" href="daos__uns_8h_source.html">daos_uns.h</a>.</p>
 
 </div>
 </div>
@@ -153,7 +153,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>extended attribute name that will container the UNS info </p>
 
-<p class="definition">Definition at line <a class="el" href="daos__uns_8h_source.html#l00054">54</a> of file <a class="el" href="daos__uns_8h_source.html">daos_uns.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="daos__uns_8h_source.html#l00059">59</a> of file <a class="el" href="daos__uns_8h_source.html">daos_uns.h</a>.</p>
 
 </div>
 </div>
@@ -198,7 +198,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on Success. errno code on failure. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on Success. Negative on Failure. </dd></dl>
 
 </div>
 </div>
@@ -235,7 +235,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on Success. errno code on failure. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on Success. Negative on Failure. </dd></dl>
 
 </div>
 </div>
@@ -275,11 +275,11 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Input string </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Length of input string </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">attr</td><td>Struct containing the attrs on the path.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">attr</td><td>Struct containing the xattrs on the path.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on Success. errno code on failure. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on Success. Negative on Failure. </dd></dl>
 
 </div>
 </div>
@@ -308,16 +308,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Retrieve the pool and container uuids from a path corresponding to a DAOS location. If this was a path created with <a class="el" href="daos__uns_8h.html#aed5d956858070fac62f6effe9c6540e1">duns_create_path()</a>, then this call would return the pool, container, and type values in the <em>attr</em> struct (the rest of the values are not populated.</p>
-<p>To avoid going through the UNS if the user knows the pool and container uuids, a special format can be passed as a prefix for a "fast path", and this call would parse those out in the <em>attr</em> struct and return whatever is left from the path in <em>attr.da_rel_path</em>. The user is responsible to free <em>attr.da_rel_path</em>. This mode is provided as a convenience to IO middleware libraries and to settle on a unified format for a mode where users know the pool and container uuids and would just like to pass them directly instead of a traditional path. The format of this path should be: daos://pool_uuid/container_uuid/xyz xyz here can be a path relative to the root of a POSIX container if the user is accessing a posix container, or it can be empty for example in the case of an HDF5 file.</p>
+<p>Retrieve the extended attributes on a path corresponding to DAOS location and properties of that path. This includes the pool and container uuid and the container type. The rest of the fields are not populated in attr struct.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Valid path in an existing namespace. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">attr</td><td>Struct containing the attrs on the path.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">attr</td><td>Struct containing the xattrs on the path.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on Success. errno code on failure. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on Success. Negative on Failure. </dd></dl>
 
 </div>
 </div>

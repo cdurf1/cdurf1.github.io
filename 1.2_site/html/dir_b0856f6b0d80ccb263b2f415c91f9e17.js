@@ -16,6 +16,5 @@ var dir_b0856f6b0d80ccb263b2f415c91f9e17 =
     [ "daos_security.h", "daos__security_8h.html", "daos__security_8h" ],
     [ "daos_task.h", "daos__task_8h_source.html", null ],
     [ "daos_types.h", "daos__types_8h_source.html", null ],
-    [ "daos_uns.h", "daos__uns_8h.html", "daos__uns_8h" ],
-    [ "dfuse_ioctl.h", "dfuse__ioctl_8h_source.html", null ]
+    [ "daos_uns.h", "daos__uns_8h.html", "daos__uns_8h" ]
 ];

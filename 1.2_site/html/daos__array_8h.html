@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="daos_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">DAOS API
-   &#160;<span id="projectnumber">Latest</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
   </td>
  </tr>
@@ -228,12 +228,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Create an Array object. This opens a DAOS KV object and adds metadata to define the cell size and chunk size. Further access to that object using the handle will use that metadata to store the array elements.</p>
-<p>The metadata of the array is stored under a special AKEY in DKEY 0. This means that this is a generic array object with it's metadata tracked in the DAOS object. The feat bits in the oid must set DAOS_OF_DKEY_UINT64 | DAOS_OF_KV_FLAT | DAOS_OF_ARRAY. If the feat bits does not set DAOS_OF_ARRAY, the user would be responsible for remembering the array metadata since DAOS will not store those, and should not call this API since nothing will be written to the array object. daos_array_open_with_attrs() can be used to get an array OH in that case to access with the Array APIs.</p>
+<p>The metadata of the array is stored under a special AKEY in DKEY 0. This means that this is a generic array object with it's metadata tracked in the DAOS object. The feat bits in the oid must set DAOS_OF_DKEY_UINT64 | DAOS_OF_ARRAY. If the feat bits does not set DAOS_OF_ARRAY but sets DAOS_OF_KV_FLAT, the user would be responsible in remembering the array metadata since DAOS will not store those, and should not call this API since nothing will be written to the array object. daos_array_open_with_attrs() can be used to get an array OH in that case to access with the Array APIs.</p>
 <p>The metadata are just entries in the KV object, meaning that any user can open the object and overwrite that metadata. The user can recreate the array; This will not punch the existing raw data; just overwrite the metadata. However changing the metadata will cause undefined access issues. (MSC - we can force an error in this case by checking for object existence by reading the metadata. But this adds extra overhead).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coh</td><td>Container open handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">oid</td><td>Object ID. It is required that the feat for dkey type be set to DAOS_OF_KV_FLAT | DAOS_OF_DKEY_UINT64 | DAOS_OF_ARRAY. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">oid</td><td>Object ID. It is required that the feat for dkey type be set to DAOS_OF_DKEY_UINT64 | DAOS_OF_ARRAY. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cell_size</td><td>Record size of the array. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">chunk_size</td><td>Number of contiguous records to store per DKey before moving to a different dkey. </td></tr>
@@ -277,7 +277,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Destroy the array object by punching all data (keys) in the array object including the metadata associated with the array. daos_obj_punch() is called underneath. The oh still needs to be closed with a call to <a class="el" href="daos__array_8h.html#a28fed60c9a468122c8c54dbdb8b8ec0c">daos_array_close()</a>, but any other access with that handle, or other array open handles, will fail. The destroy will happen regardless of any open handle, so it's the user responsibility to ensure that there is no further access to the array before the destroy is called.</p>
+<p>Destroy the array object by punching all data (keys) in the array object including the metadata associated with the array. daos_obj_punch() is called underneath. The oh still needs to be closed with a call to <a class="el" href="daos__array_8h.html#a28fed60c9a468122c8c54dbdb8b8ec0c">daos_array_close()</a>, but any other access with that handle, or other array open handles, will fail. The destroy will happen regardless of any open handle, so it's the user responsibility to ensure that there is no further access to the array before the destory is called.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">oh</td><td>Array object open handle. </td></tr>
@@ -538,11 +538,11 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coh</td><td>Container open handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">oid</td><td>Object ID. It is required that the feat for dkey type be set to DAOS_OF_KV_FLAT | DAOS_OF_DKEY_UINT64 | DAOS_OF_ARRAY. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">oid</td><td>Object ID. It is required that the feat for dkey type be set to DAOS_OF_DKEY_UINT64 | DAOS_OF_ARRAY. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>Open mode: DAOS_OO_RO/RW </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">cell_size</td><td>Record size of the array. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">chunk_size</td><td>Contiguous bytes to store per DKey before moving to a different dkey. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">chunk_size</td><td>Contiguous bytes to store per DKey before moving to a differen dkey. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">oh</td><td>Returned array object open handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. The function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
   </table>
@@ -621,7 +621,7 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>Open mode: DAOS_OO_RO/RW </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cell_size</td><td>Record size of the array. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">chunk_size</td><td>Contiguous bytes to store per DKey before moving to a different dkey. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chunk_size</td><td>Contiguous bytes to store per DKey before moving to a differen dkey. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">oh</td><td>Returned array object open handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. The function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
   </table>
@@ -731,7 +731,7 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">oh</td><td>Array object open handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">iod</td><td>IO descriptor of ranges to read from the array. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">sgl</td><td>A scatter/gather list (sgl) to the store array data. Buffer sizes do not have to match the individual range sizes as long as the total size does. User allocates the buffer(s) and sets the length of each buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sgl</td><td>A scatter/gather list (sgl) to the store array data. Buffer sizes do not have to match the indiviual range sizes as long as the total size does. User allocates the buffer(s) and sets the length of each buffer. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. Function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
   </table>
   </dd>
@@ -840,7 +840,7 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">oh</td><td>Array object open handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Transaction handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">iod</td><td>IO descriptor of ranges to write to the array. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">sgl</td><td>A scatter/gather list (sgl) to the store array data. Buffer sizes do not have to match the individual range sizes as long as the total size does. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sgl</td><td>A scatter/gather list (sgl) to the store array data. Buffer sizes do not have to match the indiviual range sizes as long as the total size does. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. Function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
   </table>
   </dd>
