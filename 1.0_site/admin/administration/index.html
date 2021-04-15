@@ -1,1302 +1,424 @@
-
-
-
-
 <!doctype html>
 <html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      
-        <meta name="description" content="Distributed Asynchronous Object Storage">
-      
-      
-        <link rel="canonical" href="http://daos.io/admin/administration/">
-      
-      
-        <meta name="author" content="DAOS Project">
-      
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
-    
-    
-      
-        <title>System Administration - DAOS v.1.0</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
-      
-      
-        
-        
-        <meta name="theme-color" content="#546e7a">
-      
-    
-    
-      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
-    
-    
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
-      
-    
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
-    
-    
-    
-      
-    
-    
-  </head>
-  
-    
-    
-    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="blue">
-  
-    <svg class="md-svg">
-      <defs>
-        
-        
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
-        
-      </defs>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="Distributed Asynchronous Object Storage">
+<link rel="canonical" href="http://daos.io/admin/administration/">
+<meta name="author" content="DAOS Project">
+<meta name="lang:clipboard.copy" content="Copy to clipboard">
+<meta name="lang:clipboard.copied" content="Copied to clipboard">
+<meta name="lang:search.language" content="en">
+<meta name="lang:search.pipeline.stopwords" content="True">
+<meta name="lang:search.pipeline.trimmer" content="True">
+<meta name="lang:search.result.none" content="No matching documents">
+<meta name="lang:search.result.one" content="1 matching document">
+<meta name="lang:search.result.other" content="# matching documents">
+<meta name="lang:search.tokenizer" content="[\s\-]+">
+<link rel="shortcut icon" href="../../assets/images/favicon.png">
+<meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
+<title>System Administration - DAOS v.1.0</title>
+<link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+<link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+<meta name="theme-color" content="#546e7a">
+<script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
+<style>
+body, input {
+    font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+code, kbd, pre {
+    font-family: "Ubuntu Mono", "Courier New", Courier, monospace
+}
+</style>
+<link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+<link href="../../../assets/stylesheets/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/stylesheets/styles_1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="blue">
+<svg class="md-svg">
+  <defs>
+    <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github">
+      <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#daos-system-administration" tabindex="0" class="md-skip">
-        Skip to content
-      </a>
-    
-    
-      <header class="md-header" data-md-component="header">
+  </defs>
+</svg>
+<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+<input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a href="#daos-system-administration" tabindex="0" class="md-skip"> Skip to content </a>
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="http://daos.io" title="DAOS v.1.0" aria-label="DAOS v.1.0" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
-        </a>
-      </div>
+    <div class="md-flex">      <div><img src="../../../assets/images/daos_logo_wh.png" width="86" height="61" alt=""/></div>
+
+<div class="md-flex__cell md-flex__cell--shrink"> <a href="http://daos.io" title="DAOS v.1.0" aria-label="DAOS v.1.0" class="md-header-nav__button md-logo"> </a> </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              DAOS v.1.0
-            </span>
-            <span class="md-header-nav__topic">
-              
-                System Administration
-              
-            </span>
-          
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"> <span class="md-header-nav__topic"> DAOS v.1.0 </span> <span class="md-header-nav__topic"> System Administration </span> </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        <div class="md-search" data-md-component="search" role="dialog">
+          <label class="md-search__overlay" for="__search"></label>
+          <div class="md-search__inner" role="search">
+            <form class="md-search__form" name="search">
+              <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+              <label class="md-icon md-search__icon" for="__search"></label>
+              <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1"> &#xE5CD; </button>
+            </form>
+            <div class="md-search__output">
+              <div class="md-search__scrollwrap" data-md-scrollfix>
+                <div class="md-search-result" data-md-component="result">
+                  <div class="md-search-result__meta"> Type to start searching </div>
+                  <ol class="md-search-result__list">
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
+        <div class="md-header-nav__source"> <a href="https://github.com/daos-stack/daos/" title="Go to repository" class="md-source" data-md-source="github">
+          <div class="md-source__icon">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <use xlink:href="#__github" width="24" height="24"></use>
+            </svg>
           </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
+          <div class="md-source__repository"> daos-stack/daos </div>
+          </a> </div>
       </div>
-    </div>
-  </div>
-</div>
-        
-      </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-<a href="https://github.com/daos-stack/daos/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
-  <div class="md-source__repository">
-    daos-stack/daos
-  </div>
-</a>
-          </div>
-        </div>
-      
     </div>
   </nav>
 </header>
-    
-    <div class="md-container">
-      
-        
-      
-      
-        
-
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  <li class="md-tabs__item">
-    
-      <a href="../.." class="md-tabs__link">
-        Home
-      </a>
-    
-  </li>
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../overview/terminology/" class="md-tabs__link">
-          Architecture Overview
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../hardware/" class="md-tabs__link md-tabs__link--active">
-          Administration Guide
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../user/container.md" class="md-tabs__link">
-          User Guide
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../release/release_notes_v1_0.md" class="md-tabs__link">
-          Releases
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../dev/development.md" class="md-tabs__link">
-          Developer Zone
-        </a>
-      
-    </li>
-  
-
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ul>
-  </div>
-</nav>
-      
-      <main class="md-main" role="main">
-        <div class="md-main__inner md-grid" data-md-component="container">
-          
-            
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="http://daos.io" title="DAOS v.1.0" class="md-nav__button md-logo">
-      
-        <i class="md-icon"></i>
-      
-    </a>
-    DAOS v.1.0
-  </label>
-  
-    <div class="md-nav__source">
-      
-
-
-  
-
-<a href="https://github.com/daos-stack/daos/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
+<div class="md-container">
+  <nav class="md-tabs md-tabs--active" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+        <li class="md-tabs__item"> <a href="../.." class="md-tabs__link"> Home </a> </li>
+        <li class="md-tabs__item"> <a href="../../overview/terminology/" class="md-tabs__link"> Architecture Overview </a> </li>
+        <li class="md-tabs__item"> <a href="../hardware/" class="md-tabs__link md-tabs__link--active"> Administration Guide </a> </li>
+        <li class="md-tabs__item"> <a href="../../user/container.md" class="md-tabs__link"> User Guide </a> </li>
+        <li class="md-tabs__item"> <a href="../../release/release_notes_v1_0.md" class="md-tabs__link"> Releases </a> </li>
+        <li class="md-tabs__item"> <a href="../../dev/development.md" class="md-tabs__link"> Developer Zone </a> </li>
+      </ul>
     </div>
-  
-  <div class="md-source__repository">
-    daos-stack/daos
-  </div>
-</a>
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
-      Architecture Overview
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Architecture Overview
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../overview/terminology/" title="Terminology" class="md-nav__link">
-      Terminology
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../overview/architecture.md" title="Architecture" class="md-nav__link">
-      Architecture
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../overview/storage/" title="Storage Model" class="md-nav__link">
-      Storage Model
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../overview/transaction/" title="Transaction Model" class="md-nav__link">
-      Transaction Model
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../overview/fault/" title="Fault Model" class="md-nav__link">
-      Fault Model
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../overview/security/" title="Security Model" class="md-nav__link">
-      Security Model
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    
-    <label class="md-nav__link" for="nav-3">
-      Administration Guide
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Administration Guide
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../hardware/" title="Hardware Requirements" class="md-nav__link">
-      Hardware Requirements
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../installation/" title="Software Installation" class="md-nav__link">
-      Software Installation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../predeployment_check.md" title="Pre-deployment Checklist" class="md-nav__link">
-      Pre-deployment Checklist
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../deployment/" title="System Deployment" class="md-nav__link">
-      System Deployment
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        System Administration
-      </label>
-    
-    <a href="./" title="System Administration" class="md-nav__link md-nav__link--active">
-      System Administration
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system-monitoring" class="md-nav__link">
-    System Monitoring
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#system-operations" class="md-nav__link">
-    System Operations
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#full-shutdown-and-restart" class="md-nav__link">
-    Full Shutdown and Restart
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fault-domain-maintenance-and-reintegration" class="md-nav__link">
-    Fault Domain Maintenance and Reintegration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#daos-system-extension" class="md-nav__link">
-    DAOS System Extension
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fault-management" class="md-nav__link">
-    Fault Management
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fault-detection-isolation" class="md-nav__link">
-    Fault Detection &amp; Isolation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rebuild-throttling" class="md-nav__link">
-    Rebuild Throttling
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#software-upgrade" class="md-nav__link">
-    Software Upgrade
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#protocol-interoperability" class="md-nav__link">
-    Protocol Interoperability
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#persistent-schema-compatibility-and-update" class="md-nav__link">
-    Persistent Schema Compatibility and Update
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storage-scrubbing" class="md-nav__link">
-    Storage Scrubbing
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../pool_operations/" title="Pool Operations" class="md-nav__link">
-      Pool Operations
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../tiering_uns.md" title="Tiering and Unified Namespace" class="md-nav__link">
-      Tiering and Unified Namespace
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../performance_tuning/" title="Performance Tuning" class="md-nav__link">
-      Performance Tuning
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../troubleshooting/" title="Troubleshooting" class="md-nav__link">
-      Troubleshooting
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../utilities_examples/" title="Utilities and Usage Examples" class="md-nav__link">
-      Utilities and Usage Examples
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../env_variables/" title="Environment Variables" class="md-nav__link">
-      Environment Variables
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      User Guide
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        User Guide
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../user/container.md" title="Container Management" class="md-nav__link">
-      Container Management
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../user/interface.md" title="Native Programming Interface" class="md-nav__link">
-      Native Programming Interface
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../user/posix.md" title="POSIX Namespace" class="md-nav__link">
-      POSIX Namespace
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../user/mpi-io.md" title="MPI-IO Support" class="md-nav__link">
-      MPI-IO Support
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../user/hdf5.md" title="HDF5 Support" class="md-nav__link">
-      HDF5 Support
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../user/spark.md" title="Spark and Hadoop" class="md-nav__link">
-      Spark and Hadoop
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Releases
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Releases
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../release/release_notes_v1_0.md" title="Release Notes v1.0" class="md-nav__link">
-      Release Notes v1.0
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../release/support_matrix.md" title="Support Matrix" class="md-nav__link">
-      Support Matrix
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      Developer Zone
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        Developer Zone
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../dev/development.md" title="Dev Environment" class="md-nav__link">
-      Dev Environment
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../dev/contributing.md" title="Contributing" class="md-nav__link">
-      Contributing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://github.com/daos-stack/daos/blob/master/src/README.md" title="DAOS Internals" class="md-nav__link">
-      DAOS Internals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../html/" title="DAOS API Documentation" class="md-nav__link">
-      DAOS API Documentation
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="https://wiki.hpdd.intel.com" title="Community Wiki" class="md-nav__link">
-      Community Wiki
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="https://wiki.hpdd.intel.com/display/DC/Roadmap/" title="Roadmap" class="md-nav__link">
-      Roadmap
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="https://daos.groups.io/g/daos" title="Mailing list" class="md-nav__link">
-      Mailing list
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="https://jira.hpdd.intel.com/projects/DAOS" title="Issue tracker" class="md-nav__link">
-      Issue tracker
-    </a>
-  </li>
-
-    
-  </ul>
-</nav>
-                  </div>
+  </nav>
+	 <section>
+	  <div class="dropdown show"> <a class="btn btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select Version </a>
+	    <div class="dropdown-menu">
+	      <a class="dropdown-item" href="../index.html">v.Dev</a> <a class="dropdown-item" href="../1.2_site/index.html" >v1.2</a> <a class="dropdown-item disabled" href="../1.0_site/index.html">v1.0</a>
+	      </div>
+      </div>
+	</section>
+  <main class="md-main" role="main">
+    <div class="md-main__inner md-grid" data-md-component="container">
+      <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+        <div class="md-sidebar__scrollwrap">
+          <div class="md-sidebar__inner">
+            <nav class="md-nav md-nav--primary" data-md-level="0">
+              <label class="md-nav__title md-nav__title--site" for="__drawer"> <a href="http://daos.io" title="DAOS v.1.0" class="md-nav__button md-logo"> </a> DAOS v.1.0 </label>
+              <div class="md-nav__source"> <a href="https://github.com/daos-stack/daos/" title="Go to repository" class="md-source" data-md-source="github">
+                <div class="md-source__icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24">
+                    <use xlink:href="#__github" width="24" height="24"></use>
+                  </svg>
                 </div>
-              </div>
-            
-            
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system-monitoring" class="md-nav__link">
-    System Monitoring
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#system-operations" class="md-nav__link">
-    System Operations
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#full-shutdown-and-restart" class="md-nav__link">
-    Full Shutdown and Restart
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fault-domain-maintenance-and-reintegration" class="md-nav__link">
-    Fault Domain Maintenance and Reintegration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#daos-system-extension" class="md-nav__link">
-    DAOS System Extension
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fault-management" class="md-nav__link">
-    Fault Management
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fault-detection-isolation" class="md-nav__link">
-    Fault Detection &amp; Isolation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rebuild-throttling" class="md-nav__link">
-    Rebuild Throttling
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#software-upgrade" class="md-nav__link">
-    Software Upgrade
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#protocol-interoperability" class="md-nav__link">
-    Protocol Interoperability
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#persistent-schema-compatibility-and-update" class="md-nav__link">
-    Persistent Schema Compatibility and Update
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storage-scrubbing" class="md-nav__link">
-    Storage Scrubbing
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                  <a href="https://github.com/daos-stack/daos/edit/master/docs/admin/administration.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
-                
-                
-                <h1 id="daos-system-administration">DAOS System Administration<a class="headerlink" href="#daos-system-administration" title="Permanent link">&para;</a></h1>
-<h2 id="system-monitoring">System Monitoring<a class="headerlink" href="#system-monitoring" title="Permanent link">&para;</a></h2>
-<p>System monitoring and telemetry data will be provided as part of the
-control plane and will be documented in a future revision.</p>
-<h2 id="system-operations">System Operations<a class="headerlink" href="#system-operations" title="Permanent link">&para;</a></h2>
-<h3 id="full-shutdown-and-restart">Full Shutdown and Restart<a class="headerlink" href="#full-shutdown-and-restart" title="Permanent link">&para;</a></h3>
-<p>Details on how to support proper DAOS server shutdown will be provided
-in a future revision.</p>
-<h3 id="fault-domain-maintenance-and-reintegration">Fault Domain Maintenance and Reintegration<a class="headerlink" href="#fault-domain-maintenance-and-reintegration" title="Permanent link">&para;</a></h3>
-<p>Details on how to drain an individual storage node or fault domain (e.g.
-rack) in preparation for maintenance activity and how to reintegrate it
-will be provided in a future revision.</p>
-<h3 id="daos-system-extension">DAOS System Extension<a class="headerlink" href="#daos-system-extension" title="Permanent link">&para;</a></h3>
-<p>Ability to add new DAOS server instances to a pre-existing DAOS system
-will be documented in a future revision.</p>
-<h2 id="fault-management">Fault Management<a class="headerlink" href="#fault-management" title="Permanent link">&para;</a></h2>
-<p>DAOS relies on massively distributed single-ported storage. Each target
-is thus effectively a single point of failure. DAOS achieves
-availability and durability of both data and metadata by providing
-redundancy across targets in different fault domains.</p>
-<h3 id="fault-detection-isolation">Fault Detection &amp; Isolation<a class="headerlink" href="#fault-detection-isolation" title="Permanent link">&para;</a></h3>
-<p>DAOS servers are monitored within a DAOS system through a gossip-based
-protocol called SWIM<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> that provides accurate, efficient, and scalable
-server fault detection.</p>
-<p>Storage attached to each DAOS target is monitored through periodic local
-health assessment. Whenever a local storage I/O error is returned to the
-DAOS server, an internal health check procedure will be called
-automatically. This procedure makes an overall health assessment by
-analyzing the IO error code and device SMART/Health data. If the result
-is negative, the target will be marked as faulty, and further I/Os to
-this target will be rejected and re-routed.</p>
-<p>Once detected, the faulty target or servers (effectively a set of
-targets) must be excluded from each pool membership. This process is
-triggered either manually by the administrator or automatically (see
-next section for more information). Upon exclusion from the pool map,
-each target starts the collective rebuild process automatically to
-restore data redundancy. The rebuild process is designed to operate
-online while servers continue to process incoming I/O operations from
-applications.</p>
-<p>Tools to monitor and manage rebuild are still under development.</p>
-<h3 id="rebuild-throttling">Rebuild Throttling<a class="headerlink" href="#rebuild-throttling" title="Permanent link">&para;</a></h3>
-<p>The rebuild process may consume many resources on each server and
-can be throttled to reduce the impact on application performance. This
-current logic relies on CPU cycles on the storage nodes. By default, the
-rebuild process is configured to consume up to 30% of the CPU cycles,
-leaving the other 70% for regular I/O operations.</p>
-<p>During the rebuild process, the user can set the throttle to guarantee the
-rebuild will not use more resource than the user setting. The user can
-only set the CPU cycle for now. For example, if the user set the
-throttle to 50, then the rebuild will at most use 50% of the CPU cycle to do
-the rebuild job. The default rebuild throttle for CPU cycle is 30. This
-parameter can be changed via the daos_mgmt_set_params() API call and
-will be eventually available through the management tools.</p>
-<h2 id="software-upgrade">Software Upgrade<a class="headerlink" href="#software-upgrade" title="Permanent link">&para;</a></h2>
-<p>Interoperability in DAOS is handled via protocol and schema versioning
-for persistent data structures. Further instructions on how to manage
-DAOS software upgrades will be provided in a future revision.</p>
-<h3 id="protocol-interoperability">Protocol Interoperability<a class="headerlink" href="#protocol-interoperability" title="Permanent link">&para;</a></h3>
-<p>Limited protocol interoperability is provided by the DAOS storage stack.
-Version compatibility checks will be performed to verify that:</p>
-<ul>
-<li>
-<p>All targets in the same pool run the same protocol version.</p>
-</li>
-<li>
-<p>Client libraries linked with the application may be up to one
-    protocol version older than the targets.</p>
-</li>
-</ul>
-<p>If a protocol version mismatch is detected among storage targets in the
-same pool, the entire DAOS system will fail to start up and will report
-failure to the control API. Similarly, the connection from clients
-running a protocol version incompatible with the targets will return an
-error.</p>
-<h3 id="persistent-schema-compatibility-and-update">Persistent Schema Compatibility and Update<a class="headerlink" href="#persistent-schema-compatibility-and-update" title="Permanent link">&para;</a></h3>
-<p>The schema of persistent data structures may evolve from time to time to
-fix bugs, add new optimizations, or support new features. To that end,
-the persistent data structures support schema versioning.</p>
-<p>Upgrading the schema version will not be performed automatically and
-must be initiated by the administrator. A dedicated upgrade tool will be
-provided to upgrade the schema version to the latest one. All targets in
-the same pool must have the same schema version. Version checks are
-performed at system initialization time to enforce this constraint.</p>
-<p>To limit the validation matrix, each new DAOS release will be published
-with a list of supported schema versions. To run with the new DAOS
-release, administrators will then need to upgrade the DAOS system to one
-of the supported schema versions. New pool shards will always be
-formatted with the latest version. This versioning schema only applies
-to a data structure stored in persistent memory and not to block storage
-that only stores user data with no metadata.</p>
-<h2 id="storage-scrubbing">Storage Scrubbing<a class="headerlink" href="#storage-scrubbing" title="Permanent link">&para;</a></h2>
-<p>Support for end-to-end data integrity is planned for DAOS v1.2 and
-background checksum scrubbing for v2.2. Once available, that
-functionality will be documented here.</p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1028914&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
-                
-                  
-                
-                
-              
-              
-                
-
-
-              
-            </article>
+                <div class="md-source__repository"> daos-stack/daos </div>
+                </a> </div>
+              <ul class="md-nav__list" data-md-scrollfix>
+                <li class="md-nav__item"> <a href="../.." title="Home" class="md-nav__link"> Home </a> </li>
+                <li class="md-nav__item md-nav__item--nested">
+                  <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+                  <label class="md-nav__link" for="nav-2"> Architecture Overview </label>
+                  <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+                    <label class="md-nav__title" for="nav-2"> Architecture Overview </label>
+                    <ul class="md-nav__list" data-md-scrollfix>
+                      <li class="md-nav__item"> <a href="../../overview/terminology/" title="Terminology" class="md-nav__link"> Terminology </a> </li>
+                      <li class="md-nav__item"> <a href="../../overview/architecture.md" title="Architecture" class="md-nav__link"> Architecture </a> </li>
+                      <li class="md-nav__item"> <a href="../../overview/storage/" title="Storage Model" class="md-nav__link"> Storage Model </a> </li>
+                      <li class="md-nav__item"> <a href="../../overview/transaction/" title="Transaction Model" class="md-nav__link"> Transaction Model </a> </li>
+                      <li class="md-nav__item"> <a href="../../overview/fault/" title="Fault Model" class="md-nav__link"> Fault Model </a> </li>
+                      <li class="md-nav__item"> <a href="../../overview/security/" title="Security Model" class="md-nav__link"> Security Model </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+                  <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+                  <label class="md-nav__link" for="nav-3"> Administration Guide </label>
+                  <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+                    <label class="md-nav__title" for="nav-3"> Administration Guide </label>
+                    <ul class="md-nav__list" data-md-scrollfix>
+                      <li class="md-nav__item"> <a href="../hardware/" title="Hardware Requirements" class="md-nav__link"> Hardware Requirements </a> </li>
+                      <li class="md-nav__item"> <a href="../installation/" title="Software Installation" class="md-nav__link"> Software Installation </a> </li>
+                      <li class="md-nav__item"> <a href="../predeployment_check.md" title="Pre-deployment Checklist" class="md-nav__link"> Pre-deployment Checklist </a> </li>
+                      <li class="md-nav__item"> <a href="../deployment/" title="System Deployment" class="md-nav__link"> System Deployment </a> </li>
+                      <li class="md-nav__item md-nav__item--active">
+                        <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+                        <label class="md-nav__link md-nav__link--active" for="__toc"> System Administration </label>
+                        <a href="./" title="System Administration" class="md-nav__link md-nav__link--active"> System Administration </a>
+                        <nav class="md-nav md-nav--secondary">
+                          <label class="md-nav__title" for="__toc">Table of contents</label>
+                          <ul class="md-nav__list" data-md-scrollfix>
+                            <li class="md-nav__item"> <a href="#system-monitoring" class="md-nav__link"> System Monitoring </a> </li>
+                            <li class="md-nav__item"> <a href="#system-operations" class="md-nav__link"> System Operations </a>
+                              <nav class="md-nav">
+                                <ul class="md-nav__list">
+                                  <li class="md-nav__item"> <a href="#full-shutdown-and-restart" class="md-nav__link"> Full Shutdown and Restart </a> </li>
+                                  <li class="md-nav__item"> <a href="#fault-domain-maintenance-and-reintegration" class="md-nav__link"> Fault Domain Maintenance and Reintegration </a> </li>
+                                  <li class="md-nav__item"> <a href="#daos-system-extension" class="md-nav__link"> DAOS System Extension </a> </li>
+                                </ul>
+                              </nav>
+                            </li>
+                            <li class="md-nav__item"> <a href="#fault-management" class="md-nav__link"> Fault Management </a>
+                              <nav class="md-nav">
+                                <ul class="md-nav__list">
+                                  <li class="md-nav__item"> <a href="#fault-detection-isolation" class="md-nav__link"> Fault Detection &amp; Isolation </a> </li>
+                                  <li class="md-nav__item"> <a href="#rebuild-throttling" class="md-nav__link"> Rebuild Throttling </a> </li>
+                                </ul>
+                              </nav>
+                            </li>
+                            <li class="md-nav__item"> <a href="#software-upgrade" class="md-nav__link"> Software Upgrade </a>
+                              <nav class="md-nav">
+                                <ul class="md-nav__list">
+                                  <li class="md-nav__item"> <a href="#protocol-interoperability" class="md-nav__link"> Protocol Interoperability </a> </li>
+                                  <li class="md-nav__item"> <a href="#persistent-schema-compatibility-and-update" class="md-nav__link"> Persistent Schema Compatibility and Update </a> </li>
+                                </ul>
+                              </nav>
+                            </li>
+                            <li class="md-nav__item"> <a href="#storage-scrubbing" class="md-nav__link"> Storage Scrubbing </a> </li>
+                          </ul>
+                        </nav>
+                      </li>
+                      <li class="md-nav__item"> <a href="../pool_operations/" title="Pool Operations" class="md-nav__link"> Pool Operations </a> </li>
+                      <li class="md-nav__item"> <a href="../tiering_uns.md" title="Tiering and Unified Namespace" class="md-nav__link"> Tiering and Unified Namespace </a> </li>
+                      <li class="md-nav__item"> <a href="../performance_tuning/" title="Performance Tuning" class="md-nav__link"> Performance Tuning </a> </li>
+                      <li class="md-nav__item"> <a href="../troubleshooting/" title="Troubleshooting" class="md-nav__link"> Troubleshooting </a> </li>
+                      <li class="md-nav__item"> <a href="../utilities_examples/" title="Utilities and Usage Examples" class="md-nav__link"> Utilities and Usage Examples </a> </li>
+                      <li class="md-nav__item"> <a href="../env_variables/" title="Environment Variables" class="md-nav__link"> Environment Variables </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item md-nav__item--nested">
+                  <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+                  <label class="md-nav__link" for="nav-4"> User Guide </label>
+                  <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+                    <label class="md-nav__title" for="nav-4"> User Guide </label>
+                    <ul class="md-nav__list" data-md-scrollfix>
+                      <li class="md-nav__item"> <a href="../../user/container.md" title="Container Management" class="md-nav__link"> Container Management </a> </li>
+                      <li class="md-nav__item"> <a href="../../user/interface.md" title="Native Programming Interface" class="md-nav__link"> Native Programming Interface </a> </li>
+                      <li class="md-nav__item"> <a href="../../user/posix.md" title="POSIX Namespace" class="md-nav__link"> POSIX Namespace </a> </li>
+                      <li class="md-nav__item"> <a href="../../user/mpi-io.md" title="MPI-IO Support" class="md-nav__link"> MPI-IO Support </a> </li>
+                      <li class="md-nav__item"> <a href="../../user/hdf5.md" title="HDF5 Support" class="md-nav__link"> HDF5 Support </a> </li>
+                      <li class="md-nav__item"> <a href="../../user/spark.md" title="Spark and Hadoop" class="md-nav__link"> Spark and Hadoop </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item md-nav__item--nested">
+                  <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+                  <label class="md-nav__link" for="nav-5"> Releases </label>
+                  <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+                    <label class="md-nav__title" for="nav-5"> Releases </label>
+                    <ul class="md-nav__list" data-md-scrollfix>
+                      <li class="md-nav__item"> <a href="../../release/release_notes_v1_0.md" title="Release Notes v1.0" class="md-nav__link"> Release Notes v1.0 </a> </li>
+                      <li class="md-nav__item"> <a href="../../release/support_matrix.md" title="Support Matrix" class="md-nav__link"> Support Matrix </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item md-nav__item--nested">
+                  <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+                  <label class="md-nav__link" for="nav-6"> Developer Zone </label>
+                  <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+                    <label class="md-nav__title" for="nav-6"> Developer Zone </label>
+                    <ul class="md-nav__list" data-md-scrollfix>
+                      <li class="md-nav__item"> <a href="../../dev/development.md" title="Dev Environment" class="md-nav__link"> Dev Environment </a> </li>
+                      <li class="md-nav__item"> <a href="../../dev/contributing.md" title="Contributing" class="md-nav__link"> Contributing </a> </li>
+                      <li class="md-nav__item"> <a href="https://github.com/daos-stack/daos/blob/master/src/README.md" title="DAOS Internals" class="md-nav__link"> DAOS Internals </a> </li>
+                      <li class="md-nav__item"> <a href="../../html/" title="DAOS API Documentation" class="md-nav__link"> DAOS API Documentation </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item"> <a href="https://wiki.hpdd.intel.com" title="Community Wiki" class="md-nav__link"> Community Wiki </a> </li>
+                <li class="md-nav__item"> <a href="https://wiki.hpdd.intel.com/display/DC/Roadmap/" title="Roadmap" class="md-nav__link"> Roadmap </a> </li>
+                <li class="md-nav__item"> <a href="https://daos.groups.io/g/daos" title="Mailing list" class="md-nav__link"> Mailing list </a> </li>
+                <li class="md-nav__item"> <a href="https://jira.hpdd.intel.com/projects/DAOS" title="Issue tracker" class="md-nav__link"> Issue tracker </a> </li>
+              </ul>
+            </nav>
           </div>
         </div>
-      </main>
-      
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../deployment/" title="System Deployment" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                System Deployment
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../pool_operations/" title="Pool Operations" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Pool Operations
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        powered by
-        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs</a>
       </div>
-      
+      <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+        <div class="md-sidebar__scrollwrap">
+          <div class="md-sidebar__inner">
+            <nav class="md-nav md-nav--secondary">
+              <label class="md-nav__title" for="__toc">Table of contents</label>
+              <ul class="md-nav__list" data-md-scrollfix>
+                <li class="md-nav__item"> <a href="#system-monitoring" class="md-nav__link"> System Monitoring </a> </li>
+                <li class="md-nav__item"> <a href="#system-operations" class="md-nav__link"> System Operations </a>
+                  <nav class="md-nav">
+                    <ul class="md-nav__list">
+                      <li class="md-nav__item"> <a href="#full-shutdown-and-restart" class="md-nav__link"> Full Shutdown and Restart </a> </li>
+                      <li class="md-nav__item"> <a href="#fault-domain-maintenance-and-reintegration" class="md-nav__link"> Fault Domain Maintenance and Reintegration </a> </li>
+                      <li class="md-nav__item"> <a href="#daos-system-extension" class="md-nav__link"> DAOS System Extension </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item"> <a href="#fault-management" class="md-nav__link"> Fault Management </a>
+                  <nav class="md-nav">
+                    <ul class="md-nav__list">
+                      <li class="md-nav__item"> <a href="#fault-detection-isolation" class="md-nav__link"> Fault Detection &amp; Isolation </a> </li>
+                      <li class="md-nav__item"> <a href="#rebuild-throttling" class="md-nav__link"> Rebuild Throttling </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item"> <a href="#software-upgrade" class="md-nav__link"> Software Upgrade </a>
+                  <nav class="md-nav">
+                    <ul class="md-nav__list">
+                      <li class="md-nav__item"> <a href="#protocol-interoperability" class="md-nav__link"> Protocol Interoperability </a> </li>
+                      <li class="md-nav__item"> <a href="#persistent-schema-compatibility-and-update" class="md-nav__link"> Persistent Schema Compatibility and Update </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item"> <a href="#storage-scrubbing" class="md-nav__link"> Storage Scrubbing </a> </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="md-content">
+        <article class="md-content__inner md-typeset"> <a href="https://github.com/daos-stack/daos/edit/master/docs/admin/administration.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+          <h1 id="daos-system-administration">DAOS System Administration<a class="headerlink" href="#daos-system-administration" title="Permanent link">&para;</a></h1>
+          <h2 id="system-monitoring">System Monitoring<a class="headerlink" href="#system-monitoring" title="Permanent link">&para;</a></h2>
+          <p>System monitoring and telemetry data will be provided as part of the
+            control plane and will be documented in a future revision.</p>
+          <h2 id="system-operations">System Operations<a class="headerlink" href="#system-operations" title="Permanent link">&para;</a></h2>
+          <h3 id="full-shutdown-and-restart">Full Shutdown and Restart<a class="headerlink" href="#full-shutdown-and-restart" title="Permanent link">&para;</a></h3>
+          <p>Details on how to support proper DAOS server shutdown will be provided
+            in a future revision.</p>
+          <h3 id="fault-domain-maintenance-and-reintegration">Fault Domain Maintenance and Reintegration<a class="headerlink" href="#fault-domain-maintenance-and-reintegration" title="Permanent link">&para;</a></h3>
+          <p>Details on how to drain an individual storage node or fault domain (e.g.
+            rack) in preparation for maintenance activity and how to reintegrate it
+            will be provided in a future revision.</p>
+          <h3 id="daos-system-extension">DAOS System Extension<a class="headerlink" href="#daos-system-extension" title="Permanent link">&para;</a></h3>
+          <p>Ability to add new DAOS server instances to a pre-existing DAOS system
+            will be documented in a future revision.</p>
+          <h2 id="fault-management">Fault Management<a class="headerlink" href="#fault-management" title="Permanent link">&para;</a></h2>
+          <p>DAOS relies on massively distributed single-ported storage. Each target
+            is thus effectively a single point of failure. DAOS achieves
+            availability and durability of both data and metadata by providing
+            redundancy across targets in different fault domains.</p>
+          <h3 id="fault-detection-isolation">Fault Detection &amp; Isolation<a class="headerlink" href="#fault-detection-isolation" title="Permanent link">&para;</a></h3>
+          <p>DAOS servers are monitored within a DAOS system through a gossip-based
+            protocol called SWIM<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> that provides accurate, efficient, and scalable
+            server fault detection.</p>
+          <p>Storage attached to each DAOS target is monitored through periodic local
+            health assessment. Whenever a local storage I/O error is returned to the
+            DAOS server, an internal health check procedure will be called
+            automatically. This procedure makes an overall health assessment by
+            analyzing the IO error code and device SMART/Health data. If the result
+            is negative, the target will be marked as faulty, and further I/Os to
+            this target will be rejected and re-routed.</p>
+          <p>Once detected, the faulty target or servers (effectively a set of
+            targets) must be excluded from each pool membership. This process is
+            triggered either manually by the administrator or automatically (see
+            next section for more information). Upon exclusion from the pool map,
+            each target starts the collective rebuild process automatically to
+            restore data redundancy. The rebuild process is designed to operate
+            online while servers continue to process incoming I/O operations from
+            applications.</p>
+          <p>Tools to monitor and manage rebuild are still under development.</p>
+          <h3 id="rebuild-throttling">Rebuild Throttling<a class="headerlink" href="#rebuild-throttling" title="Permanent link">&para;</a></h3>
+          <p>The rebuild process may consume many resources on each server and
+            can be throttled to reduce the impact on application performance. This
+            current logic relies on CPU cycles on the storage nodes. By default, the
+            rebuild process is configured to consume up to 30% of the CPU cycles,
+            leaving the other 70% for regular I/O operations.</p>
+          <p>During the rebuild process, the user can set the throttle to guarantee the
+            rebuild will not use more resource than the user setting. The user can
+            only set the CPU cycle for now. For example, if the user set the
+            throttle to 50, then the rebuild will at most use 50% of the CPU cycle to do
+            the rebuild job. The default rebuild throttle for CPU cycle is 30. This
+            parameter can be changed via the daos_mgmt_set_params() API call and
+            will be eventually available through the management tools.</p>
+          <h2 id="software-upgrade">Software Upgrade<a class="headerlink" href="#software-upgrade" title="Permanent link">&para;</a></h2>
+          <p>Interoperability in DAOS is handled via protocol and schema versioning
+            for persistent data structures. Further instructions on how to manage
+            DAOS software upgrades will be provided in a future revision.</p>
+          <h3 id="protocol-interoperability">Protocol Interoperability<a class="headerlink" href="#protocol-interoperability" title="Permanent link">&para;</a></h3>
+          <p>Limited protocol interoperability is provided by the DAOS storage stack.
+            Version compatibility checks will be performed to verify that:</p>
+          <ul>
+            <li>
+              <p>All targets in the same pool run the same protocol version.</p>
+            </li>
+            <li>
+              <p>Client libraries linked with the application may be up to one
+                protocol version older than the targets.</p>
+            </li>
+          </ul>
+          <p>If a protocol version mismatch is detected among storage targets in the
+            same pool, the entire DAOS system will fail to start up and will report
+            failure to the control API. Similarly, the connection from clients
+            running a protocol version incompatible with the targets will return an
+            error.</p>
+          <h3 id="persistent-schema-compatibility-and-update">Persistent Schema Compatibility and Update<a class="headerlink" href="#persistent-schema-compatibility-and-update" title="Permanent link">&para;</a></h3>
+          <p>The schema of persistent data structures may evolve from time to time to
+            fix bugs, add new optimizations, or support new features. To that end,
+            the persistent data structures support schema versioning.</p>
+          <p>Upgrading the schema version will not be performed automatically and
+            must be initiated by the administrator. A dedicated upgrade tool will be
+            provided to upgrade the schema version to the latest one. All targets in
+            the same pool must have the same schema version. Version checks are
+            performed at system initialization time to enforce this constraint.</p>
+          <p>To limit the validation matrix, each new DAOS release will be published
+            with a list of supported schema versions. To run with the new DAOS
+            release, administrators will then need to upgrade the DAOS system to one
+            of the supported schema versions. New pool shards will always be
+            formatted with the latest version. This versioning schema only applies
+            to a data structure stored in persistent memory and not to block storage
+            that only stores user data with no metadata.</p>
+          <h2 id="storage-scrubbing">Storage Scrubbing<a class="headerlink" href="#storage-scrubbing" title="Permanent link">&para;</a></h2>
+          <p>Support for end-to-end data integrity is planned for DAOS v1.2 and
+            background checksum scrubbing for v2.2. Once available, that
+            functionality will be documented here.</p>
+          <div class="footnote">
+            <hr />
+            <ol>
+              <li id="fn:1">
+                <p>https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1028914&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+              </li>
+            </ol>
+          </div>
+        </article>
+      </div>
     </div>
-  </div>
-</footer>
-      
+  </main>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid"> <a href="../deployment/" title="System Deployment" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+        <div class="md-flex__cell md-flex__cell--shrink"> <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i> </div>
+        <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"> <span class="md-flex__ellipsis"> <span class="md-footer-nav__direction"> Previous </span> System Deployment </span> </div>
+        </a> <a href="../pool_operations/" title="Pool Operations" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+        <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"> <span class="md-flex__ellipsis"> <span class="md-footer-nav__direction"> Next </span> Pool Operations </span> </div>
+        <div class="md-flex__cell md-flex__cell--shrink"> <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i> </div>
+        </a> </nav>
     </div>
-    
-      <script src="../../assets/javascripts/application.c33a9706.js"></script>
-      
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
-      
-    
-  </body>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright"> powered by <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a> and <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"> Material for MkDocs</a> </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="../../../assets/javascripts/application.c33a9706.js"></script>
+<script src="../../../js/jquery-3.4.1.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
+<script src="../../../js/bootstrap-4.4.1.js"></script>
+<script>app.initialize({version:"1.1.2",url:{base:"."}})</script>
+</body>
 </html>
