@@ -18,7 +18,7 @@
 <meta name="lang:search.tokenizer" content="[\s\-]+">
 <link rel="shortcut icon" href="../../assets/images/favicon.png">
 <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
-<title>System Deployment - DAOS v.Master</title>
+<title>System Deployment - DAOS v1.2</title>
 <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
 <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
 <meta name="theme-color" content="#546e7a">
@@ -34,7 +34,7 @@ code, kbd, pre {
 }
 </style>
 <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
-<link href="../../assets/stylesheets/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+<link href="../../css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
 <link href="../../assets/stylesheets/styles_1.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -51,49 +51,50 @@ code, kbd, pre {
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
 <a href="#system-deployment" tabindex="0" class="md-skip"> Skip to content </a>
 <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex"> <img src="../../assets/images/daos_logo_wh.png" width="86" height="60" alt=""/>
-      <div class="md-flex__cell md-flex__cell--shrink"> <a href="http://daos.io" title="DAOS v.Master" aria-label="DAOS v.Master" class="md-header-nav__button md-logo"> </a> </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"> <span class="md-header-nav__topic"> DAOS v.Master </span> <span class="md-header-nav__topic"> System Deployment </span> </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-        <div class="md-search" data-md-component="search" role="dialog">
-          <label class="md-search__overlay" for="__search"></label>
-          <div class="md-search__inner" role="search">
-            <form class="md-search__form" name="search">
-              <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-              <label class="md-icon md-search__icon" for="__search"></label>
-              <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1"> &#xE5CD; </button>
-            </form>
-            <div class="md-search__output">
-              <div class="md-search__scrollwrap" data-md-scrollfix>
-                <div class="md-search-result" data-md-component="result">
-                  <div class="md-search-result__meta"> Type to start searching </div>
-                  <ol class="md-search-result__list">
-                  </ol>
-                </div>
-              </div>
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex">
+  <div><img src="../../assets/images/daos_logo_wh.png" width="86" height="61" alt=""/></div>
+  <div class="md-flex__cell md-flex__cell--shrink">
+    <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+  </div>
+  <div class="md-flex__cell md-flex__cell--stretch">
+    <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"> <span class="md-header-nav__topic"> DAOS v1.2 </span> <span class="md-header-nav__topic"> System Deployment </span> </div>
+  </div>
+  <div class="md-flex__cell md-flex__cell--shrink">
+    <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+    <div class="md-search" data-md-component="search" role="dialog">
+      <label class="md-search__overlay" for="__search"></label>
+      <div class="md-search__inner" role="search">
+        <form class="md-search__form" name="search">
+          <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+          <label class="md-icon md-search__icon" for="__search"></label>
+          <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1"> &#xE5CD; </button>
+        </form>
+        <div class="md-search__output">
+          <div class="md-search__scrollwrap" data-md-scrollfix>
+            <div class="md-search-result" data-md-component="result">
+              <div class="md-search-result__meta"> Type to start searching </div>
+              <ol class="md-search-result__list">
+              </ol>
             </div>
           </div>
         </div>
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <div class="md-header-nav__source"> <a href="https://github.com/daos-stack/daos/" title="Go to repository" class="md-source" data-md-source="github">
-          <div class="md-source__icon">
-            <svg viewBox="0 0 24 24" width="24" height="24">
-              <use xlink:href="#__github" width="24" height="24"></use>
-            </svg>
-          </div>
-          <div class="md-source__repository"> daos-stack/daos </div>
-          </a> </div>
-      </div>
     </div>
-  </nav>
+  </div>
+  <div class="md-flex__cell md-flex__cell--shrink">
+    <div class="md-header-nav__source"> <a href="https://github.com/daos-stack/daos/" title="Go to repository" class="md-source" data-md-source="github">
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+      <div class="md-source__repository"> daos-stack/daos </div>
+      </a> </div>
+  </div>
+	</div></div>
+</nav>
 </header>
 <div class="md-container">
   <nav class="md-tabs md-tabs--active" data-md-component="tabs">
@@ -108,13 +109,13 @@ code, kbd, pre {
       </ul>
     </div>
   </nav>
-	 <section>
-	   <div class="dropdown show"> <a class="btn btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select Version </a>
-		   <div class="dropdown-menu">
-		    
-		     <a class="dropdown-item disabled" href="#" >Master</a> <a class="dropdown-item" href="../../1.2_site/index.html">1.2</a><a class="dropdown-item" href="../../1.0_site/index.html">1.0</a>
-	     </div>
-		    </div>
+  <section>
+      <div class="dropdown show">
+  <div class="dropdown show col-xl-12"> <a class="btn btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> DAOS Version</a>
+    <div class="dropdown-menu"> <a class="dropdown-header">Select Version</a> <a class="dropdown-item" href="devbranch/index.html">Dev Branch</a> <a class="dropdown-item disabled" href="#">1.2</a><a class="dropdown-item" href="v1.0/index.html">1.0</a> </div>
+  </div>
+      </div>
+
   </section>
   <main class="md-main" role="main">
     <div class="md-main__inner md-grid" data-md-component="container">
@@ -122,7 +123,7 @@ code, kbd, pre {
         <div class="md-sidebar__scrollwrap">
           <div class="md-sidebar__inner">
             <nav class="md-nav md-nav--primary" data-md-level="0">
-              <label class="md-nav__title md-nav__title--site" for="__drawer"> <a href="http://daos.io" title="DAOS v.Master" class="md-nav__button md-logo"> <i class="md-icon"></i> </a> DAOS v.Master </label>
+              <label class="md-nav__title md-nav__title--site" for="__drawer"> <a href="http://daos.io" title="DAOS v1.2" class="md-nav__button md-logo"> <i class="md-icon"></i> </a> DAOS v1.2 </label>
               <div class="md-nav__source"> <a href="https://github.com/daos-stack/daos/" title="Go to repository" class="md-source" data-md-source="github">
                 <div class="md-source__icon">
                   <svg viewBox="0 0 24 24" width="24" height="24">
@@ -258,6 +259,7 @@ code, kbd, pre {
                       <li class="md-nav__item"> <a href="../../user/mpi-io/" title="MPI-IO Support" class="md-nav__link"> MPI-IO Support </a> </li>
                       <li class="md-nav__item"> <a href="../../user/hdf5/" title="HDF5 Support" class="md-nav__link"> HDF5 Support </a> </li>
                       <li class="md-nav__item"> <a href="../../user/spark/" title="Spark and Hadoop" class="md-nav__link"> Spark and Hadoop </a> </li>
+                      <li class="md-nav__item"> <a href="../../user/datamover/" title="Data Mover" class="md-nav__link"> Data Mover </a> </li>
                     </ul>
                   </nav>
                 </li>
@@ -385,8 +387,8 @@ code, kbd, pre {
             storage hardware provisioning and would typically be run from a login
             node.</p>
           <p>After <code>daos_server</code> instances have been started on each storage node for the
-            first time, <code>dmg storage prepare</code> will set PMem storage into the necessary
-            state for use with DAOS.
+            first time, <code>daos_server storage prepare --scm-only</code> will set PMem storage
+            into the necessary state for use with DAOS when run on each host.
             Then <code>dmg storage format</code> formats persistent storage devices (specified in the
             server configuration file) on the storage nodes and writes necessary metadata
             before starting DAOS Engine processes that will operate across the fabric.</p>
@@ -706,11 +708,10 @@ $ systemctl start daos_server.service
             regions (interleaved mode) in groups of modules local to a specific socket
             (NUMA), and resultant nvdimm namespaces are defined by a device identifier
             (e.g., /dev/pmem0).</p>
-          <p>PMem preparation is required once per DAOS installation and
-            requires the DAOS Control Servers to be running as root.</p>
-          <p>This step requires a reboot to enable PMem resource allocation
-            changes to be read by BIOS.</p>
-          <p>PMem preparation can be performed from the management tool <code>dmg storage prepare --scm-only</code> or using the Control Server directly <code>sudo daos_server storage prepare --scm-only</code>.</p>
+          <p>PMem preparation is required once per DAOS installation.</p>
+          <p>This step requires a reboot to enable PMem resource allocation changes to be
+            read by BIOS.</p>
+          <p>PMem preparation can be performed with <code>daos_server storage prepare --scm-only</code>.</p>
           <p>The first time the command is run, the SCM interleaved regions will be created
             as resource allocations on any available PMem modules (one region per NUMA
             node/socket). The regions are activated after BIOS reads the new resource
@@ -719,65 +720,33 @@ $ systemctl start daos_server.service
             the storage node(s) in order for the BIOS to activate the new storage
             allocations.
             The storage prepare command does not initiate the reboot itself.</p>
-          <p>After running the command a reboot will be required, then the Control
-            Servers will then need to be started again and the command run for a
-            second time to expose the namespace device to be used by DAOS.</p>
+          <p>After running the command a reboot will be required, the command will then need
+            to be run for a second time to expose the namespace device to be used by DAOS.</p>
           <p>Example usage:</p>
           <ul>
             <li>
-              <p><code>dmg -l wolf-[118-121,130-133] -i storage prepare --scm-only</code> after running, the user should be prompted for a reboot.</p>
+              <p><code>clush -w wolf-[118-121,130-133] daos_server storage prepare --scm-only</code> after running, the user should be prompted for a reboot.</p>
             </li>
             <li>
               <p><code>clush -w wolf-[118-121,130-133] reboot</code></p>
             </li>
             <li>
-              <p><code>clush -w wolf-[118-121,130-133] daos_server start -o utils/config/examples/daos_server_sockets.yml</code></p>
-            </li>
-            <li>
-              <p><code>dmg -l wolf-[118-121,130-133] -i storage prepare --scm-only</code> after running, <code>/dev/pmemX</code> devices should be available on each of the hosts.</p>
+              <p><code>clush -w wolf-[118-121,130-133] daos_server storage prepare --scm-only</code> after running, PMem devices (/dev/pmemX namespaces created on the new SCM
+                regions) should be available on each of the hosts.</p>
             </li>
           </ul>
-          <p><code>sudo daos_server storage prepare --scm-only</code> should be run for a second time after
-            system reboot to create the pmem kernel devices (/dev/pmemX
-            namespaces created on the new SCM regions).</p>
           <p>On the second run, one namespace per region is created, and each namespace may
             take up to a few minutes to create. Details of the pmem devices will be
             displayed in JSON format on command completion.</p>
-          <p>Example output from the initial call (with the SCM modules set to default MemoryMode):</p>
-          <pre><code class="bash">Memory allocation goals for SCM will be changed and namespaces modified, this
-will be a destructive operation.  ensure namespaces are unmounted and SCM is
-otherwise unused.
-A reboot is required to process new memory allocation goals.
-</code></pre>
-          <p>Example output from the subsequent call (SCM modules configured to interleaved
-            mode, and host rebooted):</p>
-          <pre><code class="bash">Memory allocation goals for SCM will be changed and namespaces modified. This
-will be a destructive operation. Ensure namespaces are unmounted and the SCM
-is otherwise unused.
-creating SCM namespace, may take a few minutes...
-creating SCM namespace, may take a few minutes...
-Persistent memory kernel devices:
-[{UUID:5d2f2517-9217-4d7d-9c32-70731c9ac11e Blockdev:pmem1 Dev:namespace1.0 NumaNode:1} {UUID:2bfe6c40-f79a-4b8e-bddf-ba81d4427b9b Blockdev:pmem0 Dev:namespace0.0 NumaNode:0}]
-</code></pre>
           <p>Upon successful creation of the pmem devices, the Intel(R) Optane(TM)
             persistent memory is configured and one can move on to the next step.</p>
-          <p>If required, the pmem devices can be destroyed via the --reset option:</p>
-          <p><code>sudo daos_server [&lt;app_opts&gt;] storage prepare [--scm-only|-s] --reset [&lt;cmd_opts&gt;]</code></p>
+          <p>If required, the pmem devices can be destroyed with the command <code>daos_server storage prepare --scm-only --reset</code>.</p>
           <p>All namespaces are disabled and destroyed. The SCM regions are removed by
             resetting modules into "MemoryMode" through resource allocations.</p>
           <p>Note that undefined behavior may result if the namespaces/pmem kernel
             devices are mounted before running reset (as per the printed warning).</p>
           <p>A subsequent reboot is required for BIOS to read the new resource
             allocations.</p>
-          <p>Example output when resetting the SCM modules:</p>
-          <pre><code class="bash">Memory allocation goals for SCM will be changed and namespaces modified, this
-will be a destructive operation.  ensure namespaces are unmounted and SCM is
-otherwise unused.
-removing SCM namespace, may take a few minutes...
-removing SCM namespace, may take a few minutes...
-resetting SCM memory allocations
-A reboot is required to process new memory allocation goals.
-</code></pre>
           <h3 id="storage-selection">Storage Selection<a class="headerlink" href="#storage-selection" title="Permanent link">&para;</a></h3>
           <p>While the DAOS server auto-detects all the usable storage, the administrator
             will still be provided with the ability through the configuration file
@@ -786,8 +755,10 @@ A reboot is required to process new memory allocation goals.
             potentially usable by DAOS to populate the configuration file when the
             administrator wants to have finer control over the storage selection.</p>
           <p><code>dmg storage scan</code> can be run to query remote running <code>daos_server</code> processes over the management network.</p>
-          <p><code>sudo daos_server storage scan</code> can be used to query <code>daos_server</code> directly (scans locally-attached SSDs and Intel Persistent Memory
-            Modules usable by DAOS). Output will be equivalent running <code>dmg storage scan --verbose</code> remotely.</p>
+          <p><code>daos_server storage scan</code> can be used to query <code>daos_server</code> directly
+            (scans locally-attached SSDs and Intel Persistent Memory Modules usable by
+            DAOS) but SSDs need to be made accessible first by running <code>daos_server storage prepare --nvme-only -u &lt;current_user</code> first.
+            The output will be equivalent running <code>dmg storage scan --verbose</code> remotely.</p>
           <pre><code class="bash">bash-4.2$ dmg storage scan
 Hosts        SCM Total             NVMe Total
 -----        ---------             ----------
@@ -1325,6 +1296,6 @@ $ sudo systemctl start daos_agent.service
 <script src="../../js/jquery-3.4.1.min.js"></script>
 <script src="../../js/popper.min.js"></script>
 <script src="../../js/bootstrap-4.4.1.js"></script>
-<script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+<script>app.initialize({version:"1.1.2",url:{base:"."}})</script>
 </body>
 </html>

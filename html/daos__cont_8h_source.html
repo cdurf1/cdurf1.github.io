@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="daos_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">DAOS API
-   &#160;<span id="projectnumber">Latest</span>
+   &#160;<span id="projectnumber">Development</span>
    </div>
   </td>
  </tr>
@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('daos__cont_8h_source.html',''); initRe
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<a class="code" href="daos__cont_8h.html#a3817d3dcd223893f448a1514eca479a4">daos_cont_create</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> poh, <span class="keyword">const</span> uuid_t uuid, <a class="code" href="structdaos__prop__t.html">daos_prop_t</a> *cont_prop,</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<a class="code" href="daos__cont_8h.html#a3817d3dcd223893f448a1514eca479a4">daos_cont_create</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> poh, <span class="keyword">const</span> uuid_t uuid, daos_prop_t *cont_prop,</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;         <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keywordtype">int</span></div>
@@ -149,13 +149,13 @@ $(document).ready(function(){initNavTree('daos__cont_8h_source.html',''); initRe
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="keywordtype">int</span></div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<a class="code" href="daos__cont_8h.html#afe40750c587a6bd761f8735160152e4c">daos_cont_query</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> container, <a class="code" href="structdaos__cont__info__t.html">daos_cont_info_t</a> *info,</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <a class="code" href="structdaos__prop__t.html">daos_prop_t</a> *cont_prop, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        daos_prop_t *cont_prop, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<a class="code" href="daos__cont_8h.html#ad08f81ef557291516c1f9ec335c84cb0">daos_cont_get_acl</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> container, <a class="code" href="structdaos__prop__t.html">daos_prop_t</a> **acl_prop,</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<a class="code" href="daos__cont_8h.html#ad08f81ef557291516c1f9ec335c84cb0">daos_cont_get_acl</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> container, daos_prop_t **acl_prop,</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;          <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<a class="code" href="daos__cont_8h.html#af276a397e5990736e5f243937e983d71">daos_cont_set_prop</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> coh, <a class="code" href="structdaos__prop__t.html">daos_prop_t</a> *prop, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<a class="code" href="daos__cont_8h.html#af276a397e5990736e5f243937e983d71">daos_cont_set_prop</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> coh, daos_prop_t *prop, <a class="code" href="structdaos__event.html">daos_event_t</a> *ev);</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="keywordtype">int</span></div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<a class="code" href="daos__cont_8h.html#a36c2f6d5365282a3eb64395d376d9e89">daos_cont_overwrite_acl</a>(<a class="code" href="structdaos__handle__t.html">daos_handle_t</a> coh, <span class="keyword">struct</span> <a class="code" href="structdaos__acl.html">daos_acl</a> *acl,</div>
@@ -240,7 +240,6 @@ $(document).ready(function(){initNavTree('daos__cont_8h_source.html',''); initRe
 <div class="ttc" id="adaos__cont_8h_html_a0630e16bf88dc28b6372d5f58dc2e648"><div class="ttname"><a href="daos__cont_8h.html#a0630e16bf88dc28b6372d5f58dc2e648">daos_cont_destroy</a></div><div class="ttdeci">int daos_cont_destroy(daos_handle_t poh, const uuid_t uuid, int force, daos_event_t *ev)</div></div>
 <div class="ttc" id="adaos__cont_8h_html_a36c2f6d5365282a3eb64395d376d9e89"><div class="ttname"><a href="daos__cont_8h.html#a36c2f6d5365282a3eb64395d376d9e89">daos_cont_overwrite_acl</a></div><div class="ttdeci">int daos_cont_overwrite_acl(daos_handle_t coh, struct daos_acl *acl, daos_event_t *ev)</div></div>
 <div class="ttc" id="adaos__cont_8h_html_a794403da19e79aaed193c0ab187951ed"><div class="ttname"><a href="daos__cont_8h.html#a794403da19e79aaed193c0ab187951ed">daos_cont_destroy_snap</a></div><div class="ttdeci">int daos_cont_destroy_snap(daos_handle_t coh, daos_epoch_range_t epr, daos_event_t *ev)</div></div>
-<div class="ttc" id="astructdaos__prop__t_html"><div class="ttname"><a href="structdaos__prop__t.html">daos_prop_t</a></div><div class="ttdef"><b>Definition:</b> <a href="daos__prop_8h_source.html#l00337">daos_prop.h:337</a></div></div>
 <div class="ttc" id="adaos__cont_8h_html_a619e6f50a6272f421a6967d5a54d7686"><div class="ttname"><a href="daos__cont_8h.html#a619e6f50a6272f421a6967d5a54d7686">daos_cont_close</a></div><div class="ttdeci">int daos_cont_close(daos_handle_t coh, daos_event_t *ev)</div></div>
 <div class="ttc" id="adaos__cont_8h_html_a7e166976d2bbd06192bcdcd47f4d5462"><div class="ttname"><a href="daos__cont_8h.html#a7e166976d2bbd06192bcdcd47f4d5462">daos_cont_list_snap</a></div><div class="ttdeci">int daos_cont_list_snap(daos_handle_t coh, int *nr, daos_epoch_t *epochs, char **names, daos_anchor_t *anchor, daos_event_t *ev)</div></div>
 <div class="ttc" id="adaos__cont_8h_html_a2c7c585a946df6da3b556b539391af3d"><div class="ttname"><a href="daos__cont_8h.html#a2c7c585a946df6da3b556b539391af3d">daos_cont_update_acl</a></div><div class="ttdeci">int daos_cont_update_acl(daos_handle_t coh, struct daos_acl *acl, daos_event_t *ev)</div></div>

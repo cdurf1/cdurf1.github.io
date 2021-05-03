@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="daos_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">DAOS API
-   &#160;<span id="projectnumber">Latest</span>
+   &#160;<span id="projectnumber">Development</span>
    </div>
   </td>
  </tr>
@@ -139,7 +139,7 @@ Functions</h2></td></tr>
 <tr class="separator:a2d32bebaa76e264a8825074b360c2f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa780e37e03ace1bb78baec4ca2096c75"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#aa780e37e03ace1bb78baec4ca2096c75">daos_cont_global2local</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> poh, d_iov_t glob, <a class="el" href="structdaos__handle__t.html">daos_handle_t</a> *coh)</td></tr>
 <tr class="separator:aa780e37e03ace1bb78baec4ca2096c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3817d3dcd223893f448a1514eca479a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#a3817d3dcd223893f448a1514eca479a4">daos_cont_create</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> poh, const uuid_t uuid, <a class="el" href="structdaos__prop__t.html">daos_prop_t</a> *cont_prop, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
+<tr class="memitem:a3817d3dcd223893f448a1514eca479a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#a3817d3dcd223893f448a1514eca479a4">daos_cont_create</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> poh, const uuid_t uuid, daos_prop_t *cont_prop, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
 <tr class="separator:a3817d3dcd223893f448a1514eca479a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98252d902cb099c98ebb66e81f0e34de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#a98252d902cb099c98ebb66e81f0e34de">daos_cont_open</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> poh, const uuid_t uuid, unsigned int flags, <a class="el" href="structdaos__handle__t.html">daos_handle_t</a> *coh, <a class="el" href="structdaos__cont__info__t.html">daos_cont_info_t</a> *info, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
 <tr class="separator:a98252d902cb099c98ebb66e81f0e34de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,11 +147,11 @@ Functions</h2></td></tr>
 <tr class="separator:a619e6f50a6272f421a6967d5a54d7686"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0630e16bf88dc28b6372d5f58dc2e648"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#a0630e16bf88dc28b6372d5f58dc2e648">daos_cont_destroy</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> poh, const uuid_t uuid, int force, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
 <tr class="separator:a0630e16bf88dc28b6372d5f58dc2e648"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe40750c587a6bd761f8735160152e4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#afe40750c587a6bd761f8735160152e4c">daos_cont_query</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> container, <a class="el" href="structdaos__cont__info__t.html">daos_cont_info_t</a> *info, <a class="el" href="structdaos__prop__t.html">daos_prop_t</a> *cont_prop, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
+<tr class="memitem:afe40750c587a6bd761f8735160152e4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#afe40750c587a6bd761f8735160152e4c">daos_cont_query</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> container, <a class="el" href="structdaos__cont__info__t.html">daos_cont_info_t</a> *info, daos_prop_t *cont_prop, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
 <tr class="separator:afe40750c587a6bd761f8735160152e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad08f81ef557291516c1f9ec335c84cb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#ad08f81ef557291516c1f9ec335c84cb0">daos_cont_get_acl</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> container, <a class="el" href="structdaos__prop__t.html">daos_prop_t</a> **acl_prop, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
+<tr class="memitem:ad08f81ef557291516c1f9ec335c84cb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#ad08f81ef557291516c1f9ec335c84cb0">daos_cont_get_acl</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> container, daos_prop_t **acl_prop, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
 <tr class="separator:ad08f81ef557291516c1f9ec335c84cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af276a397e5990736e5f243937e983d71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#af276a397e5990736e5f243937e983d71">daos_cont_set_prop</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> coh, <a class="el" href="structdaos__prop__t.html">daos_prop_t</a> *prop, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
+<tr class="memitem:af276a397e5990736e5f243937e983d71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#af276a397e5990736e5f243937e983d71">daos_cont_set_prop</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> coh, daos_prop_t *prop, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
 <tr class="separator:af276a397e5990736e5f243937e983d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36c2f6d5365282a3eb64395d376d9e89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="daos__cont_8h.html#a36c2f6d5365282a3eb64395d376d9e89">daos_cont_overwrite_acl</a> (<a class="el" href="structdaos__handle__t.html">daos_handle_t</a> coh, struct <a class="el" href="structdaos__acl.html">daos_acl</a> *acl, <a class="el" href="structdaos__event.html">daos_event_t</a> *ev)</td></tr>
 <tr class="separator:a36c2f6d5365282a3eb64395d376d9e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -387,7 +387,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structdaos__prop__t.html">daos_prop_t</a> *&#160;</td>
+          <td class="paramtype">daos_prop_t *&#160;</td>
           <td class="paramname"><em>cont_prop</em>, </td>
         </tr>
         <tr>
@@ -738,7 +738,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structdaos__prop__t.html">daos_prop_t</a> **&#160;</td>
+          <td class="paramtype">daos_prop_t **&#160;</td>
           <td class="paramname"><em>acl_prop</em>, </td>
         </tr>
         <tr>
@@ -758,7 +758,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coh</td><td>Container open handle.</td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">acl_prop</td><td>Newly allocated <a class="el" href="structdaos__prop__t.html">daos_prop_t</a> containing the ACL, owner, and owner-group properties of the container. Caller must free it with daos_prop_free(). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">acl_prop</td><td>Newly allocated daos_prop_t containing the ACL, owner, and owner-group properties of the container. Caller must free it with daos_prop_free(). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ev</td><td>Completion event, it is optional and can be NULL. The function will run in blocking mode if <em>ev</em> is NULL.</td></tr>
   </table>
   </dd>
@@ -1156,7 +1156,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structdaos__prop__t.html">daos_prop_t</a> *&#160;</td>
+          <td class="paramtype">daos_prop_t *&#160;</td>
           <td class="paramname"><em>cont_prop</em>, </td>
         </tr>
         <tr>
@@ -1359,7 +1359,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structdaos__prop__t.html">daos_prop_t</a> *&#160;</td>
+          <td class="paramtype">daos_prop_t *&#160;</td>
           <td class="paramname"><em>prop</em>, </td>
         </tr>
         <tr>
