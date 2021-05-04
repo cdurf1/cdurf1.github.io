@@ -18,7 +18,7 @@
 <meta name="lang:search.tokenizer" content="[\s\-]+">
 <link rel="shortcut icon" href="../../assets/images/favicon.png">
 <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
-<title>Software Installation - DAOS v.Master</title>
+<title>Software Installation - DAOS v1.2</title>
 <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
 <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
 <meta name="theme-color" content="#546e7a">
@@ -34,7 +34,7 @@ code, kbd, pre {
 }
 </style>
 <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
-<link href="../../assets/stylesheets/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+<link href="../../css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
 <link href="../../assets/stylesheets/styles_1.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -52,13 +52,13 @@ code, kbd, pre {
 <a href="#software-installation" tabindex="0" class="md-skip"> Skip to content </a>
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
-    <div class="md-flex"> <img src="../../assets/images/daos_logo_wh.png" width="86" height="60" alt=""/>
-      <div class="md-flex__cell md-flex__cell--shrink"> <a href="http://daos.io" title="DAOS v.Master" aria-label="DAOS v.Master" class="md-header-nav__button md-logo"> </a> </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
+<div class="md-flex">
+  <div><img src="../../assets/images/daos_logo_wh.png" width="86" height="61" alt=""/></div>
+  <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"> <span class="md-header-nav__topic"> DAOS v.Master </span> <span class="md-header-nav__topic"> Software Installation </span> </div>
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"> <span class="md-header-nav__topic"> DAOS v1.2 </span> <span class="md-header-nav__topic"> Software Installation </span> </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
@@ -103,26 +103,25 @@ code, kbd, pre {
         <li class="md-tabs__item"> <a href="../../overview/terminology/" class="md-tabs__link"> Architecture Overview </a> </li>
         <li class="md-tabs__item"> <a href="../hardware/" class="md-tabs__link md-tabs__link--active"> Administration Guide </a> </li>
         <li class="md-tabs__item"> <a href="../../user/container/" class="md-tabs__link"> User Guide </a> </li>
-        <li class="md-tabs__item"> <a href="../../release/release_notes_v1_0/" class="md-tabs__link"> Releases </a> </li>
+        <li class="md-tabs__item"> <a href="../../release/releaseNote_v1_0.md" class="md-tabs__link"> Releases </a> </li>
         <li class="md-tabs__item"> <a href="../../dev/development/" class="md-tabs__link"> Developer Zone </a> </li>
       </ul>
     </div>
   </nav>
 	 <section>
-	   <div class="dropdown show"> <a class="btn btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select Version </a>
-		   <div class="dropdown-menu">
-		    
-		     <a class="dropdown-item disabled" href="#" >Master</a> <a class="dropdown-item" href="../../1.2_site/index.html">1.2</a><a class="dropdown-item" href="../../1.0_site/index.html">1.0</a>
-	     </div>
-		    </div>
-  </section>
+    <div class="dropdown show">
+      <div class="dropdown show col-xl-12"> <a class="btn btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> DAOS Version</a>
+        <div class="dropdown-menu"> <a class="dropdown-header">Select Version</a> <a class="dropdown-item" href="../../devbranch/index.html">Dev Branch</a> <a class="dropdown-item disabled" href="#">1.2</a><a class="dropdown-item" href="../../v1.0/index.html">1.0</a> </div>
+      </div>
+    </div>
+	</section>
   <main class="md-main" role="main">
     <div class="md-main__inner md-grid" data-md-component="container">
       <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
         <div class="md-sidebar__scrollwrap">
           <div class="md-sidebar__inner">
             <nav class="md-nav md-nav--primary" data-md-level="0">
-              <label class="md-nav__title md-nav__title--site" for="__drawer"> <a href="http://daos.io" title="DAOS v.Master" class="md-nav__button md-logo"> <i class="md-icon"></i> </a> DAOS v.Master </label>
+              <label class="md-nav__title md-nav__title--site" for="__drawer"> <a href="http://daos.io" title="DAOS v1.2" class="md-nav__button md-logo"> <i class="md-icon"></i> </a> DAOS v1.2 </label>
               <div class="md-nav__source"> <a href="https://github.com/daos-stack/daos/" title="Go to repository" class="md-source" data-md-source="github">
                 <div class="md-source__icon">
                   <svg viewBox="0 0 24 24" width="24" height="24">
@@ -162,11 +161,11 @@ code, kbd, pre {
                         <nav class="md-nav md-nav--secondary">
                           <label class="md-nav__title" for="__toc">Table of contents</label>
                           <ul class="md-nav__list" data-md-scrollfix>
-                            <li class="md-nav__item"> <a href="#software-dependencies" class="md-nav__link"> Software Dependencies </a> </li>
                             <li class="md-nav__item"> <a href="#distribution-packages" class="md-nav__link"> Distribution Packages </a>
                               <nav class="md-nav">
                                 <ul class="md-nav__list">
-                                  <li class="md-nav__item"> <a href="#installing-daos-from-rpms" class="md-nav__link"> Installing DAOS from RPMs </a> </li>
+                                  <li class="md-nav__item"> <a href="#centos-79" class="md-nav__link"> CentOS 7.9 </a> </li>
+                                  <li class="md-nav__item"> <a href="#opensuse-leap-15" class="md-nav__link"> openSUSE Leap 15 </a> </li>
                                 </ul>
                               </nav>
                             </li>
@@ -212,8 +211,7 @@ code, kbd, pre {
                       <li class="md-nav__item"> <a href="../../user/container/" title="Container Management" class="md-nav__link"> Container Management </a> </li>
                       <li class="md-nav__item"> <a href="../../user/interface/" title="Native Programming Interface" class="md-nav__link"> Native Programming Interface </a> </li>
                       <li class="md-nav__item"> <a href="../../user/posix/" title="POSIX Namespace" class="md-nav__link"> POSIX Namespace </a> </li>
-                      <li class="md-nav__item"> <a href="../../user/mpi-io/" title="MPI-IO Support" class="md-nav__link"> MPI-IO Support </a> </li>
-                      <li class="md-nav__item"> <a href="../../user/hdf5/" title="HDF5 Support" class="md-nav__link"> HDF5 Support </a> </li>
+                      <li class="md-nav__item"> <a href="../../user/hpc.md" title="HPC I/O Middleware" class="md-nav__link"> HPC I/O Middleware </a> </li>
                       <li class="md-nav__item"> <a href="../../user/spark/" title="Spark and Hadoop" class="md-nav__link"> Spark and Hadoop </a> </li>
                     </ul>
                   </nav>
@@ -224,8 +222,7 @@ code, kbd, pre {
                   <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
                     <label class="md-nav__title" for="nav-5"> Releases </label>
                     <ul class="md-nav__list" data-md-scrollfix>
-                      <li class="md-nav__item"> <a href="../../release/release_notes_v1_0/" title="Release Notes v1.0" class="md-nav__link"> Release Notes v1.0 </a> </li>
-                      <li class="md-nav__item"> <a href="../../release/support_matrix/" title="Support Matrix" class="md-nav__link"> Support Matrix </a> </li>
+                      <li class="md-nav__item"> <a href="../../release/releaseNote_v1_0.md" title="Release Notes" class="md-nav__link"> Release Notes </a> </li>
                     </ul>
                   </nav>
                 </li>
@@ -257,11 +254,11 @@ code, kbd, pre {
             <nav class="md-nav md-nav--secondary">
               <label class="md-nav__title" for="__toc">Table of contents</label>
               <ul class="md-nav__list" data-md-scrollfix>
-                <li class="md-nav__item"> <a href="#software-dependencies" class="md-nav__link"> Software Dependencies </a> </li>
                 <li class="md-nav__item"> <a href="#distribution-packages" class="md-nav__link"> Distribution Packages </a>
                   <nav class="md-nav">
                     <ul class="md-nav__list">
-                      <li class="md-nav__item"> <a href="#installing-daos-from-rpms" class="md-nav__link"> Installing DAOS from RPMs </a> </li>
+                      <li class="md-nav__item"> <a href="#centos-79" class="md-nav__link"> CentOS 7.9 </a> </li>
+                      <li class="md-nav__item"> <a href="#opensuse-leap-15" class="md-nav__link"> openSUSE Leap 15 </a> </li>
                     </ul>
                   </nav>
                 </li>
@@ -292,66 +289,36 @@ code, kbd, pre {
         <article class="md-content__inner md-typeset"> <a href="https://github.com/daos-stack/daos/edit/master/docs/admin/installation.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
           <h1 id="software-installation">Software Installation<a class="headerlink" href="#software-installation" title="Permanent link">&para;</a></h1>
           <p>Please check the <a href="https://daos-stack.github.io/release/support_matrix">support matrix</a> to select the appropriate software combination.</p>
-          <h2 id="software-dependencies">Software Dependencies<a class="headerlink" href="#software-dependencies" title="Permanent link">&para;</a></h2>
-          <p>DAOS requires a C99-capable compiler, a Go compiler, and the scons build tool.
-            Moreover, the DAOS stack leverages the following open source projects:</p>
-          <ul>
-            <li>
-              <p><a href="https://grpc.io/"><em>gRPC</em></a> provides a secured out-of-band channel for
-                DAOS administration.</p>
-            </li>
-            <li>
-              <p><a href="https://github.com/pmem/pmdk.git"><em>PMDK</em></a> for persistent memory
-                programming.</p>
-            </li>
-            <li>
-              <p><a href="http://spdk.io/"><em>SPDK</em></a> for userspace NVMe device access and management.</p>
-            </li>
-            <li>
-              <p><a href="https://github.com/01org/isa-l"><em>ISA-L</em></a> and <a href="https://github.com/01org/isa-l_crypto"><em>ISA-L_Crypto</em></a> for checksum and
-                erasure code</p>
-            </li>
-            <li>
-              <p><a href="https://github.com/pmodels/argobots"><em>Argobots</em></a> for thread management.</p>
-            </li>
-            <li>
-              <p><a href="https://github.com/open-mpi/hwloc"><em>hwloc</em></a> for discovering system devices,
-                detecting their NUMA node affinity and for CPU binding</p>
-            </li>
-            <li>
-              <p><a href="https://github.com/ofiwg/libfabric"><em>libfabric</em></a> for detecting fabric
-                interfaces, providers, and connection management.</p>
-            </li>
-          </ul>
-          <p>The DAOS build system can be configured to download and build any missing
-            dependencies automatically.</p>
           <h2 id="distribution-packages">Distribution Packages<a class="headerlink" href="#distribution-packages" title="Permanent link">&para;</a></h2>
-          <p>DAOS RPM packaging is currently available, and DEB packaging is under
-            development and will be available in a future DAOS release.
-            Integration with the <a href="https://spack.io/">Spack</a> package manager is also
-            under consideration.</p>
-          <h3 id="installing-daos-from-rpms">Installing DAOS from RPMs<a class="headerlink" href="#installing-daos-from-rpms" title="Permanent link">&para;</a></h3>
-          <p>DAOS RPMs are available from the Intel&copy; Registration Center.
-            Clicking the <a href="https://registrationcenter.intel.com/forms/?productid=3412">Intel&copy; Registration Center</a> link will take you to the registration center, where you will create an account.
-            After creating an account, the following files can be downloaded:</p>
-          <ul>
-            <li>daos_debug.tar - <em>debuginfo</em> packages</li>
-            <li>daos_packages.tar - client and server main packages</li>
-            <li>daos_source.tar - source RPMs</li>
-          </ul>
-          <p>Recommended steps after download:</p>
-          <pre><code class="bash">$ sudo tar -C / -xf daos_packages.tar
-$ sudo cp /opt/intel/daos_rpms/packages/daos_packages.repo /etc/yum.repos.d
-$ rm /opt/intel/daos_rpms/packages/libabt*
-  (cd /opt/intel/daos_rpms/packages/ &amp;&amp; createrepo .)
-$ sudo yum install epel-release
-$ sudo yum install daos-server
-$ sudo yum install daos-client
+          <p>DAOS packages are available for CentOS7 and openSUSE Leap 15.
+            For other distribution, manual building is required (see next section).</p>
+          <h3 id="centos-79">CentOS 7.9<a class="headerlink" href="#centos-79" title="Permanent link">&para;</a></h3>
+          <p>Configure the DAOS package repository as follows:</p>
+          <pre><code class="bash">$ sudo wget -O /etc/yum.repos.d/daos-packages.repo http://packages.daos.io/v1.2/CentOS7/packages/x86_64/daos_packages.repo
 </code></pre>
-          <div class="admonition note">
-            <p class="admonition-title">Note</p>
-            <p>Only daos-client OR daos-server needs to be specified on the yum command line.</p>
-          </div>
+          <p>epel-release is required for both client and server:</p>
+          <pre><code class="bash">$ sudo yum install -y epel-release
+</code></pre>
+          <p>To install the DAOS client packages:</p>
+          <pre><code class="bash">$ sudo yum install -y daos-client
+</code></pre>
+          <p>To install the DAOS server packages:</p>
+          <pre><code class="bash">$ sudo yum install -y daos-server
+</code></pre>
+          <p>Debug and source RPMs available in the respective <a href="http://packages.daos.io/v1.2/CentOS7/debug/x86_64/daos_debug.repo">debug</a> and <a href="http://packages.daos.io/v1.2/CentOS7/source/daos_source.repo">source</a> repositories.</p>
+          <h3 id="opensuse-leap-15">openSUSE Leap 15<a class="headerlink" href="#opensuse-leap-15" title="Permanent link">&para;</a></h3>
+          <p>Add the DAOS package repository via zypper:</p>
+          <pre><code class="bash">$ sudo zypper ar http://packages.daos.io/v1.2/Leap15.2/packages x86_64/daos_packages
+$ sudo rpm --import http://packages.daos.io/RPM-GPG-KEY
+$ sudo zypper --non-interactive ref
+</code></pre>
+          <p>To install the DAOS client packages:</p>
+          <pre><code class="bash">$ sudo zypper install -y daos-client
+</code></pre>
+          <p>To install the DAOS server packages:</p>
+          <pre><code class="bash">$ sudo zypper install -y daos-server
+</code></pre>
+          <p>Debug and source RPMs available in the respective <a href="http://packages.daos.io/v1.2/Leap15.2/debug/x86_64/daos_debug.repo">debug</a> and <a href="http://packages.daos.io/v1.2/Leaps15.2/source/daos_source.repo">source</a> repositories.</p>
           <h2 id="daos-from-scratch">DAOS from Scratch<a class="headerlink" href="#daos-from-scratch" title="Permanent link">&para;</a></h2>
           <p>The following instructions have been verified with CentOS. Installations on other
             Linux distributions might be similar with some variations.
@@ -365,23 +332,20 @@ $ sudo yum install daos-client
           <p>An exhaustive list of packages for each supported Linux distribution is
             maintained in the Docker files (please click on the link):</p>
           <ul>
-            <li><a href="https://github.com/daos-stack/daos/blob/master/utils/docker/Dockerfile.centos.7#L53-L79">CentOS</a></li>
-            <li><a href="https://github.com/daos-stack/daos/blob/master/utils/docker/Dockerfile.leap.15#L71-L100">OpenSUSE</a></li>
-            <li><a href="https://github.com/daos-stack/daos/blob/master/utils/docker/Dockerfile.ubuntu.20.04#L21-L39">Ubuntu</a></li>
+            <li><a href="https://github.com/daos-stack/daos/tree/release/1.2/utils/docker/Dockerfile.centos.7#L19-L79">CentOS 7</a></li>
+            <li><a href="https://github.com/daos-stack/daos/tree/release/1.2/utils/docker/Dockerfile.leap.15#L36-L85">openSUSE Leap 15</a></li>
+            <li><a href="https://github.com/daos-stack/daos/tree/release/1.2/utils/docker/Dockerfile.ubuntu.20.04#L14-L22">Ubuntu 20.04</a></li>
           </ul>
           <p>The command lines to install the required packages can be extracted from
             the Docker files by removing the "RUN" command, which is specific to Docker.
-            Check the <a href="https://github.com/daos-stack/daos/tree/master/utils/docker">utils/docker</a> directory for different Linux distribution versions.</p>
+            Check the <a href="https://github.com/daos-stack/daos/tree/release/1.2/utils/docker">utils/docker</a> directory for different Linux distribution versions.</p>
           <p>Some DAOS tests use MPI. The DAOS build process uses the environment modules
             package to detect the presence of MPI. If none is found, the build will skip
             building those tests.</p>
           <h3 id="daos-source-code">DAOS Source Code<a class="headerlink" href="#daos-source-code" title="Permanent link">&para;</a></h3>
           <p>The DAOS repository is hosted on <a href="https://github.com/daos-stack/daos">GitHub</a>.</p>
-          <p>To checkout the latest stable version, simply run:</p>
-          <pre><code class="bash">$ git clone --recurse-submodules -b v1.0.1 https://github.com/daos-stack/daos.git
-</code></pre>
-          <p>For the current development version, then run:</p>
-          <pre><code class="bash">$ git clone --recurse-submodules https://github.com/daos-stack/daos.git
+          <p>To checkout the latest 1.2 version, simply run:</p>
+          <pre><code class="bash">$ git clone --recurse-submodules -b release/1.2 https://github.com/daos-stack/daos.git
 </code></pre>
           <p>This command clones the DAOS git repository (path referred as ${daospath}
             below) and initializes all the submodules automatically.</p>
@@ -424,7 +388,7 @@ export CPATH PATH
             "Preferences/{Disk, Memory}" are configured accordingly.</p>
           <h3 id="building-a-docker-image">Building a Docker Image<a class="headerlink" href="#building-a-docker-image" title="Permanent link">&para;</a></h3>
           <p>To build the Docker image directly from GitHub, run the following command:</p>
-          <pre><code class="bash">$ docker build https://github.com/daos-stack/daos.git#master \
+          <pre><code class="bash">$ docker build https://github.com/daos-stack/daos.git#release/1.2 \
         -f utils/docker/Dockerfile.centos.7 -t daos
 </code></pre>
           <p>or from a local tree:</p>
@@ -433,8 +397,7 @@ export CPATH PATH
           <p>This creates a CentOS 7 image, fetches the latest DAOS version from GitHub,
             builds it, and installs it in the image.
             For Ubuntu and other Linux distributions, replace Dockerfile.centos.7 with
-            Dockerfile.ubuntu.20.04 and the appropriate version of interest. <code>master</code> should be replaced by the relevant release tag (e.g. v1.0.1) to
-            build a stable version.</p>
+            Dockerfile.ubuntu.20.04 and the appropriate version of interest.</p>
           <h3 id="simple-docker-setup">Simple Docker Setup<a class="headerlink" href="#simple-docker-setup" title="Permanent link">&para;</a></h3>
           <p>Once the image created, one can start a container that will eventually run
             the DAOS service:</p>
@@ -498,6 +461,6 @@ export CPATH PATH
 <script src="../../js/jquery-3.4.1.min.js"></script>
 <script src="../../js/popper.min.js"></script>
 <script src="../../js/bootstrap-4.4.1.js"></script>
-<script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+<script>app.initialize({version:"1.1.2",url:{base:"."}})</script>
 </body>
 </html>
