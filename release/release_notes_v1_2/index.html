@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="Distributed Asynchronous Object Storage">
+<link rel="canonical" href="http://daos.io/release/release_notes_v1_2/">
+<meta name="author" content="DAOS Project">
+<meta name="lang:clipboard.copy" content="Copy to clipboard">
+<meta name="lang:clipboard.copied" content="Copied to clipboard">
+<meta name="lang:search.language" content="en">
+<meta name="lang:search.pipeline.stopwords" content="True">
+<meta name="lang:search.pipeline.trimmer" content="True">
+<meta name="lang:search.result.none" content="No matching documents">
+<meta name="lang:search.result.one" content="1 matching document">
+<meta name="lang:search.result.other" content="# matching documents">
+<meta name="lang:search.tokenizer" content="[\s\-]+">
+<link rel="shortcut icon" href="../../assets/images/favicon.png">
+<meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
+<title>Release Notes v1.0 - DAOS v1.2</title>
+<link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+<link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+<meta name="theme-color" content="#546e7a">
+<script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
+<style>
+body, input {
+    font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+code, kbd, pre {
+    font-family: "Ubuntu Mono", "Courier New", Courier, monospace
+}
+</style>
+<link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+<link href="../../css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+<link href="../../assets/stylesheets/styles_1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="blue">
+<svg class="md-svg">
+  <defs>
+    <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github">
+      <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/>
+    </svg>
+  </defs>
+</svg>
+<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+<input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a href="#daos-version-12-release-notes" tabindex="0" class="md-skip"> Skip to content </a>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex"><img src="../../v1.0/assets/images/daos_logo_wh.png" width="80" height="61" alt=""/>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"> <span class="md-header-nav__topic"> DAOS v1.2 </span> <span class="md-header-nav__topic"> Release Notes v1.0 </span> </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        <div class="md-search" data-md-component="search" role="dialog">
+          <label class="md-search__overlay" for="__search"></label>
+          <div class="md-search__inner" role="search">
+            <form class="md-search__form" name="search">
+              <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+              <label class="md-icon md-search__icon" for="__search"></label>
+              <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1"> &#xE5CD; </button>
+            </form>
+            <div class="md-search__output">
+              <div class="md-search__scrollwrap" data-md-scrollfix>
+                <div class="md-search-result" data-md-component="result">
+                  <div class="md-search-result__meta"> Type to start searching </div>
+                  <ol class="md-search-result__list">
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source"> <a href="https://github.com/daos-stack/daos/" title="Go to repository" class="md-source" data-md-source="github">
+          <div class="md-source__icon">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <use xlink:href="#__github" width="24" height="24"></use>
+            </svg>
+          </div>
+          <div class="md-source__repository"> daos-stack/daos </div>
+          </a> </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="md-container">
+  <nav class="md-tabs md-tabs--active" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+        <li class="md-tabs__item"> <a href="../../" class="md-tabs__link"> Home </a> </li>
+        <li class="md-tabs__item"> <a href="../../overview/terminology" class="md-tabs__link"> Architecture Overview </a> </li>
+        <li class="md-tabs__item"> <a href="../../admin/hardware" class="md-tabs__link"> Administration Guide </a> </li>
+        <li class="md-tabs__item"> <a href="../../user/container" class="md-tabs__link"> User Guide </a> </li>
+        <li class="md-tabs__item"> <a href="./" class="md-tabs__link md-tabs__link--active"> Releases </a> </li>
+        <li class="md-tabs__item"> <a href="../../dev/development" class="md-tabs__link"> Developer Zone </a> </li>
+      </ul>
+    </div>
+  </nav>
+	 <section>
+      <div class="dropdown show">
+  <div class="dropdown show col-xl-12"> <a class="btn btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> DAOS Version</a>
+    <div class="dropdown-menu"> <a class="dropdown-header">Select Version</a> <a class="dropdown-item" href="../../devbranch/index.html">Dev Branch</a> <a class="dropdown-item disabled" href="file:///C|/Users/wcdurfey/OneDrive - Intel Corporation/Documents/new/index.html">1.2</a><a class="dropdown-item" href="../../v1.0/index.html">1.0</a> </div>
+  </div>
+      </div>
+
+  </section>
+  <main class="md-main" role="main">
+    <div class="md-main__inner md-grid" data-md-component="container">
+      <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+        <div class="md-sidebar__scrollwrap">
+          <div class="md-sidebar__inner">
+            <nav class="md-nav md-nav--primary" data-md-level="0">
+              <label class="md-nav__title md-nav__title--site" for="__drawer"> <a href="http://daos.io" title="DAOS v1.2" class="md-nav__button md-logo"> <i class="md-icon"></i> </a> DAOS v1.2 </label>
+              <div class="md-nav__source"> <a href="https://github.com/daos-stack/daos/" title="Go to repository" class="md-source" data-md-source="github">
+                <div class="md-source__icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24">
+                    <use xlink:href="#__github" width="24" height="24"></use>
+                  </svg>
+                </div>
+                <div class="md-source__repository"> daos-stack/daos </div>
+                </a> </div>
+              <ul class="md-nav__list" data-md-scrollfix>
+                <li class="md-nav__item"> <a href="../../" title="Home" class="md-nav__link"> Home </a> </li>
+                <li class="md-nav__item md-nav__item--nested">
+                  <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+                  <label class="md-nav__link" for="nav-2"> Architecture Overview </label>
+                  <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+                    <label class="md-nav__title" for="nav-2"> Architecture Overview </label>
+                    <ul class="md-nav__list" data-md-scrollfix>
+                      <li class="md-nav__item"> <a href="../../overview/terminology" title="Terminology" class="md-nav__link"> Terminology </a> </li>
+                      <li class="md-nav__item"> <a href="../../overview/architecture" title="Architecture" class="md-nav__link"> Architecture </a> </li>
+                      <li class="md-nav__item"> <a href="../../overview/storage" title="Storage Model" class="md-nav__link"> Storage Model </a> </li>
+                      <li class="md-nav__item"> <a href="../../overview/transaction" title="Transaction Model" class="md-nav__link"> Transaction Model </a> </li>
+                      <li class="md-nav__item"> <a href="../../overview/fault" title="Fault Model" class="md-nav__link"> Fault Model </a> </li>
+                      <li class="md-nav__item"> <a href="../../overview/security" title="Security Model" class="md-nav__link"> Security Model </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item md-nav__item--nested">
+                  <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+                  <label class="md-nav__link" for="nav-3"> Administration Guide </label>
+                  <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+                    <label class="md-nav__title" for="nav-3"> Administration Guide </label>
+                    <ul class="md-nav__list" data-md-scrollfix>
+                      <li class="md-nav__item"> <a href="../../admin/hardware" title="Hardware Requirements" class="md-nav__link"> Hardware Requirements </a> </li>
+                      <li class="md-nav__item"> <a href="../../admin/installation" title="Software Installation" class="md-nav__link"> Software Installation </a> </li>
+                      <li class="md-nav__item"> <a href="../../admin/predeployment_check" title="Pre-deployment Checklist" class="md-nav__link"> Pre-deployment Checklist </a> </li>
+                      <li class="md-nav__item"> <a href="../../admin/deployment" title="System Deployment" class="md-nav__link"> System Deployment </a> </li>
+                      <li class="md-nav__item"> <a href="../../admin/administration" title="System Administration" class="md-nav__link"> System Administration </a> </li>
+                      <li class="md-nav__item"> <a href="../../admin/pool_operations" title="Pool Operations" class="md-nav__link"> Pool Operations </a> </li>
+                      <li class="md-nav__item"> <a href="../../admin/tiering_uns" title="Tiering and Unified Namespace" class="md-nav__link"> Tiering and Unified Namespace </a> </li>
+                      <li class="md-nav__item"> <a href="../../admin/performance_tuning" title="Performance Tuning" class="md-nav__link"> Performance Tuning </a> </li>
+                      <li class="md-nav__item"> <a href="../../admin/troubleshooting" title="Troubleshooting" class="md-nav__link"> Troubleshooting </a> </li>
+                      <li class="md-nav__item"> <a href="../../admin/utilities_examples" title="Utilities and Usage Examples" class="md-nav__link"> Utilities and Usage Examples </a> </li>
+                      <li class="md-nav__item"> <a href="../../admin/env_variables" title="Environment Variables" class="md-nav__link"> Environment Variables </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item md-nav__item--nested">
+                  <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+                  <label class="md-nav__link" for="nav-4"> User Guide </label>
+                  <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+                    <label class="md-nav__title" for="nav-4"> User Guide </label>
+                    <ul class="md-nav__list" data-md-scrollfix>
+                      <li class="md-nav__item"> <a href="../../user/container" title="Container Management" class="md-nav__link"> Container Management </a> </li>
+                      <li class="md-nav__item"> <a href="../../user/interface" title="Native Programming Interface" class="md-nav__link"> Native Programming Interface </a> </li>
+                      <li class="md-nav__item"> <a href="../../user/posix" title="POSIX Namespace" class="md-nav__link"> POSIX Namespace </a> </li>
+                      <li class="md-nav__item"> <a href="../../user/mpi-io" title="MPI-IO Support" class="md-nav__link"> MPI-IO Support </a> </li>
+                      <li class="md-nav__item"> <a href="../../user/hdf5" title="HDF5 Support" class="md-nav__link"> HDF5 Support </a> </li>
+                      <li class="md-nav__item"> <a href="../../user/spark" title="Spark and Hadoop" class="md-nav__link"> Spark and Hadoop </a> </li>
+                      <li class="md-nav__item"> <a href="../../user/datamover" title="Data Mover" class="md-nav__link"> Data Mover </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+                  <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+                  <label class="md-nav__link" for="nav-5"> Releases </label>
+                  <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+                    <label class="md-nav__title" for="nav-5"> Releases </label>
+                    <ul class="md-nav__list" data-md-scrollfix>
+                      <li class="md-nav__item md-nav__item--active">
+                        <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+                        <label class="md-nav__link md-nav__link--active" for="__toc"> Release Notes v1.0 </label>
+                        <a href="./" title="Release Notes v1.0" class="md-nav__link md-nav__link--active"> Release Notes v1.2 </a>
+                        <nav class="md-nav md-nav--secondary">
+                          <label class="md-nav__title" for="__toc">Table of contents</label>
+                          <ul class="md-nav__list" data-md-scrollfix>
+                            <li class="md-nav__item"> <a href="#software-dependencies" class="md-nav__link"> Software Dependencies </a> </li>
+                            <li class="md-nav__item"> <a href="#distribution-packages" class="md-nav__link"> Distribution Packages </a> </li>
+                            <li class="md-nav__item"> <a href="#build-prerequisites" class="md-nav__link"> Build Prerequisites </a> </li>
+                            <li class="md-nav__item"> <a href="#hardware-support" class="md-nav__link"> Hardware Support </a>
+                              <nav class="md-nav">
+                                <ul class="md-nav__list">
+                                  <li class="md-nav__item"> <a href="#processor-requirements" class="md-nav__link"> Processor Requirements </a> </li>
+                                  <li class="md-nav__item"> <a href="#network-requirements" class="md-nav__link"> Network Requirements </a> </li>
+                                  <li class="md-nav__item"> <a href="#storage-requirements" class="md-nav__link"> Storage Requirements </a> </li>
+                                </ul>
+                              </nav>
+                            </li>
+                            <li class="md-nav__item"> <a href="#daos-testing" class="md-nav__link"> DAOS Testing </a> </li>
+                            <li class="md-nav__item"> <a href="#version-12-major-features" class="md-nav__link"> Version 1.2 major features </a>
+                              <nav class="md-nav">
+                                <ul class="md-nav__list">
+                                  <li class="md-nav__item"> <a href="#end-to-end-data-integrity" class="md-nav__link"> End-to-end Data Integrity </a> </li>
+                                  <li class="md-nav__item"> <a href="#per-container-acl" class="md-nav__link"> Per Container ACL </a> </li>
+                                  <li class="md-nav__item"> <a href="#improved-control-plane" class="md-nav__link"> Improved Control Plane </a>
+                                    <nav class="md-nav">
+                                      <ul class="md-nav__list">
+                                        <li class="md-nav__item"> <a href="#external-device-states-via-dmg" class="md-nav__link"> External Device States (via DMG) </a> </li>
+                                        <li class="md-nav__item"> <a href="#user-interfaces" class="md-nav__link"> User Interfaces </a> </li>
+                                      </ul>
+                                    </nav>
+                                  </li>
+                                  <li class="md-nav__item"> <a href="#replication-and-self-healing" class="md-nav__link"> Replication and Self Healing </a> </li>
+                                  <li class="md-nav__item"> <a href="#erasure-code-preview" class="md-nav__link"> Erasure Code (Preview) </a> </li>
+                                  <li class="md-nav__item"> <a href="#off-line-re-integration" class="md-nav__link"> Off-line Re-integration </a> </li>
+                                  <li class="md-nav__item"> <a href="#hdf5-with-async" class="md-nav__link"> HDF5 with Async </a> </li>
+                                  <li class="md-nav__item"> <a href="#posix-data-mover" class="md-nav__link"> POSIX Data Mover </a> </li>
+                                  <li class="md-nav__item"> <a href="#spark" class="md-nav__link"> SPARK </a> </li>
+                                </ul>
+                              </nav>
+                            </li>
+                            <li class="md-nav__item"> <a href="#document-updates" class="md-nav__link"> Document updates </a> </li>
+                            <li class="md-nav__item"> <a href="#known-issues" class="md-nav__link"> Known Issues </a>
+                              <nav class="md-nav">
+                                <ul class="md-nav__list">
+                                  <li class="md-nav__item"> <a href="#update-admin-guide-to-use-daos_server-storage-prepare-daos-7365" class="md-nav__link"> Update Admin Guide to use daos_server Storage Prepare (DAOS-7365) </a> </li>
+                                  <li class="md-nav__item"> <a href="#daos-racer-hung-daos-7359" class="md-nav__link"> DAOS Racer Hung (DAOS-7359) </a> </li>
+                                  <li class="md-nav__item"> <a href="#pmem-registration-failures-with-verbs-on-recent-kernels-daos-6768" class="md-nav__link"> PMEM Registration Failures with Verbs on Recent Kernels (DAOS-6768) </a> </li>
+                                  <li class="md-nav__item"> <a href="#after-creating-200-pools-daos_io_server-crash-signal-11-when-querying-the-pools-daos-6505" class="md-nav__link"> After Creating 200 Pools, daos_io_server Crash (signal 11) When Querying the Pools (DAOS-6505) </a> </li>
+                                  <li class="md-nav__item"> <a href="#soak-ior-a-mpiio-daos-client-report-der_inval-with-oclass-rp_2gx-daos-6308" class="md-nav__link"> Soak: ior -a MPIIO - daos client report DER_INVAL with oclass RP_2GX (DAOS-6308) </a> </li>
+                                  <li class="md-nav__item"> <a href="#add-support-for-co-located-targets-shards-in-placement-daos-5499" class="md-nav__link"> Add support for co-located (targets) shards in placement (DAOS-5499) </a> </li>
+                                  <li class="md-nav__item"> <a href="#fiolibaio-not-working-over-dfuse-with-direct_io-daos-5299" class="md-nav__link"> fio/libaio not working over dfuse with direct_io (DAOS-5299) </a> </li>
+                                  <li class="md-nav__item"> <a href="#the-dmg-storage-scan-may-report-incorrect-numa-socket-id" class="md-nav__link"> The dmg storage scan may report incorrect NUMA socket ID </a> </li>
+                                  <li class="md-nav__item"> <a href="#specifying-a-scm_mount-path-with-more-than-one-subdirectory-causes-engine_died-event-daos-7386" class="md-nav__link"> Specifying a 'scm_mount' path with more than one subdirectory causes engine_died event (DAOS-7386) </a> </li>
+                                  <li class="md-nav__item"> <a href="#replication-and-self-healing_1" class="md-nav__link"> Replication and Self-healing </a> </li>
+                                </ul>
+                              </nav>
+                            </li>
+                            <li class="md-nav__item"> <a href="#fixed-issues-details" class="md-nav__link"> Fixed Issues Details </a>
+                              <nav class="md-nav">
+                                <ul class="md-nav__list">
+                                  <li class="md-nav__item"> <a href="#psm-over-opa-is-not-fully-functional" class="md-nav__link"> PSM over OPA is not fully functional </a> </li>
+                                  <li class="md-nav__item"> <a href="#limited-bandwidth-to-scm-with-some-updatewrite-operations" class="md-nav__link"> Limited bandwidth to SCM with some update/write operations </a> </li>
+                                  <li class="md-nav__item"> <a href="#aggregation-issue" class="md-nav__link"> Aggregation Issue </a> </li>
+                                </ul>
+                              </nav>
+                            </li>
+                            <li class="md-nav__item"> <a href="#change-log" class="md-nav__link"> Change Log </a> </li>
+                          </ul>
+                        </nav>
+                      </li>
+                      <li class="md-nav__item"> <a href="../support_matrix" title="Support Matrix" class="md-nav__link"> Support Matrix </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item md-nav__item--nested">
+                  <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+                  <label class="md-nav__link" for="nav-6"> Developer Zone </label>
+                  <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+                    <label class="md-nav__title" for="nav-6"> Developer Zone </label>
+                    <ul class="md-nav__list" data-md-scrollfix>
+                      <li class="md-nav__item"> <a href="../../dev/development" title="Dev Environment" class="md-nav__link"> Dev Environment </a> </li>
+                      <li class="md-nav__item"> <a href="../../dev/contributing" title="Contributing" class="md-nav__link"> Contributing </a> </li>
+                      <li class="md-nav__item"> <a href="https://github.com/daos-stack/daos/blob/master/src/README.md" title="DAOS Internals" class="md-nav__link"> DAOS Internals </a> </li>
+                      <li class="md-nav__item"> <a href="../../html" title="DAOS API Documentation" class="md-nav__link"> DAOS API Documentation </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item"> <a href="https://wiki.hpdd.intel.com" title="Community Wiki" class="md-nav__link"> Community Wiki </a> </li>
+                <li class="md-nav__item"> <a href="https://wiki.hpdd.intel.com/display/DC/Roadmap/" title="Roadmap" class="md-nav__link"> Roadmap </a> </li>
+                <li class="md-nav__item"> <a href="https://daos.groups.io/g/daos" title="Mailing list" class="md-nav__link"> Mailing list </a> </li>
+                <li class="md-nav__item"> <a href="https://jira.hpdd.intel.com/projects/DAOS" title="Issue tracker" class="md-nav__link"> Issue tracker </a> </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+        <div class="md-sidebar__scrollwrap">
+          <div class="md-sidebar__inner">
+            <nav class="md-nav md-nav--secondary">
+              <label class="md-nav__title" for="__toc">Table of contents</label>
+              <ul class="md-nav__list" data-md-scrollfix>
+                <li class="md-nav__item"> <a href="#software-dependencies" class="md-nav__link"> Software Dependencies </a> </li>
+                <li class="md-nav__item"> <a href="#distribution-packages" class="md-nav__link"> Distribution Packages </a> </li>
+                <li class="md-nav__item"> <a href="#build-prerequisites" class="md-nav__link"> Build Prerequisites </a> </li>
+                <li class="md-nav__item"> <a href="#hardware-support" class="md-nav__link"> Hardware Support </a>
+                  <nav class="md-nav">
+                    <ul class="md-nav__list">
+                      <li class="md-nav__item"> <a href="#processor-requirements" class="md-nav__link"> Processor Requirements </a> </li>
+                      <li class="md-nav__item"> <a href="#network-requirements" class="md-nav__link"> Network Requirements </a> </li>
+                      <li class="md-nav__item"> <a href="#storage-requirements" class="md-nav__link"> Storage Requirements </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item"> <a href="#daos-testing" class="md-nav__link"> DAOS Testing </a> </li>
+                <li class="md-nav__item"> <a href="#version-12-major-features" class="md-nav__link"> Version 1.2 major features </a>
+                  <nav class="md-nav">
+                    <ul class="md-nav__list">
+                      <li class="md-nav__item"> <a href="#end-to-end-data-integrity" class="md-nav__link"> End-to-end Data Integrity </a> </li>
+                      <li class="md-nav__item"> <a href="#per-container-acl" class="md-nav__link"> Per Container ACL </a> </li>
+                      <li class="md-nav__item"> <a href="#improved-control-plane" class="md-nav__link"> Improved Control Plane </a>
+                        <nav class="md-nav">
+                          <ul class="md-nav__list">
+                            <li class="md-nav__item"> <a href="#external-device-states-via-dmg" class="md-nav__link"> External Device States (via DMG) </a> </li>
+                            <li class="md-nav__item"> <a href="#user-interfaces" class="md-nav__link"> User Interfaces </a> </li>
+                          </ul>
+                        </nav>
+                      </li>
+                      <li class="md-nav__item"> <a href="#replication-and-self-healing" class="md-nav__link"> Replication and Self Healing </a> </li>
+                      <li class="md-nav__item"> <a href="#erasure-code-preview" class="md-nav__link"> Erasure Code (Preview) </a> </li>
+                      <li class="md-nav__item"> <a href="#off-line-re-integration" class="md-nav__link"> Off-line Re-integration </a> </li>
+                      <li class="md-nav__item"> <a href="#hdf5-with-async" class="md-nav__link"> HDF5 with Async </a> </li>
+                      <li class="md-nav__item"> <a href="#posix-data-mover" class="md-nav__link"> POSIX Data Mover </a> </li>
+                      <li class="md-nav__item"> <a href="#spark" class="md-nav__link"> SPARK </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item"> <a href="#document-updates" class="md-nav__link"> Document updates </a> </li>
+                <li class="md-nav__item"> <a href="#known-issues" class="md-nav__link"> Known Issues </a>
+                  <nav class="md-nav">
+                    <ul class="md-nav__list">
+                      <li class="md-nav__item"> <a href="#update-admin-guide-to-use-daos_server-storage-prepare-daos-7365" class="md-nav__link"> Update Admin Guide to use daos_server Storage Prepare (DAOS-7365) </a> </li>
+                      <li class="md-nav__item"> <a href="#daos-racer-hung-daos-7359" class="md-nav__link"> DAOS Racer Hung (DAOS-7359) </a> </li>
+                      <li class="md-nav__item"> <a href="#pmem-registration-failures-with-verbs-on-recent-kernels-daos-6768" class="md-nav__link"> PMEM Registration Failures with Verbs on Recent Kernels (DAOS-6768) </a> </li>
+                      <li class="md-nav__item"> <a href="#after-creating-200-pools-daos_io_server-crash-signal-11-when-querying-the-pools-daos-6505" class="md-nav__link"> After Creating 200 Pools, daos_io_server Crash (signal 11) When Querying the Pools (DAOS-6505) </a> </li>
+                      <li class="md-nav__item"> <a href="#soak-ior-a-mpiio-daos-client-report-der_inval-with-oclass-rp_2gx-daos-6308" class="md-nav__link"> Soak: ior -a MPIIO - daos client report DER_INVAL with oclass RP_2GX (DAOS-6308) </a> </li>
+                      <li class="md-nav__item"> <a href="#add-support-for-co-located-targets-shards-in-placement-daos-5499" class="md-nav__link"> Add support for co-located (targets) shards in placement (DAOS-5499) </a> </li>
+                      <li class="md-nav__item"> <a href="#fiolibaio-not-working-over-dfuse-with-direct_io-daos-5299" class="md-nav__link"> fio/libaio not working over dfuse with direct_io (DAOS-5299) </a> </li>
+                      <li class="md-nav__item"> <a href="#the-dmg-storage-scan-may-report-incorrect-numa-socket-id" class="md-nav__link"> The dmg storage scan may report incorrect NUMA socket ID </a> </li>
+                      <li class="md-nav__item"> <a href="#specifying-a-scm_mount-path-with-more-than-one-subdirectory-causes-engine_died-event-daos-7386" class="md-nav__link"> Specifying a 'scm_mount' path with more than one subdirectory causes engine_died event (DAOS-7386) </a> </li>
+                      <li class="md-nav__item"> <a href="#replication-and-self-healing_1" class="md-nav__link"> Replication and Self-healing </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item"> <a href="#fixed-issues-details" class="md-nav__link"> Fixed Issues Details </a>
+                  <nav class="md-nav">
+                    <ul class="md-nav__list">
+                      <li class="md-nav__item"> <a href="#psm-over-opa-is-not-fully-functional" class="md-nav__link"> PSM over OPA is not fully functional </a> </li>
+                      <li class="md-nav__item"> <a href="#limited-bandwidth-to-scm-with-some-updatewrite-operations" class="md-nav__link"> Limited bandwidth to SCM with some update/write operations </a> </li>
+                      <li class="md-nav__item"> <a href="#aggregation-issue" class="md-nav__link"> Aggregation Issue </a> </li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="md-nav__item"> <a href="#change-log" class="md-nav__link"> Change Log </a> </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="md-content">
+        <article class="md-content__inner md-typeset"> <a href="https://github.com/daos-stack/daos/edit/master/docs/release/release_notes_v1_2.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+          <h1 id="daos-version-12-release-notes">DAOS Version 1.2 Release Notes<a class="headerlink" href="#daos-version-12-release-notes" title="Permanent link">&para;</a></h1>
+          <p>We are pleased to announce the release of DAOS version 1.2, advancing on a newly created high-performance object store that is ultimately
+            shifting the HPC and big data paradigm. </p>
+          <p>This release is targeted towards benchmarking, partner integration, evaluation,
+            and brings support for the following new features:</p>
+          <ul>
+            <li>End-to-end Data Integrity</li>
+            <li>Per Container ACL</li>
+            <li>Improved Control Plane</li>
+            <li>Replication and Self Healing</li>
+            <li>Erasure Code (Preview)</li>
+            <li>Off-line Re-integration</li>
+            <li>HDF5 with Async</li>
+            <li>POSIX I/O with Conditional Update Support</li>
+            <li>POSIX Data Mover</li>
+            <li>SPARK Integration</li>
+          </ul>
+          <p>Visit the <a href="https://daos-stack.github.io/">DAOS github.io</a> page for more
+            information. All DAOS project source code is maintained in the <a href="https://github.com/daos-stack/daos">https://github.com/daos-stack/daos</a> repository.
+            Please visit this <a href="https://github.com/daos-stack/daos/blob/master/LICENSE">link</a> for more information on the licenses.</p>
+          <h2 id="software-dependencies">Software Dependencies<a class="headerlink" href="#software-dependencies" title="Permanent link">&para;</a></h2>
+          <p>Reference the <a href="https://daos-stack.github.io/admin/installation/">Software Installation</a> section of the <a href="https://daos-stack.github.io/admin/hardware/">DAOS Administration Guide</a> for more details.</p>
+          <h2 id="distribution-packages">Distribution Packages<a class="headerlink" href="#distribution-packages" title="Permanent link">&para;</a></h2>
+          <p>DAOS RPMs are available for DAOS v1.2. Instructions for
+            obtaining the RPMs will be provided in this document at a future date, and will
+            be posted in the <a href="https://daos.groups.io/g/daos">DAOS mailing list</a>.</p>
+          <h2 id="build-prerequisites">Build Prerequisites<a class="headerlink" href="#build-prerequisites" title="Permanent link">&para;</a></h2>
+          <p>To build DAOS and its dependencies, several software packages must be installed
+            on the system. This includes scons, libuuid, cmocka, ipmctl, and several other
+            packages usually available on all the Linux distributions. Moreover, a Go
+            version of at least 1.10 is required.</p>
+          <p><a href="https://github.com/daos-stack/daos/blob/master/utils/docker/Dockerfile.centos.7#L53-L76">CentOS</a> is currently the only supported Linux distribution. An exhaustive list of
+            packages for each supported Linux distribution is maintained in the Docker
+            files. Refer to the <a href="https://daos-stack.github.io/admin/installation/">Software Installation</a> section of the <a href="https://daos-stack.github.io/admin/hardware/">DAOS Administration Guide</a> for more details.</p>
+          <h2 id="hardware-support">Hardware Support<a class="headerlink" href="#hardware-support" title="Permanent link">&para;</a></h2>
+          <h3 id="processor-requirements">Processor Requirements<a class="headerlink" href="#processor-requirements" title="Permanent link">&para;</a></h3>
+          <p>DAOS requires a 64-bit processor architecture and is primarily developed on
+            Intel 64 architecture. The DAOS software and the libraries it depends on
+            (e.g., ISA-L, SPDK, PMDK, and DPDK) can take advantage of Intel SSE and AVX
+            extensions.</p>
+          <h3 id="network-requirements">Network Requirements<a class="headerlink" href="#network-requirements" title="Permanent link">&para;</a></h3>
+          <p>The DAOS network layer relies on libfabric and supports OFI providers for
+            Ethernet/sockets, InfiniBand/verbs. An RDMA-capable fabric is preferred for
+            better performance. DAOS can support multiple rails by binding different
+          instances of the DAOS server to individual network cards.</p>
+          <p>The DAOS control plane provides methods for administering and managing the
+            DAOS servers using a secure socket layer interface. An additional out-of-band
+            network connecting the nodes in the DAOS service cluster is required for DAOS
+            administration. Management traffic between clients and servers use IP over
+            Fabric.</p>
+          <h3 id="storage-requirements">Storage Requirements<a class="headerlink" href="#storage-requirements" title="Permanent link">&para;</a></h3>
+          <p>DAOS requires each storage node to have direct access to storage-class memory
+            (SCM). While DAOS is primarily tested and tuned for Intel(R)  Optane PMEM, the DAOS software stack is built over the Persistent Memory
+            Development Kit (PMDK) and the DAX feature of the Linux operating systems as
+            described in the <a href="https://www.snia.org/sites/default/files/technical_work/final/NVMProgrammingModel_v1.2.pdf">SNIA NVM Programming Model</a>.
+            As a result, the open-source DAOS software stack should be able to run
+            transparently over any storage-class memory supported by the PMDK.</p>
+          <p>The storage node should be equipped with NVMe (non-volatile memory express)
+            SSDs to provide capacity. HDDs, as well as SATA and SAS SSDs, are not
+            supported by DAOS. Both NVMe 3D-NAND and Optane SSDs are supported.
+            NVMe-oF devices should theoretically work with the user-space storage stack
+            but have not been tested.</p>
+          <p>A recommended  ratio of 6% SCM to SSD capacity will generally insure that DAOS has
+            enough space in SCM to store its internal metadata (e.g., pool metadata,
+          SSD block allocation tracking).</p>
+          <p>For testing purposes, SCM can be emulated with DRAM by mounting a tmpfs
+            filesystem, and NVMe SSDs can be also emulated with DRAM or a loopback
+            file. Any data written using a tmpfs will not be persistent across a reboot.</p>
+          <h2 id="daos-testing">DAOS Testing<a class="headerlink" href="#daos-testing" title="Permanent link">&para;</a></h2>
+          <p>DAOS 1.2 validation efforts were focused on anticipated initial use cases. Testing has been completed in the following areas:</p>
+          <ul>
+            <li>Testing has been performed on CentOS 7.9, OpenSuse 15.2,with CentOS  being used in the majority of the test cycles. Smaller scale testing has been done on OpenSuse 15.2, and no testing performed on Ubuntu and MOFED 5.1x</li>
+            <li>Testing has been conducted using Intel Xeon processors, Intel 3D NAND and
+              Optane based NVMe SSDs and Optane persistent memory modules although generally
+              storage density was not tested at production levels.</li>
+            <li>DAOS uses the libfabric network abstraction layer and testing has been
+              performed on a number of network specific providers, including the IB verbs,
+              socket and TCP providers.  Network testing is on-going and none of
+              the above providers should be considered fully tested at this time.</li>
+            <li>All DAOS 1.2 supported functionality has been tested with an emphasis on use
+              cases with positive outcomes. Error cases (e.g., DAOS server failure) have
+            limited test cycles at this time.</li>
+
+            <li>Soak testing with an emphasis on I/O jobs in combination with basic
+              administrative actions has been run and found to be error free for periods up
+              to 48 hours. As with functional testing the focus has been on positive path
+              testing with failure paths and fault injection coming in a future release.</li>
+          </ul>
+          <h2 id="version-12-major-features">Version 1.2 major features<a class="headerlink" href="#version-12-major-features" title="Permanent link">&para;</a></h2>
+          <h3 id="end-to-end-data-integrity">End-to-end Data Integrity<a class="headerlink" href="#end-to-end-data-integrity" title="Permanent link">&para;</a></h3>
+          <p>For DAOS, end-to-end means that the client will calculate and verify checksums, providing protection for data through the entire I/O stack. During a write or update, the DAOS Client library (libdaos.so) calculates a checksum and appends it to the RPC message before being transferred over the network. Depending on the configuration, the DAOS Server may or may not calculate checksums to verify the data on receipt. On a fetch, the DAOS Server will send a known good checksum with the requested data to the DAOS Client, which will calculate checksums on the data received and verify.</p>
+          <p><a href="https://daos-stack.github.io/overview/data_integrity/">More information</a></p>
+          <h3 id="per-container-acl">Per Container ACL<a class="headerlink" href="#per-container-acl" title="Permanent link">&para;</a></h3>
+          <p>Client user and group access for containers is controlled by Access Control Lists (ACLs). Access-controlled container accesses include:</p>
+          <ul>
+            <li>Opening the container for access.</li>
+            <li>Reading and writing data in the container.</li>
+            <li>Reading and writing objects.</li>
+            <li>Getting, setting, and listing user attributes.</li>
+            <li>Getting, setting, and listing snapshots.</li>
+            <li>Deleting the container (if the pool does not grant the user permission).</li>
+            <li>Getting and setting container properties.</li>
+            <li>Getting and modifying the container ACL.</li>
+            <li>Modifying the container's owner.</li>
+          </ul>
+          <p>This is reflected in the set of supported <a href="https://daos-stack.github.io/overview/security/#permissions">container permissions</a>.</p>
+          <p><a href="https://daos-stack.github.io/user/container/#access-control-lists">More information</a></p>
+          <h3 id="improved-control-plane">Improved Control Plane<a class="headerlink" href="#improved-control-plane" title="Permanent link">&para;</a></h3>
+          <h4 id="external-device-states-via-dmg">External Device States (via DMG)<a class="headerlink" href="#external-device-states-via-dmg" title="Permanent link">&para;</a></h4>
+          <p>The device states that are returned from a device query by the administrator are dependent on both the persistently stored device state in SMD, and the in-memory BIO device list.</p>
+          <ul>
+            <li>NORMAL: A fully functional device in use by DAOS (or in setup).</li>
+            <li>EVICTED: A device has been manually evicted and is no longer in use by DAOS.</li>
+            <li>UNPLUGGED: A device previously used by DAOS is unplugged.</li>
+            <li>NEW: A new device is available for use by DAOS.</li>
+          </ul>
+          <p><a href="https://daos-stack.github.io/admin/administration/#nvme-ssd-health-monitoring">More information</a></p>
+          <h4 id="user-interfaces">User Interfaces<a class="headerlink" href="#user-interfaces" title="Permanent link">&para;</a></h4>
+          <p>The DAOS dmg management utility can be used to query NVMe SSD health data, as well as provide useful commands for NVMe SSD eviction, hot plug, and device identification. NVMe hot plug and reintegration will not be fully supported until DAOS 2.2 release. </p>
+          <ul>
+            <li>Manually evict and NVMe SSD</li>
+            <li>Replace an evicted SSD with a new NVMe SSD</li>
+            <li>Reuse a faulty NVMe SSD (w/o reintegration)</li>
+            <li>Locate a healthy NVMe SSD (for VMD-enabled devices only)</li>
+            <li>Locate an evicted NVMe SSD (for VMD-enabled devices only)</li>
+          </ul>
+          <p><a href="https://daos-stack.github.io/admin/administration/#nvme-ssd-eviction-and-hotplug">More information</a></p>
+          <h3 id="replication-and-self-healing">Replication and Self Healing<a class="headerlink" href="#replication-and-self-healing" title="Permanent link">&para;</a></h3>
+          <p>In DAOS, if the data is replicated with multiple copies on different targets, and one of the targets fail, the data on it will be rebuilt on the other targets. This reduces the data redundancy that would be impacted by the target failure. </p>
+          <p><a href="https://daos-stack.github.io/admin/pool_operations/#target-exclusion-and-self-healing">More information</a></p>
+          <h3 id="erasure-code-preview">Erasure Code (Preview)<a class="headerlink" href="#erasure-code-preview" title="Permanent link">&para;</a></h3>
+          <p>This release implements Reed Solomon based EC for data protection of DAOS, it supports EC data recovery for storage target failure, and data migration while extending the storage pool. Main features of DAOS EC include:</p>
+          <ul>
+            <li>Reed-Solomon based EC support for I/O. DAOS has two value types: array value for large streaming I/O; single value for Key-value store. DAOS EC supports both array value and single value. An array value always has fixed stripe size and cell size, whereas a single value has dynamic stripe size to provide storage efficiency of application data with arbitrary size. The EC feature is activated by utilizing one of the predefined EC object classes. The user can choose the appropriate object class for their data based on their requirements and restrictions. For example, capacity and bandwidth overhead, fault tolerance level, etc.</li>
+            <li>Versioned data aggregation for EC protected object. The data model of DAOS is multi-versioned: a write operation is non-destructive, and it is stored as a new version if a write overlaps with old data. The DAOS EC aggregation service can merge versioned data protected by EC, re-encode aggregated data, and reclaim space by removing old data versions.</li>
+            <li>Data recovery for EC protected object.  DAOS server failure may result in loss of access to part of the EC protected data. If number of failures is equal or less than the EC redundancy factor, DAOS client can retrieve a quorum of surviving cells and reconstruct the inaccessible data for application that is trying to read, whereas DAOS server can reconstruct lost data in the background and recover data redundancy to the original level. </li>
+          </ul>
+          <h3 id="off-line-re-integration">Off-line Re-integration<a class="headerlink" href="#off-line-re-integration" title="Permanent link">&para;</a></h3>
+          <p>In DAOS, the excluded targets can be reintegrated back into the pool by dmg pool command, though the pool should not be connected (no I/O) during reintegration, otherwise application failure or even data corruption might be observed, which will be fixed in the later version. The status of the reintegration can also be checked through dmg pool query, similar as rebuild. During reintegration, all old data on the reintegrated target will be erased. Once the target is reintegrated, it operates the same as normal active targets.</p>
+          <p><a href="https://github.com/daos-stack/daos/blob/master/src/bio/README.md">More information</a></p>
+          <h3 id="hdf5-with-async">HDF5 with Async<a class="headerlink" href="#hdf5-with-async" title="Permanent link">&para;</a></h3>
+          <p>The HDF5 Library is one of the major I/O libraries and binary file formats that is used among the HPC community. The HDF5 library has recently been enhanced to enable non-POSIX storage paradigms, such as object stores, enabling “non-native” file formats. A new architectural layer called the HDF5 Virtual Object Layer (VOL) was added to the library to redirect data from an HDF5 application to other types of storage using HDF5 VOL connectors.</p>
+          <p>More information: <a href="https://github.com/HDFGroup/vol-daos">https://github.com/HDFGroup/vol-daos</a> <a href="https://github.com/HDFGroup/vol-daos/blob/master/docs/users_guide.pdf">https://github.com/HDFGroup/vol-daos/blob/master/docs/users_guide.pdf</a></p>
+          <h3 id="posix-data-mover">POSIX Data Mover<a class="headerlink" href="#posix-data-mover" title="Permanent link">&para;</a></h3>
+          <p>The Dataset Mover is a collection of multiple tools that allow users to copy and serialize data across DAOS and POSIX file systems. There is support for data movement across POSIX, DAOS, and HDF5 containers. There is also support for serializing a DAOS container to an HDF5 file and deserializing back to DAOS.</p>
+          <p><a href="https://daos-stack.github.io/admin/tiering_uns/#migration-tofrom-a-posix-filesystem">More information</a></p>
+          <h3 id="spark">SPARK<a class="headerlink" href="#spark" title="Permanent link">&para;</a></h3>
+          <p>Support for Spark and Hadoop is available in this release.</p>
+          <p><a href="https://daos-stack.github.io/user/spark/">More information</a></p>
+          <h2 id="document-updates">Document updates<a class="headerlink" href="#document-updates" title="Permanent link">&para;</a></h2>
+          <p>All documents supporting the <a href="https://daos-stack.github.io/">https://daos-stack.github.io/</a> site have been refreshed for this release.
+            Design documents in the DAOS Source repository have also been refreshed for this release.</p>
+          <h2 id="known-issues">Known Issues<a class="headerlink" href="#known-issues" title="Permanent link">&para;</a></h2>
+          <h3 id="update-admin-guide-to-use-daos_server-storage-prepare-daos-7365">Update Admin Guide to use daos_server Storage Prepare (<a href="https://jira.hpdd.intel.com/browse/DAOS-7365">DAOS-7365</a>)<a class="headerlink" href="#update-admin-guide-to-use-daos_server-storage-prepare-daos-7365" title="Permanent link">&para;</a></h3>
+          <p>The <code>dmg storage prepare</code> command may fail to complete in some circumstances. The recommended workflow as documented in the DAOS Adminstrator's Guide is to use <code>daos_server storage prepare -u &lt;daos_server user&gt;</code>. Alternatively, running <code>dmg storage prepare --scm-only</code> and/or <code>dmg storage prepare --nvme-only</code> separately will avoid the problem.</p>
+          <p>This will be fixed in the next DAOS v1.2 Documentation Update.</p>
+          <h3 id="daos-racer-hung-daos-7359">DAOS Racer Hung (<a href="https://jira.hpdd.intel.com/browse/DAOS-7359">DAOS-7359</a>)<a class="headerlink" href="#daos-racer-hung-daos-7359" title="Permanent link">&para;</a></h3>
+          <p>Currently if one issues a daos_obj_update with an IOD that has a dkey/akey with a record type of DAOS_IOD_ARRAY and record size of 0;
+            this operation can cause server corruption and possibly a server crash. </p>
+          <p>This will be fixed in a future release.</p>
+          <h3 id="pmem-registration-failures-with-verbs-on-recent-kernels-daos-6768">PMEM Registration Failures with Verbs on Recent Kernels (<a href="https://jira.hpdd.intel.com/browse/DAOS-6768">DAOS-6768</a>)<a class="headerlink" href="#pmem-registration-failures-with-verbs-on-recent-kernels-daos-6768" title="Permanent link">&para;</a></h3>
+          <p>Memory registration failures when Leap15 + verbs;rxm + pmem combination is used. crt_bulk_create() fails with verbs level fi_mr_regv() failing with -95 error: Operation Not supported.</p>
+          <p>If PMEM backed memory is replaced by tmpfs, then bulk creation succeeds.</p>
+          <p>If FI_VERBS_USE_ODP is set, pmem-backed memory registration succeeds, however the ior test slows by 90%.</p>
+          <p>This only appears to happen on Leap15.2 and not centos 7.9.</p>
+          <p>This will be fixed in a future kernel update.</p>
+          <h3 id="after-creating-200-pools-daos_io_server-crash-signal-11-when-querying-the-pools-daos-6505">After Creating 200 Pools, daos_io_server Crash (signal 11) When Querying the Pools (<a href="https://jira.hpdd.intel.com/browse/DAOS-6505">DAOS-6505</a>)<a class="headerlink" href="#after-creating-200-pools-daos_io_server-crash-signal-11-when-querying-the-pools-daos-6505" title="Permanent link">&para;</a></h3>
+          <p>This will be fixed in a future release.</p>
+          <h3 id="soak-ior-a-mpiio-daos-client-report-der_inval-with-oclass-rp_2gx-daos-6308">Soak: ior -a MPIIO - daos client report DER_INVAL with oclass RP_2GX (<a href="https://jira.hpdd.intel.com/browse/DAOS-6308">DAOS-6308</a>)<a class="headerlink" href="#soak-ior-a-mpiio-daos-client-report-der_inval-with-oclass-rp_2gx-daos-6308" title="Permanent link">&para;</a></h3>
+          <p>If failures reduce the number of available targets below the number required for an object, writes will not be possible until the system is repaired via reintegration, and data will be vulnerable to additional failures until that reintegration is complete. </p>
+          <p>This will be fixed in a future release.</p>
+          <h3 id="add-support-for-co-located-targets-shards-in-placement-daos-5499">Add support for co-located (targets) shards in placement (<a href="https://jira.hpdd.intel.com/browse/DAOS-5499">DAOS-5499</a>)<a class="headerlink" href="#add-support-for-co-located-targets-shards-in-placement-daos-5499" title="Permanent link">&para;</a></h3>
+          <p>If you have a widely striped object (or even just a "normal object" but a very small cluster) one or more failures might mean that your objects require more targets to place than are available on the system. </p>
+          <p>This will be fixed in a future release.</p>
+          <h3 id="fiolibaio-not-working-over-dfuse-with-direct_io-daos-5299">fio/libaio not working over dfuse with direct_io (<a href="https://jira.hpdd.intel.com/browse/DAOS-5299">DAOS-5299</a>)<a class="headerlink" href="#fiolibaio-not-working-over-dfuse-with-direct_io-daos-5299" title="Permanent link">&para;</a></h3>
+          <p>Trying to run fio over dfuse results in EINVAL errors in normal usage.  When fio is using libaio as a backend, libaio is calling io_setup() which works, however, io_submit() is failing with EINVAL.</p>
+          <p>Currently there is a bug where dfuse doesn't set the O_DIRECT flag. 
+            As a workaround, adding a --disable-directio flag to dfuse and setting this for the fio test.</p>
+          <p>This will be fixed in a future kernel update.</p>
+          <h3 id="the-dmg-storage-scan-may-report-incorrect-numa-socket-id">The dmg storage scan may report incorrect NUMA socket ID<a class="headerlink" href="#the-dmg-storage-scan-may-report-incorrect-numa-socket-id" title="Permanent link">&para;</a></h3>
+          <p>The ndctl package maintainers have confirmed that this is a kernel regression
+            that has been resolved in CentOS 8. Some DAOS nodes may not report the correct
+            NUMA socket ID when running a "dmg storage scan." This appears to be a
+            regression in the CentOS7.7 kernel rather than an ndctl issue. This is due to
+            different versions of ndctl provisioning different JSON namespace details
+            (storage scan command reads the "numa_node" field). The regression also affects
+            the operation of the "dmg config generate" command which isn't able to detect
+            correct NUMA affinity for the PMem namespaces required for the config.
+            The regression has been fixed in the CentOS7.9 kernel.</p>
+          <p>A fix for this is not planned.</p>
+          <h3 id="specifying-a-scm_mount-path-with-more-than-one-subdirectory-causes-engine_died-event-daos-7386">Specifying a 'scm_mount' path with more than one subdirectory causes engine_died event (<a href="https://jira.hpdd.intel.com/browse/DAOS-7386">DAOS-7386</a>)<a class="headerlink" href="#specifying-a-scm_mount-path-with-more-than-one-subdirectory-causes-engine_died-event-daos-7386" title="Permanent link">&para;</a></h3>
+          <p>When testing daos-1.3.0-13.6343.g011b78cb.el7.x86_64 RPMs, an attempt to start two servers using the " scm_mount: /mnt/daos/1" configuration file setting as specified in the default /etc/daos/daos_server.yml file was performed.  After starting the servers with systemd and issuing the "dmg -d storage format" the engine_died event occurred.</p>
+          <p>This issue is being investigated.</p>
+          <h3 id="replication-and-self-healing_1">Replication and Self-healing<a class="headerlink" href="#replication-and-self-healing_1" title="Permanent link">&para;</a></h3>
+          <p>While replication and self-healing features have been fully implemented,
+            those features haven't been thoroughly tested in 1.2. As a result, they are
+            supported as preview features and will be fully supported in the next release.
+            The storage node fault detection has thus been disabled by default and failed
+            storage nodes have to be excluded manually to trigger automatic repair.
+            Please refer to the [Pool Modifications] (https://daos-stack.github.io/admin/pool_operations/#pool-modifications)
+            section of the administration guide for more information.</p>
+          <h2 id="fixed-issues-details">Fixed Issues Details<a class="headerlink" href="#fixed-issues-details" title="Permanent link">&para;</a></h2>
+          <h3 id="psm-over-opa-is-not-fully-functional">PSM over OPA is not fully functional<a class="headerlink" href="#psm-over-opa-is-not-fully-functional" title="Permanent link">&para;</a></h3>
+          <p>If you must evaluate DAOS on an OPA fabric, we recommend using IP over
+            fabric/sockets for evaluation.  For benchmarking, PSM2 over OPA offers a
+            better picture of DAOS performance, but the PSM2 provider is not fully
+            functional. For a discussion of issues and options, contact us via the <a href="https://daos.groups.io/g/daos">mailing list</a>.</p>
+          <h3 id="limited-bandwidth-to-scm-with-some-updatewrite-operations">Limited bandwidth to SCM with some update/write operations<a class="headerlink" href="#limited-bandwidth-to-scm-with-some-updatewrite-operations" title="Permanent link">&para;</a></h3>
+          <p>With a configuration of only Intel(R) Optane Pmem for storage in a DAOS pool
+            (no SSDs), a known limitation currently exists on the write/update performance
+            with bulk transfers to the SCM with all network providers which limits the BW
+            per storage server.</p>
+          <h3 id="aggregation-issue">Aggregation Issue<a class="headerlink" href="#aggregation-issue" title="Permanent link">&para;</a></h3>
+          <p>The aggregation service is only activated after the system has idled for more
+            than 5 seconds, so the aggregation is always suspended if there are sustained
+            I/O requests from application. As a result, storage node will run out of SCM
+            space even there is plenty of free space in SSD</p>
+          <h2 id="change-log">Change Log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h2>
+          <p>No changes for this release.</p>
+        </article>
+      </div>
+    </div>
+  </main>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid"> <a href="../../user/datamover" title="Data Mover" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+        <div class="md-flex__cell md-flex__cell--shrink"> <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i> </div>
+        <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"> <span class="md-flex__ellipsis"> <span class="md-footer-nav__direction"> Previous </span> Data Mover </span> </div>
+        </a> <a href="../support_matrix" title="Support Matrix" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+        <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"> <span class="md-flex__ellipsis"> <span class="md-footer-nav__direction"> Next </span> Support Matrix </span> </div>
+        <div class="md-flex__cell md-flex__cell--shrink"> <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i> </div>
+        </a> </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright"> powered by <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a> and <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"> Material for MkDocs</a> </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="../../assets/javascripts/application.c33a9706.js"></script> 
+<script src="../../js/jquery-3.4.1.min.js"></script> 
+<script src="../../js/popper.min.js"></script> 
+<script src="../../js/bootstrap-4.4.1.js"></script> 
+<script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
+</body>
+</html>
